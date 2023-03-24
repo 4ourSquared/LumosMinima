@@ -1,0 +1,38 @@
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{adjustbox}
+
+\newcounter{verscount}
+\setcounter{verscount}{0}
+\newcommand{\addversione}[5]{
+	\ifdefined\setversione
+		\setversione{#1}
+	\else\fi
+	\stepcounter{verscount}
+	\expandafter\newcommand%
+		\csname ver\theverscount \endcsname{#1&#2&#3&#4&#5}
+}
+
+\newcommand{\listversioni}{
+	\ifnum\value{verscount}>1
+		\csname ver\theverscount \endcsname
+		\addtocounter{verscount}{-1}
+		\\\hline
+		\listversioni
+	\else
+		\csname ver\theverscount \endcsname\\\hline
+	\fi
+}
+
+\newcommand{\makeversioni}{
+	\begin{center}
+		\begin{tabularx}{\textwidth}{|c|c|c|c|X|}
+		\hline
+		\textbf{Versione} & \textbf{Data} & \textbf{Redattore} & \textbf{Verificatore} & \textbf{Descrizione} \\
+		\hline
+		\listversioni
+		\end{tabularx}
+	\end{center}
+	\clearpage
+}

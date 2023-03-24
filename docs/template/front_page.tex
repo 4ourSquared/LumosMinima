@@ -1,0 +1,73 @@
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{makecell}
+
+\newcommand{\settitolo}[1]{\newcommand{\titolo}{#1\\}}
+\newcommand{\setprogetto}[1]{\newcommand{\progetto}{#1\\}}
+\newcommand{\setcommittenti}[1]{\newcommand{\committenti}{#1\\}}
+\newcommand{\setredattori}[1]{\newcommand{\redattori}{#1\\}}
+\newcommand{\setrevisori}[1]{\newcommand{\revisori}{#1\\}}
+\newcommand{\setresponsabili}[1]{\newcommand{\responsabili}{#1\\}}
+\newcommand{\setversione}[1]{
+	\ifdefined\versione\renewcommand{\versione}{#1\\}
+	\else\newcommand{\versione}{#1\\}\fi
+}
+\newcommand{\setdestuso}[1]{\newcommand{\uso}{#1\\}}
+\newcommand{\setdescrizione}[1]{\newcommand{\descrizione}{#1\\}}
+
+\newcommand{\makefrontpage}{
+	\begin{titlepage}
+		\begin{center}
+
+		\includegraphics[width=0.4\textwidth]{\templates/4ourSquared_logo}\\
+
+		{\Large 4OURSQUARED}\\[6pt]
+		\href{mailto://4oursquared.unipd@gmail.com}{4oursquared.unipd@gmail.com}\\
+		
+		\ifdefined\progetto
+		\vspace{1cm}
+		{\Large\progetto}
+		{\large\committenti}
+		\else\fi
+		
+		\vspace{1.5cm}
+		{\LARGE\titolo}
+		
+		\vfill
+		
+		\begin{tabular}{r | l}
+		\multicolumn{2}{c}{\textit{Informazioni}}\\
+		\hline
+		
+		\ifdefined\redattori
+			\textit{Redattori} &
+			\makecell[l]{\redattori}\\
+		\else\fi
+		\ifdefined\revisori
+			\textit{Revisori} &
+			\makecell[l]{\revisori}\\
+		\else\fi
+		\ifdefined\responsabili
+			\textit{Responsabili} &
+			\makecell[l]{\responsabili}\\
+		\else\fi
+		
+		\ifdefined\versione
+			\textit{Versione} & \versione
+		\else\fi
+		
+		\textit{Uso} & \uso
+		
+		\end{tabular}
+		
+		\vspace{2cm}
+		
+		\ifdefined\descrizione
+		Descrizione
+		\vspace{6pt}
+		\hrule
+		\descrizione
+		\else\fi
+		\end{center}
+	\end{titlepage}
+}

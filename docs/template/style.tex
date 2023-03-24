@@ -1,0 +1,13 @@
+\usepackage[a4paper, margin=2.5cm]{geometry}
+
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep}
+\setlist[enumerate]{noitemsep}
+
+\let\oldpar\paragraph
+\renewcommand{\paragraph}[1]{\oldpar{#1\\}\noindent}
+
+% Avoid dots in the table of contents, it mess with the gulpease calculation
+\makeatletter
+\renewcommand{\@dotsep}{10000} 
+\makeatother

@@ -1,1 +1,2 @@
-# LumosMinima
+# 4ourSquared
+Progetto SWE
