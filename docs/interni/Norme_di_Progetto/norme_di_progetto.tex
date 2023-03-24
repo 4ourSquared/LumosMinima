@@ -5,18 +5,103 @@
 \input{\templates/front_page}
 \input{\templates/history}
 
-\settitolo{Norme di progetto}
-\setprogetto{Undefined}
-\setcommittenti{Undefined}
+\settitolo{Norme di Progetto}
+\setprogetto{Lumos Minima}
+\setcommittenti{Imola Informatica}
 \setredattori{Soldà Matteo}
 \setdestuso{interno}
 \setdescrizione{
 Questo documento contiene le procedure, gli strumenti e i criteri di qualità che verranno usati nel progetto.
 }
 
-\addversione{0.0.0}{24/03/2023}{Soldà Matteo}{}{Prima stesura.}
+\addversione{0.0.0}{24/03/2023}{Soldà Matteo}{Brotto Romina}{Prima stesura.}
 
 \begin{document}
 \makefrontpage \makeversioni
 \tableofcontents
+\newpage
+
+\section{Introduzione}
+\subsection{Scopo del Documento}
+Il documento si prefigge lo scopo di definire i metodi e le attività chiave legate al \textit{Way of Working}. Tutti i membri del gruppo si impegnano a seguire quanto riportato.
+
+\section{Processi Primari}
+\subsection{Fornitura}
+\subsubsection{Repository Pubblica}
+Durante lo sviluppo del progetto, il codice e la documentazione saranno depositati in una repository pubblica. La parte di interesse del proponente e del committente riguarda la cartella \textit{public}. \\
+La cartella sopra citata contiene la documentazione necessaria alle revisioni di periodo con il committente. Tale cartella rispecchia la struttura della cartella \textit{docs}, situata nella parte privata. \\
+I file che prevedono versionamento, riporteranno al loro interno la numerazione relativa alla versione attuale e un riassunto delle versioni precedenti. \\ 
+Ogni modifica della parte pubblica deve essere approvata, tramite \textit{pull request}, dal responsabile.
+
+\subsubsection{Contatti}
+Tutti i contatti ufficiali, sia con il proponente che con il committente, avverranno tramite la mail del gruppo \href{mailto:4oursquared.unipd@gmail.com}{4oursquared.unipd@gmail.com}.\\
+Le mail per la presentazione ad una revisione di periodo necessita di una conferma unanime, valutata la preparazione. Questa mail deve contenere la lettera di presentazione con i link ai vari documenti aggiunti/aggiornati nella parte pubblica della repository.
+
+\subsection{Sviluppo}
+\subsubsection{Organizzazione dei File}
+Tutta la documentazione sarà contenuta all'interno della cartella \textit{docs/}. Questa sarà inoltre suddivisa in \textit{interna} ed \textit{esterna}, le quali conterranno rispettivamente la documentazione interna al gruppo e quella da condividere con il proponente e con il committente. \\
+I verbali interni saranno conservati nella sottocartella \textit{docs/interni/verbali} mentre quelli esterni saranno conservati in \textit{docs/esterni/verbali}.\\
+Per ogni documento esisterà una nuova sottocartella omonima.
+
+\section{Processi Secondari}
+\subsection{Documentazione}
+\subsubsection{Ciclo di Vita}
+Ogni documento seguirà il seguente flusso:
+\begin{itemize}
+    \item \textbf{Pianificazione} \\ Il documento viene progettato ad alto livello secondo quanto richiesto.
+    \item \textbf{Redazione} \\ Un membro del gruppo, nel ruolo di redattore, stila il documento.
+    \item \textbf{Revisione} \\ Un membro del gruppo, nel ruolo di revisore, controlla l'assenza di errori grammaticali e il contenuto sia conforme alle norme di progetto.
+    \item \textbf{Approvazione} \\ Un membro del gruppo, nel ruolo di responsabile, verifica che il contenuto del documento sia corretto.
+\end{itemize}
+
+\subsubsection{Strumenti Utilizzati}
+Per la stesura dei documenti verrà utilizzato il linguaggio \LaTeX. \\
+Affinché i documenti risultino stilisticamente coerenti, dovranno includere al loro interno il file \textit{docs/template/style.tex} per lo stile generale e il file \textit{docs/template/front\_page.tex} per utilizzare il template della prima pagina.
+
+\subsubsection{Struttura}
+Ogni documento sarà così strutturato:
+\begin{enumerate}
+    \item Pagina di intestazione
+    \item Pagina con lista delle versioni, ove necessario
+    \item Pagina indice, ove necessario
+    \item Una o più pagine di contenuto
+\end{enumerate}
+
+Le varie sezioni saranno così definite:
+
+\textbf{Pagina di Intestazione} \\
+\begin{itemize}
+    \item Logo e nome del gruppo
+    \item Nome del progetto e azienda cliente
+    \item Mail di contatto
+    \item Titolo del documento
+    \item Info generali
+    \begin{itemize}
+        \item Redattori
+        \item Revisori
+        \item Responsabile
+        \item Versione, ove necessario
+        \item Destinazione d'uso (interno o esterno)
+    \end{itemize}
+    \item Sinossi
+\end{itemize}
+
+\textbf{Elenco delle Versioni} \\
+L'elenco delle versioni è una tabella così definita:
+\begin{itemize}
+    \item Versione
+    \item Data
+    \item Redattore
+    \item Revisore
+    \item Descrizione
+\end{itemize}
+Le righe della tabella sono organizzate in ordine cronologico inverso.
+
+\textbf{Indice} \\
+L'indice è stato creato utilizzando il comando \textit{\textbackslash tableofcontents}
+
+\subsection{Versionamento}
+\subsubsection{Repository Github}
+Per il versionamento del progetto si è deciso di utilizzare \textit{Git} sulla piattaforma \textit{GitHub}. La repository è raggiungibile tramite l'indirizzo \href{https://github.com/4ourSquared/LumosMinima}{https://github.com/4ourSquared/LumosMinima}.
+
 \end{document}
