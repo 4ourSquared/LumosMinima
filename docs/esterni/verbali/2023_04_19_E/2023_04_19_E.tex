@@ -1,0 +1,56 @@
+\documentclass[a4paper, 12pt]{article}
+
+\newcommand{\templates} {../../../template}
+\input{\templates/style}
+\input{\templates/front_page}
+\input{\templates/history}
+
+\settitolo{Verbale del 19/04/2023 con Imola Informatica}
+\setredattori{Soldà Matteo}
+\setrevisori{Brotto Romina \\ Cavaliere Erica}
+\setdestuso{esterno}
+\setdescrizione{
+    Verbale dell'incontro del 19/04/2023 con Imola Informatica
+}
+
+\begin{document}
+\makefrontpage
+\section*{Informazioni Generali}
+\begin{itemize}
+    \item Data e Ora: 19/04/2023 15:00
+    \item Durata: 0.35h
+    \item Piattaforma: Google Meet
+    \item Partecipanti
+    \begin{itemize}
+        \item Alberti Nicolas
+        \item Brotto Romina
+        \item Cavaliere Erica
+        \item Ceccato Francesco
+        \item Salami Lorenzo
+        \item Soldà Matteo
+        \item Patera Lorenzo (Imola Informatica)
+    \end{itemize}
+\end{itemize}
+\section*{O.D.G}
+\begin{itemize}
+    \item Specifiche Tecniche Generali
+    \item Server di Test
+    \item Varie ed Eventuali
+\end{itemize}
+\section*{Conclusioni}
+A seguito della riunione effettuata, è emerso quanto di seguito:
+\begin{itemize}
+    \item Per quanto riguarda il \textbf{frontend}, ci è stato consigliato di usare \textit{ReactJS}
+    \item Per quanto riguarda il \textbf{backend}, ci è stato consigliato di usare \textit{NodeJS}
+    \item Per quanto riguarda la \textbf{comunicazione} tra frontend e backend ci è stato consigliato l'utilizzo di \href{https://devacademy.it/rest-api-cosa-sono-come-funzionano-e-come-progettarle/}{\textit{API REST}} o di \textit{MQTT}
+    \item Per quanto riguarda i \textbf{test}, ci è stato fornito uno script Python di base per la generazione di luci virtuali sulle quali testare le comunicazioni
+    \item Per quanto riguarda l'\textbf{accessibilità}, non è richiesto un livello minimo
+    \item Per quanto riguarda il \textbf{software di ticketing}, ci è stato consigliato \href{redmine.org}{\textit{redmine}}
+\end{itemize}
+Ci è stato inoltre ricordato che, affinché il progetto sia considerato di buon livello, esso deve essere quanto più modulare possibile. Questa caratteristica può essere verificata tramite \href{https://docs.sonarqube.org/latest/}{programmi appositi} che verificano il \textit{code coverage}. Inoltre, qualora utilizzassimo le \textit{API REST}, ci è stato consigliato di utilizzare il tool \href{https://chrome.google.com/webstore/detail/talend-api-tester-free-ed/aejoelaoggembcahagimdiliamlcdmfm?authuser=2}{\textit{Talend Api Tester}}.\newline
+Infine, ci è stato riferito che quando il progetto uscirà dallo stato embrionale, sarà possibile testarlo su di un server privato in possesso dell'azienda, accessibile tramite una VPN specifica.
+
+\section*{Impegni Assunti}
+I membri del gruppo, a seguito della riunione, aggiorneranno i documenti necessari e richiesti per la creazione di un \textit{Way of Working} solido con i nuovi dati, rimandandosi a lunedì 24/04 per l'eventuale correzione e successiva validazione e approvazione degli stessi.
+
+\end{document}
