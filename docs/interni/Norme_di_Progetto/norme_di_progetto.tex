@@ -15,6 +15,7 @@ Questo documento contiene le procedure, gli strumenti e i criteri di qualità ch
 }
 
 \addversione{0.0.0}{24/03/2023}{Soldà Matteo}{Brotto Romina}{Prima stesura.}
+\addversione{0.0.1}{19/04/2023}{Soldà Matteo}{}{Terminata Sezione Documentazione}
 
 \begin{document}
 \makefrontpage \makeversioni
@@ -99,9 +100,86 @@ Le righe della tabella sono organizzate in ordine cronologico inverso.
 \newline \newline
 \textbf{Indice} \\
 L'indice è stato creato utilizzando il comando \textit{\textbackslash tableofcontents}
-
+\newline \newline
+\textbf{Norme di Progetto}
+\begin{itemize}
+    \item \textbf{Scopo:} Lo scopo del documento è quello di definire le procedure, gli strumenti e criteri di qualità al fine di stabilire un \textit{Way of Working}. Ogni membro del gruppo sarà tenuto a rispettare le indicazioni del documento presentate
+    \item \textbf{Titolo:} Norme di Progetto
+    \item \textbf{Nome del File:} $norme\_di\_progetto.tex$
+\end{itemize} 
+\paragraph{}\\
+\textbf{Verbali}
+\begin{itemize}
+    \item \textbf{Scopo:} Lo scopo dei verbali è quello di rendicontare ciò che viene discusso durante una riunione, sia interna che esterna, delineando gli impegni che ne derivano
+    \item \textbf{Titolo:} Ogni verbale sarà titolato con "$Verbale \ del \ <data> \ [con <esterni>]$"
+    \item \textbf{Nome del File:} Tutti i file saranno chiamati $<yyyy>\_<mm>\_<dd>\_<tipo>.tex$ dove $<yyyy>\_<mm>\_<dd>$ indica la data nella quale si è effettuatal a riunione nel formato anno-mese-giorno; <tipo> indica se la riunione è avvenuta tra i soli membri del gruppo "I" o con persone esterne "E".
+    \item \textbf{Inidice:} Non presente in quanto non utile
+    \item \textbf{Struttura:}
+    \begin{itemize}
+        \item Data, ora e durata;
+        \item Luogo;
+        \item Partecipanti (interni ed esterni, raggruppati per appartenenza e ordinati alfabeticamente secondo il cognome);
+        \item Ordine del giorno;
+        \item Conclusioni derivanti dalla riunione;
+        \item Impegni assunti.
+    \end{itemize}
+    \item \textbf{Stesura:} All'inizio di ogni riunione verrà nominato un membro del gruppo che redigerà il verbale e un membro che lo validerà. Chi redige il verbale avrà 24 ore per completare il lavoro, lo stesso tempo sarà concesso al validatore per approvarlo e segnalare le modifiche da applicare.
+\end{itemize}
+\paragraph{}\\
+\textbf{Piano di Progetto}
+\begin{itemize}
+    \item \textbf{Scopo:} Lo scopo del documento è quello di definire gli obiettivi da raggiungere, stabilendo le tempistiche e il responsabile, tenendo traccia dei progeressi e valutando i coste sostenuti rispetto a quelli preventivati.
+    \item \textbf{Titolo:} Piano di Progetto
+    \item \textbf{Nome del File:} 
+\end{itemize}
+\paragraph{}\\
+\textbf{Piano di Qualifica}
+\begin{itemize}
+    \item \textbf{Scopo:} Lo scopo del documento è quello di definire le metriche e i requisiti minimi di qualità affinchè un prodotto del progetto possa essere approvato.
+    \item \textbf{Titolo:} Piano di Qualifica
+    \item \textbf{Nome del File:} 
+\end{itemize}
+\subsubsection{Convenzioni Documentali}
+\begin{itemize}
+    \item \textbf{Riferimento a file o cartelle:}
+    \begin{itemize}
+        \item Per fare riferimento al nome di un file o di una cartella si utilizza il \texttt{testo monospaziato};
+        \item Il nome di una cartella deve sempre terminare con \texttt{/}.
+    \end{itemize}
+    \item \textbf{Stringhe e nomi:}
+    \begin{itemize}
+        \item Le stringhe vanno scritte tra doppi apici;
+        \item Per indicare un parametro rappresentate una stringa si usa il testo tra parentesi angolari. Tale parametro non può contenere spazi;
+        \item Per indicare una parte di nome o stringa opzionale si usa il testo racchiuso tra parentesi quadre.
+    \end{itemize}
+    \item \textbf{Riferimento tra documenti:}
+    \begin{itemize}
+        \item Riferimenti interni al documento: comando \texttt{$\backslash$ref};
+        \item Riferimenti esterni al documento: nome della sezione del documento a cui si fa riferimento in corsivo.
+    \end{itemize}
+\end{itemize}
 \subsection{Versionamento}
 \subsubsection{Repository Github}
 Per il versionamento del progetto si è deciso di utilizzare \textit{Git} sulla piattaforma \textit{GitHub}. La repository è raggiungibile tramite l'indirizzo \href{https://github.com/4ourSquared/LumosMinima}{https://github.com/4ourSquared/LumosMinima}.
-
+\subsubsection{Convenzioni di Versionamento}
+Per il versionamento si farà uso del Versionamento Semantico, secondo le \href{https://semver.org/lang/it/#specifica-di-versionamento-semantico-semver}{linee guida}.\newline
+Questo tipo di versionamento si fonda sulle seguenti caratteristiche principali:
+\begin{enumerate}
+    \item Un numero di versione deve essere nella forma $X.Y.Z$ dove $X,Y,Z$ sono numeri interi non negativi e non devono contenere zeri iniziali;
+    \item La versione \textit{major zero} (es: $0.X.Y$) serve solo per lo sviluppo iniziale e indica una versione non stabile del prodotto;
+    \item La versione \textit{patch Z} (es: $x.y.Z$) deve essere incrementata solo se sono state introdotte correzioni retrocompatibili del testo (modifica da parte del reddatore);
+    \item La versione \textit{minor Y} (es: $x.Y.z$) deve essere incrementata se nella documentazione è stata introdotta una nuova modifica retrocompatibile (approvazione da parte del verificatore);
+    \item la versione \textit{major Z} (es: $X.y.z$) deve essere incrementata solo se nella documentazione è stata introdotta una modifica non retrocompatibile con le versioni precedenti (pubblicazione da parte del responsabile).
+\end{enumerate}
+\subsubsection{Comandi Utili}
+\begin{itemize}
+    \item \textbf{Sincronizzazione con la repository remota:} \texttt{git pull};
+    \item \textbf{Creazione di un nuovo branch locale:} \texttt{git branch <nome\_branch>};
+    \item \textbf{Passaggio ad un branch locale esistente:} \texttt{git checkout <nome\_branch>};
+    \item \textbf{Aggiunta delle modifiche alla stage area:} \texttt{git add .};
+    \item \textbf{Creazione del commit con le modifiche:} \texttt{git commit -m <descrizione>};
+    \item \textbf{Push sul remote in un branch remoto non esistente:} \texttt{git push --set-upstream origin <nome\_branch>};
+    \item \textbf{Push sul branch remoto esistente omonimo del branch locale:} \texttt{git push}.
+\end{itemize}
+Escludendo per il momento l'utilizzo di \textit{git flow}, questi risultano i comandi da utilizzare.
 \end{document}
