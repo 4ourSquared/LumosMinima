@@ -1,0 +1,125 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\usepackage{tabularx}
+\usepgfplotslibrary{dateplot}
+
+\newcommand{\templates}{../../template}
+\input{\templates/style}
+\input{\templates/front_page}
+\input{\templates/history}
+
+\settitolo{Piano di Qualifica}
+\setredattori{Lorenzo Salami}
+\setdestuso{esterno}
+\setdescrizione{
+Questo documento serve a definire le metriche e i criteri di accettazione dei prodotti.
+}
+
+
+\addversione{0.0.1}{18/04/2023}{Lorenzo Salami}{Soldà Matteo}{Stesura iniziale.}
+
+
+\begin{document}
+
+\makefrontpage
+
+\makeversioni
+
+\tableofcontents
+\clearpage
+
+\section{Qualità di prodotto}
+
+\subsection{Documentazione}
+\subsubsection{Indice di Gulpease}
+\[ \text{Indice di Gulpease} = 89 + \frac{300*\text{\#frasi} - 10*\text{\#lettere}}{\text{\#parole}} \]
+\begin{itemize}
+	\item \#lettere: numero di caratteri alfanumerici;
+	\item \#parole: numero di gruppi di caratteri alfanumerici;
+	\item \#frasi: numero di gruppi di punti o punti e virgola consecutivi.
+\end{itemize}
+
+\subparagraph{Prodotti coinvolti:}
+\begin{center}
+	\begin{tabularx}{\textwidth}{|X|X|X|}
+		\hline
+		\textbf{Prodotto} & \textbf{Valore accettabile} & \textbf{Valore ottimale } \\
+		\hline
+		Documenti interni & $>$ 40                      & $>$ 60                    \\
+		\hline
+		Documenti esterni & $>$ 50                      & $>$ 60                    \\
+		\hline
+	\end{tabularx}\\[8pt]
+	\mbox{}\\
+\end{center}
+
+\subparagraph{Riferimenti:} \underline{\href{http://www.corrige.it/leggibilita/lindice-gulpease/}{http://www.corrige.it/leggibilita/lindice-gulpease/}}
+
+\subsection{Prodotti software}
+
+\subsubsection{Copertura statement}
+La metrica si basa sullo statement coverage.
+
+\subparagraph{Prodotti coinvolti:}
+\begin{center}
+	\begin{tabularx}{\textwidth}{|X|X|X|}
+		\hline
+		\textbf{Prodotto} & \textbf{Valore accettabile } & \textbf{Valore ottimale } \\
+		\hline
+		Software          & $>$ 80\%                     & $>$ 95\%                     \\
+		\hline
+	\end{tabularx}\\[8pt]
+	\mbox{}\\
+\end{center}
+\subsubsection{Copertura branch}
+La metrica si basa sul branch coverage.
+
+\subparagraph{Prodotti coinvolti:}
+\begin{center}
+	\begin{tabularx}{\textwidth}{|X|X|X|}
+		\hline
+		\textbf{Prodotto} & \textbf{Valore accettabile } & \textbf{Valore ottimale } \\
+		\hline
+		Software          & $>$ 80\%                     & $>$ 95\%                     \\
+		\hline
+	\end{tabularx}\\[8pt]
+	\mbox{}\\
+\end{center}
+
+
+\section{Qualità di processo}
+\subsubsection{Time variance}
+La metrica si basa sulla variazione percentuale rispetto alla stima iniziale.
+
+\subparagraph{Prodotti coinvolti:}
+\begin{center}
+	\begin{tabularx}{\textwidth}{|X|X|X|}
+		\hline
+		\textbf{Prodotto} & \textbf{Valore accettabile } & \textbf{Valore ottimale } \\
+		\hline
+		Software          & $<$ 20\%                     & 0\%                       \\
+		\hline
+		Documentazione    & $<$ 20\%                     & 0\%                       \\
+		\hline
+	\end{tabularx}\\[8pt]
+	\mbox{}\\
+\end{center}
+\subsubsection{Budget variance}
+La metrica si basa sulla variazione percentuale rispetto alla stima iniziale.
+
+\subparagraph{Prodotti coinvolti:}
+\begin{center}
+	\begin{tabularx}{\textwidth}{|X|X|X|}
+		\hline
+		\textbf{Prodotto} & \textbf{Valore accettabile } & \textbf{Valore ottimale } \\
+		\hline
+		Software          & $<$ 20\%                     & 0\%                       \\
+		\hline
+		Documentazione    & $<$ 20\%                     & 0\%                       \\
+		\hline
+	\end{tabularx}\\[8pt]
+	\mbox{}\\
+\end{center}
+
+\end{document}
