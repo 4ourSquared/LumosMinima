@@ -18,6 +18,7 @@ Questo documento contiene le procedure, gli strumenti e i criteri di qualità ch
 \addversione{0.0.1}{19/04/2023}{Soldà Matteo}{}{Terminata Sezione Documentazione}
 \addversione{0.0.2}{20/04/2023}{Ceccato Francesco}{Soldà Matteo}{Terminata Sezione Convenzioni di Codifica}
 \addversione{0.0.3}{22/04/2023}{Alberti Nicolas}{}{Stesura iniziale sezioni "1.1, 2.1, 2.2"}
+\addversione{0.0.4}{22/04/2023}{Brotto Romina}{}{Stesura iniziale sezioni "3.3, 3.4, 4, 4.2"}
 
 \begin{document}
 \makefrontpage \makeversioni
@@ -421,4 +422,53 @@ Questo tipo di versionamento si fonda sulle seguenti caratteristiche principali:
     \item \textbf{Push sul branch remoto esistente omonimo del branch locale:} \texttt{git push}.
 \end{itemize}
 Escludendo per il momento l'utilizzo di \textit{git flow}, questi risultano i comandi da utilizzare.
+
+\subsection{Verifica}
+\subsubsection{Regole Generali}
+\begin{itemize}
+    \item Il Verificatore su occupa di controllare le Pull Request aperte dagli altri membri del gruppo;
+    \item Il Verificatore NON contribuisce ai prodotti che verifica;
+    \item Il Verificatore NON modifica i prodotti che verifica;
+    \item Il Verificatore, nel caso in cui trovi errori, `e tenuto a commentare le PR usando la funzione apposita di GitHub.
+\end{itemize}
+\subsubsection{Metodi di Verifica}
+Il verificatore può far uso dei test automatici presenti nel Piano di qualifica.\\
+Per le sezioni di codice è consigliato un walkthrough del prodotto, similmente si dovrebbe chiedere a chi abbia scritto il codice eventuali delucidazioni su elementi poco chiari.
+
+\subsection{Change Management}
+Nel caso si dovessero cambiare sezione del codice bisogna controllare che eventuali modifiche
+non vadano ad impattare altri elementi.\\
+Per evitare ciò si farà uso del Diagramma delle classi presente nelle Specifiche architetturali.
+\section{Processi Organizzativi}
+\subsection{Gestione dei Processi}
+Si stato scelto il modello Scrum con sprint di durata settimanale. Si è deciso di effettuare una riunione interna ogni mercoledì dove discutere dei seguenti punti:
+\begin{itemize}
+    \item Resoconto dello Sprint precedente;
+    \item Eventuali problemi riscontrati e soluzioni adottate;
+    \item Resoconto di ore e costi per ogni componente;
+    \item Pianificazione degli sprint successivi.
+\end{itemize}
+I resoconti dovranno essere preparati dai singoli membri prima di ogni esposizione.\\ Ogni incontro dovrà produrre un aggiornamento delle milestones (e diagramma di Gantt). La pianificazione dei prossimi sprint consisterà nel dividere il lavoro in item e decidere il
+numero di membri adatto per item. \\
+Gli item pianificati non potranno subire modifiche o cancellazioni durante il ciclo di sprint e dovranno essere portati a termine entro il ciclo successivo.
+In caso emergessero importanti contestazioni o criticità il responsabile deciderà
+come agire.\\
+Ogni ciclo di Scrum prevederà un nuovo responsabile, scelto per cognome in ordine alfabetico. Il responsabile dovrà assegnare le persone agli item considerando la
+rotazione dei ruoli e dovrà poi creare le issues su GitHub relative agli item
+e assegnarvici i membri. \\
+Le issues dovranno essere collegate alle milestones di appartenenza
+dal responsabile, che si occuperà di aggiornare preventivo e consultivo
+totale, compilando nel Piano di Progetto la sezione del ciclo di Scrum corrispondente. \\
+Si è inoltre deciso che in caso di problemi singolarmente insormontabili andrà notificato
+il responsabile su Telegram che si occuperà di assegnare un membro per la risoluzione. \\
+Il responsabile dovrà creare la issue su GitHub relativa al problema assegnandovici la persona
+scelta. Le soluzioni adottate per la risoluzione del problema andranno documentate
+dal responsabile stesso.
+\subsection{Miglioramento dei processi}
+Durante l´attivià di consuntivo di periodo dell’incontro settimanale, viene discusso il lavoro
+fatto fino ad ora, dando particolare peso ai problemi riscontrati. \\In base a ciò si valutano
+le eventuali migliorie e correzioni applicabili.
+
+
+
 \end{document}
