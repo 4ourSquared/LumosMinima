@@ -25,10 +25,76 @@ Questo documento contiene le procedure, gli strumenti e i criteri di qualità ch
 
 \section{Introduzione}
 \subsection{Scopo del Documento}
-Il documento si prefigge lo scopo di definire i metodi e le attività chiave legate al \textit{Way of Working}. Tutti i membri del gruppo si impegnano a seguire quanto riportato.
+Il documento si prefigge lo scopo di definire i metodi e le attività chiave
+legate al \textit{Way of Working}. Tutti i membri del gruppo si impegnano a
+seguire quanto riportato, al fine di ottenere consistenza e coerenza in tutti i
+documenti e in tutte le attività del gruppo, per raggiungere in modo efficace ed
+efficiente la realizzazione del prodotto finale.
+
+\subsubsection{Scopo del prodotto}
+TODO: inserire quello che abbiamo previsto nella candidatura e quello di cui
+abbiamo parlato nella presentazione.
+
+\subsubsection{Glossario}
+TODO: redigere un Glossario in un documento a parte oppure integrarlo qui;
+Indicare termine nel glossario con testo \textit{corsivo} e con una 'G' in pedice.
 
 \section{Processi Primari}
 \subsection{Fornitura}
+\subsubsection{Scopo}
+Lo scopo del processo di fornitura è quello di descrivere e determinare ogni
+compito ed attività svolta dal fornitore, al fine di comprendere e soddisfare le
+richieste del proponente. 
+La suddivisione e le tempistiche delle attività da svolgere saranno definite dal documento
+\textit{Piano di Progetto}.
+
+\subsubsection{Aspettative}
+Le aspettative determinate dal processo di fornitura sono le seguenti:
+\begin{itemize}
+    \item Individuare e definire i bisogni che il prodotto deve soddisfare;
+    \item Definire i requisiti e i vincoli dei processi;
+    \item Stimare i costi per la realizzazione del prodotto;
+    \item Ottenere dei feedback da proponente e committenti riguardanti il
+    lavoro svolto;
+    \item Chiarire eventuali dubbi sorti durante il progetto;
+\end{itemize}
+
+\subsubsection{Documenti}
+\paragraph{\textit{Piano di Progetto}}
+\\
+Il \textit{Piano di Progetto} è il documento che viene redatto e mantenuto
+durante tutta la durata del progetto. Al suo interno comprende:
+\begin{itemize}
+    \item \textbf{Analisi dei rischi:} vengono analizzati i rischi che possono
+    essere individuati durante il corso del progetto e vengono descritte le
+    strategie messe in atto al fine di contenerne la gravità;
+    \item \textbf{Pianificazione del lavoro;}
+    \item \textbf{Preventivo e consuntivo delle ore e dei costi.}
+\end{itemize}
+\paragraph{\textit{Piano di Qualifica}}
+\\
+Al fine di produrre materiale di qualità, viene redatto il documento
+\textit{Piano di Qualifica}, che descrive le norme riguardanti la qualità dei prodotti e dei
+processi del gruppo. Al suo interno comprende:
+\begin{itemize}
+    \item \textbf{Qualità di processo;}
+    \item \textbf{Qualità di prodotto;}
+    \item \textbf{Specifiche dei test;}
+    \item \textbf{Resoconto delle attività di verifica.}
+\end{itemize}
+
+\subsubsection{Strumenti}
+Nel processo di fornitura, il gruppo utilizza i seguenti strumenti per produrre
+i documenti precedentemente elencati:
+\begin{itemize}
+    \item \textbf{Google Calendar:} sistema di calendari, usato per inserire le
+    scadenze e gli eventi significativi riguardanti il gruppo;
+    \item \textbf{Microsoft PowerPoint (TODO: Google Presentazioni?):} è un
+    software facente parte del pacchetto suite Microsoft Office, permette la
+    realizzazione delle presentazioni del gruppo.
+    \item \textbf{TODO: programma per Gantt}
+\end{itemize}
+
 \subsubsection{Repository Pubblica}
 Durante lo sviluppo del progetto, il codice e la documentazione saranno depositati in una repository pubblica. La parte di interesse del proponente e del committente riguarda la cartella \textit{public}. \\
 La cartella sopra citata contiene la documentazione necessaria alle revisioni di periodo con il committente. Tale cartella rispecchia la struttura della cartella \textit{docs}, situata nella parte privata. \\
@@ -40,12 +106,116 @@ Tutti i contatti ufficiali, sia con il proponente che con il committente, avverr
 Le mail per la presentazione ad una revisione di periodo necessita di una conferma unanime, valutata la preparazione. Questa mail deve contenere la lettera di presentazione con i link ai vari documenti aggiunti/aggiornati nella parte pubblica della repository.
 
 \subsection{Sviluppo}
+\subsubsection{Scopo}
+Il processo di sviluppo ha come scopo quello di descrivere le attività e i task di
+analisi, progettazione, codifica, test, installazione e accettazione riguardanti
+il prodotto software in sviluppo.
+
+\subsubsection{Aspettative}
+Le aspettative prevedono:
+\begin{itemize}
+    \item Determinazione dei requisiti del prodotto;
+    \item Determinazione dei vincoli tecnologici e di design;
+    \item Determinazione degli obiettivi di sviluppo;
+    \item Realizzazione del prodotto finale, superando tutti i test individuati
+    e soddisfando i requisiti e le aspettative del proponente.
+\end{itemize}
+
+\subsubsection{\textit{Analisi dei Requisiti}}
+
+\paragraph{Scopo}
+Lo scopo dell'\textit{Analisi dei Requisiti} è quello di:
+\begin{itemize}
+    \item Identificare requisiti obbligatori ed auspicabili richiesti dal
+    proponente, tramite lo studio del capitolato;
+    \item Supportare l'attività di pianificazione, fornendo informazioni utili
+    al computo della mole di lavoro;
+    \item Supportare l'attività di verifica, facilitandone il tracciamento dei requisiti.
+\end{itemize}
+
+\paragraph{Aspettative}
+L'attività si pone come risultato la creazione di un documento contenente tutti
+i requisiti richiesti dal proponente, includendo anche il punto di vista
+dell'utente che utilizzerà i prodotti. Sarà presente una sezione legata al
+tracciamento dai requisiti ai casi d'uso e viceversa.
+
+\paragraph{TBD: Casi d'Uso}
+Un Caso d'Uso è l'insieme degli scenari che prevedono uno stesso obiettivo per
+un utente. Vengono descritte le interazioni con il sistema da parte di uno o più
+attori, senza fornire alcun dettaglio implementativo. È formato da:
+\begin{itemize}
+    \item \textbf{Diagramma \textit{UML}} (opzionale): indica la relazione con
+    altri Casi d'Uso;
+    \item \textit{\textbf{TBD: Intestazione}}, nel formato:
+    \begin{center}
+        \begin{BVerbatim}
+UC [Codice] - [Numero Caso d'Uso].[Sottocaso] [Titolo]
+        \end{BVerbatim}   
+    \end{center}
+    dove:
+    \begin{itemize}
+        \item \Verb^UC ^indica "\textit{Use Case}", ovvero "Caso d'Uso";
+        \item \Verb^[Codice] ^è il codice identificativo del Caso d'Uso, 
+        \item \Verb^[Titolo] ^è il titolo del Caso d'Uso. 
+    \end{itemize}
+    \item \textbf{\textit{Attore/i} primario/i};
+    \item \textbf{\textit{Attore/i} secondario/i} (opzionale);
+    \item \textbf{Descrizione};
+    \item \textbf{Scenario principale};
+    \item \textbf{Estensioni};
+    \item \textbf{Inclusioni};
+    \item \textbf{Precondizioni};
+    \item \textbf{Postcondizioni};
+    \item \textbf{Generalizzazioni}.
+\end{itemize}
+
+\paragraph{TBD: Requisiti}
+I requisiti ricavati dall'analisi approfondita del capitolato, dalle discussioni
+con i componenti del gruppo e dal confronto con il proponente, vengono suddivisi
+in tre tipologie:
+\begin{itemize}
+    \item \textbf{Funzionali:} descrivono le funzionalità e il comportamento
+    che il prodotto deve presentare;
+    \item \textbf{Qualità:} descrivono i vincoli sulla qualità del prodotto e
+    dei suoi componenti;
+    \item \textbf{Vincolo:} descrivono i vincoli legati all'implementazione del
+    prodotto, come ad esempio sulla tecnologia da utilizzare.
+\end{itemize}
+Ogni requisito ha una determinata importanza, di seguito descritta:
+\begin{itemize}
+    \item \textbf{Obbligatorio}
+    \item \textbf{Desiderabile}
+    \item \textbf{Opzionale}
+\end{itemize}
+Ogni requisito viene presentato nel formato univoco descritto di seguito: \textbf{TBD}
+\begin{center}
+    \begin{BVerbatim}
+R[Tipologia][Caso d'Uso Relativo].[Sottocaso] - [Importanza]
+    \end{BVerbatim}   
+\end{center}
+Dove:
+\begin{itemize}
+    \item \Verb^R^: Acronimo di "Requisito";
+    \item \Verb^[Tipologia]^: indica la tipologia del requisito tra le seguenti:
+    \begin{itemize}
+        \item \textbf{F:} Funzionale;
+        \item \textbf{Q:} Qualità;
+        \item \textbf{V:} Vincolo;
+    \end{itemize}
+    \item \Verb^[Importanza]^: indica l'importanza del requisito tra le seguenti:
+    \begin{itemize}
+        \item \textbf{O:} Obbligatorio;
+        \item \textbf{D:} Desiderabile;
+        \item \textbf{P:} Opzionale.
+    \end{itemize}
+\end{itemize}
+
 \subsubsection{Organizzazione dei File}
 Tutta la documentazione sarà contenuta all'interno della cartella \textit{docs/}. Questa sarà inoltre suddivisa in \textit{interna} ed \textit{esterna}, le quali conterranno rispettivamente la documentazione interna al gruppo e quella da condividere con il proponente e con il committente. \\
 I verbali interni saranno conservati nella sottocartella \textit{docs/interni/verbali} mentre quelli esterni saranno conservati in \textit{docs/esterni/verbali}.\\
 Per ogni documento esisterà una nuova sottocartella omonima.
 
-\subsubsection{Convezioni di Codifica}
+\subsubsection{Convenzioni di Codifica}
 \textbf{Convenzioni Linguistiche} \newline
 \begin{itemize}
     \item Ogni elemento del codice deve essere scritto in lingua inglese, ad eccezione dei commenti, che dovrebbero essere scritti in italiano per evitare incomprensioni.
