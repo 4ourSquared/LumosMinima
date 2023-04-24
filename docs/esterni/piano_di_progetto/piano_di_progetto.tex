@@ -9,6 +9,7 @@
 \input{\templates/style}
 \input{\templates/front_page}
 \input{\templates/history}
+\graphicspath{ {./immagini/} }
 
 \settitolo{Piano di Progetto}
 \setredattori{Erica Cavaliere}
@@ -17,7 +18,8 @@
 Questo documento serve a tracciare l'efficienza del progetto. Tiene traccia dei costi sostenuti fino ad oggi e li confronta con i costi preventivati, in relazione agli obiettivi fissati.
 }
 
-\addversione{0.0.0}{22/04/2023}{Erica Cavaliere}{Redazione}{Stesura iniziale}
+\addversione{0.0.1}{22/04/2023}{Erica Cavaliere}{}{Stesura iniziale}
+\addversione{0.0.2}{24/04/2023}{Erica Cavaliere}{}{Correzzione errori e aggiunta delle intestazioni e dei piè di pagina}
 
 \def\pgfcalendarmonthitname#1{%
 \ifcase#1 \or Gennaio\or Febbraio\or Marzo\or Aprile\or Maggio\or Giugno\or Luglio\or Agosto\or Settembre\or Ottobre\or Novembre\or Dicembre\fi%
@@ -39,14 +41,15 @@ Le tecnologie consigliate per lo svolgimento del progetto da parte del richieden
 Per prefissare le scadenze bisognerà tenere conto del tempo impiegato per imparare le nuove tecnologie, oltre al tempo di sviluppo del progetto stesso.
 
 \subsection{Rischi organizzativi}
-Durante lo svolgimento del progetto, è possibile andare incontro a dei problemi di organizzazione degli orari e quini di non riuscire a rispettare la stima delle ore richiesta e, di conseguenza, sforare i costi indicati dal preventivo iniziale.
+Durante lo svolgimento del progetto, è possibile andare incontro a dei problemi di organizzazione degli orari e quindi di non riuscire a rispettare la stima delle ore richiesta e, di conseguenza, sforare i costi indicati dal preventivo iniziale.
 
 \section{Pianificazione del lavoro}
 
-
 \paragraph{Grafico di Gantt}
 
-\section{Preventivo e consuntivo delle ore e dei costi}
+\includegraphics[scale=0.24]{grafico_gantt.png}
+
+\section{Preventivo delle ore e dei costi}
 
 \subsection{Suddivisione delle ore previste}
 
@@ -66,7 +69,7 @@ Durante lo svolgimento del progetto, è possibile andare incontro a dei problemi
     \hline
     Romina & 12 & 8 & 17 & 21 & 22 & 15 & 95\\
     \hline
-    Totale & 70 & 50 & 100 & 130 & 130 & 90 & 570\\
+    \textbf{Totale} & 70 & 50 & 100 & 130 & 130 & 90 & 570\\
     \hline
 \end{tabular}\\[8pt]
 
@@ -94,8 +97,7 @@ Durante lo svolgimento del progetto, è possibile andare incontro a dei problemi
     \hline
 \end{tabular}\\[8pt]
 
-\paragraph{Grafico dei costi attesi}
-\graphicspath{ {./immagini/} }
+\subsection{Grafico dei costi attesi}
 \includegraphics{grafico_costi.png}
 
 \end{document}
