@@ -19,6 +19,7 @@ Questo documento contiene le procedure, gli strumenti e i criteri di qualità ch
 \addversione{0.0.2}{20/04/2023}{Ceccato Francesco}{Soldà Matteo}{Terminata Sezione Convenzioni di Codifica}
 \addversione{0.0.3}{22/04/2023}{Alberti Nicolas}{}{Stesura iniziale sezioni "1.1, 2.1, 2.2"}
 \addversione{0.0.4}{22/04/2023}{Brotto Romina}{}{Stesura iniziale sezioni "3.3, 3.4, 4, 4.2"}
+\addversione{0.0.5}{24/04/2023}{Soldà Matteo}{}{Separazione capitoli e risoluzione di alcuni typo}
 
 \begin{document}
 \makeindexdetails
@@ -43,6 +44,7 @@ abbiamo parlato nella presentazione.
 \subsubsection{Glossario}
 TODO: redigere un Glossario in un documento a parte oppure integrarlo qui;
 Indicare termine nel glossario con testo \textit{corsivo} e con una 'G' in pedice.
+\newpage
 
 \section{Processi Primari}
 \subsection{Fornitura}
@@ -216,22 +218,24 @@ Dove:
 \end{itemize}
 
 \subsubsection{Organizzazione dei File}
-Tutta la documentazione sarà contenuta all'interno della cartella \textit{docs/}. Questa sarà inoltre suddivisa in \textit{interna} ed \textit{esterna}, le quali conterranno rispettivamente la documentazione interna al gruppo e quella da condividere con il proponente e con il committente. \\
-I verbali interni saranno conservati nella sottocartella \textit{docs/interni/verbali} mentre quelli esterni saranno conservati in \textit{docs/esterni/verbali}.\\
+Tutta la documentazione sarà contenuta all'interno della cartella \texttt{docs/}. Questa sarà inoltre suddivisa in \textit{interna} ed \textit{esterna}, le quali conterranno rispettivamente la documentazione interna al gruppo e quella da condividere con il proponente e con il committente. \\
+I verbali interni saranno conservati nella sottocartella \texttt{docs/interni/verbali/} mentre quelli esterni saranno conservati in \texttt{docs/esterni/verbali/}.\\
 Per ogni documento esisterà una nuova sottocartella omonima.
 
 \subsubsection{Convenzioni di Codifica}
 \textbf{Convenzioni Linguistiche} \newline
 \begin{itemize}
-    \item Ogni elemento del codice deve essere scritto in lingua inglese, ad eccezione dei commenti, che dovrebbero essere scritti in italiano per evitare incomprensioni.
+    \item Ogni elemento del codice deve essere scritto in lingua inglese, ad eccezione dei commenti, che devono essere scritti in italiano per evitare incomprensioni.
 \end{itemize}
 \paragraph{}\\
 \textbf{Convenzioni di Nomenclatura File}
 \begin{itemize}
-    \item Un file che contiene l'interfaccia o l'implementazione di una sola ed esclusiva classe (ad eccezione di classi interne e sottoclassi) dovrebbe essere individuato nel seguento modo: \texttt{NomeClasse.estensione}.
+    \item Un file che contiene l'interfaccia o l'implementazione di una sola ed esclusiva classe (ad eccezione di classi interne e sottoclassi) deve essere individuato nel seguente modo: \texttt{NomeClasse.estensione}.
 \end{itemize}
 \paragraph{} \\
-\textbf{Convenzioni Stilistiche} 
+\textbf{Convenzioni Stilistiche} \\
+Per quanto riguarda la scrittura del codice, si è scelto di utilizzare le seguenti convenzioni, che saranno poi suddivise: \textit{camel case}, \textit{pascal case}, \textit{snake case}, \textit{lowercase} e \textit{screaming snake case}.\\ \\
+Con il termine "NA" si intende "Non Applicabile"
 \begin{table}[ht]
 \begin{tabular}{|| c || c | c | c | c |}
     \hline
@@ -253,7 +257,8 @@ Per ogni documento esisterà una nuova sottocartella omonima.
     \hline
 \end{tabular}
 \end{table}
-\vspace*{0.5cm} \newline
+
+\vspace*{0.5cm}
 A seguire, in JavaScript, le funzioni e i metodi privati anteporranno il simbolo di underscore prima del nome.\newline
 Per quanto riguarda invece i linguaggi di markup, i tag e gli attributi andranno scritti in lowercase se primitivi o in kebab-case se custom o complessi. \newline
 Inoltre:
@@ -264,13 +269,13 @@ Inoltre:
         \item Variabili di istanza (attributi) \\
         Nel seguente ordine (ove possibile):
         \begin{enumerate}
-            \item public
-            \item protected
-            \item private
+            \item public;
+            \item protected;
+            \item private;
         \end{enumerate}
-        \item Costruttore
-        \item Distruttore (se richiesto)
-        \item Metodi
+        \item Costruttore;
+        \item Distruttore (se richiesto);
+        \item Metodi.
     \end{itemize}
     \item Un blocco di codice delimitato da parentesi graffe dovrebbe essere strutturato apponendo le parentesi graffe ognuna in una nuova riga;
     \item Si predilige l'uso della tabulazione per indentare la porzione di codice inclusa in un blocco.
@@ -280,64 +285,65 @@ Inoltre:
 \begin{itemize}
     \item Mantenere un file chiamato \texttt{nomepagina.css} per la versione desktop di ciascuna pagina;
     \item Mantenere un file chiamato \texttt{global.css} per le regole che si applicano ad ogni aspetto del sito, in particolare ai moduli universali quali, a titolo esemplificativo e non esaustivo, header e footer;
-    \item Mantenere un file chiamato \texttt{mini.css} con accorgimenti per la versione mobile
+    \item Mantenere un file chiamato \texttt{mini.css} con accorgimenti per la versione mobile;
     \item Specificare le unità di misura in \textit{em}, \textit{rem}, \textit{\%}, \textit{vw}, \textit{vh} (unità relative), a parte per i valori delle seguenti proprietà, i quali possono essere espressi in \textit{px}:
     \begin{itemize}
-        \item \textit{text-shadow}
-        \item \textit{box-shadow}
+        \item \textit{text-shadow};
+        \item \textit{box-shadow}.
     \end{itemize}
 \end{itemize}
+\newpage
 \section{Processi Secondari}
 \subsection{Documentazione}
 \subsubsection{Ciclo di Vita}
 Ogni documento seguirà il seguente flusso:
 \begin{itemize}
-    \item \textbf{Pianificazione} \\ Il documento viene progettato ad alto livello secondo quanto richiesto.
-    \item \textbf{Redazione} \\ Un membro del gruppo, nel ruolo di redattore, stila il documento.
-    \item \textbf{Revisione} \\ Un membro del gruppo, nel ruolo di revisore, controlla l'assenza di errori grammaticali e il contenuto sia conforme alle norme di progetto.
-    \item \textbf{Approvazione} \\ Un membro del gruppo, nel ruolo di responsabile, verifica che il contenuto del documento sia corretto.
+    \item \textbf{Pianificazione} \\ Il documento viene progettato ad alto livello secondo quanto richiesto;
+    \item \textbf{Redazione} \\ Un membro del gruppo, nel ruolo di redattore, stila il documento;
+    \item \textbf{Revisione} \\ Un membro del gruppo, nel ruolo di revisore, controlla l'assenza di errori grammaticali e il contenuto sia conforme alle norme di progetto;
+    \item \textbf{Approvazione} \\ Un membro del gruppo, nel ruolo di responsabile, convalida il contenuto del documento corretto.
 \end{itemize}
 
 \subsubsection{Strumenti Utilizzati}
 Per la stesura dei documenti verrà utilizzato il linguaggio \LaTeX. \\
-Affinché i documenti risultino stilisticamente coerenti, dovranno includere al loro interno il file \textit{docs/template/style.tex} per lo stile generale e il file \textit{docs/template/front\_page.tex} per utilizzare il template della prima pagina.
+Affinché i documenti risultino stilisticamente coerenti, dovranno includere al loro interno il file \texttt{docs/template/style.tex} per lo stile generale e il file \texttt{docs/template/front\_page.tex} per utilizzare il template della prima pagina.
 
 \subsubsection{Struttura}
 Ogni documento sarà così strutturato:
 \begin{enumerate}
-    \item Pagina di intestazione
-    \item Pagina con lista delle versioni, ove necessario
-    \item Pagina indice, ove necessario
-    \item Una o più pagine di contenuto
+    \item Pagina di intestazione;
+    \item Pagina con lista delle versioni, ove necessario;
+    \item Pagina indice, ove necessario;
+    \item Una o più pagine di contenuto.
 \end{enumerate}
 
 Le varie sezioni saranno così definite: \\
 
 \textbf{Pagina di Intestazione} 
 \begin{itemize}
-    \item Logo e nome del gruppo
-    \item Nome del progetto e azienda cliente
-    \item Mail di contatto
-    \item Titolo del documento
-    \item Info generali
+    \item Logo e nome del gruppo;
+    \item Nome del progetto e azienda cliente;
+    \item Mail di contatto;
+    \item Titolo del documento;
+    \item Info generali:
     \begin{itemize}
-        \item Redattori
-        \item Revisori
-        \item Responsabile
-        \item Versione, ove necessario
-        \item Destinazione d'uso (interno o esterno)
+        \item Redattori;
+        \item Revisori;
+        \item Responsabile;
+        \item Versione, ove necessario;
+        \item Destinazione d'uso (interno o esterno);
     \end{itemize}
-    \item Sinossi
+    \item Sinossi.
 \end{itemize}
 
 \textbf{Elenco delle Versioni} \\
 L'elenco delle versioni è una tabella così definita:
 \begin{itemize}
-    \item Versione
-    \item Data
-    \item Redattore
-    \item Revisore
-    \item Descrizione
+    \item Versione;
+    \item Data;
+    \item Redattore;
+    \item Revisore;
+    \item Descrizione.
 \end{itemize}
 Le righe della tabella sono organizzate in ordine cronologico inverso. 
 \newline \newline
@@ -348,15 +354,15 @@ L'indice è stato creato utilizzando il comando \textit{\textbackslash tableofco
 \begin{itemize}
     \item \textbf{Scopo:} Lo scopo del documento è quello di definire le procedure, gli strumenti e criteri di qualità al fine di stabilire un \textit{Way of Working}. Ogni membro del gruppo sarà tenuto a rispettare le indicazioni del documento presentate
     \item \textbf{Titolo:} Norme di Progetto
-    \item \textbf{Nome del File:} $norme\_di\_progetto.tex$
+    \item \textbf{Nome del File:} \texttt{norme\_di\_progetto.tex}
 \end{itemize} 
 \paragraph{}\\
 \textbf{Verbali}
 \begin{itemize}
     \item \textbf{Scopo:} Lo scopo dei verbali è quello di rendicontare ciò che viene discusso durante una riunione, sia interna che esterna, delineando gli impegni che ne derivano
     \item \textbf{Titolo:} Ogni verbale sarà titolato con "$Verbale \ del \ <data> \ [con <esterni>]$"
-    \item \textbf{Nome del File:} Tutti i file saranno chiamati $<yyyy>\_<mm>\_<dd>\_<tipo>.tex$ dove $<yyyy>\_<mm>\_<dd>$ indica la data nella quale si è effettuatal a riunione nel formato anno-mese-giorno; <tipo> indica se la riunione è avvenuta tra i soli membri del gruppo "I" o con persone esterne "E".
-    \item \textbf{Inidice:} Non presente in quanto non utile
+    \item \textbf{Nome del File:} Tutti i file saranno chiamati \texttt{<yyyy>\_<mm>\_<dd>\_<tipo>.tex} dove $<yyyy>\_<mm>\_<dd>$ indica la data nella quale si è effettuata la riunione nel formato anno-mese-giorno; $<tipo>$ indica se la riunione è avvenuta tra i soli membri del gruppo "I" o con persone esterne "E".
+    \item \textbf{Indice:} Non presente in quanto non utile
     \item \textbf{Struttura:}
     \begin{itemize}
         \item Data, ora e durata;
@@ -371,16 +377,16 @@ L'indice è stato creato utilizzando il comando \textit{\textbackslash tableofco
 \paragraph{}\\
 \textbf{Piano di Progetto}
 \begin{itemize}
-    \item \textbf{Scopo:} Lo scopo del documento è quello di definire gli obiettivi da raggiungere, stabilendo le tempistiche e il responsabile, tenendo traccia dei progeressi e valutando i coste sostenuti rispetto a quelli preventivati.
+    \item \textbf{Scopo:} Lo scopo del documento è quello di definire gli obiettivi da raggiungere, stabilendo le tempistiche e il responsabile, tenendo traccia dei progressi e valutando i coste sostenuti rispetto a quelli preventivati.
     \item \textbf{Titolo:} Piano di Progetto
-    \item \textbf{Nome del File:} 
+    \item \textbf{Nome del File:} \texttt{piano\_di\_progetto.tex}
 \end{itemize}
 \paragraph{}\\
 \textbf{Piano di Qualifica}
 \begin{itemize}
-    \item \textbf{Scopo:} Lo scopo del documento è quello di definire le metriche e i requisiti minimi di qualità affinchè un prodotto del progetto possa essere approvato.
+    \item \textbf{Scopo:} Lo scopo del documento è quello di definire le metriche e i requisiti minimi di qualità affinché un prodotto del progetto possa essere approvato.
     \item \textbf{Titolo:} Piano di Qualifica
-    \item \textbf{Nome del File:} 
+    \item \textbf{Nome del File:} \texttt{piano\_di\_qualifica.tex}
 \end{itemize}
 \subsubsection{Convenzioni Documentali}
 \begin{itemize}
@@ -410,9 +416,9 @@ Questo tipo di versionamento si fonda sulle seguenti caratteristiche principali:
 \begin{enumerate}
     \item Un numero di versione deve essere nella forma $X.Y.Z$ dove $X,Y,Z$ sono numeri interi non negativi e non devono contenere zeri iniziali;
     \item La versione \textit{major zero} (es: $0.X.Y$) serve solo per lo sviluppo iniziale e indica una versione non stabile del prodotto;
-    \item La versione \textit{patch Z} (es: $x.y.Z$) deve essere incrementata solo se sono state introdotte correzioni retrocompatibili del testo (modifica da parte del reddatore);
+    \item La versione \textit{patch Z} (es: $x.y.Z$) deve essere incrementata solo se sono state introdotte correzioni retrocompatibili del testo (modifica da parte del redatore);
     \item La versione \textit{minor Y} (es: $x.Y.z$) deve essere incrementata se nella documentazione è stata introdotta una nuova modifica retrocompatibile (approvazione da parte del verificatore);
-    \item la versione \textit{major X} (es: $X.y.z$) deve essere incrementata solo se nella documentazione è stata introdotta una modifica non retrocompatibile con le versioni precedenti (pubblicazione da parte del responsabile).
+    \item La versione \textit{major X} (es: $X.y.z$) deve essere incrementata solo se nella documentazione è stata introdotta una modifica non retrocompatibile con le versioni precedenti (pubblicazione da parte del responsabile).
 \end{enumerate}
 \subsubsection{Comandi Utili}
 \begin{itemize}
@@ -442,6 +448,7 @@ Per le sezioni di codice è consigliato un walkthrough del prodotto, similmente 
 Nel caso si dovessero cambiare sezione del codice bisogna controllare che eventuali modifiche
 non vadano ad impattare altri elementi.\\
 Per evitare ciò si farà uso del Diagramma delle classi presente nelle Specifiche architetturali.
+\newpage
 \section{Processi Organizzativi}
 \subsection{Gestione dei Processi}
 Si stato scelto il modello Scrum con sprint di durata settimanale. Si è deciso di effettuare una riunione interna ogni mercoledì dove discutere dei seguenti punti:
