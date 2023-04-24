@@ -1,5 +1,7 @@
 \usepackage[a4paper, margin=2.5cm]{geometry}
 \usepackage{fancyvrb}
+\usepackage{stackengine}
+\usepackage{lastpage}
 
 \usepackage{enumitem}
 \setlist[itemize]{noitemsep}
@@ -12,3 +14,18 @@
 \makeatletter
 \renewcommand{\@dotsep}{10000} 
 \makeatother
+
+\newcommand{\makeindexdetails}{
+	\pagestyle{fancy}
+	\lhead{4ourSquared} \chead{\includegraphics[width=1cm]{../../template/4ourSquared_logo} } \rhead{Versione e Indice}
+	\pagenumbering{Roman}
+}
+
+\newcommand{\makecontentsdetails}[1]{
+	\clearpage
+    \renewcommand{\footrulewidth}{0.4pt}
+	\pagestyle{fancy}
+	\lhead{4ourSquared} \chead{\includegraphics[width=1cm]{../../template/4ourSquared_logo}} \rhead{\nouppercase{\leftmark}}
+	\pagenumbering{arabic}
+    \lfoot{#1} \cfoot{} \rfoot{\thepage / \pageref{LastPage}}
+}
