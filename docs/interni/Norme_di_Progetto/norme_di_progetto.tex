@@ -15,13 +15,14 @@ Questo documento contiene le procedure, gli strumenti e i criteri di qualità ch
 }
 
 \addversione{0.0.0}{24/03/2023}{Soldà Matteo}{Brotto Romina}{Prima stesura.}
-\addversione{0.0.1}{19/04/2023}{Soldà Matteo}{}{Terminata Sezione Documentazione}
+\addversione{0.0.1}{19/04/2023}{Soldà Matteo}{Ceccato Francesco}{Terminata Sezione Documentazione}
 \addversione{0.0.2}{20/04/2023}{Ceccato Francesco}{Soldà Matteo}{Terminata Sezione Convenzioni di Codifica}
-\addversione{0.0.3}{22/04/2023}{Alberti Nicolas}{}{Stesura iniziale sezioni "1.1, 2.1, 2.2"}
-\addversione{0.0.4}{22/04/2023}{Brotto Romina}{}{Stesura iniziale sezioni "3.3, 3.4, 4, 4.2"}
-\addversione{0.0.5}{24/04/2023}{Soldà Matteo}{}{Separazione capitoli e risoluzione di alcuni typo}
-\addversione{0.0.6}{24/04/2023}{Brotto Romina}{}{Risoluzione typo}
-\addversione{0.0.7}{25/04/2023}{Alberti Nicolas}{}{Modifica elementi TODO e TBD; introduzione Glossario v.0.0.0}
+\addversione{0.0.3}{22/04/2023}{Alberti Nicolas}{Salami Lorenzo}{Stesura iniziale sezioni "1.1, 2.1, 2.2"}
+\addversione{0.0.4}{22/04/2023}{Brotto Romina}{Cavaliere Erica}{Stesura iniziale sezioni "3.3, 3.4, 4, 4.2"}
+\addversione{0.0.5}{24/04/2023}{Soldà Matteo}{Alberti Nicolas}{Separazione capitoli e risoluzione di alcuni typo}
+\addversione{0.0.6}{24/04/2023}{Brotto Romina}{Soldà Matteo}{Risoluzione typo}
+\addversione{0.0.7}{25/04/2023}{Alberti Nicolas}{Soldà Matteo}{Modifica elementi TODO e TBD; introduzione Glossario v.0.0.0}
+\addversione{0.0.8}{26/04/2023}{Brotto Romina}{Alberti Nicolas}{Modifica elementi sezione 2.2.5}
 
 \begin{document}
 \makeindexdetails
@@ -34,13 +35,13 @@ Questo documento contiene le procedure, gli strumenti e i criteri di qualità ch
 \section{Introduzione}
 \subsection{Scopo del Documento}
 Il documento si prefigge lo scopo di definire i metodi e le attività chiave
-legate al \textit{Way of Working}. Tutti i membri del gruppo si impegnano a
+legate al \textit{Way of Working}\textsubscript{\textit{G}}. Tutti i membri del gruppo si impegnano a
 seguire quanto riportato, al fine di ottenere consistenza e coerenza in tutti i
 documenti e in tutte le attività del gruppo, per raggiungere in modo efficace ed
 efficiente la realizzazione del prodotto finale.
 
 \subsubsection{Scopo del prodotto}
-Lo scopo del prodotto è quello di realizzare una \textit{Web Application} per
+Lo scopo del prodotto è quello di realizzare una \textit{Web Application}\textsubscript{\textit{G}} per
 gestire e regolare l'intensità di uno o più impianti di illuminazione pubblica
 in maniera automatica o manuale.
 
@@ -48,18 +49,18 @@ in maniera automatica o manuale.
 Al fine di evitare ambiguità nei termini utilizzati durante la redazione dei
 documenti, viene fornito anche il \textit{Glossario v.0.0.0,} dove vengono
 definiti tutti i termini aventi un particolare significato. \\
-Un termine presente nel \textit{Glossario}, viene contrassegnato dal corsivo e
+Un termine presente nel \textit{Glossario} viene contrassegnato dal corsivo e
 da una 'G' aggiunta in pedice.
 \newpage
 
 \section{Processi Primari}
 \subsection{Fornitura}
 \subsubsection{Scopo}
-Lo scopo del processo di fornitura è quello di descrivere e determinare ogni
+Lo scopo del \textit{processo}\textsubscript{\textit{G}} di fornitura è quello di descrivere e determinare ogni
 compito ed attività svolta dal fornitore, al fine di comprendere e soddisfare le
 richieste del proponente. 
 La suddivisione e le tempistiche delle attività da svolgere saranno definite dal documento
-\textit{Piano di Progetto}.
+\textit{Piano di Progetto}\textsubscript{\textit{G}}.
 
 \subsubsection{Aspettative}
 Le aspettative determinate dal processo di fornitura sono le seguenti:
@@ -245,64 +246,67 @@ Per ogni documento esisterà una nuova sottocartella omonima.
 \paragraph{} \\
 \textbf{Convenzioni Stilistiche} \\
 Per quanto riguarda la scrittura del codice, si è scelto di utilizzare le seguenti convenzioni, che saranno poi suddivise: \textit{camel case}, \textit{pascal case}, \textit{snake case}, \textit{lowercase} e \textit{screaming snake case}.\\ \\
-Con il termine "NA" si intende "Non Applicabile"
-\begin{table}[ht]
-\begin{tabular}{|| c || c | c | c | c |}
-    \hline
-        & Java & JavaScript & Python & TypeScript \\
-    \hline \hline
-    Funzioni e Metodi & camelCase() & camelCase() & snake\_case() & camelCase() \\
-    \hline
-    Classi & \multicolumn{4}{c|}{PascalCase} \\
-    \hline
-    Interfacce & PascalCase & PascalCase & NA & PascalCase \\
-    \hline
-    Namespace e Package & lowercase & NA & NA & camelCase \\
-    \hline
-    Costanti & \multicolumn{4}{c|}{SCREAMING\_SNAKE\_CASE} \\
-    \hline  
-    Variabili Locali e Attributi & camelCase & camelCase & snake\_case & snake\_case \\
-    \hline
-    Variabili Globali & NA & camelCase & snake\_case & snake\_case \\
-    \hline
-\end{tabular}
-\end{table}
 
-\vspace*{0.5cm}
-A seguire, in JavaScript, le funzioni e i metodi privati anteporranno il simbolo di underscore prima del nome.\newline
-Per quanto riguarda invece i linguaggi di markup, i tag e gli attributi andranno scritti in lowercase se primitivi o in kebab-case se custom o complessi. \newline
-Inoltre:
+
+%\begin{table}[ht]
+%\begin{tabular}{|| c || c | c | c | c |}
+%    \hline
+%        & Java & JavaScript & Python & TypeScript \\
+%   \hline \hline
+%    Funzioni e Metodi & camelCase() & camelCase() & snake\_case() & camelCase() \\
+%    \hline
+%    Classi & \multicolumn{4}{c|}{PascalCase} \\
+%    \hline
+%    Interfacce & PascalCase & PascalCase & NA & PascalCase \\
+%    \hline
+%    Namespace e Package & lowercase & NA & NA & camelCase \\
+%    \hline
+%    Costanti & \multicolumn{4}{c|}{SCREAMING\_SNAKE\_CASE} \\
+%    \hline  
+%    Variabili Locali e Attributi & camelCase & camelCase & snake\_case & snake\_case \\
+%    \hline
+%    Variabili Globali & NA & camelCase & snake\_case & snake\_case \\
+%    \hline
+%\end{tabular}
+%\end{table}
+%
+%\vspace*{0.5cm}
+%A seguire, in JavaScript, le funzioni e i metodi privati anteporranno il simbolo di underscore prima del nome.\newline
+%Per quanto riguarda invece i linguaggi di markup, i tag e gli attributi andranno scritti in lowercase se primitivi o in kebab-case se custom o complessi. \newline
+%Inoltre:
+%\begin{itemize}
+%    \item I membri di una classe dovrebbero essere dichiarati e/o definiti nel seguente ordine:
+%    \begin{itemize}
+%        \item Variabili di classe (statiche)
+%        \item Variabili di istanza (attributi) \\
+%        Nel seguente ordine (ove possibile):
+%        \begin{enumerate}
+%            \item public;
+%            \item protected;
+%            \item private;
+%        \end{enumerate}
+%        \item Costruttore;
+%        \item Distruttore (se richiesto);
+%        \item Metodi.
+%    \end{itemize}
 \begin{itemize}
-    \item I membri di una classe dovrebbero essere dichiarati e/o definiti nel seguente ordine:
-    \begin{itemize}
-        \item Variabili di classe (statiche)
-        \item Variabili di istanza (attributi) \\
-        Nel seguente ordine (ove possibile):
-        \begin{enumerate}
-            \item public;
-            \item protected;
-            \item private;
-        \end{enumerate}
-        \item Costruttore;
-        \item Distruttore (se richiesto);
-        \item Metodi.
-    \end{itemize}
     \item Un blocco di codice delimitato da parentesi graffe dovrebbe essere strutturato apponendo le parentesi graffe ognuna in una nuova riga;
     \item Si predilige l'uso della tabulazione per indentare la porzione di codice inclusa in un blocco.
 \paragraph{}\\
 \end{itemize}
-\textbf{CSS}
-\begin{itemize}
-    \item Mantenere un file chiamato \texttt{nomepagina.css} per la versione desktop di ciascuna pagina;
-    \item Mantenere un file chiamato \texttt{global.css} per le regole che si applicano ad ogni aspetto del sito, in particolare ai moduli universali quali, a titolo esemplificativo e non esaustivo, header e footer;
-    \item Mantenere un file chiamato \texttt{mini.css} con accorgimenti per la versione mobile;
-    \item Specificare le unità di misura in \textit{em}, \textit{rem}, \textit{\%}, \textit{vw}, \textit{vh} (unità relative), a parte per i valori delle seguenti proprietà, i quali possono essere espressi in \textit{px}:
-    \begin{itemize}
-        \item \textit{text-shadow};
-        \item \textit{box-shadow}.
-    \end{itemize}
-\end{itemize}
+%\textbf{CSS}
+%\begin{itemize}
+%    \item Mantenere un file chiamato \texttt{nomepagina.css} per la versione desktop di ciascuna pagina;
+%    \item Mantenere un file chiamato \texttt{global.css} per le regole che si applicano ad ogni aspetto del sito, in particolare ai moduli universali quali, a titolo esemplificativo e non esaustivo, header e footer;
+%    \item Mantenere un file chiamato \texttt{mini.css} con accorgimenti per la versione mobile;
+%    \item Specificare le unità di misura in \textit{em}, \textit{rem}, \textit{\%}, \textit{vw}, \textit{vh} (unità relative), a parte per i valori delle seguenti proprietà, i quali possono essere espressi in \textit{px}:
+%    \begin{itemize}
+%        \item \textit{text-shadow};
+%        \item \textit{box-shadow}.
+%    \end{itemize}
+%\end{itemize}
 \newpage
+
 \section{Processi Secondari}
 \subsection{Documentazione}
 \subsubsection{Ciclo di Vita}
