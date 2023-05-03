@@ -23,6 +23,7 @@ Questo documento contiene le procedure, gli strumenti e i criteri di qualità ch
 \addversione{0.0.6}{24/04/2023}{Brotto Romina}{Soldà Matteo}{Risoluzione typo}
 \addversione{0.0.7}{25/04/2023}{Alberti Nicolas}{Soldà Matteo}{Modifica elementi TODO e TBD; introduzione Glossario v.0.0.0}
 \addversione{0.0.8}{26/04/2023}{Brotto Romina}{Alberti Nicolas}{Modifica elementi sezione 2.2.5}
+\addversione{0.0.9}{03/05/2023}{Alberti Nicolas}{}{Aggiunta sezione 4.1.1; modifica sezione 4.1}
 
 \begin{document}
 \makeindexdetails
@@ -478,16 +479,59 @@ numero di membri adatto per item. \\
 In caso emergessero importanti contestazioni o criticità il responsabile deciderà
 come agire.\\
 \indent Ogni ciclo di Scrum prevederà un nuovo responsabile, scelto per cognome in ordine alfabetico. Il responsabile dovrà assegnare le persone agli item considerando la
-rotazione dei ruoli e dovrà poi creare le issues su GitHub relative agli item
-e assegnarvici i membri. \\
-\indent Le issues dovranno essere collegate alle milestones di appartenenza
-dal responsabile, che si occuperà di aggiornare preventivo e consultivo
-totale, compilando nel Piano di Progetto la sezione del ciclo di Scrum corrispondente. \\
-\indent Si è inoltre deciso che in caso di problemi singolarmente insormontabili andrà notificato
-il responsabile su Telegram che si occuperà di assegnare un membro per la risoluzione. \\
-\indent Il responsabile dovrà creare la issue su GitHub relativa al problema assegnandovici la persona
-scelta. Le soluzioni adottate per la risoluzione del problema andranno documentate
-dal responsabile stesso.
+rotazione dei ruoli e assegnerà i membri alle attività previste tramite il
+servizio di \textit{ticketing\textsubscript{G}}, come descritto nella sezione \nameref{sec:Ticketing}. \\
+% \indent Le issues dovranno essere collegate alle milestones di appartenenza
+% dal responsabile, che si occuperà di aggiornare preventivo e consultivo
+% totale, compilando nel Piano di Progetto la sezione del ciclo di Scrum corrispondente. \\
+% \indent Si è inoltre deciso che in caso di problemi singolarmente insormontabili andrà notificato
+% il responsabile su Telegram che si occuperà di assegnare un membro per la risoluzione. \\
+% \indent Il responsabile dovrà creare la issue su GitHub relativa al problema assegnandovici la persona
+% scelta. Le soluzioni adottate per la risoluzione del problema andranno documentate
+% dal responsabile stesso.
+\subsubsection{Ticketing}
+\label{sec:Ticketing}
+Il ticketing è uno strumento che permette a tutti i membri del gruppo di
+conoscere le attività da svolgere, quelle in corso e quelle completate. Il
+Responsabile ne monitora l'avanzamento e può assegnare i compiti ai membri. Come
+strumento di ticketing si utilizza il servizio di gestione delle issue integrato
+in GitHub. Viene soddisfatto un requisito quando:
+\begin{enumerate}
+    \item viene creata una issue associata;
+    \item viene collegata la issue ad un branch;
+    \item i Verificatori devono controllare quanto è stato svolto: \begin{itemize}
+        \item se la verifica ha esito positivo verranno effettuate le seguenti azioni: \begin{itemize}
+            \item viene fatto il merge del branch nell'upstream;
+            \item viene cancellato il branch creato appositamente per l'issue;
+            \item l'issue viene chiusa;
+            \item il requisito viene considerato soddisfatto. 
+        \end{itemize}
+        \item se la verifica ha esito negativo, verrà effettuata la seguente
+        azione: \begin{itemize}
+            \item vengono corretti gli errori segnalati dai Verificatori e si
+            torna al punto (3).
+        \end{itemize}
+    \end{itemize}
+\end{enumerate}
+Le issue vengono create dal Responsabile o dai Verificatori e devono avere:
+\begin{itemize}
+    \item \textbf{title}: un titolo, dal contenuto breve e significativo;
+    \item \textbf{description}: una descrizione, che deve essere breve, chiara e specifica, contenente il
+    motivo dell'apertura della issue;
+    \item \textbf{assignee}: il membro o i membri a cui viene associata l'issue.
+    Possono variare durante il progetto;
+    \item \textbf{\textit{milestone}}\textit{\textsubscript{G}}: la milestone ad
+    essa associata;
+    \item \textbf{labels}: le etichette, specificano lo stato della issue ed il
+    contesto a cui è legata. Le etichette utilizzate sono le seguenti:
+    \begin{itemize}
+        \item \textbf{documentation:} indica che l'issue a cui si sta lavorando
+        riguarda i documenti del gruppo.
+        % AGGIUNGERE LABELS IN CASO DI UTILIZZO IN FUTURO
+    \end{itemize}
+\end{itemize}
+
+
 \subsection{Miglioramento dei processi}
 Durante l'attività di consuntivo di periodo dell’incontro settimanale, viene discusso il lavoro
 fatto fino a quel momento, dando particolare peso ai problemi riscontrati. \\In base a ciò si valutano
