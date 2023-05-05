@@ -1,0 +1,362 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{eurosym}
+\usepackage{pdflscape}
+\usepackage{pgfgantt}
+\usepackage{pgfplots}
+
+
+\newcommand{\templates}{../../template}
+\input{\templates/style}
+\input{\templates/front_page}
+\input{\templates/history}
+\graphicspath{ {./immagini/} }
+
+\settitolo{Analisi dei requisiti}
+\setredattori{Erica Cavaliere \\ Francesco Ceccato}
+\setdestuso{esterno}
+\setdescrizione{
+Questo documento si occupa di riportare un'analisi di tutti gli elementi richiesti e i vincoli da rispettare per una completa comprensione del progetto.
+}
+
+
+\addversione{0.0.1}{05/05/2023}{Erica Cavaliere}{Lorenzo Salami}{Stesura iniziale}
+\addversione{0.0.2}{05/05/2023}{Francesco Ceccato}{Lorenzo Salami}{Inserimento di alcuni casi d'uso}
+
+\def\pgfcalendarmonthitname#1{%
+\ifcase#1 \or Gennaio\or Febbraio\or Marzo\or Aprile\or Maggio\or Giugno\or Luglio\or Agosto\or Settembre\or Ottobre\or Novembre\or Dicembre\fi%
+}
+\usepgfplotslibrary{dateplot}
+
+\begin{document}
+\makeindexdetails
+\makefrontpage \makeversioni
+\tableofcontents
+\newpage
+\clearpage
+\makecontentsdetails{Piano di Progetto} 
+
+\section{Introduzione}
+In questo progetto viene richiesto di creare un sistema che permetta di gestire i lampioni, accendendo una o più luci se sono presenti nelle vicinanze una o più persone o spegnendole altrimenti.\newline
+Bisognerà che ci sia anche un modo per registrare i guasti degli impianti e segnalarli tramite apposita applicazione.\newline
+
+\newpage
+
+\section{Casi d'uso}
+
+\subsection{Diagramma dei casi d'uso}
+
+\includegraphics[scale=0.7]{diagramma_use_case_1.png}
+
+\includegraphics[scale=0.65]{diagramma_use_case_2.png}
+
+\includegraphics[scale=0.7]{diagramma_use_case_3.png}
+
+\includegraphics[scale=0.7]{diagramma_use_case_4.png}
+
+\subsection{Attori}
+\begin{itemize}
+    \item Operatore non autenticato: operatore che non ha inserito le proprie credenziali
+    \item Operatore autenticato: operatore che ha inserito correttamente le credenziali
+    \item Sistema di autenticazione: sistema di controllo che permette di verificare il corretto inserimento dei dati per accedere al programma
+    \item Sensore: dispositivo che rileva la presenza di persone
+\end{itemize}
+
+\subsection{Lista dei casi d'uso}
+\subsubsection{UC1 - Rilevamento presenza di persone}
+\textbf{Attore:} Sensore\newline
+\textbf{PRE:} l'individuo non è ancora posizionato in prossimità dell'area con lampioni, i lampioni sono spenti\newline
+\textbf{POST:} l'individuo è posizionato all'interno dell'area, i lampioni illuminano l'area\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item Il sensore rileva la presenza di uno o più individui nel raggio d'azione
+    \item Il sistema riceve in modalità push/pull le informazioni dal sensore
+    \item Il sistema elabora l'informazione ricevuta, aumenta l'intensità luminosa dell'area (include[UC17]) per un certo tempo
+    \item A seguire, l'intensità luminosa dell'area viene riportata al valore di default
+\end{enumerate}
+
+\subsubsection{UC2 - Associazione di un nuovo sensore ad un'area illuminata}
+\textbf{Attore:} operatore autenticato\newline
+\textbf{PRE:} il sensore è fisicamente presente in un'area, ma non è configurato per essere parte del sistema gestito dall'applicazione\newline
+\textbf{POST:} il sensore è inserito nel sistema ed è raggiungibile.\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item L'operatore accede al sistema
+    \item L'operatore effettua il login con proprie credenziali
+    \item L'operatore avvia procedura inserimento
+    \item L'operatore specifica tipo di interazione push/pull, dettagli, posizione geografica dispositivo, raggio d'azione
+    \item L'operatore specifica l'area illuminata di riferimento
+    \item Viene ottenuta la conferma dell'inserimento
+\end{enumerate}
+
+\subsubsection{UC3 - Acquisizione intensità luminosa di un impianto}
+\textbf{Attore:} operatore autenticato\newline
+\textbf{PRE:} un'area luminosa configurata illumina con un intensità iniziale arbitraria\newline
+\textbf{POST:} l'area luminosa summenzionata illumina con una precisa intensità finale\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item L'operatore accede al sistema
+    \item L'operatore effettua il login con proprie credenziali
+    \item Il sistema acquisisce l'elenco di tutte le aree illuminate
+    \item L'operatore seleziona una o più aree illuminate
+    \item L'operatore imposta un valore di intensità luminosa per tutti gli impianti nelle aree selezionate in 4.
+    \item Il sistema configura tutti gli impianti selezionati in 4. all'intensità selezionata in 5.
+\end{enumerate}
+
+\subsubsection{UC4 - Aumento manuale dell'intensità luminosa di un'area illuminata}
+\textbf{Attore:} operatore autenticato\newline
+\textbf{PRE:} un'area luminosa configurata illumina con un intensità iniziale arbitraria\newline
+\textbf{POST:} l'area luminosa summenzionata illumina con una precisa intensità finale\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item L'operatore accede al sistema
+    \item L'operatore effettua il login con proprie credenziali
+    \item Il sistema mostra elenco di tutte le aree illuminate
+    \item L'operatore seleziona una o più aree illuminate
+    \item L'operatore imposta un valore maggiore di intensità luminosa per tutti gli impianti nelle aree selezionate in 4.
+    \item Il sistema configura tutti gli impianti selezionati in 4. all'intensità selezionata in 5.
+\end{enumerate}
+
+\subsubsection{UC5 - Diminuzione manuale dell'intensità luminosa di un'area illuminata}
+\textbf{Attore:} operatore autenticato\newline
+\textbf{PRE:} un'area luminosa configurata illumina con un intensità iniziale arbitraria\newline
+\textbf{POST:} l'area luminosa summenzionata illumina con una precisa intensità finale\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item L'operatore accede al sistema
+    \item L'operatore effettua il login con proprie credenziali
+    \item Il sistema mostra elenco di tutte le aree illuminate
+    \item L'operatore seleziona una o più aree illuminate
+    \item L'operatore imposta un valore minore di intensità luminosa per tutti gli impianti nelle aree selezionate in 4.
+    \item Il sistema configura tutti gli impianti selezionati in 4. all'intensità selezionata in 5.
+\end{enumerate}
+
+\subsubsection{UC6 - Login di un operatore}
+\textbf{Attore:} operatore non autenticato\newline
+\textbf{PRE:} l'operatore non è entrato nel sistema e quindi non può gestire i sistemi di illuminazione, ma è registrato nel database\newline
+\textbf{POST:} l'operatore ha inserito le proprie credenziali e può gestire i sistemi di illuminazione\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item L'operatore accede al sistema
+    \item L'operatore inserisce le proprie credenziali
+    \item Il sistema verifica se le credenziali corrispondono a quelle di un utente nel database
+\end{enumerate}
+\textbf{Estensioni:}
+\begin{itemize}
+    \item [a.] Le credenziali inserite non sono corrette
+    \begin{enumerate}
+        \item Viene visualizzato un errore
+        \item L'operatore deve immettere nuovamente le proprie credenziali
+    \end{enumerate}
+\end{itemize}
+
+\subsubsection{UC7 - Logout dell'operatore}
+\textbf{Attore:} operatore autenticato\newline
+\textbf{PRE:} l'operatore ha il consenso di gestire i sistemi di illuminazione tramite l'applicazione\newline
+\textbf{POST:} all'operatore non è consentito gestire i sistemi di illuminazione tramite l'applicazione, ma è registrato nel database\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item L'operatore ha l'accesso del sistema
+    \item L'operatore seleziona il pulsante di Logout
+    \item L'applicazione cancella le credenziali con cui l'operatore aveva fatto l'accesso
+\end{enumerate}
+
+\subsubsection{UC8 - Inserimento di nuovo impianto luminoso}
+\textbf{Attore:} operatore autenticato\newline
+\textbf{PRE:} l'impianto è fisicamente presente ma non è registrato nel sistema\newline
+\textbf{POST:} l'impianto è stato registrato correttamente e sarà possibile gestirlo tramite applicazione\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item L'operatore accede al sistema
+    \item L'operatore effettua il login con proprie credenziali
+    \item L'operatore avvia procedura inserimento
+    \item L'operatore specifica il sensore che gestirà l'impianto e i relativi dettagli
+    \item Viene ottenuta la conferma dell'inserimento
+\end{enumerate}
+
+\subsubsection{UC9 - Rimozione di un impianto luminoso esistente}
+\textbf{Attore:} operatore autenticato\newline
+\textbf{PRE:} l'impianto è registrato nel sistema\newline
+\textbf{POST:} l'impianto è stato cancellato dal database e non sarà possibile gestirlo dall'applicazione\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item L'operatore accede al sistema
+    \item L'operatore effettua il login con proprie credenziali
+    \item L'operatore avvia procedura di rimozione
+    \item Viene visualizzato l'elenco degli impianti luminosi esistenti
+    \item L'operatore seleziona l'impianto da rimuovere dal sistema
+    \item Viene chiesta la conferma di eliminazione
+    \item L'operatore conferma l'operazione
+    \item Viene rimosso l'impianto luminoso dal sistema
+    \item Viene ottenuta la conferma di rimozione
+\end{enumerate}
+\textbf{Estensioni:}
+\begin{itemize}
+    \item [a.] L'operatore non conferma la rimozione alla richiesta di conferma
+    \begin{enumerate}
+        \item Viene visualizzato l'elenco degli impianti luminosi esistenti
+        \item L'operatore devrà selezionare un impianto da eliminare o annullare la procedura
+    \end{enumerate}
+    \item [b.] Viene annullata la procedura di rimozione
+    \begin{enumerate}
+        \item La lista degli impianti non subisce modifiche
+        \item Viene visualizzata la schermata principale
+    \end{enumerate}
+\end{itemize}
+
+\subsubsection{UC10 - Consultazione elenco impianti luminosi}
+\textbf{Attore:} operatore autenticato\newline
+\textbf{PRE:} l'operatore non visualizza l'elenco degli impianti luminosi\newline
+\textbf{POST:} l'operatore visualizza l'elenco degli impianti e potrà interagire con esso\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item L'operatore accede al sistema
+    \item L'operatore effettua il login con proprie credenziali
+    \item L'operatore seleziona il pulsante di consultazione elenco impianti luminosi
+    \item Viene visualizzato l'elenco degli impainti luminosi
+\end{enumerate}
+
+\subsubsection{UC11 - Consultazione elenco impianti guasti}
+\textbf{Attore:} operatore autenticato\newline
+\textbf{PRE:} l'operatore non visualizza l'elenco degli impianti con segnalato dei guasti\newline
+\textbf{POST:} l'operatore consulta l'elenco degli impianti dei guasti e interagisce con esso\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item L'operatore accede al sistema
+    \item L'operatore effettua il login con proprie credenziali
+    \item L'operatore seleziona il pulsante di consultazione elenco impianti guasti
+    \item Viene visualizzato l'elenco degli impainti guasti
+\end{enumerate}
+
+\subsubsection{UC12 - Inserimento manuale di un guasto ad un impianto}
+\textbf{Attore:} operatore registrato\newline
+\textbf{PRE:} è presente un impianto non funzionante che non è incluso nella lista degli impianti guasti\newline
+\textbf{POST:} l'impianto non funzionante è incluso nella lista degli impianti guasti\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item L'operatore accede al sistema
+    \item L'operatore effettua il login con proprie credenziali
+    \item L'operatore avvia la procedura per l’inserimento di un impianto luminoso guasto
+    \item Viene consultato l’elenco degli impianti di illuminazione guasti(include [UC10]).
+    \item L'operatore marca il dispositivo interessato come guasto, scatenandone l’inserimento dell’elenco degli impianti di illuminazione guasti
+\end{enumerate}
+
+\subsubsection{UC13 - Consultazione elenco aree illuminate}
+\textbf{Attore:} operatore autenticato\newline
+\textbf{PRE:} l'operatore non visualizza l'elenco delle aree illuminate\newline
+\textbf{POST:} l'operatore visualizza l'elenco delle aree illuminate e potrà interagire con esso\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item L'operatore accede al sistema
+    \item L'operatore effettua il login con proprie credenziali
+    \item L'operatore seleziona il pulsante di consultazione elenco aree illuminate
+    \item Viene visualizzato l'elenco delle aree illuminate
+\end{enumerate}
+
+\subsubsection{UC14 - Creazione di nuova area illuminata}
+\textbf{Attore:} operatore autenticato\newline
+\textbf{PRE:} l'area illuminata non è presente nel sistema\newline
+\textbf{POST:} l'area illuminata è presente nel sistema ed è possibile gestirla tramite applicazione\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item L'operatore accede al sistema
+    \item L'operatore effettua il login con proprie credenziali
+    \item L'operatore avvia la procedura di creazione di una nuova area illuminata
+    \item L'operatore specifica posizione geografica e relativi dettagli
+    \item Viene ottenuta la conferma di inserimento
+\end{enumerate}
+
+\subsubsection{UC15 - Modifica di area illuminata esistente}
+\textbf{Attore:} operatore autenticato\newline
+\textbf{PRE:} l'area illuminata è registrata con dati arbitrari\newline
+\textbf{POST:} l'area illuminata è registrata con i dati aggiornati\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item L'operatore accede al sistema
+    \item L'operatore effettua il login con proprie credenziali
+    \item L'operatore avvia la procedura di modifica di un'area illuminata
+    \item Viene visualizzato l'elenco delle aree illuminate
+    \item L'operatore selezione l'area illuminata che desidera modificare
+    \item Viene visualizzata la schermata di modifica dell'area illuminata selezionata in 5.
+    \item L'operatore modifica l'area illuminata con dati aggiornati
+    \item Viene ottenuta la conferma di modifica 
+\end{enumerate}
+
+\subsubsection{UC16 - Rimozione di area illuminata esistente}
+\textbf{Attore:} operatore autenticato\newline
+\textbf{PRE:} l'area illuminata è presente nel sistema e visibile tramite applicazione\newline
+\textbf{POST:} l'area illuminata non è presente nel sistema\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item L'operatore accede al sistema
+    \item L'operatore effettua il login con proprie credenziali
+    \item L'operatore avvia la procedura di rimozione di un'area illuminata
+    \item Viene visualizzato l'elenco delle aree illuminate esistenti
+    \item L'operatore selezione l'area illuminata che desidera rimuovere
+    \item Viene visualizzata la richiesta di conferma di cancellazione
+    \item L'operatore conferma l'operazione
+    \item Viene rimossa l'area illuminata dal sistema
+    \item Viene ottenuta la conferma di rimozione
+\end{enumerate}
+\textbf{Estensioni:}
+\begin{itemize}
+    \item [a.] L'operatore non conferma la rimozione alla richiesta di conferma
+    \begin{enumerate}
+        \item Viene visualizzato l'elenco delle aree illuminate esistenti
+        \item L'operatore dovrà selezionare un'area illuminata da eliminare o annullare la procedura
+    \end{enumerate}
+    \item [b.] Viene annullata la procedura di rimozione
+    \begin{enumerate}
+        \item La lista delle aree illuminate non subisce modifiche
+        \item Viene visualizzata la schermata principale
+    \end{enumerate}
+\end{itemize}
+
+\subsubsection{UC17 - Aumento automatico dell'intensità luminosa di un'area illuminata}
+\textbf{Attore:} sensore\newline
+\textbf{PRE:} un'area luminosa configurata illumina con un'intensità iniziale arbitraria\newline
+\textbf{POST:} l'area luminosa summenzionata illumina con una precisa intensità finale\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item Il sensore rileva la presenza di persone in una area illuminata precisa [UC1]
+    \item Il sensore aumenta l'intensità luminosa dell'area illuminata rilevata in 1.
+\end{enumerate}
+
+\subsubsection{UC18 - Diminuzione automatica dell'intensità luminosa di un'area illuminata}
+\textbf{Attore:} sensore\newline
+\textbf{PRE:} un'area luminosa configurata illumina con un'intensità iniziale arbitraria\newline
+\textbf{POST:} l'area luminosa summenzionata illumina con una precisa intensità finale\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item Il sensore rileva che in un'area illuminata con intensità luminosa alta non ci sono persone presenti.
+    \item Il sensore diminuisce l'intensità luminosa dell'area illuminata rilevata in 1.
+\end{enumerate}
+
+\subsubsection{UC19 - Settaggio di un impianto in modalità automatica}
+\textbf{Attore:} operatore autenticato\newline
+\textbf{PRE:} l'impianto non è stato settato con modalità automatica\newline
+\textbf{POST:} l'impianto ha la modalità automatica attiva e può gestire i dispositivi collegati ad esso\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item L'operatore accede al sistema
+    \item L'operatore effettua il login con proprie credenziali
+    \item L'operatore avvia la procedura di settaggio di un impianto in modalità automatica
+    \item L'operatore visualizza l'elenco degli impianti esistenti
+    \item L'operatore seleziona l'impianto che desidera impostare con modalità automatica
+    \item Viene ottenuta la conferma di attivazione della modalità automatica dell'impianto selezionato in 5.
+\end{enumerate}
+
+\subsubsection{UC20 - Rimozione di impianto da elenco impianti guasti}
+\textbf{Attore:} operatore autenticato\newline
+\textbf{PRE:} l'impianto è presente nel sistema come impianto guasto\newline
+\textbf{POST:} l'impianto è presente nel sistema ma non è indicato come impianto guasto\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item L'operatore accede al sistema
+    \item L'operatore effettua il login con proprie credenziali
+    \item L'operatore avvia la procedura di rimozione di un impianto guasto
+    \item Viene visualizzato l'elenco degli impianti guasti esistenti
+    \item L'operatore seleziona l'impianto che desidera rimuovere dall'elenco
+    \item Viene ottenuta la conferma di rimozione
+\end{enumerate}
+
+\end{document}
