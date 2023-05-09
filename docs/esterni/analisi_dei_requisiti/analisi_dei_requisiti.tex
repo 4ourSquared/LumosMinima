@@ -21,6 +21,7 @@ Questo documento si occupa di riportare un'analisi di tutti gli elementi richies
 
 \addversione{0.0.1}{05/05/2023}{Erica Cavaliere}{Lorenzo Salami}{Stesura iniziale}
 \addversione{0.0.2}{05/05/2023}{Francesco Ceccato}{Lorenzo Salami}{Inserimento di alcuni casi d'uso}
+\addversione{0.0.3}{09/05/2023}{Brotto Romina}{}{Aggiunta sezioni 2, 2.1, 4, 4.1 ed inizio stesura requisiti funzionali}
 
 \def\pgfcalendarmonthitname#1{%
 \ifcase#1 \or Gennaio\or Febbraio\or Marzo\or Aprile\or Maggio\or Giugno\or Luglio\or Agosto\or Settembre\or Ottobre\or Novembre\or Dicembre\fi%
@@ -36,8 +37,42 @@ Questo documento si occupa di riportare un'analisi di tutti gli elementi richies
 \makecontentsdetails{Analisi dei requisiti} 
 
 \section{Introduzione}
+\subsection{Scopo del Documento}
 In questo progetto viene richiesto di creare un sistema che permetta di gestire i lampioni, accendendo una o più luci se sono presenti nelle vicinanze una o più persone o spegnendole altrimenti.\newline
-Bisognerà che ci sia anche un modo per registrare i guasti degli impianti e segnalarli tramite apposita applicazione.\newline
+Bisognerà che ci sia anche un modo per registrare i guasti degli impianti e segnalarli tramite apposita applicazione.
+
+\subsection{Riferimenti}
+\subsubsection*{Riferimenti normativi}
+\begin{itemize}
+    \item Capitolato d'appalto: C2;
+    \item Norme di Progetto.
+\end{itemize}
+
+\subsubsection*{Riferimenti informativi}
+\begin{itemize}
+    \item Slide analisi dei requisiti - Materiale didattico del corso IS;
+    \item Slide diagrammi dei casi d'uso - Materiale didattico del corso IS.
+\end{itemize}
+
+\section{Descrizione del Prodotto}
+L'azienda \textit{Imola Informatica} propone attraverso il capitolato C2: \textit{Lumos Minima}. L'obiettivo è sviluppare un sistema per l'ottimizzazione dell'illuminazione pubblica che permetta ai gestori di sfruttare la possibilità di regolare l'intensità di luce emessa dagli impianti.
+\subsection{Scopo del Prodotto}
+Il sistema sopra citato consentirebbe di garantire sicurezza stradale e sociale, e al tempo stesso permetterebbe di risparmiare energia e quindi risorse economiche ed ambientali. Il processo è caratterizzato da operazioni effettuate dal sistema e/o dai gestori:
+\begin{itemize}
+    \item Rilevamento della presenza di persone in prossimità della fonte luminosa;
+    \item Aumento e riduzione dell'intensità luminosa;
+    \item Rilevamento automatico del guasto di un impianto di illuminazione;
+    \item Segnalazione manuale del guasto di un impianto di illuminazione;
+    \item Aumento e riduzione manuale dell'intensità luminosa;
+    \item Inserimento e gestione di un impianto luminoso;
+    \item Aumento o riduzione globale dell'intensità luminosa. 
+\end{itemize}
+
+\subsection{Parti del Prodotto}
+
+\subsection{Caratteristiche utenti}
+
+\subsection{Vincoli e preferenze}
 
 \newpage
 
@@ -358,5 +393,22 @@ Bisognerà che ci sia anche un modo per registrare i guasti degli impianti e seg
     \item L'operatore seleziona l'impianto che desidera rimuovere dall'elenco
     \item Viene ottenuta la conferma di rimozione
 \end{enumerate}
+
+\section{Requisiti}
+Ogni requisito è identificato da un codice così strutturato: R (per requisito) + F/Q/V (tipologie: funzionale, Qualità, Vincolo) + O/D/F (Rilevanza: Obbligatorio, Desiderabile, Facoltativo) + x (numero univoco a due cifre).
+
+\subsection{Requisiti funzionali}
+
+\setlength\tabcolsep{4pt}
+\begin{tabular}{|c|p{7cm}|c|p{4cm}|}
+    \hline
+    \multicolumn{4}{| c |}{\textbf{Requisiti funzionali}} \\
+    \hline
+    \textbf{Codice} & \textbf{Descrizione} & \textbf{Rilevanza} & \textbf{Fonti} \\
+    \hline
+    RFO01 & Rilevamento della presenza di individui in una delle aree illuminate. & Obbligatorio & UC1 \\
+    \end{tabular}
+
+
 
 \end{document}
