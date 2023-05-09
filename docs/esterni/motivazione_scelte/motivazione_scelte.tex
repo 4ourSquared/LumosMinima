@@ -1,0 +1,115 @@
+\documentclass[a4paper, 12pt]{article}
+
+\newcommand{\templates}{../../template}
+\input{\templates/style}
+\input{\templates/front_page}
+\input{\templates/history}
+
+\settitolo{Motivazione delle Scelte}
+\setprogetto{Lumos Minima}
+\setcommittenti{Imola Informatica}
+\setredattori{Ceccato Francesco \\ Soldà Matteo}
+\setdestuso{esterno}
+\setdescrizione{
+Questo documento riporta i confronti tra i vari linguaggi presi in considerazione per lo sviluppo del progetto e la motivazione della scelta di uno rispetto agli altri.
+}
+
+\addversione{0.0.0}{09/05/2023}{Soldà Matteo}{Ceccato Francesco}{Prima stesura.}
+
+
+\begin{document}
+\makeindexdetails
+\makefrontpage \makeversioni
+\tableofcontents
+\newpage
+\clearpage
+\makecontentsdetails{Motivazione delle Scelte}
+\newpage
+\section{Introduzione}
+Il seguente documento ha come scopo principale quello di confrontare i vari linguaggi, database e framework con lo scopo di fornire un prodotto quanto più efficace, efficiente e aderente alle richieste del proponente.\\
+\subsection{Sitografia}
+
+\newpage
+\section{Confronti}
+\subsection{Database}
+Come database, non sapendo al momento come saranno strutturati i dati che necessitano di essere salvati in maniera persistente, abbiamo preso in considerazione \href{https://mariadb.org/}{MariaDB} per i database SQL e \href{https://www.mongodb.com/}{MongoDB} per i database NoSQL. \\
+Queste due scelte sono state fatte per due motivi principali:
+\begin{itemize}
+    \item Ricerca di un database computazionalmente leggero e che fosse aderente agli standard
+    \item Ricerca di un database la cui community è attiva e la documentazione chiara e puntuale, così da poter risolvere quanto prima i problemi che si potessero presentare data la poca esperienza accumulata con i database nel tempo
+\end{itemize}
+\subsection{Backend}
+Per quanto riguarda il backend, la scelta sarà vincolata dalla preferenza verso un linguaggio staticamente o dinamicamente tipizzato. \\
+Qualora si scegliesse la tipizzazione statica, le scelte ricadono su:
+\begin{itemize}
+    \item \href{https://www.java.com/it/}{Java}
+    \item \href{https://learn.microsoft.com/en-us/dotnet/csharp/}{C\#}
+    \item \href{https://www.typescriptlang.org/}{TypeScript}
+\end{itemize}
+Mentre, scegliendo la tipizzazione dinamica, le scelte ricadrebbero su:
+\begin{itemize}
+    \item \href{https://www.python.org/}{Python}
+    \item \href{https://www.javascript.com/}{JavaScript}
+\end{itemize}
+\subsubsection{C\#}
+\subsubsection{Java}
+\subsubsection{JavaScript}
+\subsubsection{Python}
+\subsubsection{Typescript}
+
+\subsection{Backend Framework}
+\subsubsection{C\#}
+\begin{itemize}
+    \item \href{https://dotnet.microsoft.com/en-us/apps/aspnet}{ASP.NET}
+\end{itemize}
+\subsubsection{Java}
+\begin{itemize}
+    \item \href{https://spring.io/}{Java Spring}
+\end{itemize}
+\subsubsection{JavaScript}
+\begin{itemize}
+    \item \href{https://nextjs.org/}{Next}
+    \item \href{https://nodejs.org/}{Node}
+\end{itemize}
+\subsubsection{Python}
+\begin{itemize}
+    \item \href{https://www.djangoproject.com/}{Django}
+    \item \href{https://flask.palletsprojects.com/}{Flask}
+\end{itemize}
+\subsubsection{Typescript}
+\begin{itemize}
+    \item \href{https://nestjs.com/}{Nest}
+    \item \href{https://feathersjs.com/}{Feathers}
+    \item \href{https://loopback.io/}{Loopback}
+\end{itemize}
+\subsection{Frontend}
+Escludendo \textit{HTML5}, \textit{XHTML} e \textit{CSS} che saranno di sicuro usati per la parte di frontend della webapp, i linguaggi tra cui scegliere risultano essere solamente
+\begin{itemize}
+    \item \href{https://www.typescriptlang.org/}{TypeScript}
+    \item \href{https://www.javascript.com/}{JavaScript}
+\end{itemize}
+\subsubsection{JavaScript}
+\subsubsection{TypeScript}
+
+\subsection{Frontend Framework}
+\subsubsection{JavaScript}
+\begin{itemize}
+    \item \href{https://angularjs.org/}{Angular}
+    \item \href{https://react.dev/}{React}
+    \item \href{https://vuejs.org/}{Vue}
+    \item \href{https://backbonejs.org/}{Backbone}
+    \item \href{https://preactjs.com/}{Preact}
+    \item \href{https://expressjs.com/}{Express}
+\end{itemize}
+\subsubsection{TypeScript}
+\begin{itemize}
+    \item \href{https://angularjs.org/}{Angular}
+    \item \href{https://emberjs.com/}{Ember}
+\end{itemize}
+
+\newpage
+\section{Scelte e Motivazioni}
+
+
+
+\end{document} 
