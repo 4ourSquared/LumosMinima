@@ -28,6 +28,15 @@ Questo documento riporta i confronti tra i vari linguaggi presi in considerazion
 \section{Introduzione}
 Il seguente documento ha come scopo principale quello di confrontare i vari linguaggi, database e framework con lo scopo di fornire un prodotto quanto più efficace, efficiente e aderente alle richieste del proponente.\\
 \subsection{Sitografia}
+\begin{itemize}
+    \item https://www.quora.com/Why-are-there-so-many-backend-systems-written-in-dynamically-typed-languages-while-the-benefit-of-static-typing-is-obvious
+    \item https://mobisoftinfotech.com/resources/blog/typescript-vs-javascript/
+    \item https://stackoverflow.com/questions/49640121/mixing-javascript-and-typescript-in-node-js
+    \item https://www.monocubed.com/blog/top-python-frameworks/
+    \item https://www.theserverside.com/tip/The-differences-between-Java-and-TypeScript-devs-must-know
+    \item https://medium.com/rewrite-tech/embedding-typescript-in-java-a343576031be
+    \item https://blog.geekandjob.com/framework-javascript/
+\end{itemize}
 
 \newpage
 \section{Confronti}
@@ -52,11 +61,79 @@ Mentre, scegliendo la tipizzazione dinamica, le scelte ricadrebbero su:
     \item \href{https://www.javascript.com/}{JavaScript}
 \end{itemize}
 \subsubsection{C\#}
-\subsubsection{Java}
-\subsubsection{JavaScript}
-\subsubsection{Python}
-\subsubsection{Typescript}
+\textbf{Pro:}
+\begin{itemize}
+    \item Facile da eseguire su dispositivi Windows (che rappresenta la stragrande maggioranza degli utenti)
+    \item Essendo un linguaggio compilato e non interpretato, rende difficile in caso di attacchi la lettura del codice sorgente in chiaro
+\end{itemize}
+\vspace*{0.5cm}
+\textbf{Contro:}
+\begin{itemize}
+    \item Deve essere ricompilato per ogni minima modifica
+    \item Hostabile solo su server Windows
+\end{itemize}
 
+\subsubsection{Java}
+\textbf{Pro:}
+\begin{itemize}
+    \item Linguaggio facile da imparare
+    \item Linguaggio di alto livello (assenza di puntatori, presenza di garbage collector)
+    \item Linguaggio OOP
+    \item \textit{Platform Indipendent}
+    \item Supporto al \textit{multithreading\textsubscript{G}} 
+\end{itemize}
+\vspace*{0.5cm}
+\textbf{Contro:}
+\begin{itemize}
+    \item Rispetto ad altri linguaggi può risultare più lento o povero in fatto di performance
+    \item Mancanza di feature per il backup dei dati
+    \item Rispetto ad altri linguaggi, richiede uno spazio di memoria significativo
+    \item Rispetto ad altri linguaggi, usa molto più codice per svolgere una operazione basilare
+\end{itemize}
+\subsubsection{JavaScript}
+\textbf{Pro:}
+\begin{itemize}
+    \item Semplice da imparare
+    \item Interoperabile
+    \item Versatile in quanto linguaggio \textit{fullstack\textsubscript{G}}
+\end{itemize}
+\vspace*{0.5cm}
+\textbf{Contro:}
+\begin{itemize}
+    \item Linguaggio interpretato
+    \item Tipizzazione dinamica
+    \item Inconsistenza tra browser
+\end{itemize}
+\subsubsection{Python}
+\textbf{Pro:}
+\begin{itemize}
+    \item Facile da imparare
+    \item Flessibile ed estensibile
+    \item Presenza di moltissime librerie
+    \item Estremamente scalabile
+    \item Portabile
+    \item Vasta integrazione con l'\textit{IoT\textsubscript{G}}
+\end{itemize}
+\vspace*{0.5cm}
+\textbf{Contro:}
+\begin{itemize}
+    \item Forte utilizzo di memoria
+    \item Tipizzazione dinamica
+    \item Multithreading complesso
+    \item Garbace colletion che porta ad un potenziale spreco di memoria
+\end{itemize}
+\subsubsection{Typescript}
+\textbf{Pro:}
+\begin{itemize}
+    \item Linguaggio compilato
+    \item Tipizzazione statica
+\end{itemize}
+\vspace*{0.5cm}
+\begin{itemize}
+    \item Inconsistenza tra browser
+    \item Tipizzazione alcune volte complessa
+    \item Necessità di ricompilare per ogni minima modifica
+\end{itemize}
 \subsection{Backend Framework}
 \subsubsection{C\#}
 \begin{itemize}
@@ -109,7 +186,9 @@ Escludendo \textit{HTML5}, \textit{XHTML} e \textit{CSS} che saranno di sicuro u
 
 \newpage
 \section{Scelte e Motivazioni}
-
-
-
+[WIP]
 \end{document} 
+
+%% TO-DO
+% Aggiungere descrizione con pro e contro dei linguaggi
+% Aggiungere descrizione con pro e contro dei framework
