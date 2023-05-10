@@ -3,6 +3,8 @@
 \usepackage{pdflscape}
 \usepackage{pgfgantt}
 \usepackage{pgfplots}
+\usepackage{booktabs}
+\usepackage{longtable}
 
 
 \newcommand{\templates}{../../template}
@@ -474,7 +476,7 @@ Ogni requisito è identificato da un codice la cui struttura è definita nelle \
 \subsection{Requisiti funzionali}
 %R+tipologia(F/Q/V)+caso d'uso relativo.sottocaso - importanza (O/D/F) 
 \setlength\tabcolsep{4pt}
-\begin{tabular}{|c|p{7cm}|c|p{4cm}|}
+\begin{longtable}{|c|p{7cm}|c|p{4cm}|}
     \hline
     \multicolumn{4}{| c |}{\textbf{Requisiti funzionali}} \\
     \hline
@@ -517,15 +519,6 @@ Ogni requisito è identificato da un codice la cui struttura è definita nelle \
     RF16-O & Il gestore può rimuovere un'area illuminata già esistente. &
     Obbligatorio & UC16 \\
     \hline
-\end{tabular}
-
-\setlength\tabcolsep{4pt}
-\begin{tabular}{|c|p{7cm}|c|p{4cm}|}
-    \hline
-    \multicolumn{4}{| c |}{\textbf{Requisiti funzionali}} \\
-    \hline
-    \textbf{Codice} & \textbf{Descrizione} & \textbf{Rilevanza} & \textbf{Fonti} \\
-    \hline
     RF17-O & Il sistema di gestione dell'illuminazione aumenta l'intensità
     luminosa al passaggio di una o più persone. & Obbligatorio & UC17 \\
     \hline
@@ -537,6 +530,6 @@ Ogni requisito è identificato da un codice la cui struttura è definita nelle \
     \hline
     RF20-O & Il gestore può rimuovere un impianto dall'elenco degli impianti
     guasti e ritorna negli impianti attivi. & Obbligatorio & UC20 \\
-    \hline
-\end{tabular}
+    \bottomrule
+\end{longtable}
 \end{document}
