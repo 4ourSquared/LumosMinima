@@ -29,13 +29,13 @@ Questo documento riporta i confronti tra i vari linguaggi presi in considerazion
 Il seguente documento ha come scopo principale quello di confrontare i vari linguaggi, database e framework con lo scopo di fornire un prodotto quanto più efficace, efficiente e aderente alle richieste del proponente.\\
 \subsection{Sitografia}
 \begin{itemize}
-    \item https://www.quora.com/Why-are-there-so-many-backend-systems-written-in-dynamically-typed-languages-while-the-benefit-of-static-typing-is-obvious
-    \item https://mobisoftinfotech.com/resources/blog/typescript-vs-javascript/
-    \item https://stackoverflow.com/questions/49640121/mixing-javascript-and-typescript-in-node-js
-    \item https://www.monocubed.com/blog/top-python-frameworks/
-    \item https://www.theserverside.com/tip/The-differences-between-Java-and-TypeScript-devs-must-know
-    \item https://medium.com/rewrite-tech/embedding-typescript-in-java-a343576031be
-    \item https://blog.geekandjob.com/framework-javascript/
+    \item https://www.quora.com/Why-are-there-so-many-backend-systems-written-in-dynamically-typed-languages-while-the-benefit-of-static-typing-is-obvious;
+    \item https://mobisoftinfotech.com/resources/blog/typescript-vs-javascript/;
+    \item https://stackoverflow.com/questions/49640121/mixing-javascript-and-typescript-in-node-js;
+    \item https://www.monocubed.com/blog/top-python-frameworks/;
+    \item https://www.theserverside.com/tip/The-differences-between-Java-and-TypeScript-devs-must-know;
+    \item https://medium.com/rewrite-tech/embedding-typescript-in-java-a343576031be;
+    \item https://blog.geekandjob.com/framework-javascript/.
 \end{itemize}
 
 \newpage
@@ -44,127 +44,127 @@ Il seguente documento ha come scopo principale quello di confrontare i vari ling
 Come database, non sapendo al momento come saranno strutturati i dati che necessitano di essere salvati in maniera persistente, abbiamo preso in considerazione \href{https://mariadb.org/}{MariaDB} per i database SQL e \href{https://www.mongodb.com/}{MongoDB} per i database NoSQL. \\
 Queste due scelte sono state fatte per due motivi principali:
 \begin{itemize}
-    \item Ricerca di un database computazionalmente leggero e che fosse aderente agli standard
-    \item Ricerca di un database la cui community è attiva e la documentazione chiara e puntuale, così da poter risolvere quanto prima i problemi che si potessero presentare data la poca esperienza accumulata con i database nel tempo
+    \item Ricerca di un database computazionalmente leggero e che fosse aderente agli standard;
+    \item Ricerca di un database la cui community è attiva e la documentazione chiara e puntuale, così da poter risolvere quanto prima i problemi che si potessero presentare data la poca esperienza accumulata con i database nel tempo.
 \end{itemize}
 \subsection{Backend}
 Per quanto riguarda il backend, la scelta sarà vincolata dalla preferenza verso un linguaggio staticamente o dinamicamente tipizzato. \\
 Qualora si scegliesse la tipizzazione statica, le scelte ricadono su:
 \begin{itemize}
-    \item \href{https://www.java.com/it/}{Java}
-    \item \href{https://learn.microsoft.com/en-us/dotnet/csharp/}{C\#}
-    \item \href{https://www.typescriptlang.org/}{TypeScript}
+    \item \href{https://www.java.com/it/}{Java};
+    \item \href{https://learn.microsoft.com/en-us/dotnet/csharp/}{C\#};
+    \item \href{https://www.typescriptlang.org/}{TypeScript}.
 \end{itemize}
 Mentre, scegliendo la tipizzazione dinamica, le scelte ricadrebbero su:
 \begin{itemize}
-    \item \href{https://www.python.org/}{Python}
-    \item \href{https://www.javascript.com/}{JavaScript}
+    \item \href{https://www.python.org/}{Python};
+    \item \href{https://www.javascript.com/}{JavaScript}.
 \end{itemize}
 \subsubsection{C\#}
 \textbf{Pro:}
 \begin{itemize}
-    \item Facile da eseguire su dispositivi Windows (che rappresenta la stragrande maggioranza degli utenti)
-    \item Essendo un linguaggio compilato e non interpretato, rende difficile in caso di attacchi la lettura del codice sorgente in chiaro
+    \item Facile da eseguire su dispositivi Windows (che rappresenta la stragrande maggioranza degli utenti);
+    \item Essendo un linguaggio compilato e non interpretato, rende difficile in caso di attacchi la lettura del codice sorgente in chiaro.
 \end{itemize}
 \vspace*{0.5cm}
 \textbf{Contro:}
 \begin{itemize}
-    \item Deve essere ricompilato per ogni minima modifica
-    \item Hostabile solo su server Windows
+    \item Deve essere ricompilato per ogni minima modifica;
+    \item Hostabile solo su server Windows.
 \end{itemize}
 
 \subsubsection{Java}
 \textbf{Pro:}
 \begin{itemize}
-    \item Linguaggio facile da imparare
-    \item Linguaggio di alto livello (assenza di puntatori, presenza di garbage collector)
-    \item Linguaggio OOP
-    \item \textit{Platform Indipendent}
-    \item Supporto al \textit{multithreading\textsubscript{G}} 
+    \item Linguaggio facile da imparare;
+    \item Linguaggio di alto livello (assenza di puntatori, presenza di garbage collector);
+    \item Linguaggio OOP;
+    \item \textit{Platform Indipendent};
+    \item Supporto al \textit{multithreading\textsubscript{G}}. 
 \end{itemize}
 \vspace*{0.5cm}
 \textbf{Contro:}
 \begin{itemize}
-    \item Rispetto ad altri linguaggi può risultare più lento o povero in fatto di performance
-    \item Mancanza di feature per il backup dei dati
-    \item Rispetto ad altri linguaggi, richiede uno spazio di memoria significativo
-    \item Rispetto ad altri linguaggi, usa molto più codice per svolgere una operazione basilare
+    \item Rispetto ad altri linguaggi può risultare più lento o povero in fatto di performance;
+    \item Mancanza di feature per il backup dei dati;
+    \item Rispetto ad altri linguaggi, richiede uno spazio di memoria significativo;
+    \item Rispetto ad altri linguaggi, usa molto più codice per svolgere una operazione basilare.
 \end{itemize}
 \subsubsection{JavaScript}
 \textbf{Pro:}
 \begin{itemize}
-    \item Semplice da imparare
-    \item Interoperabile
-    \item Versatile in quanto linguaggio \textit{fullstack\textsubscript{G}}
+    \item Semplice da imparare;
+    \item Interoperabile;
+    \item Versatile in quanto linguaggio \textit{fullstack\textsubscript{G}}.
 \end{itemize}
 \vspace*{0.5cm}
 \textbf{Contro:}
 \begin{itemize}
-    \item Linguaggio interpretato
-    \item Tipizzazione dinamica
-    \item Inconsistenza tra browser
+    \item Linguaggio interpretato;
+    \item Tipizzazione dinamica;
+    \item Inconsistenza tra browser.
 \end{itemize}
 \subsubsection{Python}
 \textbf{Pro:}
 \begin{itemize}
-    \item Facile da imparare
-    \item Flessibile ed estensibile
-    \item Presenza di moltissime librerie
-    \item Estremamente scalabile
-    \item Portabile
-    \item Vasta integrazione con l'\textit{IoT\textsubscript{G}}
+    \item Facile da imparare;
+    \item Flessibile ed estensibile;
+    \item Presenza di moltissime librerie;
+    \item Estremamente scalabile;
+    \item Portabile;
+    \item Vasta integrazione con l'\textit{IoT\textsubscript{G}}.
 \end{itemize}
 \vspace*{0.5cm}
 \textbf{Contro:}
 \begin{itemize}
-    \item Forte utilizzo di memoria
-    \item Tipizzazione dinamica
-    \item Multithreading complesso
-    \item Garbace colletion che porta ad un potenziale spreco di memoria
+    \item Forte utilizzo di memoria;
+    \item Tipizzazione dinamica;
+    \item Multithreading complesso;
+    \item Garbace collection che porta ad un potenziale spreco di memoria.
 \end{itemize}
 \subsubsection{Typescript}
 \textbf{Pro:}
 \begin{itemize}
-    \item Linguaggio compilato
-    \item Tipizzazione statica
+    \item Linguaggio compilato;
+    \item Tipizzazione statica.
 \end{itemize}
 \vspace*{0.5cm}
 \textbf{Contro:}
 \begin{itemize}
-    \item Inconsistenza tra browser
-    \item Tipizzazione alcune volte complessa
-    \item Necessità di ricompilare per ogni minima modifica
+    \item Inconsistenza tra browser;
+    \item Tipizzazione alcune volte complessa;
+    \item Necessità di ricompilare per ogni minima modifica.
 \end{itemize}
 \subsection{Backend Framework}
 \subsubsection{C\#}
 \begin{itemize}
-    \item \href{https://dotnet.microsoft.com/en-us/apps/aspnet}{ASP.NET}
+    \item \href{https://dotnet.microsoft.com/en-us/apps/aspnet}{ASP.NET}.
 \end{itemize}
 \subsubsection{Java}
 \begin{itemize}
-    \item \href{https://spring.io/}{Java Spring}
+    \item \href{https://spring.io/}{Java Spring}.
 \end{itemize}
 \subsubsection{JavaScript}
 \begin{itemize}
-    \item \href{https://nextjs.org/}{Next}
-    \item \href{https://nodejs.org/}{Node}
+    \item \href{https://nextjs.org/}{Next};
+    \item \href{https://nodejs.org/}{Node}.
 \end{itemize}
 \subsubsection{Python}
 \begin{itemize}
-    \item \href{https://www.djangoproject.com/}{Django}
-    \item \href{https://flask.palletsprojects.com/}{Flask}
+    \item \href{https://www.djangoproject.com/}{Django};
+    \item \href{https://flask.palletsprojects.com/}{Flask}.
 \end{itemize}
 \subsubsection{Typescript}
 \begin{itemize}
-    \item \href{https://nestjs.com/}{Nest}
-    \item \href{https://feathersjs.com/}{Feathers}
-    \item \href{https://loopback.io/}{Loopback}
+    \item \href{https://nestjs.com/}{Nest};
+    \item \href{https://feathersjs.com/}{Feathers};
+    \item \href{https://loopback.io/}{Loopback}.
 \end{itemize}
 \subsection{Frontend}
 Escludendo \textit{HTML5}, \textit{XHTML} e \textit{CSS} che saranno di sicuro usati per la parte di frontend della webapp, i linguaggi tra cui scegliere risultano essere solamente
 \begin{itemize}
-    \item \href{https://www.typescriptlang.org/}{TypeScript}
-    \item \href{https://www.javascript.com/}{JavaScript}
+    \item \href{https://www.typescriptlang.org/}{TypeScript};
+    \item \href{https://www.javascript.com/}{JavaScript}.
 \end{itemize}
 \subsubsection{JavaScript}
 \subsubsection{TypeScript}
@@ -172,17 +172,17 @@ Escludendo \textit{HTML5}, \textit{XHTML} e \textit{CSS} che saranno di sicuro u
 \subsection{Frontend Framework}
 \subsubsection{JavaScript}
 \begin{itemize}
-    \item \href{https://angularjs.org/}{Angular}
-    \item \href{https://react.dev/}{React}
-    \item \href{https://vuejs.org/}{Vue}
-    \item \href{https://backbonejs.org/}{Backbone}
-    \item \href{https://preactjs.com/}{Preact}
-    \item \href{https://expressjs.com/}{Express}
+    \item \href{https://angularjs.org/}{Angular};
+    \item \href{https://react.dev/}{React};
+    \item \href{https://vuejs.org/}{Vue};
+    \item \href{https://backbonejs.org/}{Backbone};
+    \item \href{https://preactjs.com/}{Preact};
+    \item \href{https://expressjs.com/}{Express}.
 \end{itemize}
 \subsubsection{TypeScript}
 \begin{itemize}
-    \item \href{https://angularjs.org/}{Angular}
-    \item \href{https://emberjs.com/}{Ember}
+    \item \href{https://angularjs.org/}{Angular};
+    \item \href{https://emberjs.com/}{Ember}.
 \end{itemize}
 Per i pro e i contro dei framework, sia frontend che backend, si rimanda il lettore a \href{https://blog.geekandjob.com/framework-javascript/}{questo link}.
 \newpage
@@ -190,6 +190,3 @@ Per i pro e i contro dei framework, sia frontend che backend, si rimanda il lett
 [WIP]
 \end{document} 
 
-%% TO-DO
-% Aggiungere descrizione con pro e contro dei linguaggi
-% Aggiungere descrizione con pro e contro dei framework
