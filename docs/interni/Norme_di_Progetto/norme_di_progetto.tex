@@ -24,6 +24,7 @@ Questo documento contiene le procedure, gli strumenti e i criteri di qualità ch
 \addversione{0.0.7}{25/04/2023}{Alberti Nicolas}{Soldà Matteo}{Modifica elementi TODO e TBD; introduzione Glossario v.0.0.0}
 \addversione{0.0.8}{26/04/2023}{Brotto Romina}{Alberti Nicolas}{Modifica elementi sezione 2.2.5}
 \addversione{0.0.9}{03/05/2023}{Alberti Nicolas}{Soldà Matteo}{Aggiunta sezione 4.1.1; modifica sezione 4.1}
+\addversione{0.0.10}{11/05/2023}{Erica Cavaliere}{Lorenzo Salami}{Aggiunta sezione 2.2.6}
 
 \begin{document}
 \makeindexdetails
@@ -306,6 +307,30 @@ Per quanto riguarda la scrittura del codice, si è scelto di utilizzare le segue
 %        \item \textit{box-shadow}.
 %    \end{itemize}
 %\end{itemize}
+
+\subsubsection{Workflow Github}
+
+Ogni modifica alla repository dovrà seguire i seguenti passaggi:
+\begin{itemize}
+\item Modifica del codice su repository locale;
+\item Push su un branch remoto;
+\item Pull request tramite piattaforma web GitHub per merge sul branch \texttt{main};
+\item Review della pull request;
+\item Merge sul branch \texttt{main}.
+\end{itemize}
+
+Un branch remoto è un branch su cui operano uno o più membri del gruppo e ha come scopo l'elaborazione di un prodotto o di un processo di progetto. Il branch si chiamerà come il prodotto o il processo relativo.\newline
+Le modifiche su un branch remoto avverranno tramite merge di un branch locale o con commit diretto. I membri del gruppo che lavorano sul branch concordano una modalità.\newline
+È auspicabile che i branch locali non compaiano nella repository remota.\newline
+Prima di effettuare un push alla repository remota o un merge è necessario fare uno squash dei commit superflui.\newline
+Non appena chi lavora su un branch remoto ritenga che ci sia materiale pronto per una revisione, apre una pull request su GitHub.\newline
+La review dovrà essere fatta dal verificatore. Il verificatore potrà accettare la pull request.\newline
+Una pull request può essere accettata solo se tutti i prodotti coinvolti superano i requisiti minimi definiti nel \textit{Piano di Qualifica}.\newline
+Quando il verificatore accetta un pull request, dovrà eliminare il branch relativo a quest'ultima.\newline
+Non è consentito fare il caricamento diretto di file tramite interfaccia web o desktop.\newline
+Non è consentito forzare i push sulla repository remota.\newline
+
+
 \newpage
 
 \section{Processi Secondari}
