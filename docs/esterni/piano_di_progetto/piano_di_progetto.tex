@@ -22,6 +22,7 @@ Questo documento serve a tracciare l'efficienza del progetto. Tiene traccia dei 
 \addversione{0.0.1}{22/04/2023}{Erica Cavaliere}{Alberti Nicolas}{Stesura iniziale}
 \addversione{0.0.2}{24/04/2023}{Erica Cavaliere}{Soldà Matteo}{Correzione errori e aggiunta delle intestazioni e dei piè di pagina}
 \addversione{0.0.3}{26/04/2023}{Erica Cavaliere}{Brotto Romina}{Inserimento interruzioni di pagina e completamento grafico di Gantt}
+\addversione{0.0.4}{16/05/2023}{Erica Cavaliere}{Lorenzo Salami}{Inserimento degli sprint e aggiornamento dei grafici di Gantt}
 
 \def\pgfcalendarmonthitname#1{%
 \ifcase#1 \or Gennaio\or Febbraio\or Marzo\or Aprile\or Maggio\or Giugno\or Luglio\or Agosto\or Settembre\or Ottobre\or Novembre\or Dicembre\fi%
@@ -47,10 +48,170 @@ Durante lo svolgimento del progetto, è possibile andare incontro a dei problemi
 \newpage
 \section{Pianificazione del lavoro}
 
-\paragraph{Grafico di Gantt}
+\subsection{Lavoro svolto}
+%Di seguito sono riportati i grafici aggiornati del lavoro pianificato.\newline
+%Se si desidera vedere l'evoluzione degli impegni presi in un arco temporale preciso, lo si può vedere nella sezione \ref{Scrum}.\newline
 
-\includegraphics[scale=0.24]{grafico_gantt.png}
+
+
+\begin{itemize}
+    \item Way of Working\newline
+    \includegraphics[scale=0.24]{WoW_2.png}\newline
+    \item Requirements and Technology Baseline\newline
+    \includegraphics[scale=0.24]{RTB_3.png}\newline
+\end{itemize}
+
+\subsection{Scrum}\label{Scrum}
+
+\subsubsection{Sprint 1}
+\textbf{Data di inizio:} 14/04/2023\newline
+\textbf{Data di fine:} 27/04/2023\newline
+\newline
+\textbf{Suddivisione del lavoro:}
+\begin{itemize}
+    \item aggiornamento delle norme di progetto;
+    \item stesura del piano di progetto;
+    \item stesura del piano di qualifica.
+\end{itemize}
+\textbf{Difficoltà incontrate:}
+\begin{itemize}
+    \item problemi a suddividere i ruoli e assegnare i compiti.
+\end{itemize}
+\includegraphics[scale=0.24]{WoW_1.png}\newline
+\newline
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{ORE} & \textbf{Respon.} & \textbf{Amministr.} & \textbf{Analista} & \textbf{Proget.} & \textbf{Program.} & \textbf{Verif.} & \textbf{Totale}\\
+    \hline
+    Erica & & & 1 & & & & 1\\
+    \hline
+    Francesco & & 1 & & & & & 1\\
+    \hline
+    Lorenzo & & & 1 & & & & 1\\
+    \hline
+    Matteo & 2 & & & & & & 2\\
+    \hline
+    Nicolas & & 1.30 & & & & & 1.30\\
+    \hline
+    Romina & & & & & & 1 & 1\\
+    \hline
+    \textbf{Totale} & 2 & 2.30 & 2 & 0 & 0 & 1 & 7.30\\
+    \hline
+\end{tabular}\\[8pt]
+
+\subsubsection{Sprint 2}
+\textbf{Data di inizio:} 28/04/2023\newline
+\textbf{Data di fine:} 08/05/2023\newline
+\newline
+\textbf{Suddivisione del lavoro:}
+\begin{itemize}
+    \item aggiornamento delle Norme di Progetto inserendo la gestione dei processi e il ticketing;
+    \item creare una prima stesura dell'Analisi dei Requisiti;
+    \item preparare una base delle Use Case da inserire nell'Analisi dei Requisiti;
+    \item stesura di un Glossario.
+\end{itemize}
+\textbf{Difficoltà incontrate:}
+\begin{itemize}
+    \item iniziale difficoltà di organizzazione del lavoro;
+    \item difficoltà nell'interpretazione di alcuni termini  del capitolato.
+\end{itemize}
+\includegraphics[scale=0.24]{RTB_1.png}\newline
+\newline
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{ORE} & \textbf{Respon.} & \textbf{Amministr.} & \textbf{Analista} & \textbf{Proget.} & \textbf{Program.} & \textbf{Verif.} & \textbf{Totale}\\
+    \hline
+    Erica & & & 2 & & & & 3(+2)\\
+    \hline
+    Francesco & & & 2 & & & & 3(+2)\\
+    \hline
+    Lorenzo & & & & & & 2 & 3(+2)\\
+    \hline
+    Matteo & & 3 & & & & & 5(+3)\\
+    \hline
+    Nicolas & 3 & & & & & & 4.30(+3)\\
+    \hline
+    Romina & & 2 & & & & & 3(+2)\\
+    \hline
+    \textbf{Totale} & 5(+3) & 7.30(+5) & 6(+4) & 0(+0) & 0(+0) & 3(+2) & 21.30(+14)\\
+    \hline
+\end{tabular}\\[8pt]
+
+\subsubsection{Sprint 3}
+\textbf{Data di inizio:} 09/05/2023\newline
+\textbf{Data di fine:} 16/05/2023\newline
+\newline
+\textbf{Suddivisione del lavoro:}
+\begin{itemize}
+    \item aggiornamento dell'Analisi dei Requisiti inserendo vincoli, riferimenti normativi, riferimenti informativi e una tabella dei requisiti;
+    \item aggiornamento delle Norme di Progetto inserendo una sequenza chiara per la gestione dei commit;
+    \item fare uno confronto dei possibili linguaggi che si andranno poi ad utilizzare nel progetto.
+\end{itemize}
+\textbf{Difficoltà incontrate:}
+\begin{itemize}
+    \item gestione della repository;
+    \item scarsa conoscenza dei comandi nel VCS;
+    \item difficoltà nella scelta dei linguaggi framework data la poca esperienza accomulata e la grande presenza di alternative.
+\end{itemize}
+\includegraphics[scale=0.24]{RTB_2.png}\newline
+\newline
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{ORE} & \textbf{Respon.} & \textbf{Amministr.} & \textbf{Analista} & \textbf{Proget.} & \textbf{Program.} & \textbf{Verif.} & \textbf{Totale}\\
+    \hline
+    Erica & & 2 & & & & & 5(+2)\\
+    \hline
+    Francesco & & & 2 & & & & 5(+2)\\
+    \hline
+    Lorenzo & & 2 & & & & & 5(+2)\\
+    \hline
+    Matteo & 2 & & & & & & 7(+2)\\
+    \hline
+    Nicolas & & & & & & 2 & 6.30(+2)\\
+    \hline
+    Romina & & & 2 & & & & 5(+2)\\
+    \hline
+    \textbf{Totale} & 7(+2) & 11.30(+4) & 10(+4) & 0(+0) & 0(+0) & 5(+2) & 33.30(+12)\\
+    \hline
+\end{tabular}\\[8pt]
+
+\subsubsection{Sprint 3}
+\textbf{Data di inizio:} 17/05/2023\newline
+\textbf{Data di fine:} 25/05/2023\newline
+\newline
+\textbf{Suddivisione del lavoro:}
+\begin{itemize}
+    \item incontro con il proponente per sistemare gli use case;
+    \item decidere i linguaggi e i framework da utilizzare.
+\end{itemize}
+\textbf{Difficoltà incontrate:}
+\begin{itemize}
+    \item (da definire)
+\end{itemize}
+\includegraphics[scale=0.24]{RTB_3.png}\newline
+\newline
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{ORE} & \textbf{Respon.} & \textbf{Amministr.} & \textbf{Analista} & \textbf{Proget.} & \textbf{Program.} & \textbf{Verif.} & \textbf{Totale}\\
+    \hline
+    Erica & & 0 & & & & & 0(+0)\\
+    \hline
+    Francesco & & & & & & 0 & 0(+0)\\
+    \hline
+    Lorenzo & & 0 & & & & & 0(+0)\\
+    \hline
+    Matteo & & & 0 & & & & 0(+0)\\
+    \hline
+    Nicolas & & & 0 & & & & 0(+0)\\
+    \hline
+    Romina & 0 & & & & & & 0(+0)\\
+    \hline
+    \textbf{Totale} & 0(+0) & 0(+) & 0(+0) & 0(+0) & 0(+0) & 0(+0) & 0(+0)\\
+    \hline
+\end{tabular}\\[8pt]
+
 \newpage
+
 \section{Preventivo delle ore e dei costi}
 
 \subsection{Suddivisione delle ore previste}
