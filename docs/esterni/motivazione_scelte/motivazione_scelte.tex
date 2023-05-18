@@ -15,6 +15,7 @@ Questo documento riporta i confronti tra i vari linguaggi presi in considerazion
 }
 
 \addversione{0.0.0}{09/05/2023}{Soldà Matteo}{Ceccato Francesco}{Prima stesura.}
+\addversione{0.0.1}{18/05/2023}{Soldà Matteo}{}{Aggiunta decisione preliminare dei linguaggi e framework}
 
 
 \begin{document}
@@ -187,6 +188,42 @@ Escludendo \textit{HTML5}, \textit{XHTML} e \textit{CSS} che saranno di sicuro u
 Per i pro e i contro dei framework, sia frontend che backend, si rimanda il lettore a \href{https://blog.geekandjob.com/framework-javascript/}{questo link}.
 \newpage
 \section{Scelte e Motivazioni}
-[WIP]
+A seguito di una votazione unanime del gruppo, si è pensato di utilizzare il framework \href{https://react.dev/}{React} per il frontend e il framework \href{https://nodejs.org/}{Node} per il backend, entrambi utilizzeranno \href{https://www.typescriptlang.org/}{TypeScript} insieme a \href{https://www.typescriptlang.org/docs/handbook/jsx.html}{JSX}.
+Queste scelte sono dovute a diversi fattori, nello specifico:
+\begin{itemize}
+    \item Si è scelto TypeScript al posto di JavaScript in quanto utilizza una tipizzazione statica e non dinamica, portando di conseguenza i seguenti vantaggi:
+    \begin{itemize}
+        \item Rilevazione degli errori a tempo di compilazione: nei linguaggi a tipizzazione statica, gli errori di tipo vengono rilevati durante la fase di compilazione; ciò significa che gli errori di tipo, come l'uso di un tipo errato di dato o la mancanza di coerenza tra i tipi, vengono evidenziati prima che il programma venga eseguito. Questo aiuta a prevenire errori costosi o bug difficili da individuare in fase di esecuzione;
+        \item Maggiore robustezza e sicurezza: la dichiarazione esplicita dei tipi di dati può aiutare gli sviluppatori a comprendere meglio l'intento del codice e a individuare eventuali incongruenze o problemi potenziali. Inoltre, poiché i tipi sono controllati a tempo di compilazione, i programmi tipizzati staticamente tendono ad avere meno errori di tipo durante l'esecuzione;
+        \item Ottimizzazione delle performance: i linguaggi tipizzati staticamente possono spesso beneficiare di ottimizzazioni a livello di compilazione. Il compilatore può effettuare analisi statiche più avanzate, come l'inferenza di tipo o la rilevazione di pattern specifici, per generare codice più efficiente. Di conseguenza, i programmi tipizzati staticamente possono ottenere migliori prestazioni rispetto ai programmi tipizzati dinamicamente;
+        \item Documentazione implicita: nei linguaggi con tipizzazione statica, i tipi di dati possono fungere da documentazione implicita del codice. La dichiarazione esplicita dei tipi di dati aiuta gli sviluppatori a capire come utilizzare correttamente le funzioni e le variabili, migliorando la leggibilità e la manutenibilità del codice;
+        \item Semplicità nella collaborazione e per la scalabilità: nei progetti di grandi dimensioni o quando si lavora in team, la tipizzazione statica può favorire una migliore collaborazione. La dichiarazione dei tipi rende più chiaro come le diverse parti del sistema interagiscono tra loro, facilitando l'integrazione del codice scritto da più persone. Inoltre, la tipizzazione statica può aiutare a identificare e prevenire errori di integrazione durante il processo di sviluppo e di manutenzione del software.
+    \end{itemize}
+    \item Si è scelto di utilizzare React e NodeJS in quanto consigliati dall'azienda proponente, rendendo quindi possibile la comunicazione con la stessa per la risoluzione di problemi di qualsiasi entità dovuta alla poca conoscenza dei framework, inoltre:
+    \begin{itemize}
+        \item React è stato scelto per i seguenti motivi:
+        \begin{itemize}
+            \item Component-based architecture: utilizza un'architettura basata su componenti, che consente di suddividere l'interfaccia utente in componenti modulari e riutilizzabili. Questo approccio favorisce la modularità del codice, semplifica la gestione dello stato e offre una maggiore scalabilità del progetto;
+            \item Virtual DOM: utilizza un concetto chiamato "Virtual DOM" (DOM virtuale). Questo significa che React mantiene una rappresentazione leggera del DOM in memoria e si occupa di aggiornare solo le parti dell'interfaccia utente che sono state effettivamente modificate. Questo approccio porta a un'efficienza notevole nelle operazioni di rendering e aggiornamento dell'interfaccia utente, migliorando le prestazioni complessive dell'applicazione;
+            \item Reattività e gestione dello stato: fornisce un'eccellente gestione dello stato dell'applicazione. Attraverso il concetto di "state" (stato) e "props" (proprietà), è possibile gestire in modo semplice e prevedibile i dati dell'applicazione e reagire ai cambiamenti in modo efficiente. Inoltre, React offre un'ampia gamma di librerie e soluzioni per la gestione dello stato, come Redux e MobX, che semplificano ulteriormente la gestione delle informazioni in un'applicazione complessa;
+            \item Ampia comunità e supporto: ha una delle comunità di sviluppatori più grandi e attive nel panorama dello sviluppo frontend. Ciò significa che è possibile trovare una vasta gamma di risorse, documentazione, tutorial e librerie di terze parti per supportare lo sviluppo di progetti. Inoltre, la comunità offre costantemente aggiornamenti, nuove funzionalità e correzioni di bug per React, garantendo che il framework sia all'avanguardia;
+            \item Ecosistema ricco: è supportato da un vasto ecosistema di strumenti e librerie. Ci sono numerose librerie, come React Router per il routing, Axios per le richieste HTTP e molti altri che semplificano lo sviluppo di funzionalità specifiche;
+            \item Compatibilità con TypeScript: ha un'ottima integrazione con TypeScript, un linguaggio di programmazione con tipizzazione statica. Utilizzando React con TypeScript, puoi ottenere i benefici della tipizzazione statica, come rilevazione degli errori a tempo di compilazione e autocompletamento, per una migliore esperienza di sviluppo e una maggiore sicurezza del codice.
+        \end{itemize}
+        \item NodeJS è stato scelto per i seguenti motivi:
+        \begin{itemize}
+            \item Efficienza e scalabilità: è noto per la sua efficienza e scalabilità. Grazie al suo modello di I/O non bloccante e orientato agli eventi, Node.js può gestire un grande numero di richieste simultanee con una risposta rapida. Ciò lo rende particolarmente adatto per applicazioni in tempo reale e applicazioni con un alto traffico;
+            \item Comunità e supporto: ha una comunità di sviluppatori attiva e una vasta quantità di risorse disponibili. Ciò significa che si può trovare un supporto significativo, documentazione, tutorial e librerie di terze parti a supporto delle difficoltà che si potrebbero incontrare;
+            \item Adattabilità: è un runtime flessibile che può essere utilizzato per diversi tipi di progetti. Può essere utilizzato per sviluppare API RESTful, servizi web, applicazioni in tempo reale, microservizi e molto altro ancora. La sua natura leggera e modulare consente di adattarlo alle specifiche esigenze del tuo progetto.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+\vspace*{0.5cm}
+Per far funzionare ReactJS e NodeJS con TypeScript, è necessario configurare correttamente l'ambiente di sviluppo.\\
+Prima di tutto, è necessario creare un nuovo progetto e impostare le dipendenze necessarie.\\ \\
+Per un'applicazione ReactJS, puoi utilizzare Create React App (CRA) per avviare rapidamente un progetto preconfigurato che supporta TypeScript di default, quindi non è necessaria alcuna configurazione aggiuntiva.\\ \\
+Per un'applicazione NodeJS, si può inizializzare un nuovo progetto utilizzando \textit{npm} o \textit{yarn} e installare le dipendenze necessarie, come \textit{Express} per il routing e \textit{Mongoose} per l'interazione con il database. \\
+Bisogna inoltre assicurarsi di configurare il progetto per utilizzare TypeScript impostando un file di configurazione \texttt{tsconfig.json} nella radice del progetto.\\\\
+Successivamente, si possono aggiungere le definizioni dei tipi necessarie per ReactJS e le dipendenze specifiche che si utilizzando in NodeJS. Per ReactJS, bisogna installare le definizioni dei tipi per React tramite il pacchetto \texttt{@types/react}. Per le applicazioni NodeJS, bisogna installare le definizioni dei tipi per le dipendenze specifiche utilizzate nel progetto.\\
 \end{document} 
 
