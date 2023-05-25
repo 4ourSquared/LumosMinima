@@ -25,6 +25,7 @@ Questo documento si occupa di riportare un'analisi di tutti gli elementi richies
 \addversione{0.0.2}{05/05/2023}{Francesco Ceccato}{Lorenzo Salami}{Inserimento di alcuni casi d'uso}
 \addversione{0.0.3}{09/05/2023}{Brotto Romina}{Soldà Matteo}{Aggiunta sezioni 2, 2.1, 4, 4.1 ed inizio stesura requisiti funzionali}
 \addversione{0.0.4}{10/05/2023}{Alberti Nicolas}{Brotto Romina}{}
+\addversione{0.0.5}{25/05/2023}{Brotto Romina}{Cavaliere Erica}{Sistemazione casi d'uso, aggiunta sottocasi e requisiti funzionali}
 
 \def\pgfcalendarmonthitname#1{%
 \ifcase#1 \or Gennaio\or Febbraio\or Marzo\or Aprile\or Maggio\or Giugno\or Luglio\or Agosto\or Settembre\or Ottobre\or Novembre\or Dicembre\fi%
@@ -157,7 +158,8 @@ completamento del progetto:
 \end{itemize}
 
 \subsection{Lista dei casi d'uso}
-\subsubsection{UC1 - Rilevamento presenza di persone}
+
+\subsubsection{UC1 - Rilevamento presenza di persone automatico}
 \textbf{Attore:} Sensore.\newline
 \textbf{PRE:} l'individuo non è ancora posizionato in prossimità dell'area con lampioni, i lampioni sono spenti.\newline
 \textbf{POST:} l'individuo è posizionato all'interno dell'area, i lampioni illuminano l'area.\newline
@@ -168,9 +170,35 @@ completamento del progetto:
     \item Il sistema elabora l'informazione ricevuta, aumenta l'intensità luminosa dell'area (include[UC17]) per un certo tempo;
     \item A seguire, l'intensità luminosa dell'area viene riportata al valore di default.
 \end{enumerate}
-\textbf{Requisiti collegati:} RF1-O\newline
+\textbf{Requisiti collegati:} RF1-O\newline 
 
-\subsubsection{UC2 - Acquisizione intensità luminosa di un'area illuminata}
+\subsubsection{UC1.1 - Rilevamento presenza di persone automatico}
+\textbf{Attore:} Sensore.\newline
+\textbf{PRE:} l'individuo non è ancora posizionato in prossimità dell'area con lampioni, i lampioni sono spenti.\newline
+\textbf{POST:} l'individuo è posizionato all'interno dell'area, i lampioni illuminano l'area.\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item Il sensore rileva la presenza di uno o più individui nel raggio d'azione;
+    \item Il sistema riceve in modalità push le informazioni dal sensore;
+    \item Il sistema elabora l'informazione ricevuta, aumenta l'intensità luminosa dell'area (include[UC17]) per un certo tempo;
+    \item A seguire, l'intensità luminosa dell'area viene riportata al valore di default.
+\end{enumerate}
+\textbf{Requisiti collegati:} RF21-O\newline
+
+\subsubsection{UC1.2 - Rilevamento presenza di persone su richiesta}
+\textbf{Attore:} Sensore.\newline
+\textbf{PRE:} l'individuo non è ancora posizionato in prossimità dell'area con lampioni, i lampioni sono spenti.\newline
+\textbf{POST:} l'individuo è posizionato all'interno dell'area, i lampioni illuminano l'area.\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item Il sensore rileva la presenza di uno o più individui nel raggio d'azione;
+    \item Il sistema riceve in modalità pull le informazioni dal sensore;
+    \item Il sistema elabora l'informazione ricevuta, aumenta l'intensità luminosa dell'area (include[UC17]) per un certo tempo;
+    \item A seguire, l'intensità luminosa dell'area viene riportata al valore di default.
+\end{enumerate}
+\textbf{Requisiti collegati:} RF22-F\newline
+
+\subsubsection{UC2 - Visualizzazione intensità luminosa di un'area illuminata}
 \textbf{Attore:} Manutentore.\newline
 \textbf{PRE:} un'area luminosa configurata illumina con un intensità iniziale arbitraria.\newline
 \textbf{POST:} l'area luminosa summenzionata illumina con una precisa intensità finale.\newline
@@ -179,13 +207,15 @@ completamento del progetto:
     \item L'operatore accede al sistema;
     \item L'operatore effettua il login con proprie credenziali;
     \item Il sistema acquisisce l'elenco di tutte le aree illuminate;
-    \item L'operatore seleziona una o più aree illuminate;
-    \item L'operatore imposta un valore di intensità luminosa per tutti gli impianti nelle aree selezionate in 4;
-    \item Il sistema configura tutti gli impianti selezionati in 4. all'intensità selezionata in 5.
+    \item L'operatore seleziona una aree illuminate;
+    \item L'operatore imposta un valore di intensità luminosa per gli impianti nell'area selezionata;
+    \item Il sistema configura tutti gli impianti selezionati all'intensità desiderata.
 \end{enumerate}
 \textbf{Requisiti collegati:} RF2-O\newline
 
-\subsubsection{UC3 - Aumento manuale dell'intensità luminosa di un'area illuminata}
+
+
+\subsubsection{UC3 - Aumento manuale dell'intensità luminosa}
 \textbf{Attore:} Manutentore.\newline
 \textbf{PRE:} un'area luminosa configurata illumina con un intensità iniziale arbitraria.\newline
 \textbf{POST:} l'area luminosa summenzionata illumina con una precisa intensità finale.\newline
@@ -194,13 +224,43 @@ completamento del progetto:
     \item L'operatore accede al sistema;
     \item L'operatore effettua il login con proprie credenziali;
     \item Il sistema mostra l'elenco di tutte le aree illuminate;
-    \item L'operatore seleziona una o più aree illuminate;
-    \item L'operatore imposta un valore maggiore di intensità luminosa per tutti gli impianti nelle aree selezionate in 4;
-    \item Il sistema configura tutti gli impianti selezionati in 4. all'intensità selezionata in 5.
+    \item L'operatore seleziona un'area illuminata;
+    \item L'operatore imposta un valore maggiore di intensità luminosa per tutti gli impianti nell'area selezionata;
+    \item Il sistema configura tutti gli impianti selezionati all'intensità desiderata.
 \end{enumerate}
 \textbf{Requisiti collegati:} RF3-O\newline
 
-\subsubsection{UC4 - Diminuzione manuale dell'intensità luminosa di un'area illuminata}
+\subsubsection{UC3.1 - Aumento manuale dell'intensità luminosa di un'area illuminata}
+\textbf{Attore:} Manutentore.\newline
+\textbf{PRE:} un'area luminosa configurata illumina con un intensità iniziale arbitraria.\newline
+\textbf{POST:} l'area luminosa summenzionata illumina con una precisa intensità finale.\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item L'operatore accede al sistema;
+    \item L'operatore effettua il login con proprie credenziali;
+    \item Il sistema mostra l'elenco di tutte le aree illuminate;
+    \item L'operatore seleziona un'area illuminata;
+    \item L'operatore imposta un valore maggiore di intensità luminosa per tutti gli impianti nell'area selezionata;
+    \item Il sistema configura tutti gli impianti selezionati all'intensità desiderata.
+\end{enumerate}
+\textbf{Requisiti collegati:} RF23-O\newline
+
+\subsubsection{UC3.2 - Aumento manuale dell'intensità luminosa di più aree illuminate}
+\textbf{Attore:} Manutentore.\newline
+\textbf{PRE:} le aree luminose configurate illuminano con un intensità iniziale arbitraria.\newline
+\textbf{POST:} le aree luminose summenzionate illuminano con una precisa intensità finale.\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item L'operatore accede al sistema;
+    \item L'operatore effettua il login con proprie credenziali;
+    \item Il sistema mostra l'elenco di tutte le aree illuminate;
+    \item L'operatore seleziona più aree illuminate;
+    \item L'operatore imposta un valore maggiore di intensità luminosa per tutti gli impianti nelle aree selezionate;
+    \item Il sistema configura tutti gli impianti selezionati all'intensità desiderata.
+\end{enumerate}
+\textbf{Requisiti collegati:} RF24-F\newline
+
+\subsubsection{UC4 - Diminuzione manuale dell'intensità luminosa}
 \textbf{Attore:} Manutentore.\newline
 \textbf{PRE:} un'area luminosa configurata illumina con un intensità iniziale arbitraria.\newline
 \textbf{POST:} l'area luminosa summenzionata illumina con una precisa intensità finale.\newline
@@ -209,11 +269,41 @@ completamento del progetto:
     \item L'operatore accede al sistema;
     \item L'operatore effettua il login con proprie credenziali;
     \item Il sistema mostra elenco di tutte le aree illuminate;
-    \item L'operatore seleziona una o più aree illuminate;
-    \item L'operatore imposta un valore minore di intensità luminosa per tutti gli impianti nelle aree selezionate in 4;
-    \item Il sistema configura tutti gli impianti selezionati in 4. all'intensità selezionata in 5.
+    \item L'operatore seleziona un'area illuminata;
+    \item L'operatore imposta un valore minore di intensità luminosa per tutti gli impianti nell'area selezionata;
+    \item Il sistema configura tutti gli impianti selezionati all'intensità desiderata.
 \end{enumerate}
 \textbf{Requisiti collegati:} RF4-O\newline
+
+\subsubsection{UC4.1 - Diminuzione manuale dell'intensità luminosa di un'area illuminata}
+\textbf{Attore:} Manutentore.\newline
+\textbf{PRE:} un'area luminosa configurata illumina con un intensità iniziale arbitraria.\newline
+\textbf{POST:} l'area luminosa summenzionata illumina con una precisa intensità finale.\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item L'operatore accede al sistema;
+    \item L'operatore effettua il login con proprie credenziali;
+    \item Il sistema mostra elenco di tutte le aree illuminate;
+    \item L'operatore seleziona un'area illuminata;
+    \item L'operatore imposta un valore minore di intensità luminosa per tutti gli impianti nell'area selezionata;
+    \item Il sistema configura tutti gli impianti selezionati all'intensità desiderata.
+\end{enumerate}
+\textbf{Requisiti collegati:} RF25-O\newline
+
+\subsubsection{UC4.2 - Diminuzione manuale dell'intensità luminosa di più aree illuminate}
+\textbf{Attore:} Manutentore.\newline
+\textbf{PRE:} le aree luminose configurate illuminano con un intensità iniziale arbitraria.\newline
+\textbf{POST:} le aree luminose summenzionate illuminano con una precisa intensità finale.\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item L'operatore accede al sistema;
+    \item L'operatore effettua il login con proprie credenziali;
+    \item Il sistema mostra elenco di tutte le aree illuminate;
+    \item L'operatore seleziona più aree illuminate;
+    \item L'operatore imposta un valore minore di intensità luminosa per tutti gli impianti nelle aree selezionate;
+    \item Il sistema configura tutti gli impianti selezionati all'intensità desiderata.
+\end{enumerate}
+\textbf{Requisiti collegati:} RF26-F\newline
 
 \subsubsection{UC5 - Login}
 \textbf{Attore:} 
@@ -436,7 +526,7 @@ completamento del progetto:
 \end{itemize}
 \textbf{Requisiti collegati:} RF12-O\newline
 
-\subsubsection{UC13 - Aumento automatico dell'intensità luminosa di un'area illuminata}
+\subsubsection{UC13 - Aumento automatico dell'intensità luminosa}
 \textbf{Attori:} Sensore \newline
 \textbf{PRE:} un'area luminosa configurata illumina con un'intensità iniziale arbitraria.\newline
 \textbf{POST:} l'area luminosa summenzionata illumina con una precisa intensità finale.\newline
@@ -446,11 +536,39 @@ completamento del progetto:
 % automaticamente aumenta la luminosità.
 \begin{enumerate}
     \item Il sensore rileva la presenza di persone in una area illuminata precisa; [UC1]
-    \item Il sistema di gestione dell'illuminazione aumenta l'intensità luminosa dell'area illuminata rilevata in 1.
+    \item Il sistema di gestione dell'illuminazione aumenta l'intensità luminosa dell'area illuminata rilevata.
 \end{enumerate}
 \textbf{Requisiti collegati:} RF13-O\newline
 
-\subsubsection{UC14 - Diminuzione automatica dell'intensità luminosa di un'area illuminata}
+\subsubsection{UC13.1 - Aumento automatico dell'intensità luminosa di un'area illuminata}
+\textbf{Attori:} Sensore \newline
+\textbf{PRE:} un'area luminosa configurata illumina con un'intensità iniziale arbitraria.\newline
+\textbf{POST:} l'area luminosa summenzionata illumina con una precisa intensità finale.\newline
+\textbf{Scenario principale:}
+% DA CONTROLLARE: Non è il sensore che modifica l'intensità, ma esso fornisce il
+% l'informazione al software del passaggio della persona: poi il software
+% automaticamente aumenta la luminosità.
+\begin{enumerate}
+    \item Il sensore rileva la presenza di persone in una area illuminata precisa; [UC1]
+    \item Il sistema di gestione dell'illuminazione aumenta l'intensità luminosa dell'area illuminata rilevata.
+\end{enumerate}
+\textbf{Requisiti collegati:} RF27-O\newline
+
+\subsubsection{UC13.2 - Aumento automatico dell'intensità luminosa di più aree illuminate}
+\textbf{Attori:} Sensore \newline
+\textbf{PRE:} le aree luminose configurate illuminano con un'intensità iniziale arbitraria.\newline
+\textbf{POST:} le aree luminose summenzionata illuminano con una precisa intensità finale.\newline
+\textbf{Scenario principale:}
+% DA CONTROLLARE: Non è il sensore che modifica l'intensità, ma esso fornisce il
+% l'informazione al software del passaggio della persona: poi il software
+% automaticamente aumenta la luminosità.
+\begin{enumerate}
+    \item Il sensore rileva la presenza di persone in più aree illuminate; [UC1]
+    \item Il sistema di gestione dell'illuminazione aumenta l'intensità luminosa di tali aree.
+\end{enumerate}
+\textbf{Requisiti collegati:} RF28-F\newline
+
+\subsubsection{UC14 - Diminuzione automatica dell'intensità luminosa}
 \textbf{Attori:} Sensore \newline
 \textbf{PRE:} un'area luminosa configurata illumina con un'intensità iniziale arbitraria.\newline
 \textbf{POST:} l'area luminosa summenzionata illumina con una precisa intensità finale.\newline
@@ -460,9 +578,37 @@ completamento del progetto:
 % automaticamente diminuisce la luminosità.
 \begin{enumerate}
     \item Il sensore rileva che in un'area illuminata con intensità luminosa alta non ci sono persone presenti;
-    \item il sistema di gestione dell'illuminazione diminuisce l'intensità luminosa dell'area illuminata rilevata in 1.
+    \item il sistema di gestione dell'illuminazione diminuisce l'intensità luminosa dell'area illuminata rilevata.
 \end{enumerate}
 \textbf{Requisiti collegati:} RF14-O\newline
+
+\subsubsection{UC14.1 - Diminuzione automatica dell'intensità luminosa di un'area illuminata}
+\textbf{Attori:} Sensore \newline
+\textbf{PRE:} un'area luminosa configurata illumina con un'intensità iniziale arbitraria.\newline
+\textbf{POST:} l'area luminosa summenzionata illumina con una precisa intensità finale.\newline
+\textbf{Scenario principale:}
+% DA CONTROLLARE: Non è il sensore che modifica l'intensità, ma esso fornisce il
+% l'informazione al software della mancata presenza della persona: poi il software
+% automaticamente diminuisce la luminosità.
+\begin{enumerate}
+    \item Il sensore rileva che in un'area illuminata con intensità luminosa alta non ci sono persone presenti;
+    \item il sistema di gestione dell'illuminazione diminuisce l'intensità luminosa dell'area illuminata rilevata.
+\end{enumerate}
+\textbf{Requisiti collegati:} RF29-O\newline
+
+\subsubsection{UC14.2 - Diminuzione automatica dell'intensità luminosa di più aree illuminate}
+\textbf{Attori:} Sensore \newline
+\textbf{PRE:} le aree luminose configurate illuminano con un'intensità iniziale arbitraria.\newline
+\textbf{POST:} le aree luminose summenzionata illuminano con una precisa intensità finale.\newline
+\textbf{Scenario principale:}
+% DA CONTROLLARE: Non è il sensore che modifica l'intensità, ma esso fornisce il
+% l'informazione al software della mancata presenza della persona: poi il software
+% automaticamente diminuisce la luminosità.
+\begin{enumerate}
+    \item Il sensore rileva che in più aree illuminate con intensità luminosa alta non ci sono persone presenti;
+    \item il sistema di gestione dell'illuminazione diminuisce l'intensità luminosa di tali aree.
+\end{enumerate}
+\textbf{Requisiti collegati:} RF30-F\newline
 
 \subsubsection{UC15 - Settaggio di un impianto in modalità automatica}
 \textbf{Attore:} Amministratore.\newline
@@ -547,6 +693,29 @@ Ogni requisito è identificato da un codice la cui struttura è definita nelle \
     RF19-O & Il gestore può inserire nel sistema l'impianto di illuminazione da attivare con i relativi dettagli. & Obbligatorio & UC11.3\\
     \hline
     RF20-O & Il gestore può rimuovere dal sistema uno degli impianti luminosi registrati. & Obbligatorio & UC11.4 \\
+    \hline
+    RF21-O & Rilevamento della presenza di individui in modalità automatica in una delle aree illuminate & Obbligatorio & UC1.1 \\
+    \hline
+    RF22-F & Rilevamento della presenza di individui su richesta in una delle aree illuminate & Facoltativo & UC1.2 \\
+    \hline
+    RF23-O & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato aumenta manualmente il livello di intesità luminosa di un'area illuminata & Obbligatorio & UC3.1 \\
+    \hline
+    RF24-F & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato aumenta manualmente il livello di intesità luminosa di più aree illuminate & Facoltativo & UC3.2 \\
+    \hline
+    RF25-O & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato diminuisce manualmente il livello di intesità luminosa di un'area illuminata & Obbligatorio & UC4.1 \\
+    \hline
+    RF26-F & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato diminuisce manualmente il livello di intesità luminosa di più aree illuminate & Facoltativo & UC4.2 \\
+    \hline
+    RF27-O & Una volta acquisito il livello di luminosità iniziale, il sistema aumenta automaticamente il livello di intesità luminosa di un'area illuminata & Obbligatorio & UC13.1 \\
+    \hline
+    RF28-F & Una volta acquisito il livello di luminosità iniziale, il sistema aumenta automaticamente il livello di intesità luminosa di più aree illuminate & Facoltativo & UC13.2 \\
+    \hline
+    RF29-O & Una volta acquisito il livello di luminosità iniziale, il sistema diminuisce automaticamente il livello di intesità luminosa di un'area illuminata & Obbligatorio & UC14.1 \\
+    \hline
+    RF30-F & Una volta acquisito il livello di luminosità iniziale, il sistema diminuisce automaticamente il livello di intesità luminosa di più aree illuminate & Facoltativo & UC14.2 \\
+    
+    
+    
     \bottomrule
 \end{longtable}
 
