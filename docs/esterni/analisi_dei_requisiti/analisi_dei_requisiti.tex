@@ -63,7 +63,7 @@ Bisognerà che ci sia anche un modo per registrare i guasti degli impianti e seg
 L'azienda \textit{Imola Informatica} propone attraverso il capitolato C2:
 \textit{Lumos Minima}. L'obiettivo è sviluppare un sistema per l'ottimizzazione
 dell'illuminazione pubblica che permetta ai gestori di sfruttare la possibilità
-di regolare l'intensità di luce emessa dagli impianti, grazie all'utilizzo di
+di regolare l'intensità di luce emessa dagli \textit{impianti luminosi\textsubscript{G}}, grazie all'utilizzo di
 sensori specifici che permettono di ottenere informazioni legate all'ambiente circostante.
 \subsection{Scopo del Prodotto}
 Il sistema sopra citato consentirebbe di garantire sicurezza stradale e sociale, e al tempo stesso permetterebbe di risparmiare energia e quindi risorse economiche ed ambientali. Il processo è caratterizzato da operazioni effettuate dal sistema e/o dai gestori:
@@ -80,8 +80,8 @@ Il sistema sopra citato consentirebbe di garantire sicurezza stradale e sociale,
 \subsection{Parti del Prodotto}
 Il prodotto si compone delle seguenti parti: % BOZZA
 \begin{itemize}
-    \item Landing page per permettere l'autenticazione dell'operatore;
-    \item Web App con dashboard per visualizzare, selezionare tutti i gruppi di
+    \item \textit{Landing page\textsubscript{G}} per permettere l'autenticazione dell'operatore;
+    \item \textit{Web App\textsubscript{G}} con \textit{dashboard\textsubscript{G}} per visualizzare, selezionare tutti i gruppi di
     impianti luminosi ed interagire con essi.
 \end{itemize}
 % BOZZA - DA DEFINIRE
@@ -112,8 +112,8 @@ correggere il funzionamento dell'impianto.
 \subsection{Vincoli e preferenze}
 Il proponente non impone particolari vincoli nella scelta delle tecnologie e dei linguaggi, sono stati però forniti alcui suggerimenti da prendere in considerazione:
 \begin{itemize}
-    \item utilizzo di React per lo sviluppo delle parti di Front-end;
-    \item utilizzo di Node JS per lo sviluppo delle parti di Back-end;
+    \item utilizzo di React per lo sviluppo delle parti di \textit{Front-end\textsubscript{G}};
+    \item utilizzo di Node JS per lo sviluppo delle parti di \textit{Back-end\textsubscript{G}};
 \end{itemize}
 
 Per il completamento del progetto il proponente richiede che siano ottenuti i
@@ -139,12 +139,6 @@ completamento del progetto:
 \section{Casi d'uso}
 
 \subsection{Diagramma dei casi d'uso}
-
-\includegraphics[scale=0.7]{diagramma_use_case_1.png}
-
-\includegraphics[scale=0.60]{diagramma_use_case_2.png}
-
-\includegraphics[scale=0.7]{diagramma_use_case_3.png}
 
 \includegraphics[scale=0.7]{diagramma_use_case_4.png}
 
@@ -185,7 +179,7 @@ completamento del progetto:
 \textbf{Scenario principale:}
 \begin{enumerate}
     \item Il sensore rileva la presenza di uno o più individui nel raggio d'azione;
-    \item Il sistema riceve in modalità push/pull le informazioni dal sensore;
+    \item Il sistema riceve in modalità \textit{push/pull\textsubscript{G}} le informazioni dal sensore;
     \item Il sistema elabora l'informazione ricevuta, aumenta l'intensità luminosa dell'area (include[UC17]) per un certo tempo;
     \item A seguire, l'intensità luminosa dell'area viene riportata al valore di default.
 \end{enumerate}
@@ -219,8 +213,8 @@ completamento del progetto:
 
 \subsubsection{UC2 - Visualizzazione intensità luminosa di un'area illuminata}
 \textbf{Attore:} Manutentore.\newline
-\textbf{PRE:} un'area luminosa configurata illumina con un intensità iniziale arbitraria.\newline
-\textbf{POST:} l'area luminosa summenzionata illumina con una precisa intensità finale.\newline
+\textbf{PRE:} un'\textit{area illuminata\textsubscript{G}} configurata illumina con un intensità iniziale arbitraria.\newline
+\textbf{POST:} l'area illuminata summenzionata illumina con una precisa intensità finale.\newline
 \textbf{Scenario principale:}
 \begin{enumerate}
     \item L'operatore accede al sistema;
@@ -236,8 +230,8 @@ completamento del progetto:
 
 \subsubsection{UC3 - Aumento manuale dell'intensità luminosa}
 \textbf{Attore:} Manutentore.\newline
-\textbf{PRE:} un'area luminosa configurata illumina con un intensità iniziale arbitraria.\newline
-\textbf{POST:} l'area luminosa summenzionata illumina con una precisa intensità finale.\newline
+\textbf{PRE:} un'area illuminata configurata illumina con un intensità iniziale arbitraria.\newline
+\textbf{POST:} l'area illuminata summenzionata illumina con una precisa intensità finale.\newline
 \textbf{Scenario principale:}
 \begin{enumerate}
     \item L'operatore accede al sistema;
@@ -251,8 +245,8 @@ completamento del progetto:
 
 \subsubsection{UC3.1 - Aumento manuale dell'intensità luminosa di un'area illuminata}
 \textbf{Attore:} Manutentore.\newline
-\textbf{PRE:} un'area luminosa configurata illumina con un intensità iniziale arbitraria.\newline
-\textbf{POST:} l'area luminosa summenzionata illumina con una precisa intensità finale.\newline
+\textbf{PRE:} un'area illuminata configurata illumina con un intensità iniziale arbitraria.\newline
+\textbf{POST:} l'area illuminata summenzionata illumina con una precisa intensità finale.\newline
 \textbf{Scenario principale:}
 \begin{enumerate}
     \item L'operatore accede al sistema;
@@ -281,8 +275,8 @@ completamento del progetto:
 
 \subsubsection{UC4 - Diminuzione manuale dell'intensità luminosa}
 \textbf{Attore:} Manutentore.\newline
-\textbf{PRE:} un'area luminosa configurata illumina con un intensità iniziale arbitraria.\newline
-\textbf{POST:} l'area luminosa summenzionata illumina con una precisa intensità finale.\newline
+\textbf{PRE:} un'area illuminata configurata illumina con un intensità iniziale arbitraria.\newline
+\textbf{POST:} l'area illuminata summenzionata illumina con una precisa intensità finale.\newline
 \textbf{Scenario principale:}
 \begin{enumerate}
     \item L'operatore accede al sistema;
@@ -296,8 +290,8 @@ completamento del progetto:
 
 \subsubsection{UC4.1 - Diminuzione manuale dell'intensità luminosa di un'area illuminata}
 \textbf{Attore:} Manutentore.\newline
-\textbf{PRE:} un'area luminosa configurata illumina con un intensità iniziale arbitraria.\newline
-\textbf{POST:} l'area luminosa summenzionata illumina con una precisa intensità finale.\newline
+\textbf{PRE:} un'area illuminata configurata illumina con un intensità iniziale arbitraria.\newline
+\textbf{POST:} l'area illuminata summenzionata illumina con una precisa intensità finale.\newline
 \textbf{Scenario principale:}
 \begin{enumerate}
     \item L'operatore accede al sistema;
@@ -622,8 +616,8 @@ completamento del progetto:
 
 \subsubsection{UC13 - Aumento automatico dell'intensità luminosa}
 \textbf{Attori:} Sistema di gestione degli impianti luminosi \newline
-\textbf{PRE:} un'area luminosa configurata illumina con un'intensità iniziale arbitraria.\newline
-\textbf{POST:} l'area luminosa summenzionata illumina con una precisa intensità finale.\newline
+\textbf{PRE:} un'area illuminata configurata illumina con un'intensità iniziale arbitraria.\newline
+\textbf{POST:} l'area illuminata summenzionata illumina con una precisa intensità finale.\newline
 \textbf{Scenario principale:}
 % DA CONTROLLARE: Non è il sensore che modifica l'intensità, ma esso fornisce il
 % l'informazione al software del passaggio della persona: poi il software
@@ -636,8 +630,8 @@ completamento del progetto:
 
 \subsubsection{UC13.1 - Aumento automatico dell'intensità luminosa di un'area illuminata}
 \textbf{Attori:} Sistema di gestione degli impianti luminosi \newline
-\textbf{PRE:} un'area luminosa configurata illumina con un'intensità iniziale arbitraria.\newline
-\textbf{POST:} l'area luminosa summenzionata illumina con una precisa intensità finale.\newline
+\textbf{PRE:} un'area illuminata configurata illumina con un'intensità iniziale arbitraria.\newline
+\textbf{POST:} l'area illuminata summenzionata illumina con una precisa intensità finale.\newline
 \textbf{Scenario principale:}
 % DA CONTROLLARE: Non è il sensore che modifica l'intensità, ma esso fornisce il
 % l'informazione al software del passaggio della persona: poi il software
@@ -664,8 +658,8 @@ completamento del progetto:
 
 \subsubsection{UC14 - Diminuzione automatica dell'intensità luminosa}
 \textbf{Attori:} Sistema di gestione degli impianti luminosi \newline
-\textbf{PRE:} un'area luminosa configurata illumina con un'intensità iniziale arbitraria.\newline
-\textbf{POST:} l'area luminosa summenzionata illumina con una precisa intensità finale.\newline
+\textbf{PRE:} un'area illuminata configurata illumina con un'intensità iniziale arbitraria.\newline
+\textbf{POST:} l'area illuminata summenzionata illumina con una precisa intensità finale.\newline
 \textbf{Scenario principale:}
 % DA CONTROLLARE: Non è il sensore che modifica l'intensità, ma esso fornisce il
 % l'informazione al software della mancata presenza della persona: poi il software
@@ -678,8 +672,8 @@ completamento del progetto:
 
 \subsubsection{UC14.1 - Diminuzione automatica dell'intensità luminosa di un'area illuminata}
 \textbf{Attori:} Sistema di gestione degli impianti luminosi \newline
-\textbf{PRE:} un'area luminosa configurata illumina con un'intensità iniziale arbitraria.\newline
-\textbf{POST:} l'area luminosa summenzionata illumina con una precisa intensità finale.\newline
+\textbf{PRE:} un'area illuminata configurata illumina con un'intensità iniziale arbitraria.\newline
+\textbf{POST:} l'area illuminata summenzionata illumina con una precisa intensità finale.\newline
 \textbf{Scenario principale:}
 % DA CONTROLLARE: Non è il sensore che modifica l'intensità, ma esso fornisce il
 % l'informazione al software della mancata presenza della persona: poi il software
@@ -738,8 +732,8 @@ completamento del progetto:
 
 \subsubsection{UC17 - Aumento automatico dell'intensità luminosa di tutte le aree illuminate (globale)}
 \textbf{Attore:} Sistema di gestione degli impianti luminosi.\newline
-\textbf{PRE:} un'area luminosa configurata illumina con un intensità iniziale arbitraria.\newline
-\textbf{POST:} l'area luminosa summenzionata illumina con una precisa intensità finale.\newline
+\textbf{PRE:} un'area illuminata configurata illumina con un intensità iniziale arbitraria.\newline
+\textbf{POST:} l'area illuminata summenzionata illumina con una precisa intensità finale.\newline
 \textbf{Scenario principale:}
 \begin{enumerate}
     \item Il sensore rileva un valore di intensità luminosa inferiore a una soglia arbitraria (include[UC20]);
@@ -749,8 +743,8 @@ completamento del progetto:
 
 \subsubsection{UC18 - Diminuzione automatico dell'intensità luminosa di tutte le aree illuminate (globale)}
 \textbf{Attore:} Sistema di gestione degli impianti luminosi.\newline
-\textbf{PRE:} un'area luminosa configurata illumina con un intensità iniziale arbitraria.\newline
-\textbf{POST:} l'area luminosa summenzionata illumina con una precisa intensità finale.\newline
+\textbf{PRE:} un'area illuminata configurata illumina con un intensità iniziale arbitraria.\newline
+\textbf{POST:} l'area illuminata summenzionata illumina con una precisa intensità finale.\newline
 \textbf{Scenario principale:}
 \begin{enumerate}
     \item Il sensore rileva un valore di intensità luminosa superiore a una soglia arbitraria (include[UC19]);
@@ -760,7 +754,7 @@ completamento del progetto:
 
 \subsubsection{UC19 - Rilevamento di un'intensità luminosa con valori sopra soglia}
 \textbf{Attore:} Sensore.\newline
-\textbf{PRE:} un'area luminosa configurata illumina con un intensità iniziale superiore ad una soglia arbitraria.\newline
+\textbf{PRE:} un'area illuminata configurata illumina con un intensità iniziale superiore ad una soglia arbitraria.\newline
 \textbf{POST:} Il sistema ha acquisito il livello di luminosità corrente. \newline
 \textbf{Scenario principale:}
 \begin{enumerate}
@@ -771,7 +765,7 @@ completamento del progetto:
 
 \subsubsection{UC20 - Rilevamento di un'intensità luminosa con valori sotto soglia}
 \textbf{Attore:} Sensore.\newline
-\textbf{PRE:} un'area luminosa configurata illumina con un intensità iniziale inferiore ad una soglia arbitraria.\newline
+\textbf{PRE:} un'area illuminata configurata illumina con un intensità iniziale inferiore ad una soglia arbitraria.\newline
 \textbf{POST:} Il sistema ha acquisito il livello di luminosità corrente. \newline
 \textbf{Scenario principale:}
 \begin{enumerate}
