@@ -12,19 +12,19 @@
 \graphicspath{ {./immagini/} }
 
 \settitolo{Piano di Progetto}
-\setredattori{Erica Cavaliere}
+\setredattori{Alberti Nicolas \\ Brotto Romina \\ Cavaliere Erica}
 \setdestuso{esterno}
 \setdescrizione{
 Questo documento serve a tracciare l'efficienza del progetto. Tiene traccia dei costi sostenuti fino ad oggi e li confronta con i costi preventivati, in relazione agli obiettivi fissati.
 }
 
-
-\addversione{0.0.1}{22/04/2023}{Erica Cavaliere}{Alberti Nicolas}{Stesura iniziale}
-\addversione{0.0.2}{24/04/2023}{Erica Cavaliere}{Soldà Matteo}{Correzione errori e aggiunta delle intestazioni e dei piè di pagina}
-\addversione{0.0.3}{26/04/2023}{Erica Cavaliere}{Brotto Romina}{Inserimento interruzioni di pagina e completamento grafico di Gantt}
-\addversione{0.0.4}{16/05/2023}{Erica Cavaliere}{Lorenzo Salami}{Inserimento degli sprint e aggiornamento dei grafici di Gantt}
-\addversione{0.0.5}{25/05/2023}{Nicolas Alberti}{Erica Cavaliere}{Inserimento dello sprint 4; aggiornamento dei grafici di Gantt}
+\addversione{0.0.1}{22/04/2023}{Cavaliere Erica}{Alberti Nicolas}{Stesura iniziale}
+\addversione{0.0.2}{24/04/2023}{Cavaliere Erica}{Soldà Matteo}{Correzione errori e aggiunta delle intestazioni e dei piè di pagina}
+\addversione{0.0.3}{26/04/2023}{Cavaliere Erica}{Brotto Romina}{Inserimento interruzioni di pagina e completamento grafico di Gantt}
+\addversione{0.0.4}{16/05/2023}{Cavaliere Erica}{Salami Lorenzo}{Inserimento degli sprint e aggiornamento dei grafici di Gantt}
+\addversione{0.0.5}{25/05/2023}{Alberti Nicolas}{Cavaliere Erica}{Inserimento dello sprint 4; aggiornamento dei grafici di Gantt}
 \addversione{0.0.6}{02/06/2023}{Brotto Romina}{Soldà Matteo}{Completamento sprint 5}
+\addversione{0.0.7}{11/06/2023}{Cavaliere Erica}{Soldà Matteo}{Completamento sprint 6}
 
 \def\pgfcalendarmonthitname#1{%
 \ifcase#1 \or Gennaio\or Febbraio\or Marzo\or Aprile\or Maggio\or Giugno\or Luglio\or Agosto\or Settembre\or Ottobre\or Novembre\or Dicembre\fi%
@@ -60,7 +60,7 @@ Durante lo svolgimento del progetto, è possibile andare incontro a dei problemi
     \item Way of Working\newline
     \includegraphics[scale=0.24]{WoW_2.png}\newline
     \item Requirements and Technology Baseline\newline
-    \includegraphics[scale=0.24]{RTB_4.png}\newline
+    \includegraphics[scale=0.24]{RTB_5.png}\newline
 \end{itemize}
 
 \subsection{Scrum}\label{Scrum}
@@ -228,7 +228,7 @@ Durante lo svolgimento del progetto, è possibile andare incontro a dei problemi
 \end{itemize}
 \textbf{Difficoltà incontrate:}
 \begin{itemize}
-    \item Alcune difficoltà nella precisa defiizione di alcuni sottocasi negli use case;
+    \item Alcune difficoltà nella precisa definizione di alcuni sottocasi negli use case;
     \item Difficoltà nella comprensione del funzionamento di \textit{typescript} soprattutto nel dialogo tra client e server.
 \end{itemize}
 \includegraphics[scale=0.24]{RTB_4.png}\newline
@@ -249,7 +249,43 @@ Durante lo svolgimento del progetto, è possibile andare incontro a dei problemi
     \hline
     Romina & & & 2 & & & & 8(+2)\\
     \hline
-    \textbf{Totale} & 9(+1) & 13.30(+0) & 18(+4) & 0(+0) & 4(+4) & 8(+2) & 51(+10)\\
+    \textbf{Totale} & 9(+1) & 13.30(+0) & 18(+4) & 0(+0) & 4(+4) & 8(+2) & 52.30(+11)\\
+    \hline
+\end{tabular}\\[8pt]
+
+\subsubsection{Sprint 6}
+\textbf{Data di inizio:} 03/06/2023\newline
+\textbf{Data di fine:} 12/06/2023\newline
+\newline
+\textbf{Suddivisione del lavoro:}
+\begin{itemize}
+    \item Completare il \textit{Glossario} con eventuali termini mancanti;
+    \item Chiedere al proponente un controllo dell'\textit{Analisi dei Requisiti};
+    \item Avanzamento del \textit{Proof of Concept}.
+\end{itemize}
+\textbf{Difficoltà incontrate:}
+\begin{itemize}
+    \item Eseguire il \textit{Proof of Concept} nella macchina locale di ogni componente del gruppo, dovuto alla mancanza di alcuni pacchetti fondamentali per l'esecuzione del codice.
+\end{itemize}
+\includegraphics[scale=0.24]{RTB_5.png}\newline
+\newline
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{ORE} & \textbf{Respon.} & \textbf{Amministr.} & \textbf{Analista} & \textbf{Proget.} & \textbf{Program.} & \textbf{Verif.} & \textbf{Totale}\\
+    \hline
+    Erica & & & & & & 2 & 11(+2)\\
+    \hline
+    Francesco & & & 2 & & & & 9(+2)\\
+    \hline
+    Lorenzo & & & 2 & & & & 9(+2)\\
+    \hline
+    Matteo & & & & & 3 & & 14(+3)\\
+    \hline
+    Nicolas & & 0.30 & & & 2 & & 13(+2.30)\\
+    \hline
+    Romina & 2 & & & & & & 10(+2)\\
+    \hline
+    \textbf{Totale} & 11(+2) & 14(+0.30) & 22(+4) & 0(+0) & 10(+6) & 11(+2) & 66(+13.30)\\
     \hline
 \end{tabular}\\[8pt]
 
