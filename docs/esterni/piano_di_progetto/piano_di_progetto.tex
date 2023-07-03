@@ -12,7 +12,7 @@
 \graphicspath{ {./immagini/} }
 
 \settitolo{Piano di Progetto}
-\setredattori{Alberti Nicolas \\ Brotto Romina \\ Cavaliere Erica}
+\setredattori{Alberti Nicolas \\ Brotto Romina \\ Cavaliere Erica \\ Soldà Matteo}
 \setdestuso{esterno}
 \setdescrizione{
 Questo documento serve a tracciare l'efficienza del progetto. Tiene traccia dei costi sostenuti fino ad oggi e li confronta con i costi preventivati, in relazione agli obiettivi fissati.
@@ -26,6 +26,7 @@ Questo documento serve a tracciare l'efficienza del progetto. Tiene traccia dei 
 \addversione{0.0.6}{02/06/2023}{Brotto Romina}{Soldà Matteo}{Completamento sprint 5}
 \addversione{0.0.7}{11/06/2023}{Cavaliere Erica}{Soldà Matteo}{Completamento sprint 6}
 \addversione{0.0.8}{23/06/2023}{Alberti Nicolas}{Cavaliere Erica}{Completamento sprint 7}
+\addversione{0.0.9}{02/07/2023}{Soldà Matteo}{Cavaliere Erica}{Completamento sprint 8}
 
 \def\pgfcalendarmonthitname#1{%
 \ifcase#1 \or Gennaio\or Febbraio\or Marzo\or Aprile\or Maggio\or Giugno\or Luglio\or Agosto\or Settembre\or Ottobre\or Novembre\or Dicembre\fi%
@@ -61,7 +62,7 @@ Durante lo svolgimento del progetto, è possibile andare incontro a dei problemi
     \item Way of Working\newline
     \includegraphics[scale=0.24]{WoW_2.png}\newline
     \item Requirements and Technology Baseline\newline
-    \includegraphics[scale=0.24]{RTB_6.png}\newline
+    \includegraphics[scale=0.24]{RTB_7.png}\newline
 \end{itemize}
 
 \subsection{Scrum}\label{Scrum}
@@ -322,6 +323,46 @@ Durante lo svolgimento del progetto, è possibile andare incontro a dei problemi
     Romina & & 1 & & & & & 11(+1)\\
     \hline
     \textbf{Totale} & 12(+1) & 15(+1) & 24(+2) & 3(+3) & 12(+2) & 11(+0) & 75(+9)\\
+    \hline
+\end{tabular}\\[8pt]
+
+\subsubsection{Sprint 8}
+\textbf{Data di inizio:} 19/06/2023\newline
+\textbf{Data di fine:} 03/07/2023\newline
+\newline
+\textbf{Suddivisione del lavoro:}
+\begin{itemize}
+    \item Avanzamento dello sviluppo del \textit{Proof of Concept}
+    \begin{itemize}
+        \item Implementazione del MongoDB e primo collegamento al server;
+        \item Implementazione modello sensore;
+        \item Implementazione modello area illuminata
+    \end{itemize}
+\end{itemize}
+\textbf{Difficoltà incontrate:}
+\begin{itemize}
+    \item Eseguire correttamente il codice all'interno di un \textit{container Docker};
+    \item Integrazione del database \textit{MongoDB} con il codice presente.
+\end{itemize}
+\includegraphics[scale=0.24]{RTB_7.png}\newline
+\newline
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{ORE} & \textbf{Respon.} & \textbf{Amministr.} & \textbf{Analista} & \textbf{Proget.} & \textbf{Program.} & \textbf{Verif.} & \textbf{Totale}\\
+    \hline
+    Erica & & & & 0.5 & & & 13.5(+0.5)\\
+    \hline
+    Francesco & & & & 0.5 & & & 11.5(+0.5)\\
+    \hline
+    Lorenzo & 1 & & & & & & 11(+1)\\
+    \hline
+    Matteo & & & & & & 1 & 16(+1)\\
+    \hline
+    Nicolas & & & & & 2 & & 17(+2)\\
+    \hline
+    Romina & & 1 & & & & & 12(+1)\\
+    \hline
+    \textbf{Totale} & 13(+1) & 16(+1) & 24(+0) & 4(+1) & 14(+2) & 12(+1) & 81(+6)\\
     \hline
 \end{tabular}\\[8pt]
 
