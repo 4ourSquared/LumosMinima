@@ -447,7 +447,22 @@ completamento del progetto:
 \end{enumerate}
 \textbf{Requisiti collegati:} RF17-O\newline
 
-\subsubsection{UC11.1.1 - Specifica di interazione automatica (push)}
+\subsubsection{UC11.1.1 - Specifica dettagli del sensore}
+\textbf{Attore:} Amministratore.\newline
+\textbf{PRE:} il sensore inserito non specifica alcun tipo di dettaglio.\newline
+\textbf{POST:} il sensore inserito possiede i dettagli riguardanti le caratteristiche del sensore.\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item L'amministratore accede al sistema;
+    \item L'amministratore effettua il login con proprie credenziali;
+    \item L'amministratore avvia procedura inserimento;
+    \item L'amministratore specifica i dettagli del sensore (che possono essere indirizzo IP, polling time, protocollo);
+    \item L'amministratore specifica l'area illuminata di riferimento;
+    \item Viene ottenuta la conferma dell'inserimento.
+\end{enumerate}
+\textbf{Requisiti collegati:} RF39-O\newline
+
+\subsubsection{UC11.1.2 - Specifica di interazione automatica (push)}
 \textbf{Attore:} Amministratore.\newline
 \textbf{PRE:} il sensore inserito non specifica il tipo di interazione con il sistema.\newline
 \textbf{POST:} il sensore inserito possiede come dettaglio il tipo di interazione automatico con il sistema.\newline
@@ -462,7 +477,7 @@ completamento del progetto:
 \end{enumerate}
 \textbf{Requisiti collegati:} RF37-F\newline
 
-\subsubsection{UC11.1.2 - Specifica di interazione su richesta (pull)}
+\subsubsection{UC11.1.3 - Specifica di interazione su richesta (pull)}
 \textbf{Attore:} Amministratore.\newline
 \textbf{PRE:} il sensore inserito non specifica il tipo di interazione con il sistema.\newline
 \textbf{POST:} il sensore inserito possiede come dettaglio il tipo di interazione su richiesta con il sistema.\newline
@@ -476,21 +491,6 @@ completamento del progetto:
     \item Viene ottenuta la conferma dell'inserimento.
 \end{enumerate}
 \textbf{Requisiti collegati:} RF38-F\newline
-
-\subsubsection{UC11.1.3 - Specifica dettagli del sensore}
-\textbf{Attore:} Amministratore.\newline
-\textbf{PRE:} il sensore inserito non specifica alcun tipo di dettaglio.\newline
-\textbf{POST:} il sensore inserito possiede i dettagli riguardanti le caratteristiche del sensore.\newline
-\textbf{Scenario principale:}
-\begin{enumerate}
-    \item L'amministratore accede al sistema;
-    \item L'amministratore effettua il login con proprie credenziali;
-    \item L'amministratore avvia procedura inserimento;
-    \item L'amministratore specifica i dettagli del sensore (che possono essere indirizzo IP, polling time, protocollo);
-    \item L'amministratore specifica l'area illuminata di riferimento;
-    \item Viene ottenuta la conferma dell'inserimento.
-\end{enumerate}
-\textbf{Requisiti collegati:} RF39-O\newline
 
 \subsubsection{UC11.1.4 - Specifica di posizione geografica del sensore}
 \textbf{Attore:} Amministratore.\newline
@@ -901,11 +901,11 @@ Ogni requisito è identificato da un codice la cui struttura è definita nelle \
     \hline
     RF36-F & Il sistema provvede ad inserire nella lista di impianti guasti l'area in cui è presente l'anomalia. & Facoltativo & UC22\\    
     \hline
-    RF37-F & Durante l'inserimento di un nuovo sensore si specifica il tipo di interazione automatico (push) con il sistema. & Facoltativo & UC11.1.1\\
+    RF37-F & Durante l'inserimento di un nuovo sensore si specifica il tipo di interazione automatico (push) con il sistema. & Facoltativo & UC11.1.2\\
     \hline
-    RF38-F & Durante l'inserimento di un nuovo sensore si specifica il tipo di interazione su richiesta (pull) con il sistema. & Facoltativo & UC11.1.2\\
+    RF38-F & Durante l'inserimento di un nuovo sensore si specifica il tipo di interazione su richiesta (pull) con il sistema. & Facoltativo & UC11.1.3\\
     \hline
-    RF39-O & Durante l'inserimento di un nuovo sensore si specificano i dettagli relativi a tale sensore. & Obbligatorio & UC11.1.3\\
+    RF39-O & Durante l'inserimento di un nuovo sensore si specificano i dettagli relativi a tale sensore. & Obbligatorio & UC11.1.1\\
     \hline
     RF40-O & Durante l'inserimento di un nuovo sensore si specifica la posizione geografica del sensore di riferimento. & Obbligatorio & UC11.1.4\\
     \hline
