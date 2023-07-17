@@ -27,6 +27,7 @@ Questo documento si occupa di riportare un'analisi di tutti gli elementi richies
 \addversione{0.0.4}{10/05/2023}{Alberti Nicolas}{Brotto Romina}{Aggiunta Tabella Requisiti funzionali}
 \addversione{0.0.5}{25/05/2023}{Brotto Romina}{Cavaliere Erica}{Sistemazione casi d'uso, aggiunta sottocasi e requisiti funzionali}
 \addversione{0.0.6}{01/06/2023}{Brotto Romina}{Soldà Matteo}{Aggiunti sottocasi da 11.1.1 al 11.1.5 con relativi requisiti funzionali e correzione immagini use case}
+\addversione{0.0.7}{04/07/2023}{Brotto Romina}{Cavaliere Erica}{Aggiunti casi d'uso mancanti, effettuate correzioni consigliate dal Committente e sistemate immagini}
 
 \def\pgfcalendarmonthitname#1{%
 \ifcase#1 \or Gennaio\or Febbraio\or Marzo\or Aprile\or Maggio\or Giugno\or Luglio\or Agosto\or Settembre\or Ottobre\or Novembre\or Dicembre\fi%
@@ -82,7 +83,8 @@ Il prodotto si compone delle seguenti parti: % BOZZA
 \begin{itemize}
     \item \textit{Landing page\textsubscript{G}} per permettere l'autenticazione dell'operatore;
     \item \textit{Web App\textsubscript{G}} con \textit{dashboard\textsubscript{G}} per visualizzare, selezionare tutti i gruppi di
-    impianti luminosi ed interagire con essi.
+    impianti luminosi ed interagire con essi;
+    \item \textit{BackEnd\textsubscript{G}} server che opera effettivamente sui lampioni.
 \end{itemize}
 % BOZZA - DA DEFINIRE
 Per ogni impianto luminoso deve essere prevista una modalità a funzionamento
@@ -117,7 +119,7 @@ Il proponente non impone particolari vincoli nella scelta delle tecnologie e dei
 \end{itemize}
 
 Per il completamento del progetto il proponente richiede che siano ottenuti i
-seguienti risultati:
+seguenti risultati:
 \begin{itemize}
     \item applicazione Web Responsive che soddisfi i requisiti obblgatori
     illustrati dai casi d'uso;
@@ -140,13 +142,15 @@ completamento del progetto:
 
 \subsection{Diagramma dei casi d'uso}
 
-\includegraphics[scale=0.7]{diagramma_use_case_4.png}
+\includegraphics[scale=0.8]{diagramma_use_case_1.png}
+
+\includegraphics[scale=0.8]{diagramma_use_case_2.png}
+
+\includegraphics[scale=0.65]{diagramma_use_case_3e4.png}
 
 \includegraphics[scale=0.7]{diagramma_use_case_5.png}
 
-\includegraphics[scale=0.60]{diagramma_use_case_6.png}
-
-\includegraphics[scale=0.7]{diagramma_use_case_7.png}
+\includegraphics[scale=0.60]{diagramma_use_case_6e7.png}
 
 \includegraphics[scale=0.7]{diagramma_use_case_8.png}
 
@@ -154,16 +158,17 @@ completamento del progetto:
 
 \includegraphics[scale=0.60]{diagramma_use_case_10.png}
 
-\includegraphics[scale=0.7]{diagramma_use_case_11.png}
+\includegraphics[scale=0.63]{diagramma_use_case_11.png}
 
-\includegraphics[scale=0.7]{diagramma_use_case_12.png}
+\includegraphics[scale=0.65]{diagramma_use_case_12.png}
 
 \subsection{Attori}
 \begin{itemize}
     \item Utente non autenticato: utente che non ha inserito le proprie credenziali;
     \item Utente autenticato: utente che ha inserito correttamente le credenziali;
     \item Sistema di autenticazione: sistema di controllo che permette di verificare il corretto inserimento dei dati per accedere al programma;
-    \item Manutentore: operatore registrato che si occupa di configurare le aree luminose e sistemare eventuali guasti;
+    \item Manutentore: legge l'elenco delle aree illumninate guaste e si occupa di segnalarle come riparate;
+    \item Operatore: si occupa di gestire le aree luminose (accensioni e spegnimenti e regolazioni) e segnala i guasti presenti;
     \item Amministratore: operatore registrato che oltre a poter configurare nuove aree, può aggiungere o eliminare sensori o impianti luminosi;
     \item Sensore: dispositivo che si occupa di rilevare le persone e modificare l'intensità luminosa degli impianti di illuminazione;
     \item Sistema di gestione degli impianti luminosi: si occupa della gestione automatica dell'intensità luminosa delle aree illuminate.
@@ -174,7 +179,7 @@ completamento del progetto:
 \subsubsection{UC1 - Rilevamento presenza di persone automatico}
 \textbf{Attore:} Sensore.\newline
 \textbf{Attore secondario:} Sistema di Gestione degli impianti luminosi.\newline
-\textbf{PRE:} l'individuo non è ancora posizionato in prossimità dell'area con lampioni, i lampioni sono spenti.\newline
+\textbf{PRE:} l'individuo non è ancora posizionato in prossimità dell'area con lampioni, i lampioni sono spenti o con intensità luminosa settata al minimo.\newline
 \textbf{POST:} l'individuo è posizionato all'interno dell'area, i lampioni illuminano l'area.\newline
 \textbf{Scenario principale:}
 \begin{enumerate}
@@ -212,7 +217,7 @@ completamento del progetto:
 \textbf{Requisiti collegati:} RF22-F\newline
 
 \subsubsection{UC2 - Visualizzazione intensità luminosa di un'area illuminata}
-\textbf{Attore:} Manutentore.\newline
+\textbf{Attore:} Operatore.\newline
 \textbf{PRE:} un'\textit{area illuminata\textsubscript{G}} configurata illumina con un intensità iniziale arbitraria.\newline
 \textbf{POST:} l'area illuminata summenzionata illumina con una precisa intensità finale.\newline
 \textbf{Scenario principale:}
@@ -229,7 +234,7 @@ completamento del progetto:
 
 
 \subsubsection{UC3 - Aumento manuale dell'intensità luminosa}
-\textbf{Attore:} Manutentore.\newline
+\textbf{Attore:} Operatore.\newline
 \textbf{PRE:} un'area illuminata configurata illumina con un intensità iniziale arbitraria.\newline
 \textbf{POST:} l'area illuminata summenzionata illumina con una precisa intensità finale.\newline
 \textbf{Scenario principale:}
@@ -244,7 +249,7 @@ completamento del progetto:
 \textbf{Requisiti collegati:} RF3-O\newline
 
 \subsubsection{UC3.1 - Aumento manuale dell'intensità luminosa di un'area illuminata}
-\textbf{Attore:} Manutentore.\newline
+\textbf{Attore:} Operatore.\newline
 \textbf{PRE:} un'area illuminata configurata illumina con un intensità iniziale arbitraria.\newline
 \textbf{POST:} l'area illuminata summenzionata illumina con una precisa intensità finale.\newline
 \textbf{Scenario principale:}
@@ -259,7 +264,7 @@ completamento del progetto:
 \textbf{Requisiti collegati:} RF23-O\newline
 
 \subsubsection{UC3.2 - Aumento manuale dell'intensità luminosa di più aree illuminate}
-\textbf{Attore:} Manutentore.\newline
+\textbf{Attore:} Operatore.\newline
 \textbf{PRE:} le aree luminose configurate illuminano con un intensità iniziale arbitraria.\newline
 \textbf{POST:} le aree luminose summenzionate illuminano con una precisa intensità finale.\newline
 \textbf{Scenario principale:}
@@ -274,7 +279,7 @@ completamento del progetto:
 \textbf{Requisiti collegati:} RF24-F\newline
 
 \subsubsection{UC4 - Diminuzione manuale dell'intensità luminosa}
-\textbf{Attore:} Manutentore.\newline
+\textbf{Attore:} Operatore.\newline
 \textbf{PRE:} un'area illuminata configurata illumina con un intensità iniziale arbitraria.\newline
 \textbf{POST:} l'area illuminata summenzionata illumina con una precisa intensità finale.\newline
 \textbf{Scenario principale:}
@@ -289,7 +294,7 @@ completamento del progetto:
 \textbf{Requisiti collegati:} RF4-O\newline
 
 \subsubsection{UC4.1 - Diminuzione manuale dell'intensità luminosa di un'area illuminata}
-\textbf{Attore:} Manutentore.\newline
+\textbf{Attore:} Operatore.\newline
 \textbf{PRE:} un'area illuminata configurata illumina con un intensità iniziale arbitraria.\newline
 \textbf{POST:} l'area illuminata summenzionata illumina con una precisa intensità finale.\newline
 \textbf{Scenario principale:}
@@ -304,7 +309,7 @@ completamento del progetto:
 \textbf{Requisiti collegati:} RF25-O\newline
 
 \subsubsection{UC4.2 - Diminuzione manuale dell'intensità luminosa di più aree illuminate}
-\textbf{Attore:} Manutentore.\newline
+\textbf{Attore:} Operatore.\newline
 \textbf{PRE:} le aree luminose configurate illuminano con un intensità iniziale arbitraria.\newline
 \textbf{POST:} le aree luminose summenzionate illuminano con una precisa intensità finale.\newline
 \textbf{Scenario principale:}
@@ -440,7 +445,22 @@ completamento del progetto:
 \end{enumerate}
 \textbf{Requisiti collegati:} RF17-O\newline
 
-\subsubsection{UC11.1.1 - Specifica di interazione automatica (push)}
+\subsubsection{UC11.1.1 - Specifica dettagli del sensore}
+\textbf{Attore:} Amministratore.\newline
+\textbf{PRE:} il sensore inserito non specifica alcun tipo di dettaglio.\newline
+\textbf{POST:} il sensore inserito possiede i dettagli riguardanti le caratteristiche del sensore.\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item L'amministratore accede al sistema;
+    \item L'amministratore effettua il login con proprie credenziali;
+    \item L'amministratore avvia procedura inserimento;
+    \item L'amministratore specifica i dettagli del sensore (che possono essere indirizzo IP, polling time, protocollo);
+    \item L'amministratore specifica l'area illuminata di riferimento;
+    \item Viene ottenuta la conferma dell'inserimento.
+\end{enumerate}
+\textbf{Requisiti collegati:} RF39-O\newline
+
+\subsubsection{UC11.1.2 - Specifica di interazione automatica (push)}
 \textbf{Attore:} Amministratore.\newline
 \textbf{PRE:} il sensore inserito non specifica il tipo di interazione con il sistema.\newline
 \textbf{POST:} il sensore inserito possiede come dettaglio il tipo di interazione automatico con il sistema.\newline
@@ -455,7 +475,7 @@ completamento del progetto:
 \end{enumerate}
 \textbf{Requisiti collegati:} RF37-F\newline
 
-\subsubsection{UC11.1.2 - Specifica di interazione su richesta (pull)}
+\subsubsection{UC11.1.3 - Specifica di interazione su richesta (pull)}
 \textbf{Attore:} Amministratore.\newline
 \textbf{PRE:} il sensore inserito non specifica il tipo di interazione con il sistema.\newline
 \textbf{POST:} il sensore inserito possiede come dettaglio il tipo di interazione su richiesta con il sistema.\newline
@@ -469,21 +489,6 @@ completamento del progetto:
     \item Viene ottenuta la conferma dell'inserimento.
 \end{enumerate}
 \textbf{Requisiti collegati:} RF38-F\newline
-
-\subsubsection{UC11.1.3 - Specifica dettagli del sensore}
-\textbf{Attore:} Amministratore.\newline
-\textbf{PRE:} il sensore inserito non specifica alcun tipo di dettaglio.\newline
-\textbf{POST:} il sensore inserito possiede i dettagli riguardanti le caratteristiche del sensore.\newline
-\textbf{Scenario principale:}
-\begin{enumerate}
-    \item L'amministratore accede al sistema;
-    \item L'amministratore effettua il login con proprie credenziali;
-    \item L'amministratore avvia procedura inserimento;
-    \item L'amministratore specifica i dettagli del sensore (che possono essere indirizzo IP, polling time, protocollo);
-    \item L'amministratore specifica l'area illuminata di riferimento;
-    \item Viene ottenuta la conferma dell'inserimento.
-\end{enumerate}
-\textbf{Requisiti collegati:} RF39-O\newline
 
 \subsubsection{UC11.1.4 - Specifica di posizione geografica del sensore}
 \textbf{Attore:} Amministratore.\newline
@@ -540,14 +545,14 @@ completamento del progetto:
 
 \subsubsection{UC11.3 - Associazione di un nuovo impianto di illuminazione ad un'area illuminata}
 \textbf{Attore:} Amministratore.\newline
-\textbf{PRE:} l'impianto è fisicamente presente ma non è registrato nel sistema.\newline
-\textbf{POST:} l'impianto è stato registrato correttamente e sarà possibile gestirlo tramite applicazione.\newline
+\textbf{PRE:} l'impianto di illuminazione è fisicamente presente ma non è registrato nel sistema.\newline
+\textbf{POST:} l'impianto di illuminazione è stato registrato correttamente e sarà possibile gestirlo tramite applicazione.\newline
 \textbf{Scenario principale:}
 \begin{enumerate}
     \item L'amministratore accede al sistema;
     \item L'amministratore effettua il login con proprie credenziali;
     \item L'amministratore avvia procedura inserimento;
-    \item L'amministratore specifica il sensore che gestirà l'impianto e i relativi dettagli;
+    \item L'amministratore specifica il sensore che gestirà l'impianto di illuminazione e i relativi dettagli;
     \item Viene ottenuta la conferma dell'inserimento.
 \end{enumerate}
 \textbf{Requisiti collegati:} RF19-O\newline
@@ -787,7 +792,7 @@ completamento del progetto:
 
 \subsubsection{UC22 - Inserimento automatico di un guasto ad un'area illuminata}
 \textbf{Attore:} Sistema di gestione degli impianti luminosi.\newline
-\textbf{PRE:} \'E stato segnalato un guasto in un impianto di illuminazione.\newline
+\textbf{PRE:} Si rileva una discrepanza tra luminonità attesa e luminosità rilevata dal sensore.\newline
 \textbf{POST:} Il sistema ha registrato il guasto inserendo l'area d'interesse nella lista di impianti guasti. \newline
 \textbf{Scenario principale:}
 \begin{enumerate}
@@ -795,6 +800,20 @@ completamento del progetto:
     \item Il sistema inserisce l'area colpita dal guasto nella sezione dedicata agli impianti guasti.
 \end{enumerate}
 \textbf{Requisiti collegati:} RF36-F\newline
+
+\subsubsection{UC23 - Segnalazione di un'area illuminata riparata}
+\textbf{Attore:} Manutentore.\newline
+\textbf{PRE:} Il Manutentore esegue la riparazione di un'area segnalata come guasta.\newline
+\textbf{POST:} Il Manutentore segnala tale area come riparata. \newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item \'E presente un'area illuminata nella lista di impianti guasti;
+    \item Il Manutentore prende in carico l'impianto designato per la riparazione;
+    \item Il Manutentore svolge la riparazione;
+    \item Il Manutentore segnala che l'impianto interessato è stato riparato con successo;
+    \item L'impianto riparato viene rimosso dalla lista di impianti guasti.
+\end{enumerate}
+\textbf{Requisiti collegati:} RF42-O\newline
 
 \newpage
 \section{Requisiti}
@@ -880,16 +899,17 @@ Ogni requisito è identificato da un codice la cui struttura è definita nelle \
     \hline
     RF36-F & Il sistema provvede ad inserire nella lista di impianti guasti l'area in cui è presente l'anomalia. & Facoltativo & UC22\\    
     \hline
-    RF37-F & Durante l'inserimento di un nuovo sensore si specifica il tipo di interazione automatico (push) con il sistema. & Facoltativo & UC11.1.1\\
+    RF37-F & Durante l'inserimento di un nuovo sensore si specifica il tipo di interazione automatico (push) con il sistema. & Facoltativo & UC11.1.2\\
     \hline
-    RF38-F & Durante l'inserimento di un nuovo sensore si specifica il tipo di interazione su richiesta (pull) con il sistema. & Facoltativo & UC11.1.2\\
+    RF38-F & Durante l'inserimento di un nuovo sensore si specifica il tipo di interazione su richiesta (pull) con il sistema. & Facoltativo & UC11.1.3\\
     \hline
-    RF39-O & Durante l'inserimento di un nuovo sensore si specificano i dettagli relativi a tale sensore. & Obbligatorio & UC11.1.3\\
+    RF39-O & Durante l'inserimento di un nuovo sensore si specificano i dettagli relativi a tale sensore. & Obbligatorio & UC11.1.1\\
     \hline
     RF40-O & Durante l'inserimento di un nuovo sensore si specifica la posizione geografica del sensore di riferimento. & Obbligatorio & UC11.1.4\\
     \hline
     RF41-O & Durante l'inserimento di un nuovo sensore si specifica l'ampiezza del raggio d'azione del sensore che si sta aggiungendo. & Obbligatorio & UC11.1.5\\
-
+    \hline
+    RF42-O & L'impianto guasto viene riparato dal Manutentore e viene segnalato come nuovamente funzionante. & Obbligatorio & UC23\\
 
     
     
