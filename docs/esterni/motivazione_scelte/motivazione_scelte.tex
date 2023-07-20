@@ -16,7 +16,8 @@ Questo documento riporta i confronti tra i vari linguaggi presi in considerazion
 
 \addversione{0.0.0}{09/05/2023}{Soldà Matteo}{Ceccato Francesco}{Prima stesura.}
 \addversione{0.0.1}{18/05/2023}{Soldà Matteo}{Alberti Nicolas}{Aggiunta decisione preliminare dei linguaggi e framework}
-
+\addversione{0.1.0}{20/07/2023}{Soldà Matteo}{Alberti Nicolas}{Verifica del documento per RTB}
+\addversione{1.0.0}{20/07/2023}{Soldà Matteo}{Alberti Nicolas}{Approvazione documento per candidatura RTB}
 
 \begin{document}
 \makeindexdetails
@@ -218,12 +219,7 @@ Queste scelte sono dovute a diversi fattori, nello specifico:
         \end{itemize}
     \end{itemize}
 \end{itemize}
+Inoltre, per lo sviluppo del \textit{Proof of Concept} si è deciso di utilizzare \textit{MongoDB} in quanto la struttura degli oggetti che verranno utilizzati (quali sensori, lampioni e aree illuminate) sono facilmente adattabili ad un formato \textit{JSON}, fortemente supportato dalle collezioni del database prescelto.
 \vspace*{0.5cm}
-Per far funzionare ReactJS e NodeJS con TypeScript, è necessario configurare correttamente l'ambiente di sviluppo.\\
-Prima di tutto, è necessario creare un nuovo progetto e impostare le dipendenze necessarie.\\ \\
-Per un'applicazione ReactJS, puoi utilizzare Create React App (CRA) per avviare rapidamente un progetto preconfigurato che supporta TypeScript di default, quindi non è necessaria alcuna configurazione aggiuntiva.\\ \\
-Per un'applicazione NodeJS, si può inizializzare un nuovo progetto utilizzando \textit{npm} o \textit{yarn} e installare le dipendenze necessarie, come \textit{Express} per il routing e \textit{Mongoose} per l'interazione con il database. \\
-Bisogna inoltre assicurarsi di configurare il progetto per utilizzare TypeScript impostando un file di configurazione \texttt{tsconfig.json} nella radice del progetto.\\\\
-Successivamente, si possono aggiungere le definizioni dei tipi necessarie per ReactJS e le dipendenze specifiche che si utilizzando in NodeJS. Per ReactJS, bisogna installare le definizioni dei tipi per React tramite il pacchetto \texttt{@types/react}. Per le applicazioni NodeJS, bisogna installare le definizioni dei tipi per le dipendenze specifiche utilizzate nel progetto.\\
 \end{document} 
 
