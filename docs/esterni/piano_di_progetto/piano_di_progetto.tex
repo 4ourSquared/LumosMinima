@@ -27,6 +27,9 @@ Questo documento serve a tracciare l'efficienza del progetto. Tiene traccia dei 
 \addversione{0.0.7}{11/06/2023}{Cavaliere Erica}{Soldà Matteo}{Completamento sprint 6}
 \addversione{0.0.8}{23/06/2023}{Alberti Nicolas}{Cavaliere Erica}{Completamento sprint 7}
 \addversione{0.0.9}{02/07/2023}{Soldà Matteo}{Cavaliere Erica}{Completamento sprint 8}
+\addversione{0.0.10}{21/07/2023}{Soldà Matteo}{Alberti Nicolas}{Aggiunta di specifiche relative ai rischi}
+\addversione{0.1.0}{24/07/2023}{}{}{Verifica documento per RTB}
+\addversione{1.0.0}{24/07/2023}{}{}{Approvazione documento per RTB}
 
 \def\pgfcalendarmonthitname#1{%
 \ifcase#1 \or Gennaio\or Febbraio\or Marzo\or Aprile\or Maggio\or Giugno\or Luglio\or Agosto\or Settembre\or Ottobre\or Novembre\or Dicembre\fi%
@@ -48,17 +51,78 @@ Le tecnologie consigliate per lo svolgimento del progetto da parte del richieden
 Per prefissare le scadenze bisognerà tenere conto del tempo impiegato per imparare le nuove tecnologie, oltre al tempo di sviluppo del progetto stesso.
 
 \begin{center}
-\begin{tabular}{||c|c|c|c|c||}
+\begin{tabularx}{\textwidth}{||c|X|X|c|c||}
     \hline
     \textbf{ID} & \textbf{Tipo} & \textbf{Descrizione} & \textbf{Frequenza} & \textbf{Gravità} \\
-\end{tabular}
+    \hline \hline
+    RT1 & Inesperienza con linguaggi e framework & Questo rischio nasce dalla poca esperienza avuta sia con i linguaggi utilizzati e dalla esperienza nulla con i framework per l'intero team. & Alta & Medio \\
+    \hline
+    RT2 & Incompatibilità software & Questo rischio nasce dalla differenza sia hardware che software tra i computer dei vari membri del team. Come accaduto in fase di sviluppo del \textit{PoC}, alcune versioni del database non sono compatibili con processori datati. & Bassa & Alto\\
+\hline \hline
+\end{tabularx}
 \end{center}
 
 \subsection{Rischi organizzativi}
 Durante lo svolgimento del progetto, è possibile andare incontro a dei problemi di organizzazione degli orari e quindi di non riuscire a rispettare la stima delle ore richiesta e, di conseguenza, sforare i costi indicati dal preventivo iniziale.
 
+\begin{center}
+    \begin{tabularx}{\textwidth}{||c|X|X|c|c||}
+        \hline
+        \textbf{ID} & \textbf{Tipo} & \textbf{Descrizione} & \textbf{Frequenza} & \textbf{Gravità} \\
+        \hline \hline
+        RO1 & Suddivisione del lavoro & Distribuzione non equa del lavoro dovuta all'inesperienza. & Media & Medio \\
+        \hline
+        RO2 & Impegni personali & Problemi personali legati ad un singolo membro del gruppo o che possono includere più membri del team (es: esami). & Alta & Medio \\
+        \hline
+        RO3 & Conflitti interni & Differenze nella soluzione proposta dai membri del team per la risoluzione di un problema & Bassa & Medio \\
+        \hline \hline
+    \end{tabularx}
+\end{center}
+    
+
+
 \subsection{Rischi derivanti dai Requisiti}
 Questi sono dovuti continuo mutamento dei requisti dovuti alla ricerca della soluzione che meglio si adatti alle richieste del committente e alla possibile malcomprensione dei requisiti stessi
+
+\begin{center}
+    \begin{tabularx}{\textwidth}{||c|X|X|c|c||}
+        \hline
+        \textbf{ID} & \textbf{Tipo} & \textbf{Descrizione} & \textbf{Frequenza} & \textbf{Gravità} \\
+        \hline \hline
+        RR1 & Incomprensione del requisito & Comprensione errata del requisito richiesto dal proponente. & Media & Medio \\
+        \hline
+        RR2 & Incompletezza del requisito & Il capitolato potrebbe riportare in maniera ambigua o con mancanza di precisione il requisito richiesto. & Bassa & Alto \\
+        \hline 
+        RR3 & Indisponibilità del proponente & Mancanza di tempo per il proponente per il supporto e la risoluzione di incomprensioni. & Bassa & Medio \\ 
+        \hline \hline
+    \end{tabularx}
+\end{center}
+
+\subsection{Prevenzione dei Rischi e Risoluzione dei Problemi}
+\begin{center}
+    \begin{tabularx}{\textwidth}{||c|c||X||}
+        \hline
+        \textbf{ID} & \textbf{Gravità} & \textbf{Prevenzione / Risoluzione} \\ 
+        \hline \hline
+        RT1 & Media & Il team di sviluppo si impegna a familiarizzare autonomamente con i linguaggi e con i framework prescelti prima di apportare modifiche al codice sorgente del progetto\\
+        \hline
+        RT2  & Alta & Qualora sorgesse una incompatibilità, in base al numero di membri del gruppo coinvolti, si valuterà attentamente tramite una riunione quale sia la soluzione più efficace per la risoluzione \\
+        \hline
+        RO1 & Media & Qualora venisse segnalata questo tipo di inequità, il Responsabile provvederà alla riorganizzazione del lavoro\\
+        \hline
+        RO2 & Media & Il Responsabile provvede a riorganizzare il lavoro secondo disponibilità\\
+        \hline
+        RO3 & Media & Attraverso una riunione, il gruppo discute le soluzioni proposte e dopo una valutazione critica delle soluzioni, si procede ad una votazione con la quale selezionare l'approccio favorito dalla maggior parte del team\\
+        \hline
+        RR1 & Media & Il gruppo nella sua interezza valuta il requisito per cercare una interpretazione unanime. Qualora il precedente approccio si rivelasse inconcludente, si procederà alla richiesta di un incontro con il proponente\\
+        \hline
+        RR2 & Alta & Il gruppo nella sua interezza si dedica alla valutazione del requisito. Qualora il precedente approccio si rivelasse inconcludente, si procederà alla richiesta di un incontro con il proponente\\
+        \hline
+        RR3 & Media & Attraverso una riunione con il proponente, si cercherà di trovare un punto di accordo per quanto riguarda sia le modalità di comunicazione che le tempistiche\\
+        \hline \hline
+    \end{tabularx}
+\end{center}
+    
 \newpage
 \section{Pianificazione del lavoro}
 
