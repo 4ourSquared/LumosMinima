@@ -8,7 +8,7 @@
 \settitolo{Norme di Progetto}
 \setprogetto{Lumos Minima}
 \setcommittenti{Imola Informatica}
-\setredattori{Alberti Nicolas \\ Brotto Romina \\ Ceccato Francesco \\ Soldà Matteo}
+\setredattori{Alberti Nicolas \\ Brotto Romina \\ Cavaliere Erica \\  Ceccato Francesco \\ Soldà Matteo}
 \setdestuso{interno}
 \setdescrizione{
 Questo documento contiene le procedure, gli strumenti e i criteri di qualità che verranno usati nel progetto.
@@ -25,6 +25,9 @@ Questo documento contiene le procedure, gli strumenti e i criteri di qualità ch
 \addversione{0.0.8}{26/04/2023}{Brotto Romina}{Alberti Nicolas}{Modifica elementi sezione 2.2.5}
 \addversione{0.0.9}{03/05/2023}{Alberti Nicolas}{Soldà Matteo}{Aggiunta sezione 4.1.1; modifica sezione 4.1}
 \addversione{0.0.10}{11/05/2023}{Erica Cavaliere}{Lorenzo Salami}{Aggiunta sezione 2.2.6}
+\addversione{0.0.11}{24/07/2023}{Soldà Matteo}{Ceccato Francesco}{Inserite norme di codifica}
+\addversione{0.1.0}{24/07/2023}{Ceccato Francesco}{Brotto Rominca}{Verifica documento per RTB}
+\addversione{1.0.0}{24/07/2023}{Soldà Matteo}{Ceccato Francesco}{Approvazione documento per RTB}
 
 \begin{document}
 \makeindexdetails
@@ -49,7 +52,7 @@ in maniera automatica o manuale.
 
 \subsubsection{Glossario}
 Al fine di evitare ambiguità nei termini utilizzati durante la redazione dei
-documenti, viene fornito anche il \textit{Glossario v.0.0.0,} dove vengono
+documenti, viene fornito anche il \textit{Glossario v.1.0.0,} dove vengono
 definiti tutti i termini aventi un particolare significato. \\
 Un termine presente nel \textit{Glossario} viene contrassegnato dal corsivo e
 da una 'G' aggiunta in pedice.
@@ -247,66 +250,65 @@ Per ogni documento esisterà una nuova sottocartella omonima.
 \end{itemize}
 \paragraph{} \\
 \textbf{Convenzioni Stilistiche} \\
-Per quanto riguarda la scrittura del codice, si è scelto di utilizzare le seguenti convenzioni, che verrano poi selezionate per l'uso a seconda dell'ambito e del linguaggio: \textit{camel case}, \textit{pascal case}, \textit{snake case}, \textit{lowercase} e \textit{screaming snake case}.\\ \\
+Per quanto riguarda la scrittura del codice, si è scelto di utilizzare le seguenti convenzioni, che sono state selezionate utilizzando lo \textit{standard de-facto} per il linguaggio \textit{Typescript}: \textit{camel case}, \textit{pascal case}, \textit{snake case} e \textit{screaming snake case}.\\ \\
 
+\begin{center}
+\begin{tabular}{|| c || c ||}
+    \hline
+        & TypeScript \\
+    \hline \hline
+    Funzioni e Metodi & camelCase() \\
+    \hline
+    Classi & PascalCase \\
+    \hline
+    Interfacce & PascalCase \\
+    \hline
+    Namespace e Package & camelCase \\
+    \hline
+    Costanti & SCREAMING\_SNAKE\_CASE \\
+    \hline  
+    Variabili Locali e Attributi & snake\_case \\
+    \hline
+    Variabili Globali & snake\_case \\
+    \hline
+\end{tabular}
+\end{center}
+\vspace*{0.5cm}
+Per quanto riguarda i linguaggi di markup, i tag e gli attributi andranno scritti in lowercase se primitivi o in kebab-case se custom o complessi. \newline
+Inoltre:
+\begin{itemize}
+    \item I membri di una classe dovrebbero essere dichiarati e/o definiti nel seguente ordine:
+    \begin{itemize}
+        \item Variabili di classe (statiche)
+        \item Variabili di istanza (attributi) \\
+        Nel seguente ordine (ove possibile):
+        \begin{enumerate}
+            \item public;
+            \item protected;
+            \item private;
+        \end{enumerate}
+        \item Costruttore;
+        \item Distruttore (se richiesto);
+        \item Metodi.
+    \end{itemize}
+\end{itemize}
+\textbf{CSS}
+\begin{itemize}
+    \item Mantenere un file chiamato \texttt{style.css} per la versione desktop della webapp;
+    \item Mantenere un file chiamato \texttt{global.css} per le regole che si applicano ad ogni aspetto del sito, in particolare ai moduli universali quali, a titolo esemplificativo e non esaustivo, header e footer;
+    \item Mantenere un file chiamato \texttt{mini.css} con accorgimenti per la versione mobile;
+    \item Specificare le unità di misura in \textit{em}, \textit{rem}, \textit{\%}, \textit{vw}, \textit{vh} (unità relative), a parte per i valori delle seguenti proprietà, i quali possono essere espressi in \textit{px}:
+    \begin{itemize}
+        \item \textit{text-shadow};
+        \item \textit{box-shadow}.
+    \end{itemize}
+\end{itemize}
 
-%\begin{table}[ht]
-%\begin{tabular}{|| c || c | c | c | c |}
-%    \hline
-%        & Java & JavaScript & Python & TypeScript \\
-%   \hline \hline
-%    Funzioni e Metodi & camelCase() & camelCase() & snake\_case() & camelCase() \\
-%    \hline
-%    Classi & \multicolumn{4}{c|}{PascalCase} \\
-%    \hline
-%    Interfacce & PascalCase & PascalCase & NA & PascalCase \\
-%    \hline
-%    Namespace e Package & lowercase & NA & NA & camelCase \\
-%    \hline
-%    Costanti & \multicolumn{4}{c|}{SCREAMING\_SNAKE\_CASE} \\
-%    \hline  
-%    Variabili Locali e Attributi & camelCase & camelCase & snake\_case & snake\_case \\
-%    \hline
-%    Variabili Globali & NA & camelCase & snake\_case & snake\_case \\
-%    \hline
-%\end{tabular}
-%\end{table}
-%
-%\vspace*{0.5cm}
-%A seguire, in JavaScript, le funzioni e i metodi privati anteporranno il simbolo di underscore prima del nome.\newline
-%Per quanto riguarda invece i linguaggi di markup, i tag e gli attributi andranno scritti in lowercase se primitivi o in kebab-case se custom o complessi. \newline
-%Inoltre:
-%\begin{itemize}
-%    \item I membri di una classe dovrebbero essere dichiarati e/o definiti nel seguente ordine:
-%    \begin{itemize}
-%        \item Variabili di classe (statiche)
-%        \item Variabili di istanza (attributi) \\
-%        Nel seguente ordine (ove possibile):
-%        \begin{enumerate}
-%            \item public;
-%            \item protected;
-%            \item private;
-%        \end{enumerate}
-%        \item Costruttore;
-%        \item Distruttore (se richiesto);
-%        \item Metodi.
-%    \end{itemize}
+\paragraph{Indentazione e Blocchi di Codice}
 \begin{itemize}
     \item Un \textit{blocco di codice\textsubscript{G}} delimitato da parentesi graffe dovrebbe essere strutturato apponendo le parentesi graffe ognuna in una nuova riga, non seguita da caratteri ulteriori;
     \item Si predilige l'uso della tabulazione per indentare la porzione di codice inclusa in un blocco.
-\paragraph{}\\
 \end{itemize}
-%\textbf{CSS}
-%\begin{itemize}
-%    \item Mantenere un file chiamato \texttt{nomepagina.css} per la versione desktop di ciascuna pagina;
-%    \item Mantenere un file chiamato \texttt{global.css} per le regole che si applicano ad ogni aspetto del sito, in particolare ai moduli universali quali, a titolo esemplificativo e non esaustivo, header e footer;
-%    \item Mantenere un file chiamato \texttt{mini.css} con accorgimenti per la versione mobile;
-%    \item Specificare le unità di misura in \textit{em}, \textit{rem}, \textit{\%}, \textit{vw}, \textit{vh} (unità relative), a parte per i valori delle seguenti proprietà, i quali possono essere espressi in \textit{px}:
-%    \begin{itemize}
-%        \item \textit{text-shadow};
-%        \item \textit{box-shadow}.
-%    \end{itemize}
-%\end{itemize}
 
 \subsubsection{Workflow Github}
 
