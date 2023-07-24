@@ -19,9 +19,15 @@ Le varie fasi del progetto sono cronologicamente ordinate dalla più recente all
     <summary><h1>RTB</h1></summary>
 
 ## Documenti ad Uso Esterno
-
+- Analisi dei Requisiti
+- Piano di Progetto (Aggiornato)
+- Piano di Qualifica (Aggiornato)
+- Motivazione delle Scelte
+- Glossario (Aggiornato)
+- Verbale del 17/05/2023 con Prof. Cardin
 ## Documenti ad Uso Interno
-
+- Norme di Progetto
+- n. 16 Verbali Interni (tra il 16/03/2023 e il 17/07/2023)
 </details>
 
 <details>
