@@ -1,4 +1,5 @@
 \documentclass[a4paper, 12pt]{article}
+\usepackage{graphicx} % Required for inserting images
 \usepackage{amsmath}
 \usepackage{pgfplots}
 \usepackage{tabularx}
@@ -8,6 +9,7 @@
 \input{\templates/style}
 \input{\templates/front_page}
 \input{\templates/history}
+\graphicspath{ {./immagini/} }
 
 \settitolo{Piano di Qualifica}
 \setredattori{Lorenzo Salami}
@@ -20,6 +22,8 @@ Questo documento serve a definire le metriche e i criteri di accettazione dei pr
 \addversione{0.0.0}{18/04/2023}{Salami Lorenzo}{Soldà Matteo}{Stesura iniziale.}
 \addversione{0.0.1}{24/04/2023}{Soldà Matteo}{Salami Lorenzo}{Aggiunta delle intestazioni e dei piè di pagina}
 \addversione{0.0.2}{24/07/2023}{Brotto Romina}{Ceccato Francesco}{Aggiunta sezione 3 ed indici}
+\addversione{0.1.0}{25/07/2023}{Brotto Romina}{Salami Lorenzo}{Verifica per RTB}
+\addversione{1.0.0}{25/07/2023}{Salami Lorenzo}{Brotto Romina}{Versione finale	per RTB}
 
 \begin{document}
 
@@ -139,20 +143,20 @@ durante gli sprint sopra indicati, prevedendo però di rientrare nei valori di t
 
 \subsection{Planning Value, Actual Cost e Earned Value}
 \begin{center}
-	%\includegraphics[scale=0.5]{AC_PV_EV.png}
+	\includegraphics[scale=0.5]{AC_PV_EV.png}
 \end{center}
 \subsection{Cost Variance e Schedule Variance}
 \begin{center}
-	%\includegraphics[scale=0.5]{Cost_Variance_Schedule_Variance.png}
+	\includegraphics[scale=0.5]{Cost_Variance_Schedule_Variance.png}
 \end{center}
 
 \subsection{Eastimate at completition e Estimate to Complete}
 \begin{center}
-	%\includegraphics[scale=0.6]{EAC_ETC.png}
+	\includegraphics[scale=0.6]{EAC_ETC.png}
 \end{center}
 \subsection{Cost Performance Index}
 \begin{center}
-	%\includegraphics[scale=0.6]{CPI.png}
+	\includegraphics[scale=0.6]{CPI.png}
 \end{center}
 
 \subsection{Indice di Gulpease}
