@@ -21,7 +21,7 @@ Le varie fasi del progetto sono cronologicamente ordinate dalla più recente all
 ## Documenti ad Uso Esterno
 - [Analisi dei Requisiti](esterni/analisi_dei_requisiti.pdf)
 - [Piano di Progetto](esterni/piano_di_progetto.pdf) (Aggiornato)
-- [Piano di Qualifica] (Aggiornato)
+- [Piano di Qualifica](esterni/piano_di_qualifica.pdf) (Aggiornato)
 - [Motivazione delle Scelte](esterni/motivazione_scelte.pdf)
 - [Glossario](esterni/glossario.pdf) (Aggiornato)
 - [Verbale del 17/05/2023 con Imola Informatica](esterni/verbali/2023_05_17_E.pdf)
