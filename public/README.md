@@ -9,7 +9,7 @@ Revisioni:
 - [ ] Product Baseline
 - [ ] Customer Acceptance
 
-Le varie fasi del progetto sono cronologicamente ordinate dalla più recente alla meno recente. Per visualizzare tutti i documenti creati o modificati riguardanti una determinata fase, premere sul triangolo situato al di sopra del nome della stessa.
+Le varie fasi del progetto sono cronologicamente ordinate dalla più recente alla meno recente. Per visualizzare tutti i documenti creati o modificati riguardanti una determinata fase, premere sul triangolo situato a fianco del nome della stessa.
 
 <small>Qualora un file fosse stato modificato tra una fase e l'altra, al suo fianco verrà apposta la parola "aggiornato"</small>
 
