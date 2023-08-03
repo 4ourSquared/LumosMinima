@@ -31,3 +31,8 @@ jobs:
 
             git add *.pdf
             git commit -m "Aggiornamento Automatico Documenti"
+
+        - name: Push dei File
+          uses: ad-m/github-push-action@master
+          with:
+            branch: 83-action
