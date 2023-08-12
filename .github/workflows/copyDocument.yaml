@@ -9,6 +9,21 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+
+        - name: Aggiornamento del sistema
+          run: |
+            apt-get update -y
+            apt-get upgrade -y
+
+
+        - name: Installazione di apt-utils
+          run:  apt-get install -y apt-utils
+        
+        - name: Installazione di Git
+          run:  |
+                  apt-get update -y
+                  apt-get install git -y
+
         - name: Copia dei File
           uses: actions/checkout@v2
 
