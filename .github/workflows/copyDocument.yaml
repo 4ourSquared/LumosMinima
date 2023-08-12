@@ -52,4 +52,3 @@ jobs:
           with:
             branch: 83-action
             github_token: ${{ secrets.GITHUB_TOKEN }}
-            github_url: https://github.com/4ourSquared/LumosMinima
