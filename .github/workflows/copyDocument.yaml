@@ -37,14 +37,6 @@ jobs:
             git add *.pdf
             git commit -m "Aggiornamento Automatico Documenti"
 
-        - name: Pull dal Repository Remoto
-          run: git pull origin main
-    
-        - name: Risolvi Conflitti e Crea un Nuovo Commit se Necessario
-          run: |
-            git add .
-            git commit -m "Risoluzione conflitti e aggiornamento"
-
           # push dei file creati e/o modificati (se presenti)
         - name: Push dei File
           uses: ad-m/github-push-action@master
