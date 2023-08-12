@@ -2,8 +2,9 @@ name: Copia dei File Generati
 
 # Avvio dell'azione solamente qualora avvenisse un push
 on: 
-  push: 
-    branches: [83-action]
+  push:
+    branches:
+      - main
 
 jobs:
     copy:
@@ -19,11 +20,11 @@ jobs:
 
           # Copia dei documenti interni (non verbali)
         - name: Copia dei Documenti Interni
-          run : find docs/interni/ -maxdepth 1 -name '*.pdf' -exec cp {} public/interni \;
+          run : find docs/interni/ -maxdepth 2 -name '*.pdf' -exec cp {} public/interni \;
 
           # Copia dei documenti esterni (non verbali)
         - name: Copia dei Documenti Esterni
-          run : find docs/interni/ -maxdepth 1 -name '*.pdf' -exec cp {} public/interni \;
+          run : find docs/interni/ -maxdepth 2 -name '*.pdf' -exec cp {} public/interni \;
 
           # copia dei soli verbali interni
         - name: Copia dei Verbali Interni
@@ -46,5 +47,4 @@ jobs:
         - name: Push dei File
           uses: ad-m/github-push-action@master
           with:
-            branch: 83-action
             github_token: ${{ secrets.GITHUB_TOKEN }}
