@@ -1,8 +1,6 @@
 name: Copia dei File Generati
 
-on:
-    push:
-        branches: [83-action]
+on: [push]
 
 jobs:
     copy:
@@ -50,5 +48,4 @@ jobs:
         - name: Push dei File
           uses: ad-m/github-push-action@master
           with:
-            branch: 83-action
             github_token: ${{ secrets.GITHUB_TOKEN }}
