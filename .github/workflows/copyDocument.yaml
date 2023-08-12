@@ -39,8 +39,6 @@ jobs:
         - name: Copia dei Verbali Esterni
           run : find docs/esterni/verbali/ -maxdepth 1 -name '*.pdf' -exec cp {} public/esterni/verbali \;
 
-
-
         - name: Commit dei File
           run : |
             git config --local user.email "action@github.com"
