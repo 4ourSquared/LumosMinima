@@ -33,11 +33,7 @@ jobs:
         - name: Copia dei Documenti Esterni
           run : find docs/esterni/ -name '*.pdf' -exec cp {} public/esterni \;
 
-        - name: Copia dei Verbali Interni
-          run : find docs/interni/verbali -name '*.pdf' -exec cp {} public/interni/verbali \;
 
-        - name: Copia dei Verbali Esterni
-          run : find docs/esterni/verbali -name '*.pdf' -exec cp {} public/esterni/verbali \;
 
         - name: Commit dei File
           run : |
