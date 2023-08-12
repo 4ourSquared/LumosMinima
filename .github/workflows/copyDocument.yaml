@@ -1,7 +1,9 @@
 name: Copia dei File Generati
 
 # Avvio dell'azione solamente qualora avvenisse un push
-on: [push]
+on: 
+  push: 
+    branches: [main]
 
 jobs:
     copy:
