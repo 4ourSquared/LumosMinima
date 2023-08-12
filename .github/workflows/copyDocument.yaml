@@ -28,10 +28,16 @@ jobs:
           uses: actions/checkout@v2
 
         - name: Copia dei Documenti Interni
-          run : find docs/interni/ -name '*.pdf' -exec cp {} public/interni \;
+          run : find docs/interni/ -maxdepth 1 -name '*.pdf' -exec cp {} public/interni \;
 
         - name: Copia dei Documenti Esterni
-          run : find docs/esterni/ -name '*.pdf' -exec cp {} public/esterni \;
+          run : find docs/interni/ -maxdepth 1 -name '*.pdf' -exec cp {} public/interni \;
+
+        - name: Copia dei Verbali Interni
+          run : find docs/interni/verbali/ -maxdepth 1 -name '*.pdf' -exec cp {} public/interni/verbali \;
+
+        - name: Copia dei Verbali Esterni
+          run : find docs/esterni/verbali/ -maxdepth 1 -name '*.pdf' -exec cp {} public/esterni/verbali \;
 
 
 
