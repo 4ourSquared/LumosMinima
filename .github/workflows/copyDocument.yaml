@@ -3,7 +3,7 @@ name: Copia dei File Generati
 # Avvio dell'azione solamente qualora avvenisse un push
 on: 
   push: 
-    branches: [83-actions]
+    branches: [83-action]
 
 jobs:
     copy:
