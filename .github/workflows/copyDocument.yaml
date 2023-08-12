@@ -22,11 +22,11 @@ jobs:
 
           # copia dei soli verbali interni
         - name: Copia dei Verbali Interni
-          run : find docs/interni/verbali/ -maxdepth 1 -name '*.pdf' -exec cp {} public/interni/verbali \;
+          run : find docs/interni/verbali/ -maxdepth 2 -name '*.pdf' -exec cp {} public/interni/verbali \;
 
           #copia dei soli verbali esterni
         - name: Copia dei Verbali Esterni
-          run : find docs/esterni/verbali/ -maxdepth 1 -name '*.pdf' -exec cp {} public/esterni/verbali \;
+          run : find docs/esterni/verbali/ -maxdepth 2 -name '*.pdf' -exec cp {} public/esterni/verbali \;
 
           # commit dei file creati e/o modificati (se presenti)
         - name: Commit dei File
