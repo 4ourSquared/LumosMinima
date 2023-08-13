@@ -30,6 +30,7 @@ Questo documento si occupa di riportare un'analisi di tutti gli elementi richies
 \addversione{0.0.7}{04/07/2023}{Brotto Romina}{Cavaliere Erica}{Aggiunti casi d'uso mancanti, effettuate correzioni consigliate dal Committente e sistemate immagini}
 \addversione{0.1.0}{20/07/2023}{Brotto Romina}{Soldà Matteo}{Verifica per RTB}
 \addversione{1.0.0}{20/07/2023}{Soldà Matteo}{Brotto Romina}{Approvazione per candidatura RTB}
+\addversione{1.0.1}{09/08/2023}{Brotto Romina}{Cavaliere Erica}{Aggiornamento con requisiti di Qualità e requisiti di Vincolo}
 
 
 \def\pgfcalendarmonthitname#1{%
@@ -348,7 +349,7 @@ completamento del progetto:
         \item L'utente deve immettere nuovamente le proprie credenziali.
     \end{enumerate}
 \end{itemize}
-\textbf{Requisiti collegati:} RF5-O\newline
+\textbf{Requisiti collegati:} RF5-O, RV1-O\newline
 
 \subsubsection{UC6 - Logout}
 \textbf{Attore:} Utente autenticato.\newline
@@ -386,7 +387,7 @@ completamento del progetto:
     \item il manutentore seleziona il pulsante di consultazione elenco impianti guasti;
     \item Viene visualizzato l'elenco degli impianti guasti.
 \end{enumerate}
-\textbf{Requisiti collegati:} RF8-O\newline
+\textbf{Requisiti collegati:} RF8-O, RV2-O\newline
 
 \subsubsection{UC9 - Inserimento manuale di un guasto ad una area illuminata}
 \textbf{Attore:} Amministratore.\newline
@@ -920,4 +921,43 @@ Ogni requisito è identificato da un codice la cui struttura è definita nelle \
     
     \bottomrule
 \end{longtable}
+
+
+
+
+\subsection{Requisiti di Qualità}
+\setlength\tabcolsep{4pt}
+\begin{longtable}{|c|p{7cm}|c|p{4cm}|}
+    \hline
+    \multicolumn{4}{| c |}{\textbf{Requisiti di Qualità}} \\
+    \hline
+    \textbf{Codice} & \textbf{Descrizione} & \textbf{Rilevanza} & \textbf{Fonti} \\
+    \hline
+    RQ1-O & Test che dimostrino il corretto funzionamento dei servizi e delle funzionalità previste, con una copertura dell'80\% del codice. & Obbligatorio & Capitolato C2 \\
+    \hline
+    RQ2-O & Documenti su scelte implementative e progettuale e relative motivazioni, i problemi aperti e le eventuali soluzioni proposte da approfondire. & Obbligatorio & Capitolato C2 \\
+    \hline
+    RQ3-O & Web Application responsive per soddisfare i requisiti obbligatori nei casi d'uso. & Obbligatorio & Capitolato C2 \\ 
+    \bottomrule
+\end{longtable}
+
+\subsection{Requisiti di Vincolo}
+\setlength\tabcolsep{4pt}
+\begin{longtable}{|c|p{7cm}|c|p{4cm}|}
+    \hline
+    \multicolumn{4}{| c |}{\textbf{Requisiti di Vincolo}} \\
+    \hline
+    \textbf{Codice} & \textbf{Descrizione} & \textbf{Rilevanza} & \textbf{Fonti} \\
+    \hline
+    RV1-O & Essere in possesso delle credenziali di autenticazione per accedere al sistema. & Obbligatorio & UC5 \\
+    \hline
+    RV2-O & Essere in possesso delle credenziali specifiche per il manutentore. & Obbligatorio & UC8 \\
+    \bottomrule
+\end{longtable}
+
+
+
+
+
+
 \end{document}
