@@ -7,7 +7,7 @@ Revisioni:
 
 - [x] Candidatura
 - [x] Way of Working
-- [ ] Requirements and Technology Baseline
+- [x] Requirements and Technology Baseline
 - [ ] Product Baseline
 - [ ] Customer Acceptance
 
