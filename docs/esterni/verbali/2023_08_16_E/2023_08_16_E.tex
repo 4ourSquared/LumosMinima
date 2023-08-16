@@ -1,0 +1,62 @@
+\documentclass[a4paper, 12pt]{article}
+
+\newcommand{\templates} {../../../template}
+\input{\templates/style}
+\input{\templates/front_page}
+\input{\templates/history}
+
+\settitolo{Verbale Consuntivo dello Scambio di Messaggi con Imola Informatica}
+\setredattori{Soldà Matteo}
+\setrevisori{Brotto Romina\\Cavaliere Erica}
+\setdestuso{esterno}
+\setdescrizione{
+    Verbale Consuntivo dello Scambio di Messaggi con Imola Informatica
+}
+
+\begin{document}
+\makefrontpage
+\section*{Informazioni Generali}
+\begin{itemize}
+    \item Data: 16/08/2023
+    \item Piattaforma: Telegram
+    \item Partecipanti
+    \begin{itemize}
+        \item Alberti Nicolas
+        \item Brotto Romina
+        \item Cavaliere Erica
+        \item Ceccato Francesco
+        \item Salami Lorenzo
+        \item Soldà Matteo
+        \item Patera Lorenzo (Imola Informatica)
+    \end{itemize}
+\end{itemize}
+\section*{O.D.G}
+\begin{itemize}
+    \item Chiarimento Incertezze - Modalità di Interazione
+\end{itemize}
+
+\section*{Introduzione}
+Durante lo sviluppo del meccanismo che automatizza l'accensione dei lampioni al rilevamento di movimento da parte del sensore, il gruppo ha riscontrato delle incertezze riguardo la modalità di interazione delle varie componenti del sistema. Per questo motivo, il gruppo ha contattato il proponente tramite Telegram per chiarire i dubbi.
+Nella visione del gruppo, seguendo anche quanto riportato nell'\textit{Analisi dei Requisiti V1.0.0}, emergono le seguenti informazioni:
+\begin{itemize}
+    \item Il sensore tra i suoi attributi, ne ha uno che indica il tipo di interazione (\textit{pull / push}) che ha con il sistema;
+    \item Il sensore, qualora sia impostato in modalità \textit{pull}, deve essere interrogato dal sistema per ottenere i dati;
+    \item Il sensore, qualora sia impostato in modalità \textit{push}, invia i dati al sistema in modo autonomo;
+    \item Il lampione svolge un ruolo passivo, in quanto l'interazione con il sistema non è di sua pertinenza;
+    \item L'area illuminata può contenere più sensori con modalità di interazione differenti.
+\end{itemize}
+Rileggendo però il capitolato, si è notato che, per come descritto, sembrava che l'interazione fosse da definire all'interno del componente area illuminata.
+
+\section*{Conclusioni}
+A seguito della discussione avvenuta con il Sig. Patera, si è arrivati alle seguenti conclusioni:
+\begin{itemize}
+    \item Il tipo di interazione è riferita al singolo lampione;
+    \item Il singolo sensore definisce solamente la durata del token utilizzato qualora un lampione fosse impostato sulla modalità d'interazione \textit{pull};
+    \item L'area illuminata svolge un ruolo prettamente passivo, in quanto indica solamente l'area per la quale il token del sensore è valido;
+    \item Il \textit{pooling time} del server (qualora il tipo di interazione fosse \textit{pull}) è da definire nell'ordine di grandezza delle decine di secondi
+\end{itemize}
+
+\section*{Impegni Assunti}
+Matteo si impegna a riadattare le componenti del sistema in base alle nuove informazioni ottenute (\href{https://github.com/4ourSquared/LumosMinima-code/issues/17}{\# 17}). 
+\end{document}
+
