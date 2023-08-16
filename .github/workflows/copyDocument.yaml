@@ -24,7 +24,7 @@ jobs:
 
           # Copia dei documenti esterni (non verbali)
         - name: Copia dei Documenti Esterni
-          run : find docs/interni/ -maxdepth 2 -name '*.pdf' -exec cp {} public/interni \;
+          run : find docs/esterni/ -maxdepth 2 -name '*.pdf' -exec cp {} public/esterni \;
 
           # copia dei soli verbali interni
         - name: Copia dei Verbali Interni
