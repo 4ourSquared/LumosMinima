@@ -1,5 +1,6 @@
 \documentclass[a4paper, 12pt]{article}
 
+\renewcommand{\contentsname}{Indice}
 \newcommand{\templates}{../../template}
 \input{\templates/style}
 \input{\templates/front_page}
@@ -20,20 +21,29 @@ Questo documento riporta i termini specifici del dominio per i quali viene richi
 \addversione{0.0.4}{09/06/2023}{Salami Lorenzo}{Ceccato Francesco}{Aggiunti nuovi vocaboli derivanti dall'\textit{Analisi dei requisiti}}
 \addversione{0.1.0}{20/07/2023}{Soldà Matteo}{Alberti Nicolas}{Verifica del documento per RTB}
 \addversione{1.0.0}{20/07/2023}{Soldà Matteo}{Alberti Nicolas}{Approvazione del documento per candidatura RTB}
+\addversione{1.0.1}{15/08/2023}{Alberti Nicolas}{}{Modificato l'indice del glossario inserendo le lettere al posto dei numeri.}
+
 
 \begin{document}
 \makeindexdetails
 \makefrontpage \makeversioni
+
+
 \tableofcontents
+
 \newpage
 \clearpage
 \makecontentsdetails{Glossario}
 
-\section{A.}
+\section*{A.}
+\markboth{A.}{}
+\addcontentsline{toc}{section}{A.}
 \textbf{Area illuminata:} un luogo composto da un insieme di un numero arbitrario di \textit{impianti luminosi\textsubscript{G}} e sensori.
 
 \newpage
-\section{B.}
+\section*{B.}
+\markboth{B.}{}
+\addcontentsline{toc}{section}{B.}
 \textbf{Back-end:} parte di un sistema software che elabora i dati generati dal \textit{front-end\textsubscript{G}}. \\ \\
 \textbf{Blocco di Codice:} gruppo di istruzioni che devono essere eseguite in ordine. \\ \\
 \textbf{Branch:} in \textit{GitHub\textsubscript{G}} è un ambiente isolato della
@@ -41,18 +51,24 @@ Questo documento riporta i termini specifici del dominio per i quali viene richi
 sorgente e modificarne alcune parti, apportando modifiche che non intaccano il codice principale del progetto. \\ \\
 
 \newpage
-\section{D.}
+\section*{D.}
+\markboth{D.}{}
+\addcontentsline{toc}{section}{D.}
 \textbf{Dashboard:} pannello di visualizzazione dei dati che fornisce una panoramica in tempo reale delle prestazioni e delle metriche di un progetto, servizio o specifica risorsa. \\ \\
 \textbf{Diagramma di Gantt:} strumento di supporto alla gestione dei progetti. Esso presenta l'arco temporale del progetto suddiviso in fasi incrementali e le mansioni che rappresentano il progetto stesso. \\
 
 \newpage
-\section{F.}
+\section*{F.}
+\markboth{F.}{}
+\addcontentsline{toc}{section}{F.}
 \textbf{Fornitura:} ciascuna delle serie di prodotti necessari al completamento, al funzionamento o all'efficienza di qualcosa. \\ \\
 \textbf{Front-end:} parte di un sistema software che gestisce l'interazione con l'utente o con sistemi esterni. \\ \\
 \textbf{Full-stack:} insieme di un sistema o di applicazione informatica, comprendente sia il frontend che il backend.\\ \\
 
 \newpage
-\section{G.}
+\section*{G.}
+\markboth{G.}{}
+\addcontentsline{toc}{section}{G.}
 \textbf{Git:} sistema di controllo di versione distribuito, focalizzato
 sull'agevolare il coordinamento dello sviluppo di codice tra più persone. \\ \\
 \textbf{GitHub:} servizio di hosting per progetti software per
@@ -62,10 +78,12 @@ utilizzare software aggiuntivi per la collaborazione, quali:
     \item sistema di \textit{ticketing\textsubscript{G}};
     \item sistema per la gestione delle attività di progetto;
     \item sistema per l'integraziopne continua.
-\end{itemize} 
+\end{itemize}
 \newpage
 
-\section{I.}
+\section*{I.}
+\markboth{I.}{}
+\addcontentsline{toc}{section}{I.}
 \textbf{IoT}: \textit{Internet of Things}, descrive la rete di oggetti fisici che hanno sensori, software e altre tecnologie integrate allo scopo di connettere e scambiare dati con altri dispositivi e sistemi tramite internet. \\ \\
 \textbf{Impianto luminoso:} elemento composto da una fonte luminosa. \\ \\
 \textbf{Implementazione:} realizzazione concreta di una procedura a partire dalla sua definizione logica. \\ \\
@@ -73,33 +91,45 @@ utilizzare software aggiuntivi per la collaborazione, quali:
 \textbf{Interfaccia:} dispositivo di collegamento con cui un software assicura la comunicazione tra due sistemi altrimenti incompatibili, oppure tra unità centrali e periferiche. \\ \\
 
 \newpage
-\section{L.}
+\section*{L.}
+\markboth{L.}{}
+\addcontentsline{toc}{section}{L.}
 \textbf{Landing Page:}: pagina web che ha il compito di accogliere l'utente che vi arriva, fornendogli informazioni e aiutandolo a trovare ciò che cerca. \\ \\
 
 \newpage
-\section{M.}
+\section*{M.}
+\markboth{M.}{}
+\addcontentsline{toc}{section}{M.}
 \textbf{Multithreading:} tecnicna utilizzata nella programmazione per consentire a un singolo processo di avere più \textit{thread\textsubscript{G}} di esecuzione. Ogni thread può funzionare in modo indipendente e parallelo, consentendo un uso più efficiente delle risorse. Ciò può aiutare a migliorare le prestazioni complessive di un programma e renderlo più sensibile all'input di un utente. \\ \\
 
 \newpage
-\section{P.}
+\section*{P.}
+\markboth{P.}{}
+\addcontentsline{toc}{section}{P.}
 \textbf{Piano di Progetto:} calendario di massima di un progetto riportante la stima dei costi di realizzazione, dei rischi attesi e della loro mitigazione e infine della suddivisione del lavoro in molteplici periodi successivi. Per ogni periodo devono essere riportati i seguenti elementi: obiettivi attesi, obiettivi raggiunti, rischi occorsi, conseguenze e mitigazione, costi osservati e aggiornamento del calendario futuro e della stima dei costi finali. \\ \\
 \textbf{Piano di Qualifica:} specifica gli obiettivi quantitativi di qualità di prodotto e di processo, oltre a misurare il raggiungimento di tali obiettivi allo stato corrente pone le fondamenta per retrospettive e iniziative di auto-miglioramento. \\ \\
 \textbf{Processo:} insieme di attività correlate e coese che trasformano bisogni (input) in prodotti (output) secondo regole date, utilizzando risorse nel farlo. \\ \\
 \textbf{Push/Pull:} In ambito web application, il push si riferisce alla comunicazione in cui il server invia attivamente i dati o gli aggiornamenti al client senza che vengano richiesti esplicitamente. Il pull, invece, implica che il client richieda esplicitamente i dati o gli aggiornamenti al server quando ne ha bisogno. Il push è utilizzato per aggiornamenti in tempo reale, mentre il pull viene utilizzato per richieste specifiche del client. \\ \\
 
 \newpage
-\section{R.}
+\section*{R.}
+\markboth{R.}{}
+\addcontentsline{toc}{section}{R.}
 \textbf{Repository:} è una cartella remota che permette il salvataggio dei file
 di progetto ed utilizza un sistema di controllo di versione. Quando
 viene nominato, ci si riferisce al repository \textit{GitHub\textsubscript{G}} reperibile all’indirizzo \texttt{https://github.com/4ourSquared/LumosMinima}.  \\ \\
 \textbf{Responsive:}Detto di sito web in grado di adattarsi graficamente in maniera automatica a qualsiasi dispositivo su cui viene visualizzato. \\ \\
 
 \newpage
-\section{S.}
+\section*{S.}
+\markboth{S.}{}
+\addcontentsline{toc}{section}{S.}
 \textbf{Soglia:} una fascia di tolleranza utilizzata per determinare se l'\textit{intensità luminosa\textsubscript{G}} è al di sopra o al di sotto di un limite in una determinata fascia oraria. \\ \\
 
 \newpage
-\section{T.}
+\section*{T.}
+\markboth{T.}{}
+\addcontentsline{toc}{section}{T.}
 \textbf{Thread:} suddivisione di un processo in più istanze o sottoprocessi che vengono eseguiti concorrentemente da un sistema di elaborazione. \\ \\
 \textbf{Ticket:} è l'astrazione presente in GitHub Issues con cui si rappresenta
 un'attività di progetto: le attività sono solitamente atomiche e completabili in
@@ -110,11 +140,15 @@ nella repository del progetto.\\ \\
 progetto: è composto di più \textit{ticket\textsubscript{G}}, che permettono una visualizzazione rapida ed
 efficace di ogni incarico effettuato dai membri del gruppo. \\ \\
 \newpage
-\section{V.}
+\section*{V.}
+\markboth{V.}{}
+\addcontentsline{toc}{section}{V.}
 \textbf{Versionamento:} tracciamento di un determinato stato di un software nel tempo. \\ \\
 
 \newpage
-\section{W.}
+\section*{W.}
+\markboth{W.}{}
+\addcontentsline{toc}{section}{W.}
 \textbf{Way of Working:} rappresenta il come organizzare in maniera professionale le attività di progetto.\\ \\
 \textbf{Web Application:} indica generalmente tutte le applicazioni fruibili tramite il web.
 
@@ -122,4 +156,4 @@ efficace di ogni incarico effettuato dai membri del gruppo. \\ \\
 
 
 
-\end{document} 
+\end{document}
