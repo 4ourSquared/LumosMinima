@@ -1,0 +1,65 @@
+\documentclass[a4paper, 12pt]{article}
+
+\newcommand{\templates} {../../../template}
+\input{\templates/style}
+\input{\templates/front_page}
+\input{\templates/history}
+
+\settitolo{Verbale del 21/08/2023}
+\setredattori{Soldà Matteo}
+\setrevisori{}
+\setdestuso{interno}
+\setdescrizione{
+    Verbale dell'incontro del 21/08/2023
+}
+
+\begin{document}
+
+\makefrontpage
+
+\section*{Informazioni Generali}
+\begin{itemize}
+    \item Data e Ora: 21/08/2023 15:00
+    \item Durata: 1h
+    \item Piattaforma: Discord
+    \item Partecipanti
+    \begin{itemize}
+        \item Alberti Nicolas
+        \item Brotto Romina
+        \item Cavaliere Erica
+        \item Ceccato Francesco
+        \item Salami Lorenzo
+        \item Soldà Matteo
+    \end{itemize}
+\end{itemize}
+
+\section*{O.D.G}
+\begin{itemize}
+    \item Discussione del Lavoro Svolto
+    \item Definizione Prossimi Obiettivi
+    \item Varie ed Eventuali.
+\end{itemize}
+
+\section*{Conclusioni}
+Durante la riunione è stato discusso quanto svolto durante la settimana precedente, cercando di proporre alternative migliorative in vista della stesura dei documenti essenziali per la fase di \textit{Product Baseline - PB} prevista per la prima metà di settembre.\\\\
+Durante la settimana sono stati implementate buona parte delle modali di conferma, sono stati implementati i primi unit test, è stata predisposta e applicata la modifica del sistema della webapp derivante dal \textit{Verbale Esterno del 2023/08/16} effettuato con il Sig. Patera.\\\\
+Inoltre, è stata implementata la prima versione del meccanismo che permette di collegare i sensori e i lampioni di una determinata area, permettendo l'incremento e la successiva riduzione dell'intensità luminosa di un lampione qualora il sensore rilevasse un movimento, sia che i lampioni siano impostati in modalità \textit{pull} che in modalità \textit{push}. \\\\
+Infine, è in fase di sviluppo un sistema di login/logout basato su \textit{JWT - JSON Web Token\textsubscript{G}} che permetta ad un utente di visualizzare solo le pagine che siano di propria competenza. 
+\section*{Impegni Assunti}
+
+Per la documentazione nella repository LumosMinima:
+\begin{itemize}
+    \item Erica si occupa di spostare i documenti nelle cartelle corrette, quali verbali e lettera di presentazione (issue \#92);
+    \item Romina si occupa di aggiornare il \textit{Piano di Progetto} (issue \#97);
+    \item Lorenzo provvederà ad aggiornare e modificare il \textit{Piano di Qualifica} (issue \#96);
+    \item Nicolas provvederà a redigere una versione di base della Specifica Architetturale e della Specifica Tecnica (issues \#106 - \#107).
+\end{itemize}
+
+Per il codice presente nella repository LumosMinima-code:
+\begin{itemize}
+    \item Matteo si occuperà dell'implementazione della modifica della luminosità temporizzata per le aree illuminate (issue \#11);
+    \item Erica e Francesco procederanno con gli unit test (issue \#1);
+    \item Matteo e Francesco di occuperanno del meccanismo di login (issue \#5).
+\end{itemize}
+
+\end{document}
