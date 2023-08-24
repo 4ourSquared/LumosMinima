@@ -1,0 +1,55 @@
+\documentclass[a4paper, 12pt]{article}
+
+\newcommand{\templates} {../../../template}
+\input{\templates/style}
+\input{\templates/front_page}
+\input{\templates/history}
+
+\settitolo{Verbale Consuntivo dello Scambio di Messaggi con Imola Informatica}
+\setredattori{Soldà Matteo}
+\setrevisori{}
+\setdestuso{esterno}
+\setdescrizione{
+    Verbale Consuntivo dello Scambio di Messaggi con Imola Informatica
+}
+
+\begin{document}
+\makefrontpage
+\section*{Informazioni Generali}
+\begin{itemize}
+    \item Data: 24/08/2023
+    \item Piattaforma: Telegram
+    \item Partecipanti
+    \begin{itemize}
+        \item Alberti Nicolas
+        \item Brotto Romina
+        \item Cavaliere Erica
+        \item Ceccato Francesco
+        \item Salami Lorenzo
+        \item Soldà Matteo
+        \item Patera Lorenzo (Imola Informatica)
+    \end{itemize}
+\end{itemize}
+\section*{O.D.G}
+\begin{itemize}
+    \item Chiarimento Incertezze - Responsabilità e Gestione del \textit{Polling Time\textsubscript{G}}
+\end{itemize}
+
+\section*{Introduzione}
+Durante lo sviluppo del meccanismo che automatizza la gestione della luminosità dei lampioni impostati in modalità \textit{pull}, è sorto un dubbio riguardante la componente che avrebbe dovuto definire e conseguntemente gestire il \textit{polling time} per la ricerca del \textit{token\textsubscript{G}} generato dal sensore.\\
+Prima di contattare la azienda, si è preferito discutere internamente cercando una o più risposte valide al quesito.\\
+Le soluzioni proposte erano due:
+\begin{itemize}
+    \item Responsabilità del componente "lampione"
+    \subitem Questa prima soluzione delega la responsabilità della definizione e della gestione del \textit{polling time} al lampione. Questo implica che ogni lampione appartenente ad ogni area potrebbe avere impostato un tempo diverso;
+    \item Responsabilità del componente "area illuminata"
+    \subitem Questa soluzione, che risulta anche la più logicamente corretta, delega la resposanbilità della definizione e della gestione del \textit{polling time} all'area illuminata, che imposterà quindi un tempo che si rifletterà su ogni lampione appartenente a tale zona. Oltre ad essere una soluzione di più semplice implementazione, permette di migliorare la gestione generale in quanto non serve creare una subroutine per ogni lampione (che per ovvi motivi saranno in numero maggiore rispetto alle aree illuminate).
+\end{itemize}
+
+\section*{Conclusioni}
+Internamente al team di sviluppo, si è optato per la realizzazione della seconda implementazione. Per conferma da parte dell'azienda è stato inviato un messaggio sul gruppo \textit{Telegram} e indirizzato al Sig. Patera, il quale ha approvato ciò che era stato proposto, in quanto coerente con le aspettative dell'azienda durante la stesura del capitolato.
+
+\section*{Impegni Assunti}
+Matteo si impegna a implementare il meccanismo a sistema in base alle nuove informazioni ottenute (\href{https://github.com/4ourSquared/LumosMinima-code/issues/11}{\# 11}). 
+\end{document}
+
