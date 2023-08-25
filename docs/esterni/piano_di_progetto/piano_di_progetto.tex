@@ -30,6 +30,7 @@ Questo documento serve a tracciare l'efficienza del progetto. Tiene traccia dei 
 \addversione{0.0.10}{21/07/2023}{Soldà Matteo}{Alberti Nicolas}{Aggiunta di specifiche relative ai rischi}
 \addversione{0.1.0}{24/07/2023}{Brotto Romina}{Soldà Matteo}{Verifica documento per RTB}
 \addversione{1.0.0}{27/07/2023}{Soldà Matteo}{Brotto Romina}{Approvazione documento per RTB}
+\addversione{1.0.1}{27/07/2023}{Brotto Romina}{ }{Aggiunta sprint e sezioni 2.2 e 2.3}
 
 \def\pgfcalendarmonthitname#1{%
 \ifcase#1 \or Gennaio\or Febbraio\or Marzo\or Aprile\or Maggio\or Giugno\or Luglio\or Agosto\or Settembre\or Ottobre\or Novembre\or Dicembre\fi%
@@ -138,6 +139,24 @@ Questi sono dovuti continuo mutamento dei requisti dovuti alla ricerca della sol
     \item Requirements and Technology Baseline\newline
     \includegraphics[scale=0.24]{RTB_9.png}\newline
 \end{itemize}
+
+\subsection{Stato di avanzamento corrente}
+Attualmente il gruppo sta procedendo con l'implementazione delle funzionalità mancanti della Web Application. In particolare si stanno consolidando le funzionaloità di modifica della luminosità temportizzata e la gestione di login e logout.
+La documentazione viene aggiornata in base al progresso dello stato di avanzamento.
+
+\subsection{Metodo di lavoro}
+Il framework Scrum è la modalità scelta dal gruppo per la gestione del lavoro.
+Per ogni sprint saranno visibili:
+\begin{itemize}
+	\item Data di inizio e fine sprint
+	\item Suddivisione del lavoro
+	\item Difficoltà incontrate
+	\item Diagramma di Gantt
+	\item Tabelle di preventivo ore/costi e per membro
+\end{itemize}
+
+N.B.: il gruppo ha preso atto che alcuni sprint potranno essere meno produttivi di altri, a causa delle difficoltà che verranno incontrate nel percorso di sviluppo.
+
 
 \newpage
 
@@ -882,11 +901,11 @@ Questi sono dovuti continuo mutamento dei requisti dovuti alla ricerca della sol
 		\hline
 		Alberti Nicolas    	&8 	&4	&10(+1)	&4	&10 &4	\\
 		\hline
-		Brotto Romina    	&3 	&8	&12	&0	&10(+10) &8	\\
+		Brotto Romina    	&3 	&8	&12	&0	&5(+5) &8	\\
 		\hline
 		Cavaliere Erica    	&3 	&8  &10  &7 &10 &9(+5)	\\
 		\hline
-		Ceccato Francesco   &1 	&2(+2)  &14 &7 &0 &9	\\
+		Ceccato Francesco   &1 	&2(+2)  &14 &7 &5(+5) &9	\\
 		\hline
 		Salami Lorenzo    	&4 	&6  &7 &6(+6) &10 &11	\\
 		\hline
@@ -898,6 +917,231 @@ Questi sono dovuti continuo mutamento dei requisti dovuti alla ricerca della sol
 	\end{tabularx}\\[8pt]
 	\mbox{}\\
 \end{center}
+
+\newpage
+
+\subsubsection{Sprint 11}
+\textbf{Data di inizio:} 20/07/2023\newline
+\textbf{Data di fine:} 31/07/2023\newline
+\newline
+\textbf{Suddivisione del lavoro:}
+\begin{itemize}
+    \item Allineamento e controllo documentazione in vista della revisione RTB.
+    \begin{itemize}
+        \item Revisionati tutti i documenti per la \textit{RTB};
+        \item Approvate le versioni finali.
+    \end{itemize}
+\end{itemize}
+\textbf{Difficoltà incontrate:}
+\begin{itemize}
+    \item Nulla da segnalare.
+\end{itemize}
+%\includegraphics[scale=0.178]{RTB_9.png}\newline
+%\newline
+\begin{center}
+	\begin{tabularx}{\textwidth}{|X|X|X|X|}
+		\hline
+		\multicolumn{4}{|c|}{\textbf{Preventivo ore/costi}}                                      \\
+		\hline
+		\hline
+		\textbf{Ruolo}  & \textbf{Costo orario (\euro)} & \textbf{Ore} & \textbf{Prezzo (\euro)} \\
+		\hline
+		Responsabile    & 30                            & 34(+2)       & 60                     \\
+		\hline
+		Amministratore  & 20                            & 35(+3)       & 60                      \\
+		\hline
+		Analista        & 25                            & 70(+8)       & 200                       \\
+		\hline
+		Progettista     & 25                            & 31(+0)       & 0                      \\
+		\hline
+		Programmatore   & 15                            & 56(+0)       & 0                      \\
+		\hline
+		Verificatore    & 15                            & 56(+10)       & 150                      \\
+		\hline
+		\hline
+		\textbf{Totale} &                               & 282          & 5925                    \\
+		\hline
+	\end{tabularx}\\[8pt]
+	\mbox{}\\
+\end{center}
+
+\begin{center}
+	\begin{tabularx}{\textwidth}{|X|X|X|X|X|X|X|}
+		\hline
+		\multicolumn{7}{|c|}{\textbf{Preventivo ore per membro}}                                      \\
+		\hline
+		\hline
+		\textbf{Membro}  & \textbf{Resp.} & \textbf{Amm.} & \textbf{Ana.} &
+		\textbf{Proget.} & \textbf{Program.} & \textbf{Verif.} \\
+		\hline
+		Alberti Nicolas    	&9(+1) 	&4	&10	&4	&10 &6(+2)	\\
+		\hline
+		Brotto Romina    	&3 	&9(+1)	&14(+2)	&0	&5 &10(+2)	\\
+		\hline
+		Cavaliere Erica    	&3 	&10(+2)  &12(+2)  &7 &10 &11(+2)	\\
+		\hline
+		Ceccato Francesco   &1 	&2  &16(+2) &7 &5 &11(+2)	\\
+		\hline
+		Salami Lorenzo    	&4 	&6  &9(+2) &6 &10 &11	\\
+		\hline
+		Soldà Matteo    	&14(+1)	&2  &9 &7 &16 &7(+2)	\\
+		\hline
+		\hline
+		\textbf{Totale} 	&34(+2) &35(+3) &70(+8) &31(+0) &56(+0) &56(+10)	\\
+		\hline
+	\end{tabularx}\\[8pt]
+	\mbox{}\\
+\end{center}
+
+\newpage
+
+\subsubsection{Sprint 12}
+\textbf{Data di inizio:} 01/08/2023\newline
+\textbf{Data di fine:} 11/08/2023\newline
+\newline
+\textbf{Suddivisione del lavoro:}
+\begin{itemize}
+    \item Allineamento e controllo documentazione in vista della seconda parte di revisione RTB.
+    \begin{itemize}
+        \item Sistemazione dei documenti per cui c'era necessità di fix;
+        \item Approvate le versioni finali.
+    \end{itemize}
+\end{itemize}
+\textbf{Difficoltà incontrate:}
+\begin{itemize}
+    \item Nulla da segnalare.
+\end{itemize}
+%\includegraphics[scale=0.178]{RTB_9.png}\newline
+%\newline
+\begin{center}
+	\begin{tabularx}{\textwidth}{|X|X|X|X|}
+		\hline
+		\multicolumn{4}{|c|}{\textbf{Preventivo ore/costi}}                                      \\
+		\hline
+		\hline
+		\textbf{Ruolo}  & \textbf{Costo orario (\euro)} & \textbf{Ore} & \textbf{Prezzo (\euro)} \\
+		\hline
+		Responsabile    & 30                            & 35(+1)       & 30                     \\
+		\hline
+		Amministratore  & 20                            & 37(+2)       & 40                      \\
+		\hline
+		Analista        & 25                            & 75(+5)       & 125                       \\
+		\hline
+		Progettista     & 25                            & 31(+0)       & 0                      \\
+		\hline
+		Programmatore   & 15                            & 56(+0)       & 0                      \\
+		\hline
+		Verificatore    & 15                            & 61(+5)       & 75                      \\
+		\hline
+		\hline
+		\textbf{Totale} &                               & 295          & 6195                    \\
+		\hline
+	\end{tabularx}\\[8pt]
+	\mbox{}\\
+\end{center}
+
+\begin{center}
+	\begin{tabularx}{\textwidth}{|X|X|X|X|X|X|X|}
+		\hline
+		\multicolumn{7}{|c|}{\textbf{Preventivo ore per membro}}                                      \\
+		\hline
+		\hline
+		\textbf{Membro}  & \textbf{Resp.} & \textbf{Amm.} & \textbf{Ana.} &
+		\textbf{Proget.} & \textbf{Program.} & \textbf{Verif.} \\
+		\hline
+		Alberti Nicolas    	&9 	&4	&11(+1)	&4	&10 &6	\\
+		\hline
+		Brotto Romina    	&3 	&10(+1)	&14	&0	&5 &12(+2)	\\
+		\hline
+		Cavaliere Erica    	&4(+1) 	&11(+1)  &12  &7 &10 &11(+2)	\\
+		\hline
+		Ceccato Francesco   &1 	&2  &17(+1) &7 &5 &11	\\
+		\hline
+		Salami Lorenzo    	&4 	&6  &11(+2) &6 &10 &11	\\
+		\hline
+		Soldà Matteo    	&14	&2  &10(+1) &7 &16 &8(+1)	\\
+		\hline
+		\hline
+		\textbf{Totale} 	&35(+1) &37(+2) &75(+5) &31(+0) &56(+0) &61(+5)	\\
+		\hline
+	\end{tabularx}\\[8pt]
+	\mbox{}\\
+\end{center}
+
+\subsubsection{Sprint 13}
+\textbf{Data di inizio:} 12/08/2023\newline
+\textbf{Data di fine:} 21/08/2023\newline
+\newline
+\textbf{Suddivisione del lavoro:}
+\begin{itemize}
+    \item Analisi della valutazione \textit{RTB}
+    \begin{itemize}
+        \item Creazione issues per sistemare i punti critici;
+        \item Creazione issues per procedere con lo sviluppoo del codice. 
+    \end{itemize}
+\end{itemize}
+\textbf{Difficoltà incontrate:}
+\begin{itemize}
+    \item Nulla da segnalare.
+\end{itemize}
+%\includegraphics[scale=0.178]{RTB_9.png}\newline
+%\newline
+\begin{center}
+	\begin{tabularx}{\textwidth}{|X|X|X|X|}
+		\hline
+		\multicolumn{4}{|c|}{\textbf{Preventivo ore/costi}}                                      \\
+		\hline
+		\hline
+		\textbf{Ruolo}  & \textbf{Costo orario (\euro)} & \textbf{Ore} & \textbf{Prezzo (\euro)} \\
+		\hline
+		Responsabile    & 30                            & 37(+2)       & 60                     \\
+		\hline
+		Amministratore  & 20                            & 39(+2)       & 40                      \\
+		\hline
+		Analista        & 25                            & 80(+5)       & 125                       \\
+		\hline
+		Progettista     & 25                            & 36(+5)       &  125                     \\
+		\hline
+		Programmatore   & 15                            & 66(+10)      &  150                     \\
+		\hline
+		Verificatore    & 15                            & 65(+4)       &  60                     \\
+		\hline
+		\hline
+		\textbf{Totale} &                               & 323          & 6755                    \\
+		\hline
+	\end{tabularx}\\[8pt]
+	\mbox{}\\
+\end{center}
+
+\begin{center}
+	\begin{tabularx}{\textwidth}{|X|X|X|X|X|X|X|}
+		\hline
+		\multicolumn{7}{|c|}{\textbf{Preventivo ore per membro}}                                      \\
+		\hline
+		\hline
+		\textbf{Membro}  & \textbf{Resp.} & \textbf{Amm.} & \textbf{Ana.} &
+		\textbf{Proget.} & \textbf{Program.} & \textbf{Verif.} \\
+		\hline
+		Alberti Nicolas    	&9 	&4	&11	&6(+2)	&13(+3) &6	\\
+		\hline
+		Brotto Romina    	&47(+1) &10	&16(+2)	&0	&5 &14(+2)	\\
+		\hline
+		Cavaliere Erica    	&4 	&12(+1)  &12  &9(+2) &11(+1) &11	\\
+		\hline
+		Ceccato Francesco   &2(+1) 	&2  &17 &8(+1) &6(+1) &11	\\
+		\hline
+		Salami Lorenzo    	&4 	&6  &11 &9(+3) &10 &12(+1)	\\
+		\hline
+		Soldà Matteo    	&14	&3(+1)  &10 &7 &20(+4) &9(+1)	\\
+		\hline
+		\hline
+		\textbf{Totale} 	&37(+2) &39(+2) &80(+5) &36(+5) &66(+10) &65(+4)	\\
+		\hline
+	\end{tabularx}\\[8pt]
+	\mbox{}\\
+\end{center}
+
+
 
 \newpage
 
