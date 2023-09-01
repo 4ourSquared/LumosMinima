@@ -28,6 +28,7 @@ Questo documento contiene le procedure, gli strumenti e i criteri di qualità ch
 \addversione{0.0.11}{24/07/2023}{Soldà Matteo}{Ceccato Francesco}{Inserite norme di codifica}
 \addversione{0.1.0}{24/07/2023}{Ceccato Francesco}{Brotto Romina}{Verifica documento per RTB}
 \addversione{1.0.0}{24/07/2023}{Soldà Matteo}{Ceccato Francesco}{Approvazione documento per RTB}
+\addversione{1.0.1}{31/08/2023}{Brotto Romina}{Soldà Matteo}{Aggiunta sezioni mancanti}
 
 \begin{document}
 \makeindexdetails
@@ -486,6 +487,58 @@ Escludendo per il momento l'utilizzo di \textit{git flow}, questi risultano i co
 Il verificatore può far uso dei test automatici presenti nel Piano di qualifica.\\
 Per le sezioni di codice è consigliato un walkthrough del prodotto, similmente si dovrebbe chiedere a chi abbia scritto il codice eventuali delucidazioni su elementi poco chiari.
 
+\subsubsection{Analisi dei Prodotti}
+Nel processo di verifica i verificatori si occupano di controllare ed analizzare i prodotti sviluppati dal gruppo. Per fare ciò si avvalgono di due tipi di verifica:
+\begin{itemize}
+    \item \textbf{Analisi Statica}: si tratta di un'analisi che prevede un controllo sulla struttura, contenuto, forma dei singoli documenti. Viene effettuata tramite le revisioni che seguono la stesura dei file o dei documenti;
+    \item \textbf{Analisi Dinamica}: è un sistema di valutazione di un sistema software, che osserva il comportamento utilizzando strumenti di compilazione. \'E effettuata su file di codice, non sulla documentazione, per la natura non logica di quest'ultima. 
+\end{itemize}
+
+\subsubsection{Analisi del Codice}
+Nel processo di verifica del codice i due tipi di analisi sopra descritte avvengono, nello specifico, nei file sorgente.
+\begin{itemize}
+    \item \textbf{Analisi Statica}: controllo della struttura del file, esaminandolo senza eeguirlo. Tale procedura permette di identificare errori di forma e di progettazione prima di verificarne la compilazione,
+    \item \textbf{Analisi Dinamica}: contrllo del codice eseguendo e compilando i/il file. Tale procedurta ritorna eventuali errori ed anomaile generate dal codice, permettendo un fix mirato e una possibilità di miglioramento della qualità generale del prodotto. 
+\end{itemize}
+
+\subsubsection{Testing}
+Attività che permette di verificare la presenza di lacune nel codice, oltre che verificare che ogni funzionalità implementata faccia ciò che ci si aspetta, senza sollevare problemi, bug, falle. Per fare ciò si utilizzano input specifici, per entrare anche nei casi limite. In base al risultato di test, poi, si fanno le valutazioni sulle funzioni da migliorare o si procede con la cnferma delle unità testate.
+
+
+
+\subsection{Gestione di Qualità}
+Le metriche di gestione di qualità vengono descritte nel \textit{Piano di Qualifica}. Sono istituite per fornire le linee guida affinchè il prodotto si valutabile in termini di qualità. Di seguito verranno descritte le singole metriche impiegate per monitorare l'andamento del prodotto.
+
+\subsubsection{Documentazione}
+\begin{itemize}
+    \item \textbf{Indice di Gulpease}: indice di leggibilità del testo, applicato a tutti i documenti.
+\end{itemize}
+
+\subsubsection{Prodotti Software} 
+\begin{itemize}
+    \item \textbf{Copertura Statement}: indice di copertura per le linee di codice;
+    \item \textbf{Copertura Branch}: indice di copertura per ogni ramo di esecuzione del codice;
+\end{itemize}
+
+\subsubsection{Qualità di processo} 
+\begin{itemize}
+    \item \textbf{Time Variance}: indice di variazione del tempo stimato all'inizio rispetto al tempo effettivo;
+    \item \textbf{Budget Variance}: indice di variazione del buudget stanziato all'inizio rispetto al budget iumpiegato effettivamente;
+    \item \textbf{Planned Value}: indica quanto lavoro dovrebbe essere stato completato a un determinato momento nel tempo;
+    \item \textbf{Earned Value}: indica il lavoro svolto e completato rispetto quello pianificato;
+    \item \textbf{Actual Cost}: indica la quantità in denaro usata per arrivate ad un deteminato punto della schedule;
+    \item \textbf{Cost Variance}: indica la differenza di costo tra l'ammontare programnmato e l'ammontare effettivo speso a completamento del prodotto;
+    \item \textbf{Schedule Variance}: indica il livello di avanzamento del progetto in base alle previsioni;
+    \item \textbf{Estimate at Completition (EAC)}: indica la stima corrente del costo totale alla fine del progetto;
+    \item \textbf{Estimate to Complete (ETC)}: indica quant'è il rimanente costo da affrontare per arrivare alla stima prefissata;
+    \item \textbf{Cost Performance Index (CPI)}: è la differenza tra \textit{Earned Value} e \textit{Actual Cost}. 
+
+\end{itemize}
+
+
+
+
+
 \subsection{Change Management}
 Nel caso si dovessero cambiare sezione del codice bisogna controllare che eventuali modifiche
 non vadano ad impattare altri elementi.\\
@@ -554,16 +607,33 @@ Le issue vengono create dal Responsabile o dai Verificatori e devono avere:
     \begin{itemize}
         \item \textbf{documentation:} indica che l'issue a cui si sta lavorando
         riguarda i documenti del gruppo.
-        % AGGIUNGERE LABELS IN CASO DI UTILIZZO IN FUTURO
+        
     \end{itemize}
 \end{itemize}
 
+
+\subsection{Gestione delle Comunicazioni}
+
+\subsubsection{Comunicazioni interne}
+Le interazioni interne al gruppo vengono svolte secondo due modalità:
+\begin{itemize}
+    \item \textbf{Telegram}: usato per comunicazioni brevi, istantanee e per necessità organizzative entro breve tempo. Piattaforma scelta data la conoscenza di tutti i membri del team;
+    \item \textbf{Discord}: usato per riunioni intere, per necessità di scambio di idee più complesse, opinioni, dubbi. Piattaforma scelta data la conoscenza di tutti i membri del team.
+\end{itemize}
+
+\subsubsection{Comunicazioni esterne}
+Le interazioni esterne al gruppo vengono svolte secondo le seguenti modalità:
+\begin{itemize}
+    \item \textbf{Telegram}: usato per comunicazioni brevi, piccole domande o richieste;
+    \item \textbf{E-mail}: tramite l'indirizzo \textit{4oursquared.unipd@gmail.com};
+    \item \textbf{Zoom}: per le riunioni con i professori;
+    \item \textbf{Meet}: per le riunioni con l'azienda.
+\end{itemize}
 
 \subsection{Miglioramento dei processi}
 Durante l'attività di consuntivo di periodo dell’incontro settimanale, viene discusso il lavoro
 fatto fino a quel momento, dando particolare peso ai problemi riscontrati. \\In base a ciò si valutano
 le eventuali migliorie e correzioni applicabili.
-
 
 
 \end{document}
