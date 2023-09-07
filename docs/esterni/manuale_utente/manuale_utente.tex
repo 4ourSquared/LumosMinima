@@ -65,6 +65,7 @@ Il pulsante \textit{elimina} permette di eliminare l'area. L'azione non avviene 
 \\
 Al di sopra della lista delle aree è presente un pulsante che permette di inerire una nuova area, funzionalità che verrà descritta nella prossima sottosezione
 % Immagine della lista aree (belle popolate ovviamente)
+% Manca la descrizione del selettore che permette di modificare la luminosità di tutti i lampioni dell'area
 
 \subsection{Inserimento, Modifica e Rimozione di un'Area Illuminata}
 \subsubsection{Inserimento}
@@ -73,19 +74,45 @@ Al di sopra della lista delle aree è presente un pulsante che riporta l'etichet
 % Immagine del pulsante
 
 \subsubsection{Modifica}
+A lato delle informazioni riportate nella tabella delle aree, c'è un pulsante con i bordi e la scritta gialli. Questo pulsante riporta ad una schermata molto simile a quella della creazione della nuova area dalla quale si possono modificare i dati dell'area per la quale si è premuto il pulsante
 
 \subsubsection{Rimozione}
+A lato delle informazioni riportate nella tabella delle aree, c'è un pulsante con i bordi e la scritta rossi. Il pulsante serve per eliminare l'area di riferimento. Prima della eliminazione verrà richiesta una seconda conferma tramite una modale
 
 \newpage
 \section{Lampioni}
 \subsection{Informazioni Preliminari}
+I lampioni rappresentano la componente illuminante dell'area. Essi possono interagire in due modi diversi in base alla modalità che viene impostata:
+\begin{itemize}
+    \item Manuale (Pull): il lampione non si accende subito qualora il sensore rilevasse un movimento, ma utilizza il token generato dal sensore e depositato nel database e verifica ciclicamente se esiste un token valido da utilizzare;
+    \item Automatico (Push): il lampione riceve un segnale di accensione istantaneo qualora il sensore rilevasse un movimento.
+\end{itemize}
+Inoltre, si può decidere se un lampione è recettivo rispetto ai segnali oppure no. Qualora un lampione fosse attivo (ON), allora sarà responsivo ai segnali, mentre qualora fosse disattivo (OFF) la sua gestione sarà di competenza dell'operatore umano.
 \subsection{Lista Lampioni per Area}
+Aprendo le informazioni di una singola area, al di sotto delle informazioni della stessa si troverà la lista dei lampioni collegati all'area selezionata.\\
+Per ogni lampione, sono mostrate nella lista: l'ID (generato automaticamente), lo stato, l'intensità luminosa attuale e il nome del lampione. Al fianco di queste informazioni sono presentati quattro pulsanti: informazioni, modifica, elimina e segnala guasto. \\
+Il pulsante \textit{informazioni} permette di caricare tutte le informazioni dell'area illuminata, permettendo inoltre di visualizzare i lampioni e i sensori ad essa collegati.\\
+Il pulsante \textit{modifica} permette di aprire una schermata dalla quale modificare i dati dell'area.\\
+Il pulsante \textit{elimina} permette di eliminare l'area. L'azione non avviene subito dopo la pressione del pulsante, ma richiede una seconda conferma tramite modale. \\
+Il pulsante \textit{segnala guasto} permette di segnalare manualmente un guasto rilevato nel lampione, inserendolo di conseguenza nella lista guasti (questa funzionalità attualmente è esclusiva dell'utente base e dell'amministratore).\\
+Qualora si effettuasse l'accesso con l'utente manutentore, al termine della lista sarà possibile visualizzare un pulsante grigio che permette di visualizzare i dati dei lampioni guasti, oltre a poter segnalare la loro riparazione con successiva rimozione dalla lista dei guasti.
+
 \subsection{Inserimento, Modifica e Rimozione di un Lampione}
+\subsubsection{Inserimento}
+Al di sopra della lista dei lampioni è presente un pulsante che riporta l'etichetta \textit{Aggiungi Lampione} che, alla pressione, apre una nuova schermata nella quale vengono richiesti i dati del nuovo impianto luminoso che si vuole inserire a sistema.
+% Scrivere anche cosa viene richiesto?
+% Immagine del pulsante
+
+\subsubsection{Modifica}
+A lato delle informazioni riportate nella tabella dei lampioni, c'è un pulsante con i bordi e la scritta gialli. Questo pulsante riporta ad una schermata molto simile a quella della creazione del nuovo lampione dalla quale si possono modificare i dati del lampione per il quale si è premuto il pulsante
+
+\subsubsection{Rimozione}
+A lato delle informazioni riportate nella tabella dei lampioni, c'è un pulsante con i bordi e la scritta rossi. Il pulsante serve per eliminare il lampione di riferimento. Prima della eliminazione verrà richiesta una seconda conferma tramite una modale
 
 \newpage
 \section{Sensori}
 \subsection{Informazioni Preliminari}
 \subsection{Lista Sensori per Area}
-\subsection{Inserimento, Modifica e Rimozione di un Lampione}
+\subsection{Inserimento, Modifica e Rimozione di un Sensore}
 
 \end{document}
