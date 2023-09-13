@@ -20,6 +20,7 @@ Questo documento descrive le funzionalità del programma a coloro che dovessero 
 
 \addversione{0.0.0}{05/09/2023}{Soldà Matteo}{}{Stesura scheletro}
 \addversione{0.0.1}{07/09/2023}{Soldà Matteo}{}{Stesura prima bozza contenuto}
+\addversione{0.0.2}{13/09/2023}{Soldà Matteo}{}{Aggiunta delle immagini}
 \begin{document}
 \makeindexdetails
 \makefrontpage \makeversioni
@@ -27,6 +28,8 @@ Questo documento descrive le funzionalità del programma a coloro che dovessero 
 \newpage
 \clearpage
 \makecontentsdetails{Manuale Utente}
+\newpage
+\listoffigures
 \newpage
 \section{Introduzione e Origine del Progetto}
 Questo documento, destinato agli utenti finali del programma, descrive le funzionalità implementate e come utilizzarle al meglio.\\ \\
@@ -141,7 +144,7 @@ Il pulsante \textit{elimina} permette di eliminare il lampione. L'azione non avv
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{ModaleEliminazioneLampione}
-\caption{Richiesta di conferma per l'eliminazione di lampione }
+\caption{Richiesta di conferma per l'eliminazione di un lampione }
 \end{figure}
 Il pulsante \textit{segnala guasto} permette di segnalare manualmente un guasto rilevato nel lampione, inserendolo di conseguenza nella lista guasti (questa funzionalità attualmente è esclusiva dell'utente base e dell'amministratore).\\
 \begin{figure}[H]
@@ -191,11 +194,26 @@ A lato delle informazioni riportate nella tabella dei lampioni, c'è un pulsante
 \subsection{Informazioni Preliminari}
 Il sensore è la componente dell'area che ha lo scopo di rilevare e di conseguenza segnalare i movimenti di cose, persone e animali nel suo raggio d'azione. Tra i suoi elementi, ne spicca uno in particolare: la durata della segnalazione. Questo parametro serve a indicare per quanto tempo i lampioni impostati in modalità manuale possano visualizzare la segnalazione come valida durare la verifica ciclica.
 \subsection{Lista Sensori per Area}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{ListaSensori}
+\caption{Esempio di lista dei sensori}
+\end{figure}
 Aprendo le informazioni di una singola area, al di sotto delle informazioni dei lampioni si troverà la lista dei sensori collegati all'area selezionata.\\
 Per ogni sensore, sono mostrate nella lista: l'ID (generato automaticamente), l'indirizzo IP e il nome del sensore. Al fianco di queste informazioni sono presentati tre pulsanti: informazioni, modifica ed elimina. \\
 Il pulsante \textit{informazioni} permette di caricare tutte le informazioni del sensore.\\
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{InfoSensore}
+\caption{Esempio di informazioni di un singolo sensore}
+\end{figure}
 Il pulsante \textit{modifica} permette di aprire una schermata dalla quale modificare i dati del sensore.\\
 Il pulsante \textit{elimina} permette di eliminare il sensore. L'azione non avviene subito dopo la pressione del pulsante, ma richiede una seconda conferma tramite modale. \\
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{ModaleEliminazioneSensore}
+\caption{Richiesta di conferma per l'eliminazione di un sensore }
+\end{figure}
 
 \subsection{Inserimento, Modifica e Rimozione di un Sensore}
 \subsubsection{Inserimento}
