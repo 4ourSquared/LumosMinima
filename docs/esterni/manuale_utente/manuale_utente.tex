@@ -1,5 +1,9 @@
 \documentclass[a4paper, 12pt]{article}
 
+\usepackage{graphicx}
+\usepackage{float}
+\graphicspath{ {img/} }
+
 \newcommand{\templates}{../../template}
 \input{\templates/style}
 \input{\templates/front_page}
@@ -48,10 +52,20 @@ L'utilizzo dell'utente \textbf{manutentore} permette di fare tutto ciò che l'ut
 \subsection{Login}
 Il login è la prima cosa che viene richiesta qualora si raggiungesse l'indirizzo dell'applicazione. In questa schermata andrà inserito lo username e la password del proprio utente. Qualora i dati inseriti siano corretti, si verrà renderizzati automaticamente alla dashboard, altrimenti verrà riproposta la pagina di login con un errore. La durata della sessione dopo un login effettuato con successo è di un'ora.
 % Immagine della schermata di login
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{login}
+\caption{Pagina di login}
+\end{figure}
 
 \subsection{Logout}
 La funzionalità di logout permette di terminare la sessione generata da un precedente login non ancora scaduto. Il pulsante per il logout è posizionato nella dashboard nell'angolo in alto a destra.
 % Immagine del pulsante di logout
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{EsempioBreadcrumbConEsci}
+\caption{Esempio di barra di breadcrumb con pulsante di logout}
+\end{figure}
 
 \newpage
 \section{Aree Illuminate}
@@ -59,12 +73,32 @@ La funzionalità di logout permette di terminare la sessione generata da un prec
 Le aree illuminate sono la componente di base dell'applicazione. Esse al loro interno possono contenere molteplici lampioni e sensori che interagiscono in modo diverso coerentemente alla loro configurazione.
 \subsection{Lista Aree Illuminate}
 Entrando nella dashboard dopo il login, verrà presentata la lista delle aree illuminate che sono state inserite a sistema. Ogni area presenta come informazione il proprio ID (generato automaticamente), il nome assegnato, la descrizione, la latitudine e la longitudine. Al fianco di queste informazioni sono presentati tre pulsanti: informazioni, modifica ed elimina. \\
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{ListaAree}
+\caption{Esempio di lista delle aree}
+\end{figure}
 Il pulsante \textit{informazioni} permette di caricare tutte le informazioni dell'area illuminata, permettendo inoltre di visualizzare i lampioni e i sensori ad essa collegati.\\
-Il pulsante \textit{modifica} permette di aprire una schermata dalla quale modificare i dati dell'area.\\
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{InfoArea}
+\caption{Esempio di informazioni di una singola area}
+\end{figure}
+Il pulsante \textit{modifica} permette di aprire una schermata dalla quale modificare i dati dell'area. La formattazione è analoga a quella dell'aggiunta dell'area.\\
 Il pulsante \textit{elimina} permette di eliminare l'area. L'azione non avviene subito dopo la pressione del pulsante, ma richiede una seconda conferma tramite modale. \\
-\\
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{ModaleEliminazioneArea}
+\caption{Richiesta di conferma per l'eliminazione di un'area illuminata e di tutti i lampioni e sensori ad essa associati}
+\end{figure}
+
 Al di sopra della lista delle aree è presente un pulsante che permette di inerire una nuova area, funzionalità che verrà descritta nella prossima sottosezione
 % Immagine della lista aree (belle popolate ovviamente)
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{FormAggiuntaArea}
+\caption{Form richiedente le informazioni dell'area da aggiungere a sistema}
+\end{figure}
 % Manca la descrizione del selettore che permette di modificare la luminosità di tutti i lampioni dell'area
 
 \subsection{Inserimento, Modifica e Rimozione di un'Area Illuminata}
@@ -91,11 +125,36 @@ Inoltre, si può decidere se un lampione è recettivo rispetto ai segnali oppure
 \subsection{Lista Lampioni per Area}
 Aprendo le informazioni di una singola area, al di sotto delle informazioni della stessa si troverà la lista dei lampioni collegati all'area selezionata.\\
 Per ogni lampione, sono mostrate nella lista: l'ID (generato automaticamente), lo stato, l'intensità luminosa attuale e il nome del lampione. Al fianco di queste informazioni sono presentati quattro pulsanti: informazioni, modifica, elimina e segnala guasto. \\
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{ListaLampioni}
+\caption{Esempio di lista dei lampioni}
+\end{figure}
 Il pulsante \textit{informazioni} permette di caricare tutte le informazioni del lampione.\\
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{InfoLampione}
+\caption{Esempio di informazioni di un singolo lampione}
+\end{figure}
 Il pulsante \textit{modifica} permette di aprire una schermata dalla quale modificare i dati del lampione.\\
 Il pulsante \textit{elimina} permette di eliminare il lampione. L'azione non avviene subito dopo la pressione del pulsante, ma richiede una seconda conferma tramite modale. \\
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{ModaleEliminazioneLampione}
+\caption{Richiesta di conferma per l'eliminazione di lampione }
+\end{figure}
 Il pulsante \textit{segnala guasto} permette di segnalare manualmente un guasto rilevato nel lampione, inserendolo di conseguenza nella lista guasti (questa funzionalità attualmente è esclusiva dell'utente base e dell'amministratore).\\
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{ListaLampioniConGuasti}
+\caption{I lampioni già segnalati come guasti presenteranno al posto del pulsante, una X rossa con un tooltip che indica che l'azione è già stata effettuata}
+\end{figure}
 Qualora si effettuasse l'accesso con l'utente manutentore, al termine della lista sarà possibile visualizzare un pulsante grigio che permette di visualizzare i dati dei lampioni guasti, oltre a poter segnalare la loro riparazione con successiva rimozione dalla lista dei guasti.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{ListaLampioniVistaManutentore}
+\caption{Lista dei lampioni con pulsante per la visualizzazione del pulsante per la visualizzazione della lista dei lampioni guasti (solo accedendo come manutentore)}
+\end{figure}
 
 \subsection{Inserimento, Modifica e Rimozione di un Lampione}
 \subsubsection{Inserimento}
@@ -108,6 +167,24 @@ A lato delle informazioni riportate nella tabella dei lampioni, c'è un pulsante
 
 \subsubsection{Rimozione}
 A lato delle informazioni riportate nella tabella dei lampioni, c'è un pulsante con i bordi e la scritta rossi. Il pulsante serve per eliminare il lampione di riferimento. Prima della eliminazione verrà richiesta una seconda conferma tramite una modale
+
+\subsubsection{Seganalzione Guasto e Lista Guasti}
+A lato delle informazioni riportate nella tabella dei lampioni, c'è un pulsante nero con la scritta bianca. Il pulsante serve per segnalare manualmente un lampione guasto, che verrà quindi inserito nella lista guasti (visualizzabile solo dall'utente manutentore).
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{ModaleGuastoLampione}
+\caption{Richiesta di conferma l'aggiunta di un lampione alla lista dei guastii}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{ListaGuastiVistaManutentore}
+\caption{Esempio di lista dei lampioni segnalati come guasti}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{ModaleRiparazioneLampione}
+\caption{Richiesta di conferma per la rimozione del lampione dalla lista guasti}
+\end{figure}
 
 \newpage
 \section{Sensori}
