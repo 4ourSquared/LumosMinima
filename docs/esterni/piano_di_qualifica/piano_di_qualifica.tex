@@ -24,6 +24,7 @@ Questo documento serve a definire le metriche e i criteri di accettazione dei pr
 \addversione{0.0.2}{24/07/2023}{Brotto Romina}{Ceccato Francesco}{Aggiunta sezione 3 ed indici}
 \addversione{0.1.0}{25/07/2023}{Brotto Romina}{Salami Lorenzo}{Verifica per RTB}
 \addversione{1.0.0}{25/07/2023}{Salami Lorenzo}{Brotto Romina}{Versione finale	per RTB}
+\addversione{1.0.1}{19/09/2023}{}{}{Versione per PB}
 
 \begin{document}
 
@@ -139,6 +140,72 @@ Lo stesso si può riscontrare nella distanza tra il planned e l’earned value, 
 è cresciuta particolarmente durante quegli sprint. 
 
 Il gruppo aveva tenuto in considerazione che ci sarebbe stato un calo di lavoro 
+
+
+\section{Attività di Testing}
+\subsection*{Test di unità}
+\setlength\tabcolsep{4pt}
+\begin{center}
+	\begin{tabularx}{\textwidth}{|X|X|X|}
+		\hline
+		\textbf{Codice} & \textbf{Descrizione } & \textbf{Requisiti collegati } \\
+		\hline
+		TS1 &   Verifica che il client renderizzi correttamete la pagina di login.  &    RF5-O, RV1-O                   \\
+		\hline
+		TS2 &   Verifica che le credenziali inserite siano corrette e che al click del pulsante "Entra" il login abbia successo   &     RF5-O, RV1-O                   \\
+		\hline
+		TS3 & Verifica che le credenziali inserite non siano corrette e che al click del pulsante "Entra" il login \textit{non} abbia successo & RF5-O, RV1-O \\
+		\hline
+		T4 &  Verifica che il fetch delle informazioni riguardanti tutte le aree illuminate avvenga correttamente & RF7-O \\
+		\hline
+		T5 &  Verifica che, dopo la cancellazione del lampione, esso sia effettvamente scomparso dalla lista & RF20-O \\
+		\hline
+		T6 & Verifica che, dopo la cancellazione del sensore, esso sia effettvamente scomparso dalla lista & RF18-O \\
+		\hline
+		T7 & Verifica che il fetch delle informazioni per la singola area avvenga correttamente & ? \\
+		\hline
+		T8 & Verifica che la riconfigurazione dell'area illuminata avvenga con successo & RF11-O \\
+		\hline
+		T9 & Verifica che la rimozione dell'area illuminata avvenga con successo & RF12-O \\
+		\hline
+		T10 & Verifica che la rimozione dell'area illuminata venga annullata senza modificarne il contenuto & Rf12-O \\
+		\hline
+		T11 & Verifica che la pagina di elenco aree illuminate si carichi correttamente (anche se vuota) & RF7-O \\
+		\hline
+		T12 & Verifica che il form di modifica area illuminata venga visualizzato correttamente & RF11-O \\
+		\hline
+		T13 & Verifica che il footer comune a tutte le pagine venga visualizzato correttamente & - \\
+		\hline
+		T14 & logout (header.test del client) & \\
+		\hline
+		T15 & render del footer (header.test del client) & \\
+		\hline
+		T16 & Verifica che il render della scheda dettagli lampione sia visualizzata correttamente & RF19-O \\
+		\hline
+		T16 & Verifica che il render della pagina dedicata all'elenco aree illuminate segnalate guaste avvenga correttamente & RF8-O, RV2-O \\
+		\hline
+		T17 & Verifica che il load della tabella per l'elenco delle aree illuminate segnalate guaste avvenga correttamente & RF8-O, RV2-O \\
+		\hline
+		T18 & Verifica che la rimozione dell'area illuminata dall'elenco delle aree guaste avvenga con successo & RF16-O \\
+		\hline
+		T19 & Verifica che la rimozione dell'area illuminata dall'elenco delle aree guaste venga annullata \\
+		\hline
+		T20 & Verifica che il caricamento dei dati relativi al lampione avvenga correttamente & - \\
+		\hline 
+		T21 & Verifica se sono presenti header, main e footer in tutte le pagine & - \\
+		\hline
+		T22 & Verifica che il caricamento dei dati relativi al sensore avvenga correttamente & RF39-O \\
+		\hline
+		T23 &  Verifica che il sensore invii correttamente il segnale per scatenare la modifica dell'intensità luminosa del lampione & RF27-O,RF14-O\\ 
+	\end{tabularx}\\[8pt]
+	\mbox{}\\
+\end{center}
+
+
+\subsection*{Test di sistema}
+\subsection*{Test di accettazione}
+\subsection*{Test di integrazione}
+
 durante gli sprint sopra indicati, prevedendo però di rientrare nei valori di tolleranza negli sprint successivi.
 
 \subsection{Planning Value, Actual Cost e Earned Value}
