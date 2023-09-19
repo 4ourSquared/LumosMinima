@@ -9,13 +9,13 @@
 \input{\templates/front_page}
 \input{\templates/history}
 
-\settitolo{Manuale Utente}
+\settitolo{Manuale Amministratore}
 \setprogetto{Lumos Minima}
 \setcommittenti{Imola Informatica}
 \setredattori{Soldà Matteo}
 \setdestuso{esterno}
 \setdescrizione{
-Questo documento descrive le funzionalità del programma a coloro che dovessero usufruirne in qualità di utente con privilegi di base.
+Questo documento descrive le funzionalità del programma a coloro che dovessero usufruirne in qualità di utente amministratore.
 }
 
 \addversione{0.0.0}{05/09/2023}{Soldà Matteo}{}{Stesura scheletro}
@@ -51,7 +51,7 @@ L'applicazione permette l'utilizzo di 3 tipi di utente:
 L'utilizzo dell'utente \textbf{base} permette di utilizzare tutte le funzionalità di base dell'applicazione, tra cui la creazione, la modifica e la rimozione di tutti gli elementi presenti a sistema, oltre alla possibilità di segnalare i guasti agli impianti luminosi.\\ \\
 L'utilizzo dell'utente \textbf{amministratore} permette di fare tutto ciò che l'utente base può fare, con l'aggiunta della possibilità di modificare i ruoli degli altri utenti.\\ \\
 L'utilizzo dell'utente \textbf{manutentore} permette di fare tutto ciò che l'utente base può fare, con l'aggiunta della possibilità di visualizzare la lista dei lampioni guasti area per area, permettendo inoltre di segnalare la loro riparazione.\\\\
-In questo documento descriveremo l'utilizzo dell'utente con privilegi di base.
+In questo documento descriveremo l'utilizzo dell'utente con privilegi di amministratore.
 
 \subsection{Login}
 Il login è la prima cosa che viene richiesta qualora si raggiungesse l'indirizzo dell'applicazione. In questa schermata andrà inserito lo username e la password del proprio utente. Qualora i dati inseriti siano corretti, si verrà renderizzati automaticamente alla dashboard, altrimenti verrà riproposta la pagina di login con un errore. La durata della sessione dopo un login effettuato con successo è di un'ora.
@@ -68,8 +68,37 @@ La funzionalità di logout permette di terminare la sessione generata da un prec
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{EsempioBreadcrumbConEsci}
-\caption{Esempio di barra di breadcrumb con pulsante di logout}
+\caption{Esempio di barra di breadcrumb con pulsante di logout, modifica utente e creazione utente.}
 \end{figure}
+
+\subsection{Creazione Utente}
+Considerando che il sistema è stato progettato per essere chiuso, non è possibile registrarsi autonomamente, ma deve essere un'azione che viene svolta da un utente amministratore.Per registrare un nuovo utente, bisogna cliccare sul pulsante situato a fianco del breadcrumb, che riporta l'etichetta \textit{Aggiungi Utente}.\\
+Alla pressione del pulsante, si aprirà un form nel quale inserire i dati del nuovo utente.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{FormAggiuntaUtente}
+    \caption{Form per la creazione di un nuovo utente e relativi campi da compilare.}
+\end{figure}
+
+\subsection{Modifica Utente}
+Per lo stesso motivo sopra citato, anche la modifica dei dati di un utente deve forzatamente passare per l'amministratore. A fianco del pulsante di aggiunta, si trova anche il pulsante che riporta l'etichetta \textit{Modifica Utente}.\\
+Alla pressione del pulsante, si aprirà una tabella, riportante tutti gli utenti presenti a sistema, riportandone username, mail e livello di privilegi. Cliccando sul pulsante apposto al fianco di ogni utente, si aprirà una schermata dalla quale sarà possibile modificare i dati dell'utente selezionato.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{ListaUtenti}
+    \caption{Esempio di lista utenti con pulsante di modifica.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{FormModificaUtente}
+    \caption{Esempio di form per la modifica dei dati di un utente.}
+\end{figure}
+
+
+
+
 
 \newpage
 \section{Aree Illuminate}
@@ -147,24 +176,16 @@ Il pulsante \textit{elimina} permette di eliminare il lampione. L'azione non avv
 \includegraphics[width=\textwidth]{ModaleEliminazioneLampione}
 \caption{Richiesta di conferma per l'eliminazione di un lampione }
 \end{figure}
-Il pulsante \textit{segnala guasto} permette di segnalare manualmente un guasto rilevato nel lampione, inserendolo di conseguenza nella lista guasti (questa funzionalità attualmente è esclusiva dell'utente base e dell'amministratore).\\
+Il pulsante \textit{segnala guasto} permette di segnalare manualmente un guasto rilevato nel lampione, inserendolo di conseguenza nella lista guasti (questa funzionalità attualmente è esclusiva dell'amministratore).\\
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{ListaLampioniConGuasti}
 \caption{I lampioni già segnalati come guasti presenteranno al posto del pulsante, una X rossa con un tooltip che indica che l'azione è già stata effettuata}
 \end{figure}
-Qualora si effettuasse l'accesso con l'utente manutentore, al termine della lista sarà possibile visualizzare un pulsante grigio che permette di visualizzare i dati dei lampioni guasti, oltre a poter segnalare la loro riparazione con successiva rimozione dalla lista dei guasti.
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{ListaLampioniVistaManutentore}
-\caption{Lista dei lampioni con pulsante per la visualizzazione del pulsante per la visualizzazione della lista dei lampioni guasti (solo accedendo come manutentore)}
-\end{figure}
 
 \subsection{Inserimento, Modifica e Rimozione di un Lampione}
 \subsubsection{Inserimento}
 Al di sopra della lista dei lampioni è presente un pulsante che riporta l'etichetta \textit{Aggiungi Lampione} che, alla pressione, apre una nuova schermata nella quale vengono richiesti i dati del nuovo impianto luminoso che si vuole inserire a sistema.
-% Scrivere anche cosa viene richiesto?
-% Immagine del pulsante
 
 \subsubsection{Modifica}
 A lato delle informazioni riportate nella tabella dei lampioni, c'è un pulsante con i bordi e la scritta gialli. Questo pulsante riporta ad una schermata molto simile a quella della creazione del nuovo lampione dalla quale si possono modificare i dati del lampione per il quale si è premuto il pulsante
@@ -178,16 +199,6 @@ A lato delle informazioni riportate nella tabella dei lampioni, c'è un pulsante
 \centering
 \includegraphics[width=\textwidth]{ModaleGuastoLampione}
 \caption{Richiesta di conferma l'aggiunta di un lampione alla lista dei guastii}
-\end{figure}
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{ListaGuastiVistaManutentore}
-\caption{Esempio di lista dei lampioni segnalati come guasti}
-\end{figure}
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{ModaleRiparazioneLampione}
-\caption{Richiesta di conferma per la rimozione del lampione dalla lista guasti}
 \end{figure}
 
 \newpage
