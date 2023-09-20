@@ -164,6 +164,8 @@ completamento del progetto:
 
 \includegraphics[scale=0.65]{diagramma_use_case_12.png}
 
+\includegraphics[scale=0.7]{diagramma_use_case_13.png}
+
 \subsection{Attori}
 \begin{itemize}
     \item Utente non autenticato: utente che non ha inserito le proprie credenziali;
@@ -812,6 +814,7 @@ completamento del progetto:
     \item L'attore seleziona l'impianto luminoso di cui vuole conoscere le informazioni;
     \item L'attore visualizza le informazioni relative all'impianto luminoso.
 \end{enumerate}
+\textbf{Requisiti collegati: } RF43-O\newline
 
 \subsubsection{UC25 - Modifica delle informazioni di un impianto luminoso}
 \textbf{Attore: } Amministratore.\newline
@@ -826,6 +829,7 @@ completamento del progetto:
     \item L'amministratore modifica le informazioni relative all'impianto luminoso;
     \item L'amministratore conferma le modifiche.
 \end{enumerate}
+\textbf{Requisiti collegati: } RF44-O\newline
 
 \subsubsection{UC26 - Recupero lista sensori di un'area illuminata}
 \textbf{Attore: } Utente base, manutentore e amministratore.\newline
@@ -838,6 +842,7 @@ completamento del progetto:
     \item L'attore accede alle informazioni dell'area alla quale appartiene il sensore;
     \item L'attore visualizza la lista dei sensori.
 \end{enumerate}
+\textbf{Requisiti collegati: } RF45-O\newline
 
 \subsubsection{UC27 - Visualizzazione informazioni relative ad un sensore}
 \textbf{Attore: } Utente base, manutentore e amministratore.\newline
@@ -851,6 +856,7 @@ completamento del progetto:
     \item L'attore seleziona il sensore di cui vuole conoscere le informazioni;
     \item L'attore visualizza le informazioni relative al sensore.
 \end{enumerate}
+\textbf{Requisiti collegati: } RF46-O\newline
 
 \subsubsection{UC28 - Modifica delle informazioni di un sensore}
 \textbf{Attore: } Amministratore.\newline
@@ -865,6 +871,7 @@ completamento del progetto:
     \item L'amministratore modifica le informazioni relative al sensore;
     \item L'amministratore conferma le modifiche.
 \end{enumerate}
+\textbf{Requisiti collegati: } RF47-O\newline
 
 \subsubsection{UC29 - Registrazione nuovo utente}
 \textbf{Attore: } Amministratore.\newline
@@ -879,6 +886,7 @@ completamento del progetto:
     \item L'amministratore conferma i dati inseriti;
     \item L'amministratore conferma la registrazione.
 \end{enumerate}
+\textbf{Requisiti collegati: } RV3-F\newline
 
 \subsubsection{UC30 - Modifica utente}
 \textbf{Attore: } Amministratore.\newline
@@ -893,6 +901,7 @@ completamento del progetto:
     \item L'amministratore modifica i dati dell'utente;
     \item L'amministratore conferma le modifiche.
 \end{enumerate}
+\textbf{Requisiti collegati: } RV4-F\newline
 
 \subsubsection{UC31 - Visualizzazione informazioni singola area illuminata}
 \textbf{Attore: } Utente base, manutentore e amministratore.\newline
@@ -905,8 +914,9 @@ completamento del progetto:
     \item L'attore seleziona l'area illuminata di cui vuole conoscere le informazioni;
     \item L'attore visualizza le informazioni relative all'area illuminata.
 \end{enumerate}
+\textbf{Requisiti collegati: } RF48-O\newline
 
-\subsubsection{UC31 - Recupero lista lampioni di un'area illuminata}
+\subsubsection{UC32 - Recupero lista lampioni di un'area illuminata}
 \textbf{Attore: } Utente base, manutentore e amministratore.\newline
 \textbf{PRE: } L'attore vuole visualizzare la lista dei lampioni di un'area illuminata.\newline
 \textbf{POST: } L'attore ha visualizzato la lista dei lampioni di un'area illuminata.\newline
@@ -917,6 +927,7 @@ completamento del progetto:
     \item L'attore accede alle informazioni dell'area alla quale appartiene il lampione;
     \item L'attore visualizza la lista dei lampioni.
 \end{enumerate}
+\textbf{Requisiti collegati: } RF49-O\newline
 \newpage
 \section{Requisiti}
 Ogni requisito è identificato da un codice la cui struttura è definita nelle \textit{Norme di Progetto}.
@@ -969,23 +980,23 @@ Ogni requisito è identificato da un codice la cui struttura è definita nelle \
     \hline
     RF21-O & Rilevamento della presenza di individui in modalità automatica in una delle aree illuminate & Obbligatorio & UC1.1 \\
     \hline
-    RF22-F & Rilevamento della presenza di individui su richesta in una delle aree illuminate & Facoltativo & UC1.2 \\
+    RF22-F & Rilevamento della presenza di individui su richiesta in una delle aree illuminate & Facoltativo & UC1.2 \\
     \hline
-    RF23-O & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato aumenta manualmente il livello di intesità luminosa di un'area illuminata & Obbligatorio & UC3.1 \\
+    RF23-O & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato aumenta manualmente il livello di intensità luminosa di un'area illuminata & Obbligatorio & UC3.1 \\
     \hline
-    RF24-F & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato aumenta manualmente il livello di intesità luminosa di più aree illuminate & Facoltativo & UC3.2 \\
+    RF24-F & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato aumenta manualmente il livello di intensità luminosa di più aree illuminate & Facoltativo & UC3.2 \\
     \hline
-    RF25-O & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato diminuisce manualmente il livello di intesità luminosa di un'area illuminata & Obbligatorio & UC4.1 \\
+    RF25-O & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato diminuisce manualmente il livello di intensità luminosa di un'area illuminata & Obbligatorio & UC4.1 \\
     \hline
-    RF26-F & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato diminuisce manualmente il livello di intesità luminosa di più aree illuminate & Facoltativo & UC4.2 \\
+    RF26-F & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato diminuisce manualmente il livello di intensità luminosa di più aree illuminate & Facoltativo & UC4.2 \\
     \hline
-    RF27-O & Una volta acquisito il livello di luminosità iniziale, il sistema aumenta automaticamente il livello di intesità luminosa di un'area illuminata & Obbligatorio & UC13.1 \\
+    RF27-O & Una volta acquisito il livello di luminosità iniziale, il sistema aumenta automaticamente il livello di intensità luminosa di un'area illuminata & Obbligatorio & UC13.1 \\
     \hline
-    RF28-F & Una volta acquisito il livello di luminosità iniziale, il sistema aumenta automaticamente il livello di intesità luminosa di più aree illuminate & Facoltativo & UC13.2 \\
+    RF28-F & Una volta acquisito il livello di luminosità iniziale, il sistema aumenta automaticamente il livello di intensità luminosa di più aree illuminate & Facoltativo & UC13.2 \\
     \hline
-    RF29-O & Una volta acquisito il livello di luminosità iniziale, il sistema diminuisce automaticamente il livello di intesità luminosa di un'area illuminata & Obbligatorio & UC14.1 \\
+    RF29-O & Una volta acquisito il livello di luminosità iniziale, il sistema diminuisce automaticamente il livello di intensità luminosa di un'area illuminata & Obbligatorio & UC14.1 \\
     \hline
-    RF30-F & Una volta acquisito il livello di luminosità iniziale, il sistema diminuisce automaticamente il livello di intesità luminosa di più aree illuminate & Facoltativo & UC14.2 \\
+    RF30-F & Una volta acquisito il livello di luminosità iniziale, il sistema diminuisce automaticamente il livello di intensità luminosa di più aree illuminate & Facoltativo & UC14.2 \\
     \hline
     RF31-F & Una volta rilevato un valore di intensità luminosa sotto soglia, il sistema provvede ad aumentare l'intensità luminosa. & Facoltativo & UC17\\
     \hline
@@ -999,9 +1010,9 @@ Ogni requisito è identificato da un codice la cui struttura è definita nelle \
     \hline
     RF36-F & Il sistema provvede ad inserire nella lista di impianti guasti l'area in cui è presente l'anomalia. & Facoltativo & UC22\\    
     \hline
-    RF37-F & Durante l'inserimento di un nuovo sensore si specifica il tipo di interazione automatico (push) con il sistema. & Facoltativo & UC11.1.2\\
+    RF37-F & Durante l'inserimento di un nuovo lampione si specifica il tipo di interazione automatico (push) con il sistema. & Facoltativo & UC11.3.2\\
     \hline
-    RF38-F & Durante l'inserimento di un nuovo sensore si specifica il tipo di interazione su richiesta (pull) con il sistema. & Facoltativo & UC11.1.3\\
+    RF38-F & Durante l'inserimento di un nuovo lampione si specifica il tipo di interazione su richiesta (pull) con il sistema. & Facoltativo & UC11.3.3\\
     \hline
     RF39-O & Durante l'inserimento di un nuovo sensore si specificano i dettagli relativi a tale sensore. & Obbligatorio & UC11.1.1\\
     \hline
@@ -1010,6 +1021,20 @@ Ogni requisito è identificato da un codice la cui struttura è definita nelle \
     RF41-O & Durante l'inserimento di un nuovo sensore si specifica l'ampiezza del raggio d'azione del sensore che si sta aggiungendo. & Obbligatorio & UC11.1.5\\
     \hline
     RF42-O & L'impianto guasto viene riparato dal Manutentore e viene segnalato come nuovamente funzionante. & Obbligatorio & UC23\\
+    \hline
+    RF43-O & Visualizzazione di tutte le informazioni relative ad un impianto luminoso. & Obbligatorio & UC24\\
+    \hline
+    RF44-O & Modifica delle informazioni relative ad un impianto luminoso. & Obbligatorio & UC25\\
+    \hline
+    RF45-O & Recupero della lista dei sensori di un'area illuminata. & Obbligatorio & UC26\\
+    \hline
+    RF46-O & Visualizzazione di tutte le informazioni relative ad un sensore. & Obbligatorio & UC27\\
+    \hline
+    RF47-O & Modifica delle informazioni relative ad un sensore. & Obbligatorio & UC28\\
+    \hline
+    RF48-O & Visualizzazione di tutte le informazioni relative ad un'area illuminata. & Obbligatorio & UC31\\
+    \hline
+    RF49-O & Recupero della lista dei lampioni di un'area illuminata. & Obbligatorio & UC32\\
 
     
     
@@ -1029,7 +1054,7 @@ Ogni requisito è identificato da un codice la cui struttura è definita nelle \
     \hline
     \textbf{Codice} & \textbf{Descrizione} & \textbf{Rilevanza} & \textbf{Fonti} \\
     \hline
-    RQ1-O & Test che dimostrino il corretto funzionamento dei servizi e delle funzionalità previste, con una copertura dell'80\% del codice. & Obbligatorio & Capitolato C2 \\
+    RQ1-O & Test che dimostrino il corretto funzionamento dei servizi e delle funzionalità previste, con una copertura dell'60-70\% del codice. & Obbligatorio & Capitolato C2 \\
     \hline
     RQ2-O & Documenti su scelte implementative e progettuale e relative motivazioni, i problemi aperti e le eventuali soluzioni proposte da approfondire. & Obbligatorio & Capitolato C2 \\
     \hline
@@ -1048,6 +1073,10 @@ Ogni requisito è identificato da un codice la cui struttura è definita nelle \
     RV1-O & Essere in possesso delle credenziali di autenticazione per accedere al sistema. & Obbligatorio & UC5 \\
     \hline
     RV2-O & Essere in possesso delle credenziali specifiche per il manutentore. & Obbligatorio & UC8 \\
+    \hline
+    RV3-F & Registrazione nuovo utente da parte di un amministratore. & Facoltativo & UC29 \\
+    \hline
+    RV4-F & Modifica utente da parte di un amministratore. & Facoltativo & UC30 \\
     \bottomrule
 \end{longtable}
 
