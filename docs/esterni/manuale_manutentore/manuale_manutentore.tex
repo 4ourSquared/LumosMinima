@@ -18,9 +18,9 @@
 Questo documento descrive le funzionalità del programma a coloro che dovessero usufruirne in qualità di manutentore.
 }
 
-\addversione{0.0.0}{05/09/2023}{Soldà Matteo}{}{Stesura scheletro}
-\addversione{0.0.1}{07/09/2023}{Soldà Matteo}{}{Stesura prima bozza contenuto}
-\addversione{0.0.2}{13/09/2023}{Soldà Matteo}{}{Aggiunta delle immagini}
+\addversione{0.0.0}{05/09/2023}{Soldà Matteo}{Cavaliere Erica}{Stesura scheletro}
+\addversione{0.0.1}{07/09/2023}{Soldà Matteo}{Cavaliere Erica}{Stesura prima bozza contenuto}
+\addversione{0.0.2}{13/09/2023}{Soldà Matteo}{Cavaliere Erica}{Aggiunta delle immagini}
 \begin{document}
 \makeindexdetails
 \makefrontpage \makeversioni
@@ -34,7 +34,7 @@ Questo documento descrive le funzionalità del programma a coloro che dovessero 
 \section{Introduzione e Origine del Progetto}
 Questo documento, destinato agli utenti finali del programma, descrive le funzionalità implementate e come utilizzarle al meglio.\\ \\
 La crisi internazionale determinata dal conflitto Russia-Ucraina iniziato nel 2022 ha cambiato radicalmente gli assetti geopolitici. Oltre ai notevoli costi sociali ed economici, ripropone a livello globale la centralità di temi energetici e ambientali.\\
-Il risparmio delle risorse del Pianeta, e in particolare delle fonti energetiche è entrato con forza nell'agenda politica dell'Unione Europea. Fra gli impatti più evidenti, spicca la crescita esponenziale del prezzo del gas, risorsa ancora largamente utilizzata come materia prima per la produzione di energia elettrica. Mentre in sede di Commissione Europea è in corso un acceso di dibattito sul tetto al prezzo del gas, in Italia si susseguono misure atte al risparmio energetico.\\\\
+Il risparmio delle risorse del Pianeta, e in particolare delle fonti energetiche è entrato con forza nell'agenda politica dell'Unione Europea. Fra gli impatti più evidenti, spicca la crescita esponenziale del prezzo del gas, risorsa ancora largamente utilizzata come materia prima per la produzione di energia elettrica. Mentre in sede di Commissione Europea è in corso un acceso dibattito sul tetto al prezzo del gas, in Italia si susseguono misure atte al risparmio energetico.\\\\
 Accanto a tali criticità, figurano il cambiamento climatico e il surriscaldamento globale che rappresentano un'ulteriore emergenza: gli altissimi livelli di emissioni di anidride carbonica e la gestione dei così detti gas serra che stanno irreversibilmente modificando il clima, il Pianeta e l'eredità che lasceremo alle generazioni future.\\\\
 Per far fronte al rincaro delle bollette energetiche, molti Comuni italiani stanno annunciando il taglio dell'illuminazione pubblica, che necessita di una quantità considerevole di energia elettrica.\\\\
 Con questo progetto proponiamo un sistema per l'ottimizzazione dell'illuminazione pubblica che permetta ai gestori di sfruttare la possibilità di regolare l'intensità della luce emessa dagli impianti di illuminazione. Un sistema così congegnato consentirebbe, da un lato, di garantire sicurezza stradale e sociale, e dall'altro permetterebbe di risparmiare energia e di conseguenza risorse economiche e ambientali.
@@ -75,7 +75,7 @@ La funzionalità di logout permette di terminare la sessione generata da un prec
 \subsection{Informazioni Preliminari}
 Le aree illuminate sono la componente di base dell'applicazione. Esse al loro interno possono contenere molteplici lampioni e sensori che interagiscono in modo diverso coerentemente alla loro configurazione.
 \subsection{Lista Aree Illuminate}
-Entrando nella dashboard dopo il login, verrà presentata la lista delle aree illuminate che sono state inserite a sistema. Ogni area presenta come informazione il proprio ID (generato automaticamente), il nome assegnato, la descrizione, la latitudine e la longitudine. Al fianco di queste informazioni sono presentati tre pulsanti: informazioni, modifica ed elimina. \\
+Entrando nella dashboard dopo il login, verrà presentata la lista delle aree illuminate che sono state inserite a sistema. Ogni area presenta come informazione il proprio ID (generato automaticamente), il nome assegnato, la descrizione, la latitudine e la longitudine. Al fianco di queste informazioni è presentato il pulsante per la visualizzazione delle informazioni relative a quella data area.\\
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{ListaAree}
@@ -87,34 +87,6 @@ Il pulsante \textit{informazioni} permette di caricare tutte le informazioni del
 \includegraphics[width=0.5\textwidth]{InfoArea}
 \caption{Esempio di informazioni di una singola area}
 \end{figure}
-Il pulsante \textit{modifica} permette di aprire una schermata dalla quale modificare i dati dell'area. La formattazione è analoga a quella dell'aggiunta dell'area.\\
-Il pulsante \textit{elimina} permette di eliminare l'area. L'azione non avviene subito dopo la pressione del pulsante, ma richiede una seconda conferma tramite modale. \\
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{ModaleEliminazioneArea}
-\caption{Richiesta di conferma per l'eliminazione di un'area illuminata e di tutti i lampioni e sensori ad essa associati}
-\end{figure}
-
-Al di sopra della lista delle aree è presente un pulsante che permette di inerire una nuova area, funzionalità che verrà descritta nella prossima sottosezione
-% Immagine della lista aree (belle popolate ovviamente)
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{FormAggiuntaArea}
-\caption{Form richiedente le informazioni dell'area da aggiungere a sistema}
-\end{figure}
-% Manca la descrizione del selettore che permette di modificare la luminosità di tutti i lampioni dell'area
-
-\subsection{Inserimento, Modifica e Rimozione di un'Area Illuminata}
-\subsubsection{Inserimento}
-Al di sopra della lista delle aree è presente un pulsante che riporta l'etichetta \textit{Aggiungi Area} che, alla pressione, apre una nuova schermata nella quale vengono richiesti i dati della nuova area che si vuole inserire a sistema.
-% Scrivere anche cosa viene richiesto?
-% Immagine del pulsante
-
-\subsubsection{Modifica}
-A lato delle informazioni riportate nella tabella delle aree, c'è un pulsante con i bordi e la scritta gialli. Questo pulsante riporta ad una schermata molto simile a quella della creazione della nuova area dalla quale si possono modificare i dati dell'area per la quale si è premuto il pulsante
-
-\subsubsection{Rimozione}
-A lato delle informazioni riportate nella tabella delle aree, c'è un pulsante con i bordi e la scritta rossi. Il pulsante serve per eliminare l'area di riferimento. Prima della eliminazione verrà richiesta una seconda conferma tramite una modale
 
 \newpage
 \section{Lampioni}
@@ -127,7 +99,7 @@ I lampioni rappresentano la componente illuminante dell'area. Essi possono inter
 Inoltre, si può decidere se un lampione è recettivo rispetto ai segnali oppure no. Qualora un lampione fosse attivo (ON), allora sarà responsivo ai segnali, mentre qualora fosse disattivo (OFF) la sua gestione sarà di competenza dell'operatore umano.
 \subsection{Lista Lampioni per Area}
 Aprendo le informazioni di una singola area, al di sotto delle informazioni della stessa si troverà la lista dei lampioni collegati all'area selezionata.\\
-Per ogni lampione, sono mostrate nella lista: l'ID (generato automaticamente), lo stato, l'intensità luminosa attuale e il nome del lampione. Al fianco di queste informazioni sono presentati quattro pulsanti: informazioni, modifica, elimina e segnala guasto. \\
+Per ogni lampione, sono mostrate nella lista: l'ID (generato automaticamente), lo stato, l'intensità luminosa attuale e il nome del lampione. Al fianco di queste informazioni è presentato il pulsante per la visualizzazione delle informazioni relative a quel dato lampione.\\
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{ListaLampioni}
@@ -139,45 +111,11 @@ Il pulsante \textit{informazioni} permette di caricare tutte le informazioni del
 \includegraphics[width=0.5\textwidth]{InfoLampione}
 \caption{Esempio di informazioni di un singolo lampione}
 \end{figure}
-Il pulsante \textit{modifica} permette di aprire una schermata dalla quale modificare i dati del lampione.\\
-Il pulsante \textit{elimina} permette di eliminare il lampione. L'azione non avviene subito dopo la pressione del pulsante, ma richiede una seconda conferma tramite modale. \\
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{ModaleEliminazioneLampione}
-\caption{Richiesta di conferma per l'eliminazione di un lampione }
-\end{figure}
-Il pulsante \textit{segnala guasto} permette di segnalare manualmente un guasto rilevato nel lampione, inserendolo di conseguenza nella lista guasti (questa funzionalità attualmente è esclusiva dell'utente base e dell'amministratore).\\
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{ListaLampioniConGuasti}
-\caption{I lampioni già segnalati come guasti presenteranno al posto del pulsante, una X rossa con un tooltip che indica che l'azione è già stata effettuata}
-\end{figure}
+
 Qualora si effettuasse l'accesso con l'utente manutentore, al termine della lista sarà possibile visualizzare un pulsante grigio che permette di visualizzare i dati dei lampioni guasti, oltre a poter segnalare la loro riparazione con successiva rimozione dalla lista dei guasti.
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{ListaLampioniVistaManutentore}
-\caption{Lista dei lampioni con pulsante per la visualizzazione del pulsante per la visualizzazione della lista dei lampioni guasti (solo accedendo come manutentore)}
-\end{figure}
 
-\subsection{Inserimento, Modifica e Rimozione di un Lampione}
-\subsubsection{Inserimento}
-Al di sopra della lista dei lampioni è presente un pulsante che riporta l'etichetta \textit{Aggiungi Lampione} che, alla pressione, apre una nuova schermata nella quale vengono richiesti i dati del nuovo impianto luminoso che si vuole inserire a sistema.
-% Scrivere anche cosa viene richiesto?
-% Immagine del pulsante
-
-\subsubsection{Modifica}
-A lato delle informazioni riportate nella tabella dei lampioni, c'è un pulsante con i bordi e la scritta gialli. Questo pulsante riporta ad una schermata molto simile a quella della creazione del nuovo lampione dalla quale si possono modificare i dati del lampione per il quale si è premuto il pulsante
-
-\subsubsection{Rimozione}
-A lato delle informazioni riportate nella tabella dei lampioni, c'è un pulsante con i bordi e la scritta rossi. Il pulsante serve per eliminare il lampione di riferimento. Prima della eliminazione verrà richiesta una seconda conferma tramite una modale
-
-\subsubsection{Seganalzione Guasto e Lista Guasti}
-A lato delle informazioni riportate nella tabella dei lampioni, c'è un pulsante nero con la scritta bianca. Il pulsante serve per segnalare manualmente un lampione guasto, che verrà quindi inserito nella lista guasti (visualizzabile solo dall'utente manutentore).
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{ModaleGuastoLampione}
-\caption{Richiesta di conferma l'aggiunta di un lampione alla lista dei guastii}
-\end{figure}
+\subsection{Segnalazione di Riparazione Guasto}
+Dopo aver premuto sul pulsante riportante l'etichetta \textit{Vai alla lista guasti}, si aprirà una tabella molto simile a quella dei lampioni, ma con l'aggiunta di un pulsante per la segnalazione di riparazione, la quale richiederà di confermare due volte di voler rimuovere il lampione dalla lista.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{ListaGuastiVistaManutentore}
@@ -200,31 +138,11 @@ Il sensore è la componente dell'area che ha lo scopo di rilevare e di conseguen
 \caption{Esempio di lista dei sensori}
 \end{figure}
 Aprendo le informazioni di una singola area, al di sotto delle informazioni dei lampioni si troverà la lista dei sensori collegati all'area selezionata.\\
-Per ogni sensore, sono mostrate nella lista: l'ID (generato automaticamente), l'indirizzo IP e il nome del sensore. Al fianco di queste informazioni sono presentati tre pulsanti: informazioni, modifica ed elimina. \\
+Per ogni sensore, sono mostrate nella lista: l'ID (generato automaticamente), l'indirizzo IP e il nome del sensore. Al fianco di queste informazioni è presentato il pulsante per la visualizzazione delle informazioni relative a quel dato sensore.\\
 Il pulsante \textit{informazioni} permette di caricare tutte le informazioni del sensore.\\
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{InfoSensore}
 \caption{Esempio di informazioni di un singolo sensore}
 \end{figure}
-Il pulsante \textit{modifica} permette di aprire una schermata dalla quale modificare i dati del sensore.\\
-Il pulsante \textit{elimina} permette di eliminare il sensore. L'azione non avviene subito dopo la pressione del pulsante, ma richiede una seconda conferma tramite modale. \\
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{ModaleEliminazioneSensore}
-\caption{Richiesta di conferma per l'eliminazione di un sensore }
-\end{figure}
-
-\subsection{Inserimento, Modifica e Rimozione di un Sensore}
-\subsubsection{Inserimento}
-Al di sopra della lista dei sensori è presente un pulsante che riporta l'etichetta \textit{Aggiungi Sensore} che, alla pressione, apre una nuova schermata nella quale vengono richiesti i dati del nuovo impianto di rilevamento che si vuole inserire a sistema.
-% Scrivere anche cosa viene richiesto?
-% Immagine del pulsante
-
-\subsubsection{Modifica}
-A lato delle informazioni riportate nella tabella dei sensori, c'è un pulsante con i bordi e la scritta gialli. Questo pulsante riporta ad una schermata molto simile a quella della creazione del nuovo sensore dalla quale si possono modificare i dati del sensore per il quale si è premuto il pulsante
-
-\subsubsection{Rimozione}
-A lato delle informazioni riportate nella tabella dei sensori, c'è un pulsante con i bordi e la scritta rossi. Il pulsante serve per eliminare il sensore di riferimento. Prima della eliminazione verrà richiesta una seconda conferma tramite una modale
-
 \end{document}
