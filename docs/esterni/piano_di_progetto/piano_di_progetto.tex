@@ -31,6 +31,7 @@ Questo documento serve a tracciare l'efficienza del progetto. Tiene traccia dei 
 \addversione{0.1.0}{24/07/2023}{Brotto Romina}{Soldà Matteo}{Verifica documento per RTB}
 \addversione{1.0.0}{27/07/2023}{Soldà Matteo}{Brotto Romina}{Approvazione documento per RTB}
 \addversione{1.0.1}{27/07/2023}{Brotto Romina}{Alberti Nicolas }{Aggiunta sprint e sezioni 2.2 e 2.3}
+\addversione{1.0.2}{20/09/2023}{Salami Lorenzo}{Cavaliere Erica }{Completato piano di progetto}
 
 \def\pgfcalendarmonthitname#1{%
 \ifcase#1 \or Gennaio\or Febbraio\or Marzo\or Aprile\or Maggio\or Giugno\or Luglio\or Agosto\or Settembre\or Ottobre\or Novembre\or Dicembre\fi%
@@ -1126,7 +1127,7 @@ N.B.: il gruppo ha preso atto che alcuni sprint potranno essere meno produttivi 
 		\hline
 		Alberti Nicolas   & 9                 & 4               & 11            & 6(+2)  & 13(+3)  & 6      \\
 		\hline
-		Brotto Romina     & 47(+1)            & 10              & 16(+2)        & 0      & 5       & 14(+2) \\
+		Brotto Romina     & 4(+1)            & 10              & 16(+2)        & 0      & 5       & 14(+2) \\
 		\hline
 		Cavaliere Erica   & 4                 & 12(+1)          & 12            & 9(+2)  & 11(+1)  & 11     \\
 		\hline
@@ -1143,7 +1144,236 @@ N.B.: il gruppo ha preso atto che alcuni sprint potranno essere meno produttivi 
 	\mbox{}\\
 \end{center}
 
+\newpage
 
+\subsubsection{Sprint 14}
+\textbf{Data di inizio:} 21/08/2023\newline
+\textbf{Data di fine:} 31/08/2023\newline
+\newline
+\textbf{Suddivisione del lavoro:}
+\begin{itemize}
+	\item Erica si occupa di spostare i documenti nelle cartelle corrette, quali verbali e lettera di presentazione;
+	\item Romina si occupa di aggiornare il Piano di Progetto;
+	\item Lorenzo provvedera` ad aggiornare e modificare il Piano di Qualifica;
+	\item Nicolas provvedera` a redigere una versione di base della Specifica Architetturale e della Specifica Tecnica.
+	\item Matteo si occupera` dell’implementazione della modifica della luminosita` temporizzata per le aree illuminate
+	\item Erica e Francesco procederanno con gli unit test;
+	\item Matteo e Francesco si occuperanno del meccanismo di login.
+\end{itemize}
+\textbf{Difficoltà incontrate:}
+\begin{itemize}
+	\item Limitazione della visualizzazione delle pagine in base al ruolo
+	\item Implementazione totale degli unit-test.
+	\item Implementazione totale dei test
+\end{itemize}
+\includegraphics[scale=0.178]{PB_2.png}\newline
+\newline
+\begin{center}
+	\begin{tabularx}{\textwidth}{|X|X|X|X|}
+		\hline
+		\multicolumn{4}{|c|}{\textbf{Preventivo ore/costi}}                                      \\
+		\hline
+		\hline
+		\textbf{Ruolo}  & \textbf{Costo orario (\euro)} & \textbf{Ore} & \textbf{Prezzo (\euro)} \\
+		\hline
+		Responsabile    & 30                            & 49(+12)       & 360                      \\
+		\hline
+		Amministratore  & 20                            & 42(+3)       & 60                      \\
+		\hline
+		Analista        & 25                            & 90(+10)       & 250                     \\
+		\hline
+		Progettista     & 25                            & 86(+50)       & 1250                     \\
+		\hline
+		Programmatore   & 15                            & 86(+20)      & 300                    \\
+		\hline
+		Verificatore    & 15                            & 70(+5)       & 75                      \\
+		\hline
+		\hline
+		\textbf{Totale} &                               & 423          & 9050                    \\
+		\hline
+	\end{tabularx}\\[8pt]
+	\mbox{}\\
+\end{center}
+
+\begin{center}
+	\begin{tabularx}{\textwidth}{|X|X|X|X|X|X|X|}
+		\hline
+		\multicolumn{7}{|c|}{\textbf{Preventivo ore per membro}}                                            \\
+		\hline
+		\hline
+		\textbf{Membro}   & \textbf{Resp.}    & \textbf{Amm.}   & \textbf{Ana.} &
+		\textbf{Proget.}  & \textbf{Program.} & \textbf{Verif.}                                             \\
+		\hline
+		Alberti Nicolas   & 9                 & 4               & 11            & 16(+10)  		& 18(+5) 	 & 8(+2)      \\
+		\hline
+		Brotto Romina     & 8(+4)                & 10              & 17(+1)        & 20(+20)      & 5       & 14 \\
+		\hline
+		Cavaliere Erica   & 8(+4)                & 12             & 15(+3)         & 9 		 & 16(+5) 	 & 11     \\
+		\hline
+		Ceccato Francesco & 2                & 5(+3)            & 17            & 13 (+5) 		& 16(+10)  	& 11     \\
+		\hline
+		Salami Lorenzo    & 8(+4)                & 6               & 14(+3)      & 14 (+5)		 & 10      & 12 \\
+		\hline
+		Soldà Matteo      & 14                & 3           & 13(+3)            & 17 (+10)    	 & 20 	& 12(+3)  \\
+		\hline
+		\hline
+		\textbf{Totale}   & 49(+12)            & 42(+3)          & 90(+10)        & 86(+50)  & 86(+20) & 70(+5) \\
+		\hline
+	\end{tabularx}\\[8pt]
+	\mbox{}\\
+\end{center}
+
+\newpage
+
+\subsubsection{Sprint 15}
+\textbf{Data di inizio:} 01/09/2023\newline
+\textbf{Data di fine:} 10/09/2023\newline
+\newline
+\textbf{Suddivisione del lavoro:}
+\begin{itemize}
+	\item Romina si occupa di aggiornare le Norme di Progetto
+	\item Lorenzo ultimera` il Piano di Qualifica 
+	\item Nicolas si occupera` di stendere una versione di base della Specifica Architetturale e della Specifica Tecnica
+	\item Matteo si occupera` di implementare la modifica della luminosita` temporizzata per le aree illuminate
+	\item Erica e Francesco procederanno con gli unit test
+\end{itemize}
+\textbf{Difficoltà incontrate:}
+\begin{itemize}
+	\item Implementazione layout responsive
+	\item Implementazione totale dei test.
+\end{itemize}
+\includegraphics[scale=0.178]{PB_3.png}\newline
+\newline
+\begin{center}
+	\begin{tabularx}{\textwidth}{|X|X|X|X|}
+		\hline
+		\multicolumn{4}{|c|}{\textbf{Preventivo ore/costi}}                                      \\
+		\hline
+		\hline
+		\textbf{Ruolo}  & \textbf{Costo orario (\euro)} & \textbf{Ore} & \textbf{Prezzo (\euro)} \\
+		\hline
+		Responsabile    & 30                            & 61(+12)       & 360                      \\
+		\hline
+		Amministratore  & 20                            & 45(+3)       & 60                      \\
+		\hline
+		Analista        & 25                            & 100(+10)       & 250                     \\
+		\hline
+		Progettista     & 25                            & 131(+45)       & 1125                     \\
+		\hline
+		Programmatore   & 15                            & 106(+20)      & 300                    \\
+		\hline
+		Verificatore    & 15                            & 80(+10)       & 150                      \\
+		\hline
+		\hline
+		\textbf{Totale} &                               & 523          & 11295                    \\
+		\hline
+	\end{tabularx}\\[8pt]
+	\mbox{}\\
+\end{center}
+
+\begin{center}
+	\begin{tabularx}{\textwidth}{|X|X|X|X|X|X|X|}
+		\hline
+		\multicolumn{7}{|c|}{\textbf{Preventivo ore per membro}}                                            \\
+		\hline
+		\hline
+		\textbf{Membro}   & \textbf{Resp.}    & \textbf{Amm.}   & \textbf{Ana.} &
+		\textbf{Proget.}  & \textbf{Program.} & \textbf{Verif.}                                             \\
+		\hline
+		Alberti Nicolas   & 9                 & 4               & 15(+4)            & 23(+7)  		& 18 		 & 12(+4)      \\
+		\hline
+		Brotto Romina     & 8                & 10              & 17       		& 23(+3)    	 & 15(+10)       & 14 \\
+		\hline
+		Cavaliere Erica   & 10(+2)                & 12             & 17(+2)        & 21(+12) 		 & 19(+3)	 	 & 14(+3)     \\
+		\hline
+		Ceccato Francesco & 10(+8)                & 5            & 17            & 22(+9) 		& 18(+2) 			& 14(+3)     \\
+		\hline
+		Salami Lorenzo    & 10(+2)                & 6               & 16(+2)      & 23(+9) 		 & 15(+5)    	  & 12 \\
+		\hline
+		Soldà Matteo      & 14                & 6(+3)           & 15(+2)           & 22(+5)    	 & 20 		& 12  \\
+		\hline
+		\hline
+		\textbf{Totale}   & 61(+12)            & 45(+3)          & 100(+10)        & 131(+45)  & 106(+20) & 80(+10) \\
+		\hline
+	\end{tabularx}\\[8pt]
+	\mbox{}\\
+\end{center}
+
+\newpage
+
+\subsubsection{Sprint 16}
+\textbf{Data di inizio:} 11/09/2023\newline
+\textbf{Data di fine:} 20/09/2023\newline
+\newline
+\textbf{Suddivisione del lavoro:}
+\begin{itemize}
+	\item Romina aggiornerà il Piano di Progetto allo sprint corrente
+	\item Lorenzo proseguirà con gli unit test
+	\item Matteo procederà con il Manuale Utente
+	\item Erica rocederà con la Specifica Architetturale e la Specifica Tecnica
+	\item Nicolas inserirà una pagina per l’admin di gestione dei ruoli 
+	\item Francesco si occuperà di ggiungere eventuali componenti grafiche di alert per i guasti
+\end{itemize}
+\textbf{Difficoltà incontrate:}
+\begin{itemize}
+	\item Implementazione degli Unit Test.
+\end{itemize}
+\includegraphics[scale=0.178]{PB_4.png}\newline
+\newline
+\begin{center}
+	\begin{tabularx}{\textwidth}{|X|X|X|X|}
+		\hline
+		\multicolumn{4}{|c|}{\textbf{Preventivo ore/costi}}                                      \\
+		\hline
+		\hline
+		\textbf{Ruolo}  & \textbf{Costo orario (\euro)} & \textbf{Ore} & \textbf{Prezzo (\euro)} \\
+		\hline
+		Responsabile    & 30                            & 73(+12)       & 360                      \\
+		\hline
+		Amministratore  & 20                            & 48(+3)       & 60                      \\
+		\hline
+		Analista        & 25                            & 100       	& 0                     \\
+		\hline
+		Progettista     & 25                            & 131       & 0                     \\
+		\hline
+		Programmatore   & 15                            & 131(+25)      & 375                    \\
+		\hline
+		Verificatore    & 15                            & 90(+10)       & 150                      \\
+		\hline
+		\hline
+		\textbf{Totale} &                               & 573          & 12240                    \\
+		\hline
+	\end{tabularx}\\[8pt]
+	\mbox{}\\
+\end{center}
+
+\begin{center}
+	\begin{tabularx}{\textwidth}{|X|X|X|X|X|X|X|}
+		\hline
+		\multicolumn{7}{|c|}{\textbf{Preventivo ore per membro}}                                            \\
+		\hline
+		\hline
+		\textbf{Membro}   & \textbf{Resp.}    & \textbf{Amm.}   & \textbf{Ana.} &
+		\textbf{Proget.}  & \textbf{Program.} & \textbf{Verif.}                                             \\
+		\hline
+		Alberti Nicolas   & 9(+3)                 & 7(+3)               & 15            & 23  		 & 22(+4) 		 	& 14(+2)      \\
+		\hline
+		Brotto Romina     & 11(+3)                & 10              	& 17       		& 23    	 & 21(+6)       	& 15(+1) 	\\
+		\hline
+		Cavaliere Erica   & 10(+2)                & 12             		& 17        	& 21 		 & 22(+3)	 	 	& 15(+1)     \\
+		\hline
+		Ceccato Francesco & 10(+2)             	  & 5            		& 17            & 22 		 & 22(+4) 			& 16(+2)     \\
+		\hline
+		Salami Lorenzo    & 10(+2)                & 6              		& 16     		& 23 		 & 21(+6)    	 	& 14(+2)	\\
+		\hline
+		Soldà Matteo      & 14                    & 6          			& 15            & 22    	 & 22(+2) 			& 14(+2)  	\\
+		\hline
+		\hline
+		\textbf{Totale}   & 73(+12)            & 48(+3)          & 100(+0)        & 131(+0)		 & 131(+25) & 90(+10) \\
+		\hline
+	\end{tabularx}\\[8pt]
+	\mbox{}\\
+\end{center}
 
 \newpage
 

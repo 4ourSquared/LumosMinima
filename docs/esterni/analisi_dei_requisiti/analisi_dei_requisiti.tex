@@ -14,7 +14,7 @@
 \graphicspath{ {./immagini/} }
 
 \settitolo{Analisi dei requisiti}
-\setredattori{Nicolas Alberti \\ Romina Brotto \\ Erica Cavaliere \\ Francesco Ceccato }
+\setredattori{Nicolas Alberti \\ Romina Brotto \\ Erica Cavaliere \\ Francesco Ceccato \\ Matteo Soldà}
 \setdestuso{esterno}
 \setdescrizione{
 Questo documento si occupa di riportare un'analisi di tutti gli elementi richiesti e i vincoli da rispettare per una completa comprensione del progetto.
@@ -31,6 +31,7 @@ Questo documento si occupa di riportare un'analisi di tutti gli elementi richies
 \addversione{0.1.0}{20/07/2023}{Brotto Romina}{Soldà Matteo}{Verifica per RTB}
 \addversione{1.0.0}{20/07/2023}{Soldà Matteo}{Brotto Romina}{Approvazione per candidatura RTB}
 \addversione{1.0.1}{09/08/2023}{Brotto Romina}{Cavaliere Erica}{Aggiornamento con requisiti di Qualità e requisiti di Vincolo}
+\addversione{1.0.2}{19/09/2023}{Soldà Matteo}{Ceccato Francesco}{Aggiornamento UC e requisiti in accordo con ultimi incontri effettuati con Imola Informatica}
 
 
 \def\pgfcalendarmonthitname#1{%
@@ -65,11 +66,8 @@ Bisognerà che ci sia anche un modo per registrare i guasti degli impianti e seg
 \end{itemize}
 \newpage
 \section{Descrizione del Prodotto}
-L'azienda \textit{Imola Informatica} propone attraverso il capitolato C2:
-\textit{Lumos Minima}. L'obiettivo è sviluppare un sistema per l'ottimizzazione
-dell'illuminazione pubblica che permetta ai gestori di sfruttare la possibilità
-di regolare l'intensità di luce emessa dagli \textit{impianti luminosi\textsubscript{G}}, grazie all'utilizzo di
-sensori specifici che permettono di ottenere informazioni legate all'ambiente circostante.
+L'azienda \textit{Imola Informatica} si propone attraverso il capitolato C2, denominato \textit{Lumos Minima} l'obiettivo di sviluppare un sistema per l'ottimizzazione
+dell'illuminazione pubblica che permetta ai gestori di sfruttare la possibilità di regolare l'intensità di luce emessa dagli \textit{impianti luminosi\textsubscript{G}}, grazie all'utilizzo di sensori specifici che permettono di ottenere informazioni legate all'ambiente circostante.
 \subsection{Scopo del Prodotto}
 Il sistema sopra citato consentirebbe di garantire sicurezza stradale e sociale, e al tempo stesso permetterebbe di risparmiare energia e quindi risorse economiche ed ambientali. Il processo è caratterizzato da operazioni effettuate dal sistema e/o dai gestori:
 \begin{itemize}
@@ -116,7 +114,7 @@ inoltre deve saper interpretare gli errori forniti dal prodotto, per poter
 correggere il funzionamento dell'impianto.
 
 \subsection{Vincoli e preferenze}
-Il proponente non impone particolari vincoli nella scelta delle tecnologie e dei linguaggi, sono stati però forniti alcui suggerimenti da prendere in considerazione:
+Il proponente non impone particolari vincoli nella scelta delle tecnologie e dei linguaggi, sono stati però forniti alcuni suggerimenti da prendere in considerazione:
 \begin{itemize}
     \item utilizzo di React per lo sviluppo delle parti di \textit{Front-end\textsubscript{G}};
     \item utilizzo di Node JS per lo sviluppo delle parti di \textit{Back-end\textsubscript{G}};
@@ -125,7 +123,7 @@ Il proponente non impone particolari vincoli nella scelta delle tecnologie e dei
 Per il completamento del progetto il proponente richiede che siano ottenuti i
 seguenti risultati:
 \begin{itemize}
-    \item applicazione Web Responsive che soddisfi i requisiti obblgatori
+    \item applicazione Web Responsive che soddisfi i requisiti obbligatori
     illustrati dai casi d'uso;
     \item test che dimostrino il corretto funzionamento dei servizi e delle
     funzionalità previste, con una copertura minima dell'80\%;
@@ -135,7 +133,7 @@ seguenti risultati:
 Sono di interesse altri due risultati desiderabili ma non vincolanti al fine del
 completamento del progetto:
 \begin{itemize}
-    \item cifratura di tutte le comunicazoni fra App e Server per garantire la
+    \item cifratura di tutte le comunicazioni fra App e Server per garantire la
     validità delle informazioni;
     \item analisi riguardante sia il carico massimo supportato in numero di
     dispositivi che del servizio cloud più adatto per supportarlo
@@ -166,6 +164,8 @@ completamento del progetto:
 
 \includegraphics[scale=0.65]{diagramma_use_case_12.png}
 
+\includegraphics[scale=0.7]{diagramma_use_case_13.png}
+
 \subsection{Attori}
 \begin{itemize}
     \item Utente non autenticato: utente che non ha inserito le proprie credenziali;
@@ -180,7 +180,7 @@ completamento del progetto:
 
 \subsection{Lista dei casi d'uso}
 
-\subsubsection{UC1 - Rilevamento presenza di persone automatico}
+\subsubsection{UC1 - Rilevamento presenza di persone}
 \textbf{Attore:} Sensore.\newline
 \textbf{Attore secondario:} Sistema di Gestione degli impianti luminosi.\newline
 \textbf{PRE:} l'individuo non è ancora posizionato in prossimità dell'area con lampioni, i lampioni sono spenti o con intensità luminosa settata al minimo.\newline
@@ -220,7 +220,7 @@ completamento del progetto:
 \end{enumerate}
 \textbf{Requisiti collegati:} RF22-F\newline
 
-\subsubsection{UC2 - Visualizzazione intensità luminosa di un'area illuminata}
+\subsubsection{UC2 - Modifica intensità luminosa di un'area illuminata}
 \textbf{Attore:} Operatore.\newline
 \textbf{PRE:} un'\textit{area illuminata\textsubscript{G}} configurata illumina con un intensità iniziale arbitraria.\newline
 \textbf{POST:} l'area illuminata summenzionata illumina con una precisa intensità finale.\newline
@@ -330,7 +330,7 @@ completamento del progetto:
 \subsubsection{UC5 - Login}
 \textbf{Attore:} 
 \begin{itemize}
-    \item Utente non atenticato;
+    \item Utente non autenticato;
     \item Sistema di autenticazione.
 \end{itemize}
 \textbf{PRE:} l'utente non è entrato nel sistema e quindi non può gestire i sistemi di illuminazione, ma è registrato nel database.\newline
@@ -364,7 +364,7 @@ completamento del progetto:
 \textbf{Requisiti collegati:} RF6-O\newline
 
 \subsubsection{UC7 - Consultazione elenco aree illuminate}
-\textbf{Attore:} Amministratore. \newline
+\textbf{Attore:} Utente, manutentore e/o Amministratore. \newline
 \textbf{PRE:} l'utente non visualizza l'elenco degli impianti luminosi.\newline
 \textbf{POST:} l'utente visualizza l'elenco degli impianti e potrà interagire con esso.\newline
 \textbf{Scenario principale:}
@@ -376,7 +376,7 @@ completamento del progetto:
 \end{enumerate}
 \textbf{Requisiti collegati:} RF7-O\newline
 
-\subsubsection{UC8 - Consultazione elenco aree illuminate con guasti}
+\subsubsection{UC8 - Consultazione elenco impianti luminosti guasti per un'area}
 \textbf{Attore:} Manutentore.\newline
 \textbf{PRE:} il manutentore non è al corrente dell'elenco degli impianti con segnalato dei guasti.\newline
 \textbf{POST:} il manutentore ha consultato l'elenco degli impianti dei guasti e interagisce con esso.\newline
@@ -464,36 +464,6 @@ completamento del progetto:
 \end{enumerate}
 \textbf{Requisiti collegati:} RF39-O\newline
 
-\subsubsection{UC11.1.2 - Specifica di interazione automatica (push)}
-\textbf{Attore:} Amministratore.\newline
-\textbf{PRE:} il sensore inserito non specifica il tipo di interazione con il sistema.\newline
-\textbf{POST:} il sensore inserito possiede come dettaglio il tipo di interazione automatico con il sistema.\newline
-\textbf{Scenario principale:}
-\begin{enumerate}
-    \item L'amministratore accede al sistema;
-    \item L'amministratore effettua il login con proprie credenziali;
-    \item L'amministratore avvia procedura inserimento;
-    \item L'amministratore specifica tipo di interazione push (automatica);
-    \item L'amministratore specifica l'area illuminata di riferimento;
-    \item Viene ottenuta la conferma dell'inserimento.
-\end{enumerate}
-\textbf{Requisiti collegati:} RF37-F\newline
-
-\subsubsection{UC11.1.3 - Specifica di interazione su richesta (pull)}
-\textbf{Attore:} Amministratore.\newline
-\textbf{PRE:} il sensore inserito non specifica il tipo di interazione con il sistema.\newline
-\textbf{POST:} il sensore inserito possiede come dettaglio il tipo di interazione su richiesta con il sistema.\newline
-\textbf{Scenario principale:}
-\begin{enumerate}
-    \item L'amministratore accede al sistema;
-    \item L'amministratore effettua il login con proprie credenziali;
-    \item L'amministratore avvia procedura inserimento;
-    \item L'amministratore specifica tipo di interazione pull (su richiesta);
-    \item L'amministratore specifica l'area illuminata di riferimento;
-    \item Viene ottenuta la conferma dell'inserimento.
-\end{enumerate}
-\textbf{Requisiti collegati:} RF38-F\newline
-
 \subsubsection{UC11.1.4 - Specifica di posizione geografica del sensore}
 \textbf{Attore:} Amministratore.\newline
 \textbf{PRE:} il sensore inserito non specifica la posizione geografica in cui si trova.\newline
@@ -560,6 +530,36 @@ completamento del progetto:
     \item Viene ottenuta la conferma dell'inserimento.
 \end{enumerate}
 \textbf{Requisiti collegati:} RF19-O\newline
+
+\subsubsection{UC11.3.2 - Specifica di interazione automatica (push)}
+\textbf{Attore:} Amministratore.\newline
+\textbf{PRE:} l'impianto luminoso inserito non specifica il tipo di interazione con il sistema.\newline
+\textbf{POST:} l'impianto luminoso inserito possiede come dettaglio il tipo di interazione automatico con il sistema.\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item L'amministratore accede al sistema;
+    \item L'amministratore effettua il login con proprie credenziali;
+    \item L'amministratore avvia procedura inserimento;
+    \item L'amministratore specifica tipo di interazione push (automatica);
+    \item L'amministratore specifica l'area illuminata di riferimento;
+    \item Viene ottenuta la conferma dell'inserimento.
+\end{enumerate}
+\textbf{Requisiti collegati:} RF37-F\newline
+
+\subsubsection{UC11.3.3 - Specifica di interazione su richesta (pull)}
+\textbf{Attore:} Amministratore.\newline
+\textbf{PRE:} l'impianto luminoso inserito non specifica il tipo di interazione con il sistema.\newline
+\textbf{POST:} l'impianto luminoso inserito possiede come dettaglio il tipo di interazione su richiesta con il sistema.\newline
+\textbf{Scenario principale:}
+\begin{enumerate}
+    \item L'amministratore accede al sistema;
+    \item L'amministratore effettua il login con proprie credenziali;
+    \item L'amministratore avvia procedura inserimento;
+    \item L'amministratore specifica tipo di interazione pull (su richiesta);
+    \item L'amministratore specifica l'area illuminata di riferimento;
+    \item Viene ottenuta la conferma dell'inserimento.
+\end{enumerate}
+\textbf{Requisiti collegati:} RF38-F\newline
 
 \subsubsection{UC11.4 - Rimozione di un impianto di illuminazione esistente da un'area illuminata}
 \textbf{Attore:} Amministratore.\newline
@@ -722,23 +722,6 @@ completamento del progetto:
 \end{enumerate}
 \textbf{Requisiti collegati:} RF15-O\newline
 
-\subsubsection{UC16 - Rimozione di area illuminata da elenco aree illuminate con guasti}
-\textbf{Attore:} Amministratore.\newline
-\textbf{PRE:} l'impianto è presente nel sistema come impianto guasto.\newline
-\textbf{POST:} l'impianto è presente nel sistema ma viene indicato come impianto attivo e non più come impianto guasto.\newline
-\textbf{Scenario principale:}
-% DA CONTROLLARE: ultimo pezzo modificato da verificare
-\begin{enumerate}
-    \item L'amministratore accede al sistema;
-    \item L'amministratore effettua il login con proprie credenziali;
-    \item L'amministratore avvia la procedura di rimozione di un impianto guasto;
-    \item Viene visualizzato l'elenco degli impianti guasti esistenti;
-    \item L'amministratore seleziona l'impianto che desidera rimuovere dall'elenco;
-    \item Viene ottenuta la conferma di rimozione;
-    \item L'impianto ritorna nella lista degli impianti attivi.
-\end{enumerate}
-\textbf{Requisiti collegati:} RF16-O\newline
-
 \subsubsection{UC17 - Aumento automatico dell'intensità luminosa di tutte le aree illuminate (globale)}
 \textbf{Attore:} Sistema di gestione degli impianti luminosi.\newline
 \textbf{PRE:} un'area illuminata configurata illumina con un intensità iniziale arbitraria.\newline
@@ -796,7 +779,7 @@ completamento del progetto:
 
 \subsubsection{UC22 - Inserimento automatico di un guasto ad un'area illuminata}
 \textbf{Attore:} Sistema di gestione degli impianti luminosi.\newline
-\textbf{PRE:} Si rileva una discrepanza tra luminonità attesa e luminosità rilevata dal sensore.\newline
+\textbf{PRE:} Si rileva una discrepanza tra luminosità attesa e luminosità rilevata dal sensore.\newline
 \textbf{POST:} Il sistema ha registrato il guasto inserendo l'area d'interesse nella lista di impianti guasti. \newline
 \textbf{Scenario principale:}
 \begin{enumerate}
@@ -819,6 +802,132 @@ completamento del progetto:
 \end{enumerate}
 \textbf{Requisiti collegati:} RF42-O\newline
 
+\subsubsection{UC24 - Visualizzazione informazione relative ad un impianto luminoso}
+\textbf{Attore: } Utente base, manutentore e amministratore.\newline
+\textbf{PRE: } L'attore non conosce le informazioni relative ad un impianto luminoso.\newline
+\textbf{POST: } L'attore ha visualizzato le informazioni relative ad un impianto luminoso.\newline
+\textbf{Scenario principale: }
+\begin{enumerate}
+    \item L'attore accede al sistema;
+    \item L'attore effettua il login con proprie credenziali;
+    \item L'attore accede alle informazioni dell'area alla quale appartiene l'impianto luminoso
+    \item L'attore seleziona l'impianto luminoso di cui vuole conoscere le informazioni;
+    \item L'attore visualizza le informazioni relative all'impianto luminoso.
+\end{enumerate}
+\textbf{Requisiti collegati: } RF43-O\newline
+
+\subsubsection{UC25 - Modifica delle informazioni di un impianto luminoso}
+\textbf{Attore: } Amministratore.\newline
+\textbf{PRE: } L'amministratore vuole modificare le informazioni relative ad un impianto luminoso.\newline
+\textbf{POST: } L'amministratore ha modificato le informazioni relative ad un impianto luminoso.\newline
+\textbf{Scenario principale: }
+\begin{enumerate}
+    \item L'amministratore accede al sistema;
+    \item L'amministratore effettua il login con proprie credenziali;
+    \item L'amministratore accede alle informazioni dell'area alla quale appartiene l'impianto luminoso;
+    \item L'amministratore seleziona l'impianto luminoso di cui vuole modificare le informazioni;
+    \item L'amministratore modifica le informazioni relative all'impianto luminoso;
+    \item L'amministratore conferma le modifiche.
+\end{enumerate}
+\textbf{Requisiti collegati: } RF44-O\newline
+
+\subsubsection{UC26 - Recupero lista sensori di un'area illuminata}
+\textbf{Attore: } Utente base, manutentore e amministratore.\newline
+\textbf{PRE: } L'attore vuole visualizzare la lista dei sensori di un'area illuminata.\newline
+\textbf{POST: } L'attore ha visualizzato la lista dei sensori di un'area illuminata.\newline
+\textbf{Scenario principale: }
+\begin{enumerate}
+    \item L'attore accede al sistema;
+    \item L'attore effettua il login con proprie credenziali;
+    \item L'attore accede alle informazioni dell'area alla quale appartiene il sensore;
+    \item L'attore visualizza la lista dei sensori.
+\end{enumerate}
+\textbf{Requisiti collegati: } RF45-O\newline
+
+\subsubsection{UC27 - Visualizzazione informazioni relative ad un sensore}
+\textbf{Attore: } Utente base, manutentore e amministratore.\newline
+\textbf{PRE: } L'attore non conosce le informazioni relative ad un sensore.\newline
+\textbf{POST: } L'attore ha visualizzato le informazioni relative ad un sensore.\newline
+\textbf{Scenario principale: }
+\begin{enumerate}
+    \item L'attore accede al sistema;
+    \item L'attore effettua il login con proprie credenziali;
+    \item L'attore accede alle informazioni dell'area alla quale appartiene il sensore;
+    \item L'attore seleziona il sensore di cui vuole conoscere le informazioni;
+    \item L'attore visualizza le informazioni relative al sensore.
+\end{enumerate}
+\textbf{Requisiti collegati: } RF46-O\newline
+
+\subsubsection{UC28 - Modifica delle informazioni di un sensore}
+\textbf{Attore: } Amministratore.\newline
+\textbf{PRE: } L'amministratore vuole modificare le informazioni relative ad un sensore.\newline
+\textbf{POST: } L'amministratore ha modificato le informazioni relative ad un sensore.\newline
+\textbf{Scenario principale: }
+\begin{enumerate}
+    \item L'amministratore accede al sistema;
+    \item L'amministratore effettua il login con proprie credenziali;
+    \item L'amministratore accede alle informazioni dell'area alla quale appartiene il sensore;
+    \item L'amministratore seleziona il sensore di cui vuole modificare le informazioni;
+    \item L'amministratore modifica le informazioni relative al sensore;
+    \item L'amministratore conferma le modifiche.
+\end{enumerate}
+\textbf{Requisiti collegati: } RF47-O\newline
+
+\subsubsection{UC29 - Registrazione nuovo utente}
+\textbf{Attore: } Amministratore.\newline
+\textbf{PRE: } L'amministratore vuole registrare un nuovo utente.\newline
+\textbf{POST: } L'amministratore ha registrato un nuovo utente.\newline
+\textbf{Scenario principale: }
+\begin{enumerate}
+    \item L'amministratore accede al sistema;
+    \item L'amministratore effettua il login con proprie credenziali;
+    \item L'amministratore avvia la procedura di registrazione di un nuovo utente;
+    \item L'amministratore inserisce i dati dell'utente da registrare;
+    \item L'amministratore conferma i dati inseriti;
+    \item L'amministratore conferma la registrazione.
+\end{enumerate}
+\textbf{Requisiti collegati: } RV3-F\newline
+
+\subsubsection{UC30 - Modifica utente}
+\textbf{Attore: } Amministratore.\newline
+\textbf{PRE: } L'amministratore vuole modificare un utente.\newline
+\textbf{POST: } L'amministratore ha modificato un utente.\newline
+\textbf{Scenario principale: }
+\begin{enumerate}
+    \item L'amministratore accede al sistema;
+    \item L'amministratore effettua il login con proprie credenziali;
+    \item L'amministratore avvia la procedura di modifica di un utente;
+    \item L'amministratore seleziona l'utente da modificare;
+    \item L'amministratore modifica i dati dell'utente;
+    \item L'amministratore conferma le modifiche.
+\end{enumerate}
+\textbf{Requisiti collegati: } RV4-F\newline
+
+\subsubsection{UC31 - Visualizzazione informazioni singola area illuminata}
+\textbf{Attore: } Utente base, manutentore e amministratore.\newline
+\textbf{PRE: } L'attore non conosce le informazioni relative ad un'area illuminata.\newline
+\textbf{POST: } L'attore ha visualizzato le informazioni relative ad un'area illuminata.\newline
+\textbf{Scenario principale: }
+\begin{enumerate}
+    \item L'attore accede al sistema;
+    \item L'attore effettua il login con proprie credenziali;
+    \item L'attore seleziona l'area illuminata di cui vuole conoscere le informazioni;
+    \item L'attore visualizza le informazioni relative all'area illuminata.
+\end{enumerate}
+\textbf{Requisiti collegati: } RF48-O\newline
+
+\subsubsection{UC32 - Recupero lista lampioni di un'area illuminata}
+\textbf{Attore: } Utente base, manutentore e amministratore.\newline
+\textbf{PRE: } L'attore vuole visualizzare la lista dei lampioni di un'area illuminata.\newline
+\textbf{POST: } L'attore ha visualizzato la lista dei lampioni di un'area illuminata.\newline
+\textbf{Scenario principale: }
+\begin{enumerate}
+    \item L'attore accede al sistema;
+    \item L'attore effettua il login con proprie credenziali;
+    \item L'attore accede alle informazioni dell'area alla quale appartiene il lampione;
+    \item L'attore visualizza la lista dei lampioni.
+\end{enumerate}
+\textbf{Requisiti collegati: } RF49-O\newline
 \newpage
 \section{Requisiti}
 Ogni requisito è identificato da un codice la cui struttura è definita nelle \textit{Norme di Progetto}.
@@ -861,8 +970,6 @@ Ogni requisito è identificato da un codice la cui struttura è definita nelle \
     \hline
     RF15-O & Il gestore può impostare la modalità di funzionamento automatico per l'impianto selezionato. & Obbligatorio & UC15 \\
     \hline
-    RF16-O & Il gestore può rimuovere un'area illuminata dall'elenco delle aree illuminate con guasti e ritorna nelle aree illuminate attive. & Obbligatorio & UC16 \\
-    \hline
     RF17-O & Inserimento di un nuovo sensore in un'area per essere gestito dal sistema. & Obbligatorio & UC11.1 \\
     \hline
     RF18-O & Il gestore può rimuovere dal sistema uno dei sensori registrati. & Obbligatorio & UC11.2\\
@@ -873,23 +980,23 @@ Ogni requisito è identificato da un codice la cui struttura è definita nelle \
     \hline
     RF21-O & Rilevamento della presenza di individui in modalità automatica in una delle aree illuminate & Obbligatorio & UC1.1 \\
     \hline
-    RF22-F & Rilevamento della presenza di individui su richesta in una delle aree illuminate & Facoltativo & UC1.2 \\
+    RF22-F & Rilevamento della presenza di individui su richiesta in una delle aree illuminate & Facoltativo & UC1.2 \\
     \hline
-    RF23-O & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato aumenta manualmente il livello di intesità luminosa di un'area illuminata & Obbligatorio & UC3.1 \\
+    RF23-O & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato aumenta manualmente il livello di intensità luminosa di un'area illuminata & Obbligatorio & UC3.1 \\
     \hline
-    RF24-F & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato aumenta manualmente il livello di intesità luminosa di più aree illuminate & Facoltativo & UC3.2 \\
+    RF24-F & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato aumenta manualmente il livello di intensità luminosa di più aree illuminate & Facoltativo & UC3.2 \\
     \hline
-    RF25-O & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato diminuisce manualmente il livello di intesità luminosa di un'area illuminata & Obbligatorio & UC4.1 \\
+    RF25-O & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato diminuisce manualmente il livello di intensità luminosa di un'area illuminata & Obbligatorio & UC4.1 \\
     \hline
-    RF26-F & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato diminuisce manualmente il livello di intesità luminosa di più aree illuminate & Facoltativo & UC4.2 \\
+    RF26-F & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato diminuisce manualmente il livello di intensità luminosa di più aree illuminate & Facoltativo & UC4.2 \\
     \hline
-    RF27-O & Una volta acquisito il livello di luminosità iniziale, il sistema aumenta automaticamente il livello di intesità luminosa di un'area illuminata & Obbligatorio & UC13.1 \\
+    RF27-O & Una volta acquisito il livello di luminosità iniziale, il sistema aumenta automaticamente il livello di intensità luminosa di un'area illuminata & Obbligatorio & UC13.1 \\
     \hline
-    RF28-F & Una volta acquisito il livello di luminosità iniziale, il sistema aumenta automaticamente il livello di intesità luminosa di più aree illuminate & Facoltativo & UC13.2 \\
+    RF28-F & Una volta acquisito il livello di luminosità iniziale, il sistema aumenta automaticamente il livello di intensità luminosa di più aree illuminate & Facoltativo & UC13.2 \\
     \hline
-    RF29-O & Una volta acquisito il livello di luminosità iniziale, il sistema diminuisce automaticamente il livello di intesità luminosa di un'area illuminata & Obbligatorio & UC14.1 \\
+    RF29-O & Una volta acquisito il livello di luminosità iniziale, il sistema diminuisce automaticamente il livello di intensità luminosa di un'area illuminata & Obbligatorio & UC14.1 \\
     \hline
-    RF30-F & Una volta acquisito il livello di luminosità iniziale, il sistema diminuisce automaticamente il livello di intesità luminosa di più aree illuminate & Facoltativo & UC14.2 \\
+    RF30-F & Una volta acquisito il livello di luminosità iniziale, il sistema diminuisce automaticamente il livello di intensità luminosa di più aree illuminate & Facoltativo & UC14.2 \\
     \hline
     RF31-F & Una volta rilevato un valore di intensità luminosa sotto soglia, il sistema provvede ad aumentare l'intensità luminosa. & Facoltativo & UC17\\
     \hline
@@ -903,9 +1010,9 @@ Ogni requisito è identificato da un codice la cui struttura è definita nelle \
     \hline
     RF36-F & Il sistema provvede ad inserire nella lista di impianti guasti l'area in cui è presente l'anomalia. & Facoltativo & UC22\\    
     \hline
-    RF37-F & Durante l'inserimento di un nuovo sensore si specifica il tipo di interazione automatico (push) con il sistema. & Facoltativo & UC11.1.2\\
+    RF37-F & Durante l'inserimento di un nuovo lampione si specifica il tipo di interazione automatico (push) con il sistema. & Facoltativo & UC11.3.2\\
     \hline
-    RF38-F & Durante l'inserimento di un nuovo sensore si specifica il tipo di interazione su richiesta (pull) con il sistema. & Facoltativo & UC11.1.3\\
+    RF38-F & Durante l'inserimento di un nuovo lampione si specifica il tipo di interazione su richiesta (pull) con il sistema. & Facoltativo & UC11.3.3\\
     \hline
     RF39-O & Durante l'inserimento di un nuovo sensore si specificano i dettagli relativi a tale sensore. & Obbligatorio & UC11.1.1\\
     \hline
@@ -914,6 +1021,20 @@ Ogni requisito è identificato da un codice la cui struttura è definita nelle \
     RF41-O & Durante l'inserimento di un nuovo sensore si specifica l'ampiezza del raggio d'azione del sensore che si sta aggiungendo. & Obbligatorio & UC11.1.5\\
     \hline
     RF42-O & L'impianto guasto viene riparato dal Manutentore e viene segnalato come nuovamente funzionante. & Obbligatorio & UC23\\
+    \hline
+    RF43-O & Visualizzazione di tutte le informazioni relative ad un impianto luminoso. & Obbligatorio & UC24\\
+    \hline
+    RF44-O & Modifica delle informazioni relative ad un impianto luminoso. & Obbligatorio & UC25\\
+    \hline
+    RF45-O & Recupero della lista dei sensori di un'area illuminata. & Obbligatorio & UC26\\
+    \hline
+    RF46-O & Visualizzazione di tutte le informazioni relative ad un sensore. & Obbligatorio & UC27\\
+    \hline
+    RF47-O & Modifica delle informazioni relative ad un sensore. & Obbligatorio & UC28\\
+    \hline
+    RF48-O & Visualizzazione di tutte le informazioni relative ad un'area illuminata. & Obbligatorio & UC31\\
+    \hline
+    RF49-O & Recupero della lista dei lampioni di un'area illuminata. & Obbligatorio & UC32\\
 
     
     
@@ -933,7 +1054,7 @@ Ogni requisito è identificato da un codice la cui struttura è definita nelle \
     \hline
     \textbf{Codice} & \textbf{Descrizione} & \textbf{Rilevanza} & \textbf{Fonti} \\
     \hline
-    RQ1-O & Test che dimostrino il corretto funzionamento dei servizi e delle funzionalità previste, con una copertura dell'80\% del codice. & Obbligatorio & Capitolato C2 \\
+    RQ1-O & Test che dimostrino il corretto funzionamento dei servizi e delle funzionalità previste, con una copertura dell'60-70\% del codice. & Obbligatorio & Capitolato C2 \\
     \hline
     RQ2-O & Documenti su scelte implementative e progettuale e relative motivazioni, i problemi aperti e le eventuali soluzioni proposte da approfondire. & Obbligatorio & Capitolato C2 \\
     \hline
@@ -952,6 +1073,10 @@ Ogni requisito è identificato da un codice la cui struttura è definita nelle \
     RV1-O & Essere in possesso delle credenziali di autenticazione per accedere al sistema. & Obbligatorio & UC5 \\
     \hline
     RV2-O & Essere in possesso delle credenziali specifiche per il manutentore. & Obbligatorio & UC8 \\
+    \hline
+    RV3-F & Registrazione nuovo utente da parte di un amministratore. & Facoltativo & UC29 \\
+    \hline
+    RV4-F & Modifica utente da parte di un amministratore. & Facoltativo & UC30 \\
     \bottomrule
 \end{longtable}
 
