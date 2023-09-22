@@ -1,9 +1,13 @@
-\documentclass[a4paper, 12pt]{article}
+\documentclass[a4paper, 11pt]{article}
 
 \newcommand{\templates}{../../template}
 \input{\templates/style}
 \input{\templates/front_page}
 \input{\templates/history}
+
+\usepackage{graphicx}
+\usepackage{float}
+\graphicspath{{img/}}
 
 \settitolo{Specifica Tecnica}
 \setprogetto{Lumos Minima}
@@ -15,15 +19,18 @@ Questo documento descrive la specifica architetturale del progetto, illustrando 
 }
 
 \addversione{0.0.0}{05/09/2023}{Soldà Matteo}{Alberti Nicolas}{Prima stesura.}
+\addversione{0.0.1}{20/09/2023}{Soldà Matteo}{Alberti Nicolas}{Stesura delle prime sezioni.}
 \begin{document}
 \makeindexdetails
 \makefrontpage \makeversioni
 \tableofcontents
 \newpage
+\listoffigures
 \clearpage
 \makecontentsdetails{Specifica Tecnica}
 \newpage
 \section{Introduzione}
+\subsection{Scopo del Documento}
 Questo documento ha lo scopo di descrivere nel dettaglio, sopratutto tramite diagrammi, le caratteristiche architetturali del prodotto software sviluppato.
 \subsection{Riferimenti Normativi}
 \begin{itemize}
@@ -43,8 +50,38 @@ Questo documento ha lo scopo di descrivere nel dettaglio, sopratutto tramite dia
 \end{itemize}
 
 \newpage
-\section{Architettura Logica}
+\section{Tecnologie Utilizzate}
+\subsection{Frontend}
+Per realizzare il frontend, ossia la parte di applicazione che viene eseguita sul browser dell'utente, sono state utilizzate le seguenti tecnologie:
+\begin{itemize}
+    \item React: libreria JavaScript per la creazione di interfacce utente;
+    \item Typescript: linguaggio di programmazione che estende JavaScript aggiungendo i tipi, permettendo una codifica più robusta e sicura;
+    \item Bootstrap: framework CSS per la creazione di interfacce responsive e accattivanti;
+\end{itemize}
+\subsection{Backend}
+Per realizzare il backend, ossia la parte di applicazione che viene eseguita sul server, sono state utilizzate le seguenti tecnologie:
+\begin{itemize}
+    \item Node.js: runtime JavaScript che permette di eseguire codice JavaScript lato server;
+    \item Typescript: linguaggio di programmazione che estende JavaScript aggiungendo i tipi, permettendo una codifica più robusta e sicura;
+    \item Express: framework che permette di creare applicazioni web e API più facilmente e con una miglior gestione;
+    \item Axios: client HTTP basato su promise per effettuare richieste HTTP basate su Promise;
+    \item Mongoose: libreria che permette di gestire in modo più semplice e intuitivo i database MongoDB;
+    \item Cors: middleware che permette di configurare in modo semplice e veloce le politiche CORS;
+    \item JWT: libreria che permette di gestire in modo semplice e veloce i token JWT;
+    \item Cron: libreria che permette di gestire in modo semplice e veloce i cronjob, ossia per la creazione di routine automatiche;
+\end{itemize}
 
+\subsection{Database}
+Il database utilizzato è di tipo NOSql, in particolare MongoDB, che permette di gestire documenti in formato BSON (Binary JSON).\\
+
+\subsection{Meccanismo di Comunicazione}
+Tutte le comunicazioni, sia esterne (da client a server) che interne (da server a server) sono state gestite tramite API REST.\\
+
+\newpage
+\section{Architettura Logica}
+\subsection{Frontend}
+\subsection{Backend}
+\subsection{Database}
 \newpage
 \section{Architettura di Deployment}
 
@@ -56,5 +93,39 @@ Questo documento ha lo scopo di descrivere nel dettaglio, sopratutto tramite dia
 
 \newpage
 \section{Altri Aspetti Progettuali Rilevanti}
+\subsection{Comunicazione Automatica}
+Per quanto riguarda il meccanismo che permette di aumentare e diminuire automaticamente la luminosità dei lampioni che si trovano dentro una determinata area illuminata, il soggetto principale sono i sensori: essi, qualora rilevassero il movimento di una persona, di un veicolo o di un animale, dovrebbero inviare una richiesta di tipo HTTP all'endpoint prestabilito. Alla ricezione della richiesta, il server si occuperà della gestione della stessa come descritto nel diagramma sottostante.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{sensori}
+    \caption{Diagramma di flusso del segnale relativo al movimento rilevato dai sensori.}
+\end{figure}
+Il token trova un utilizzo concreto solo per i lampioni dell'area che sono configurati in modalità PULL (manuale).\\ 
+Per questo motivo, di seguito c'è una piccola spiegazione di come viene gestito il rilevamento di movimento da entrambi i tipi di lampione:
+\begin{itemize}
+    \item PUSH: i lampioni si illuminano quando il sensore segnala un movimento, senza necessità di utilizzare il token
+    \item PULL: la parte di server vhe gestisce l'area illuminata, con cadenza regolare e definita dall'atributo \textit{polling time}, controlla nel database se c'è un token valido per l'area di riferimento:
+    \begin{itemize}
+        \item Se il token è valido e inutilizzato: illumina tutti i lampioni impostati in modalità PULL;
+        \item Se il token non è valido ma è stato utilizzato: riduce la luminosità di tutti i lampioni a quella iniziale;
+        \item Negli altri casi, verrà restituito un codice stato consono, ma senza effettuare nessun'altra azione.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Autenticazione e Autorizzazione tramite JWT}
+Dopo aver inserito le proprie credenziali nella login mask, se la password (criptata con hashing SHA512) coincide con quella dell'utente viene restituito un token JWT firmato dal server, una stringa che contiene informazioni sul ruolo dell'utente. L'autorizzazione (necessaria per l'accesso alle pagine dal lato “client”, e per utilizzare le API del server) sfrutta questo meccanismo:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{auth}
+    \caption{Diagramma di flusso del meccanismo di autorizzazione tramite JWT.}
+\end{figure}
+
+Tuttavia, il JWT è memorizzato (e inviato al server) all'interno di un cookie HTTP-Only: questo impedisce che il contenuto del cookie possa essere letto da codice JavaScript malevolo, vanificando così attacchi alla confidenzialità di tipo XSS (Cross-Site Scripting).\\\\
+Le API sono protette da due livelli di middleware che prendono in carico la richiesta HTTP.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{middleware}
+    \caption{Diagramma di flusso del meccanismo di autorizzazione tramite middleware.}
+\end{figure}
 
 \end{document}
