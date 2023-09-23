@@ -72,7 +72,7 @@ Per realizzare il backend, ossia la parte di applicazione che viene eseguita sul
 \end{itemize}
 
 \subsection{Database}
-Il database utilizzato è di tipo NOSql, in particolare MongoDB, che permette di gestire documenti in formato BSON (Binary JSON).\\
+Il database utilizzato è di tipo NoSQL, in particolare MongoDB, che permette di gestire documenti in formato BSON (Binary JSON).\\
 
 \subsection{Meccanismo di Comunicazione}
 Tutte le comunicazioni, sia esterne (da client a server) che interne (da server a server) sono state gestite tramite API REST.\\
@@ -80,19 +80,54 @@ Tutte le comunicazioni, sia esterne (da client a server) che interne (da server 
 \newpage
 \section{Architettura Logica}
 \subsection{Frontend}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{ArchitetturaClient}
+    \caption{Architettura del client.}
+\end{figure}
 \subsection{Backend}
-\subsection{Database}
-\newpage
-\section{Architettura di Deployment}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{ArchitetturaServer}
+    \caption{Architettura del server.}
+\end{figure}
 
 \newpage
 \section{Design Pattern}
-
-\newpage
-\section{Idiomi}
+Lumos Minima è un'applicazione web di tipo SPA (Single-page application) per la gestione di impianti luminosi e di sensori per la rilevazione del movimento associati ai primi, raggruppati in insiemi definiti aree illuminate.\\
+L'applicazione si avvale del cosiddetto stack MERN (dove le iniziali stanno rispettivamente per MongoDB, Express.JS, React.JS, Node.JS) e presenta un design architetturale “3-tier” dotata di un comparto client (presentazione), un server (“business logic”), e un database No-SQL per ospitare i dati (persistance). Tuttavia, invece di JavaScript “puro” si è preferito TypeScript, che viene compilato in JavaScript e fornisce un supporto opzionale della tipizzazione stretta. Il diagramma mostra le tecnologie di cui si serve ciascun layer.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{MERN}
+    \caption{Rappresentazione grafica dell'architettura MERN.}
+\end{figure}
+Questo sistema “a livelli” è stato scelto poiché, oltre a trattarsi di un sistema consolidato (e quindi che si prestasse a uno sviluppo anche gravato da vincoli temporali stringenti), consente in modo agevole il mock del layer sottostante in occasione dei test di unità, vista la necessità di raggiungere la percentuale di code coverage inizialmente indicata nel capitolato.
 
 \newpage
 \section{Altri Aspetti Progettuali Rilevanti}
+\subsection{Persistenza dei Dati}
+Per realizzare lo strato di persistenza dei dati, come precedentemente indicato, è stato utilizzato MongoDB, un database NoSQL che permette di gestire documenti in formato BSON (Binary JSON).\\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{Persistenza}
+    \caption{Struttura del database.}
+\end{figure}
+A differenza di un database di tipo SQL, in MongoDB, i dati sono raccolti in \textit{collezioni}. Queste \textit{collezioni} contengono uno, nessuno o una moltitudine di \textit{documenti}.\\
+Dato che nei database di tipo NoSQL non esiste il concetto di "relazione", ogni documento di tipo area conterrà un array di documenti di tipo sensore e un array di documenti di tipo lampione.\\\\
+Per quanto riguarda invece la comunicazione tra il server e il database, per poter comunicare i dati tra una parte e l'altra, sono stati utilizzati gli schemi di \textit{Mongoose} che permettevano di definire la struttura dei dati, i tipi di dati, i vincoli e le validazioni, oltre a fornire una interfaccia che permettesse di comunicare con il giusto tipo di dati.\\
+Di seguito la struttura dei documenti (e conseguentemente degli schemi) utilizzati:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{SchemaDB}
+    \caption{Struttura dei dati nel DB.}
+\end{figure}
+
+\subsection{Interfacciamento tra Sensori e Lampioni}
+Per accedere ai dati riguardanti un determinato lampione e/o sensore, abbiamo utilizzato la lettura di parametri dalla URL.\\ Ovviamente gli endpoint relativi ai sensori e ai lampioni sono distinti, infatti:
+\begin{itemize}
+    \item Endpoint sensori: \textit{/api/aree/$<$IdArea$>$/sensori/$<$IdSensore$>$};
+    \item Endpoint lampioni: \textit{/api/aree/$<$IdArea$>$/lampioni/$<$IdLampione$>$};
+\end{itemize}
 \subsection{Comunicazione Automatica}
 Per quanto riguarda il meccanismo che permette di aumentare e diminuire automaticamente la luminosità dei lampioni che si trovano dentro una determinata area illuminata, il soggetto principale sono i sensori: essi, qualora rilevassero il movimento di una persona, di un veicolo o di un animale, dovrebbero inviare una richiesta di tipo HTTP all'endpoint prestabilito. Alla ricezione della richiesta, il server si occuperà della gestione della stessa come descritto nel diagramma sottostante.
 \begin{figure}[H]
