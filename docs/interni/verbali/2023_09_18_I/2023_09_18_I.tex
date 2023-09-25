@@ -1,0 +1,75 @@
+\documentclass[a4paper, 12pt]{article}
+
+\newcommand{\templates} {../../../template}
+\input{\templates/style}
+\input{\templates/front_page}
+\input{\templates/history}
+
+\settitolo{Verbale del 11/09/2023}
+\setredattori{Alberti Nicolas}
+\setrevisori{Soldà Matteo}
+\setdestuso{interno}
+\setdescrizione{
+    Verbale dell'incontro del 18/09/2023
+}
+
+\begin{document}
+
+\makefrontpage
+
+\section*{Informazioni Generali}
+\begin{itemize}
+    \item Data e Ora: 18/09/2023 15:00
+    \item Durata: 1h
+    \item Piattaforma: Discord
+    \item Partecipanti
+          \begin{itemize}
+              \item Alberti Nicolas
+              \item Brotto Romina
+              \item Cavaliere Erica
+              \item Ceccato Francesco
+              \item Salami Lorenzo
+              \item Soldà Matteo
+          \end{itemize}
+\end{itemize}
+
+\section*{O.D.G}
+\begin{itemize}
+    \item Discussione sulla richiesta della valutazione \textit{MVP};
+    \item Discussione sullo stato di avanzamento dei documenti utili alla
+          revisione \textit{PB};
+    \item Varie ed Eventuali.
+\end{itemize}
+
+\section*{Conclusioni}
+Durante lo sprint corrente si è deciso di procedere con la richiesta di
+valutazione \textit{MVP} al signor Patera, così da poter procedere verso la
+revisione \textit{PB}.\\
+È avanzata la scrittura del \textit{Manuale Utente} e saranno ultimati anche i
+manuali per gli altri utenti della \textit{web app}, ossia il \textit{Manuale
+    Amministratore} e il \textit{Manuale Manutentore}.\\
+La stesura della Specifica Tecnica e della Specifica Architetturale sono in fase
+finale di scrittura, mentre mancano ancora alcuni unit test (issue \#1).\\
+È stato inoltre completato il \textit{middleware} che fornisce l'autorizzazione per l'accesso alla \textit{web app}.\\
+
+\section*{Impegni Assunti}
+
+Per la documentazione in LumosMinima:
+\begin{itemize}
+    \item Ultimare il \textit{Piano di Qualifica} (issue \#96);
+    \item Aggiornare il \textit{Piano di Progetto} allo sprint corrente;
+    \item Procedere con il Manuale Utente e i Manuali per tutti gli utilizzatori
+          menzionati prima (issue \#121);
+    \item Procedere con la Specifica Architetturale e la Specifica Tecnica
+          (issue \#106).
+\end{itemize}
+\vspace*{0.5cm}
+Per il codice presente nella repository LumosMinima-code:
+\begin{itemize}
+    \item Proseguire con gli unit test (issue \#1);
+    \item Chiudere la \textit{Pull Request} per la issue \#39;
+    \item Aggiornare il branch dei test con l'implementazione del
+          \textit{middleware} per l'accesso all'app (issue \#50);
+\end{itemize}
+
+\end{document}
