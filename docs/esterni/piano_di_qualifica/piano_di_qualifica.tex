@@ -24,7 +24,8 @@ Questo documento serve a definire le metriche e i criteri di accettazione dei pr
 \addversione{0.0.2}{24/07/2023}{Brotto Romina}{Ceccato Francesco}{Aggiunta sezione 3 ed indici}
 \addversione{0.1.0}{25/07/2023}{Brotto Romina}{Salami Lorenzo}{Verifica per RTB}
 \addversione{1.0.0}{25/07/2023}{Salami Lorenzo}{Brotto Romina}{Versione finale	per RTB}
-\addversione{1.0.1}{19/09/2023}{}{}{Versione per PB}
+\addversione{1.0.1}{19/09/2023}{Brotto Romina}{Salami Lorenzo}{Aggiunta sezione di test client}
+\addversione{1.0.2}{19/09/2023}{Brotto Romina}{}{Aggiunti test server}
 
 \begin{document}
 
@@ -139,74 +140,143 @@ influenzato il grafico dello schedule variance che è effettivamente sceso sotto
 Lo stesso si può riscontrare nella distanza tra il planned e l’earned value, che 
 è cresciuta particolarmente durante quegli sprint. 
 
-Il gruppo aveva tenuto in considerazione che ci sarebbe stato un calo di lavoro 
+Il gruppo aveva tenuto in considerazione che ci sarebbe stato un calo di lavoro durante gli sprint sopra indicati, prevedendo però di rientrare nei valori di tolleranza negli sprint successivi.
+
 
 
 \section{Attività di Testing}
-\subsection*{Test di unità}
+\subsection*{Test Client}
 \setlength\tabcolsep{4pt}
 \begin{center}
 	\begin{tabularx}{\textwidth}{|X|X|X|}
-		\hline
+	\hline
 		\textbf{Codice} & \textbf{Descrizione } & \textbf{Requisiti collegati } \\
 		\hline
-		TS1 &   Verifica che il client renderizzi correttamete la pagina di login.  &    RF5-O, RV1-O                   \\
+		TC1 &   Verifica che il client renderizzi correttamete la pagina di login.  &    RF5-O, RV1-O                   \\
 		\hline
-		TS2 &   Verifica che le credenziali inserite siano corrette e che al click del pulsante "Entra" il login abbia successo   &     RF5-O, RV1-O                   \\
+		TC2 &   Verifica che le credenziali inserite siano corrette e che al click del pulsante "Entra" il login abbia successo   &     RF5-O, RV1-O                   \\
 		\hline
-		TS3 & Verifica che le credenziali inserite non siano corrette e che al click del pulsante "Entra" il login \textit{non} abbia successo & RF5-O, RV1-O \\
+		TC3 & Verifica che le credenziali inserite non siano corrette e che al click del pulsante "Entra" il login \textit{non} abbia successo & RF5-O, RV1-O \\
 		\hline
-		T4 &  Verifica che il fetch delle informazioni riguardanti tutte le aree illuminate avvenga correttamente & RF7-O \\
+		TC4 &  Verifica che il fetch delle informazioni riguardanti tutte le aree illuminate avvenga correttamente & RF7-O \\
 		\hline
-		T5 &  Verifica che, dopo la cancellazione del lampione, esso sia effettvamente scomparso dalla lista & RF20-O \\
+		TC5 &  Verifica che, dopo la cancellazione del lampione, esso sia effettvamente scomparso dalla lista & RF20-O \\
 		\hline
-		T6 & Verifica che, dopo la cancellazione del sensore, esso sia effettvamente scomparso dalla lista & RF18-O \\
+		TC6 & Verifica che, dopo la cancellazione del sensore, esso sia effettvamente scomparso dalla lista & RF18-O \\
 		\hline
-		T7 & Verifica che il fetch delle informazioni per la singola area avvenga correttamente & ? \\
+		TC7 & Verifica che il fetch delle informazioni per la singola area avvenga correttamente & RF10-O \\
 		\hline
-		T8 & Verifica che la riconfigurazione dell'area illuminata avvenga con successo & RF11-O \\
+		TC8 & Verifica che la riconfigurazione dell'area illuminata avvenga con successo & RF11-O \\
 		\hline
-		T9 & Verifica che la rimozione dell'area illuminata avvenga con successo & RF12-O \\
+		TC9 & Verifica che la rimozione dell'area illuminata avvenga con successo & RF12-O \\
 		\hline
-		T10 & Verifica che la rimozione dell'area illuminata venga annullata senza modificarne il contenuto & Rf12-O \\
+		TC10 & Verifica che la rimozione dell'area illuminata venga annullata senza modificarne il contenuto & Rf12-O \\
 		\hline
-		T11 & Verifica che la pagina di elenco aree illuminate si carichi correttamente (anche se vuota) & RF7-O \\
+		TC11 & Verifica che la pagina di elenco aree illuminate si carichi correttamente (anche se vuota) & RF7-O \\
 		\hline
-		T12 & Verifica che il form di modifica area illuminata venga visualizzato correttamente & RF11-O \\
+		TC12 & Verifica che il form di modifica area illuminata venga visualizzato correttamente & RF11-O \\
 		\hline
-		T13 & Verifica che il footer comune a tutte le pagine venga visualizzato correttamente & - \\
-		\hline
-		T14 & logout (header.test del client) & \\
-		\hline
-		T15 & render del footer (header.test del client) & \\
-		\hline
-		T16 & Verifica che il render della scheda dettagli lampione sia visualizzata correttamente & RF19-O \\
-		\hline
-		T16 & Verifica che il render della pagina dedicata all'elenco aree illuminate segnalate guaste avvenga correttamente & RF8-O, RV2-O \\
-		\hline
-		T17 & Verifica che il load della tabella per l'elenco delle aree illuminate segnalate guaste avvenga correttamente & RF8-O, RV2-O \\
-		\hline
-		T18 & Verifica che la rimozione dell'area illuminata dall'elenco delle aree guaste avvenga con successo & RF16-O \\
-		\hline
-		T19 & Verifica che la rimozione dell'area illuminata dall'elenco delle aree guaste venga annullata \\
-		\hline
-		T20 & Verifica che il caricamento dei dati relativi al lampione avvenga correttamente & - \\
-		\hline 
-		T21 & Verifica se sono presenti header, main e footer in tutte le pagine & - \\
-		\hline
-		T22 & Verifica che il caricamento dei dati relativi al sensore avvenga correttamente & RF39-O \\
-		\hline
-		T23 &  Verifica che il sensore invii correttamente il segnale per scatenare la modifica dell'intensità luminosa del lampione & RF27-O,RF14-O\\ 
 	\end{tabularx}\\[8pt]
 	\mbox{}\\
 \end{center}
 
+\begin{center}
+	\begin{tabularx}{\textwidth}{|X|X|X|}
+	\hline
+		\hline
+		TC13 & Verifica che il footer comune a tutte le pagine venga visualizzato correttamente & - \\
+		\hline
+		TC14 & Verifica che il render del modulo header per il logout e il footer avvengano correttamente & - \\
+		\hline
+		TC16 & Verifica che il render della scheda dettagli lampione sia visualizzata correttamente & RF19-O \\
+		\hline
+		T16 & Verifica che il render della pagina dedicata all'elenco aree illuminate segnalate guaste avvenga correttamente & RF8-O, RV2-O \\
+		\hline
+		TC17 & Verifica che il load della tabella per l'elenco delle aree illuminate segnalate guaste avvenga correttamente & RF8-O, RV2-O \\
+		\hline
+		TC18 & Verifica che la rimozione dell'area illuminata dall'elenco delle aree guaste avvenga con successo & RF16-O \\
+		\hline
+		TC19 & Verifica che la rimozione dell'area illuminata dall'elenco delle aree guaste venga annullata & RF12-O\\
+		\hline
+		TC20 & Verifica che il caricamento dei dati relativi al lampione avvenga correttamente & RF11-O \\
+		\hline 
+		TC21 & Verifica se sono presenti header, main e footer in tutte le pagine & - \\
+		\hline
+		TC22 & Verifica che il caricamento dei dati relativi al sensore avvenga correttamente & RF39-O \\
+		\hline
+		TC23 &  Verifica che il sensore invii correttamente il segnale per scatenare la modifica dell'intensità luminosa del lampione & RF27-O,RF14-O\\ 
+		\hline
+	\end{tabularx}\\[8pt]
+	\mbox{}\\
+\end{center}
 
-\subsection*{Test di sistema}
-\subsection*{Test di accettazione}
-\subsection*{Test di integrazione}
+\subsection*{Test Server}
+\setlength\tabcolsep{4pt}
+\begin{center}
+	\begin{tabularx}{\textwidth}{|X|X|X|}
+	\hline
+		\textbf{Codice} & \textbf{Descrizione } & \textbf{Requisiti collegati } \\
+		\hline
+		TS1 & Verifica che il meccanismo di login funzioni correttamente   &        \\
+		\hline
+		TS2 &  Verifica che il meccanismo di logout funzioni correttamente: ritorna 403 se non è stato passato un token valido, Ritorna 200 se è stato passato un token valido    &       \\
+		\hline
+		TS3 & Verifica che la registrazione di un nuovo utente avvenga correttamente: ritorna 200 e crea un nuovo utente con successo, ritorna errore 409 se l'username esiste già, ritorna errore 409 se la mail esiste già. &  \\
+		\hline
+		TS4 &  Verifica sl passaggio dei token: ritorna 403 se non è stato passato un token valido, ritorna 200 se è stato passato un token valido.  & \\
+		\hline
+		TS5 & Verifica il recupero della lista utenti: lista completa e/o utente specifico se l'utente è admin, ritorna 500 se l'utente non è autorizzato.   &  \\
+		\hline
+		TS6 & Verifica che l'aagiornamento dati utente avvenga correttamente: ritorna 404 se l'utente non è presente, 200 se l'utente è stato aggiornato. &  \\
+		\hline
+		TS7 & Verifica che i dati dell'area illuminata vengano ricevuti correttamente in modalità GET: ritorna 500 se non è possibile recuperare le aree, ritorna 200 e l'area in base all'id fornito, ritorna 404 se l'area non è presente, 500 se non è possibile recuperare l'area specificata dall'id fornito &  \\
+		\hline
+	\end{tabularx}\\[8pt]
+	\mbox{}\\
+\end{center}
+		
+\begin{center}
+	\begin{tabularx}{\textwidth}{|X|X|X|}
+	\hline
+		TS8 & Verifica il funzionamento della creazione di un'area illuminata in modalità POST: ritorna 200 se l'area viene creata correttamente, 500 altrimenti. & \\
+		\hline
+		TS9 & Verifica che l'aggiornamento di un'area in modalità PUT avvenga correttamente: ritorna 200 se l'area viene aggiornata correttamente, 404 se l'area non viene trovata, 500 se l'area non viene aggiornata correttamente.  &  \\
+		\hline
+		TS10 & Verifica l'eliminazione di un'area: ritorna 200 se l'area viene eliminata correttamente, 404 l'area da eliminare non viene trovata, 500 se avviene un errore,    & Rf12-O \\
+		\hline
+		TS11 &  Verifica del recupero delle info del singolo lampione in modalità GET: ritorna 200 nel recupero del singolo lampione, 404 nel recupero di un lampione non esistente e di un lampione di un'area non esistente, 500 nel caso di un errore durante il recupero.   &  \\
+		\hline
+		TS12 &  Verifica del recupero delle info di tutti i lampioni in modalità GET: ritorna 200 se recupera correttamente tutti i lampioni,  404 se non viene trovata l'area di riferimento, 500 se avviene un errore durante il recupero.  &  \\
+		\hline
+		TS13 & Verifica per l'inserimento di un lampione in modalità POST: ritorna 200 se il lampione viene aggiunto. & \\
+		\hline
+	\end{tabularx}\\[8pt]
+	\mbox{}\\
+\end{center}
 
-durante gli sprint sopra indicati, prevedendo però di rientrare nei valori di tolleranza negli sprint successivi.
+\begin{center}
+	\begin{tabularx}{\textwidth}{|X|X|X|}
+		\hline
+		TS14 & Verifica del recupero delle informazioni dei sensori in modalità GET: se l'area esiste ritorna 200 e la lista di tutti i sensori presenti, ritorna 404 se l'area non esiste, 500 se non è possibile recuperare l'area specificata dall'id. & \\
+		\hline
+		TS15 & Verifica del recupero delle info del singolo sensore in modalità GET: ritorna 200 se area e sensore richiesti esistono, 404 se l'area esiste ma non il sensore o l'area non esiste & \\
+		\hline
+		TS16 & Verifica per l'inserimento di un sensore in modalità POST: ritorna 200 se l'area esiste.  & \\
+		\hline
+		TS17 & Verifica per la modifica di un sensore in modalità PUT: ritorna 200 se il sensore che si cerca di modificare esiste, 404 se non esiste & \\
+		\hline
+		TS18 & Verifica funzionamento accensione e spegnimento in modalità PUSH: ritorna 400 se l'area non è stata trovata, ritorna 200 se esiste l'area e i lampioni vengono accesi, 500 in caso di errore & \\
+		\hline
+		TS19 & Verifica il post di un segnale: ritorna 200 ed aggiunge il segnale & \\
+		\hline
+		TS20 & Verifica la generazione di un token: ritorna 200 se il token viene generato correttamente. & \\
+		\hline
+		TS21 & Verifica di un token: ritorna 226 se il token è stato utilizzato, ritorna 200 se il token è valido ed è stato utilizzato ma vanno spenti i lampioni. & \\
+		\hline
+	\end{tabularx}\\[8pt]
+	\mbox{}\\
+\end{center}
+
 
 \subsection{Planning Value, Actual Cost e Earned Value}
 \begin{center}
