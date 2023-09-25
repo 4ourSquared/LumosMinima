@@ -9,11 +9,12 @@ Revisioni:
 - [x] Way of Working
 - [x] Requirements and Technology Baseline
 - [ ] Product Baseline
-- [ ] Customer Acceptance
+
+La fase di di Customer Acceptance è stata scartata per mancanza di tempo.
 
 Le varie fasi del progetto sono cronologicamente ordinate dalla più recente alla meno recente. Per visualizzare tutti i documenti creati o modificati riguardanti una determinata fase, premere sul triangolo situato a fianco del nome della stessa.
 
-<small>Qualora un file fosse stato modificato tra una fase e l'altra, al suo fianco verrà apposta la parola "aggiornato" tra parentesi tonde. I file inseriti per la prima volta all'interno della repository non riporteranno nessun termine.</small>
+<small>Qualora un file fosse stato modificato tra una revisione e l'altra, al suo fianco verrà apposta la parola "aggiornato" tra parentesi tonde. I file inseriti per la prima volta all'interno della repository non riporteranno nessun termine.</small>
 
 ---
 
