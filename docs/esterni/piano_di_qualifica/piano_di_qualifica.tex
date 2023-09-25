@@ -213,81 +213,74 @@ Il gruppo aveva tenuto in considerazione che ci sarebbe stato un calo di lavoro 
 \subsection*{Test Server}
 \setlength\tabcolsep{4pt}
 \begin{center}
-	\begin{tabularx}{\textwidth}{|X|X|X|}
+	\begin{tabularx}{\textwidth}{|X|X|}
 	\hline
-		\textbf{Codice} & \textbf{Descrizione } & \textbf{Requisiti collegati } \\
+		\textbf{Codice} & \textbf{Descrizione }  \\
 		\hline
-		TS1 & Verifica che il meccanismo di login funzioni correttamente   &        \\
+		TS1 & Verifica che il meccanismo di login funzioni correttamente           \\
 		\hline
-		TS2 &  Verifica che il meccanismo di logout funzioni correttamente: ritorna 403 se non è stato passato un token valido, Ritorna 200 se è stato passato un token valido    &       \\
+		TS2 &  Verifica che il meccanismo di logout funzioni correttamente: ritorna 403 se non è stato passato un token valido, Ritorna 200 se è stato passato un token valido           \\
 		\hline
-		TS3 & Verifica che la registrazione di un nuovo utente avvenga correttamente: ritorna 200 e crea un nuovo utente con successo, ritorna errore 409 se l'username esiste già, ritorna errore 409 se la mail esiste già. &  \\
+		TS3 & Verifica che la registrazione di un nuovo utente avvenga correttamente: ritorna 200 e crea un nuovo utente con successo, ritorna errore 409 se l'username esiste già, ritorna errore 409 se la mail esiste già.   \\
 		\hline
-		TS4 &  Verifica sl passaggio dei token: ritorna 403 se non è stato passato un token valido, ritorna 200 se è stato passato un token valido.  & \\
+		TS4 &  Verifica sl passaggio dei token: ritorna 403 se non è stato passato un token valido, ritorna 200 se è stato passato un token valido.   \\
 		\hline
-		TS5 & Verifica il recupero della lista utenti: lista completa e/o utente specifico se l'utente è admin, ritorna 500 se l'utente non è autorizzato.   &  \\
+		TS5 & Verifica il recupero della lista utenti: lista completa e/o utente specifico se l'utente è admin, ritorna 500 se l'utente non è autorizzato.   \\
 		\hline
-		TS6 & Verifica che l'aagiornamento dati utente avvenga correttamente: ritorna 404 se l'utente non è presente, 200 se l'utente è stato aggiornato. &  \\
+		TS6 & Verifica che l'aagiornamento dati utente avvenga correttamente: ritorna 404 se l'utente non è presente, 200 se l'utente è stato aggiornato.   \\
 		\hline
-		TS7 & Verifica che i dati dell'area illuminata vengano ricevuti correttamente in modalità GET: ritorna 500 se non è possibile recuperare le aree, ritorna 200 e l'area in base all'id fornito, ritorna 404 se l'area non è presente, 500 se non è possibile recuperare l'area specificata dall'id fornito &  \\
+		TS7 & Verifica che i dati dell'area illuminata vengano ricevuti correttamente in modalità GET: ritorna 500 se non è possibile recuperare le aree, ritorna 200 e l'area in base all'id fornito, ritorna 404 se l'area non è presente, 500 se non è possibile recuperare l'area specificata dall'id fornito.   \\
 		\hline
-	\end{tabularx}\\[8pt]
-	\mbox{}\\
-\end{center}
-		
-\begin{center}
-	\begin{tabularx}{\textwidth}{|X|X|X|}
-	\hline
-		TS8 & Verifica il funzionamento della creazione di un'area illuminata in modalità POST: ritorna 200 se l'area viene creata correttamente, 500 altrimenti. & \\
+		TS8 & Verifica il funzionamento della creazione di un'area illuminata in modalità POST: ritorna 200 se l'area viene creata correttamente, 500 altrimenti.  \\
 		\hline
-		TS9 & Verifica che l'aggiornamento di un'area in modalità PUT avvenga correttamente: ritorna 200 se l'area viene aggiornata correttamente, 404 se l'area non viene trovata, 500 se l'area non viene aggiornata correttamente.  &  \\
-		\hline
-		TS10 & Verifica l'eliminazione di un'area: ritorna 200 se l'area viene eliminata correttamente, 404 l'area da eliminare non viene trovata, 500 se avviene un errore,    & Rf12-O \\
-		\hline
-		TS11 &  Verifica del recupero delle info del singolo lampione in modalità GET: ritorna 200 nel recupero del singolo lampione, 404 nel recupero di un lampione non esistente e di un lampione di un'area non esistente, 500 nel caso di un errore durante il recupero.   &  \\
-		\hline
-		TS12 &  Verifica del recupero delle info di tutti i lampioni in modalità GET: ritorna 200 se recupera correttamente tutti i lampioni,  404 se non viene trovata l'area di riferimento, 500 se avviene un errore durante il recupero.  &  \\
-		\hline
-		TS13 & Verifica per l'inserimento di un lampione in modalità POST: ritorna 200 se il lampione viene aggiunto. & \\
+		TS9 & Verifica che l'aggiornamento di un'area in modalità PUT avvenga correttamente: ritorna 200 se l'area viene aggiornata correttamente, 404 se l'area non viene trovata, 500 se l'area non viene aggiornata correttamente.   \\
 		\hline
 	\end{tabularx}\\[8pt]
 	\mbox{}\\
 \end{center}
 
 \begin{center}
-	\begin{tabularx}{\textwidth}{|X|X|X|}
+	\begin{tabularx}{\textwidth}{|X|X|}
 		\hline
-		TS14 & Verifica del recupero delle informazioni dei sensori in modalità GET: se l'area esiste ritorna 200 e la lista di tutti i sensori presenti, ritorna 404 se l'area non esiste, 500 se non è possibile recuperare l'area specificata dall'id. & \\
+		TS10 & Verifica l'eliminazione di un'area: ritorna 200 se l'area viene eliminata correttamente, 404 l'area da eliminare non viene trovata, 500 se avviene un errore. \\
 		\hline
-		TS15 & Verifica del recupero delle info del singolo sensore in modalità GET: ritorna 200 se area e sensore richiesti esistono, 404 se l'area esiste ma non il sensore o l'area non esiste & \\
+		TS11 &  Verifica del recupero delle info del singolo lampione in modalità GET: ritorna 200 nel recupero del singolo lampione, 404 nel recupero di un lampione non esistente e di un lampione di un'area non esistente, 500 nel caso di un errore durante il recupero.     \\
 		\hline
-		TS16 & Verifica per l'inserimento di un sensore in modalità POST: ritorna 200 se l'area esiste.  & \\
+		TS12 &  Verifica del recupero delle info di tutti i lampioni in modalità GET: ritorna 200 se recupera correttamente tutti i lampioni,  404 se non viene trovata l'area di riferimento, 500 se avviene un errore durante il recupero.   \\
 		\hline
-		TS17 & Verifica per la modifica di un sensore in modalità PUT: ritorna 200 se il sensore che si cerca di modificare esiste, 404 se non esiste & \\
+		TS13 & Verifica per l'inserimento di un lampione in modalità POST: ritorna 200 se il lampione viene aggiunto. \\
 		\hline
-		TS18 & Verifica funzionamento accensione e spegnimento in modalità PUSH: ritorna 400 se l'area non è stata trovata, ritorna 200 se esiste l'area e i lampioni vengono accesi, 500 in caso di errore & \\
+		TS14 & Verifica del recupero delle informazioni dei sensori in modalità GET: se l'area esiste ritorna 200 e la lista di tutti i sensori presenti, ritorna 404 se l'area non esiste, 500 se non è possibile recuperare l'area specificata dall'id.  \\
 		\hline
-		TS19 & Verifica il post di un segnale: ritorna 200 ed aggiunge il segnale & \\
+		TS15 & Verifica del recupero delle info del singolo sensore in modalità GET: ritorna 200 se area e sensore richiesti esistono, 404 se l'area esiste ma non il sensore o l'area non esiste \\
 		\hline
-		TS20 & Verifica la generazione di un token: ritorna 200 se il token viene generato correttamente. & \\
+		TS16 & Verifica per l'inserimento di un sensore in modalità POST: ritorna 200 se l'area esiste.   \\
 		\hline
-		TS21 & Verifica di un token: ritorna 226 se il token è stato utilizzato, ritorna 200 se il token è valido ed è stato utilizzato ma vanno spenti i lampioni. & \\
+		TS17 & Verifica per la modifica di un sensore in modalità PUT: ritorna 200 se il sensore che si cerca di modificare esiste, 404 se non esiste  \\
+		\hline
+		TS18 & Verifica funzionamento accensione e spegnimento in modalità PUSH: ritorna 400 se l'area non è stata trovata, ritorna 200 se esiste l'area e i lampioni vengono accesi, 500 in caso di errore  \\
+		\hline
+		TS19 & Verifica il post di un segnale: ritorna 200 ed aggiunge il segnale  \\
+		\hline
+		TS20 & Verifica la generazione di un token: ritorna 200 se il token viene generato correttamente.  \\
+		\hline
+		TS21 & Verifica di un token: ritorna 226 se il token è stato utilizzato, 200 se il token è valido ed è stato usato ma vanno spenti i lampioni.  \\
 		\hline
 	\end{tabularx}\\[8pt]
 	\mbox{}\\
 \end{center}
 
-
-\subsection{Planning Value, Actual Cost e Earned Value}
+\section{Metriche}
+\subsection*{Planning Value, Actual Cost e Earned Value}
 \begin{center}
 	\includegraphics[scale=0.5]{AC_PV_EV.png}
 \end{center}
-\subsection{Cost Variance e Schedule Variance}
+\subsection*{Cost Variance e Schedule Variance}
 \begin{center}
 	\includegraphics[scale=0.5]{Cost_Variance_Schedule_Variance.png}
 \end{center}
 
-\subsection{Eastimate at completition e Estimate to Complete}
+\subsection*{Eastimate at completition e Estimate to Complete}
 \begin{center}
 	\includegraphics[scale=0.6]{EAC_ETC.png}
 \end{center}
@@ -296,7 +289,7 @@ Il gruppo aveva tenuto in considerazione che ci sarebbe stato un calo di lavoro 
 	\includegraphics[scale=0.6]{CPI.png}
 \end{center}
 
-\subsection{Indice di Gulpease}
+\subsection*{Indice di Gulpease}
 I valori riportati sono frutto di un'analisi approssimativa, usando la libreria PyPdf2 per Python 3.
 \begin{center}
 	\begin{tabularx}{\textwidth}{|X|X|X|X|X|}
