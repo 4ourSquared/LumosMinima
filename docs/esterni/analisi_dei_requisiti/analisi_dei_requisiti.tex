@@ -32,8 +32,8 @@ Questo documento si occupa di riportare un'analisi di tutti gli elementi richies
 \addversione{1.0.0}{20/07/2023}{Soldà Matteo}{Brotto Romina}{Approvazione per candidatura RTB}
 \addversione{1.0.1}{09/08/2023}{Brotto Romina}{Cavaliere Erica}{Aggiornamento con requisiti di Qualità e requisiti di Vincolo}
 \addversione{1.0.2}{19/09/2023}{Soldà Matteo}{Ceccato Francesco}{Aggiornamento UC e requisiti in accordo con ultimi incontri effettuati con Imola Informatica}
-\addversione{1.1.0}{25/09/2023}{Alberti Nicolas}{Soldà Matteo}{Verifica per PB}
-\addversione{2.0.0}{25/09/2023}{Soldà Matteo}{Alberti Nicolas}{Approvazione per candidatura PB}
+\addversione{1.1.0}{26/09/2023}{Alberti Nicolas}{Soldà Matteo}{Verifica per \textit{PB}}
+\addversione{2.0.0}{26/09/2023}{Soldà Matteo}{Alberti Nicolas}{Approvazione per candidatura \textit{PB}}
 
 
 \def\pgfcalendarmonthitname#1{%
@@ -47,7 +47,7 @@ Questo documento si occupa di riportare un'analisi di tutti gli elementi richies
 \tableofcontents
 \newpage
 \clearpage
-\makecontentsdetails{Analisi dei requisiti} 
+\makecontentsdetails{Analisi dei requisiti}
 
 \section{Introduzione}
 \subsection{Scopo del Documento}
@@ -57,7 +57,7 @@ Bisognerà che ci sia anche un modo per registrare i guasti degli impianti e seg
 \subsection{Riferimenti}
 \subsubsection*{Riferimenti normativi}
 \begin{itemize}
-    \item Capitolato d'appalto: C2; 
+    \item Capitolato d'appalto: C2;
     \item Norme di Progetto.
 \end{itemize}
 
@@ -79,7 +79,7 @@ Il sistema sopra citato consentirebbe di garantire sicurezza stradale e sociale,
     \item Segnalazione manuale del guasto di un impianto di illuminazione;
     \item Aumento e riduzione manuale dell'intensità luminosa;
     \item Inserimento e gestione di un impianto luminoso;
-    \item Aumento o riduzione globale dell'intensità luminosa. 
+    \item Aumento o riduzione globale dell'intensità luminosa.
 \end{itemize}
 
 \subsection{Parti del Prodotto}
@@ -87,25 +87,25 @@ Il prodotto si compone delle seguenti parti: % BOZZA
 \begin{itemize}
     \item \textit{Landing page\textsubscript{G}} per permettere l'autenticazione dell'operatore;
     \item \textit{Web App\textsubscript{G}} con \textit{dashboard\textsubscript{G}} per visualizzare, selezionare tutti i gruppi di
-    impianti luminosi ed interagire con essi;
+          impianti luminosi ed interagire con essi;
     \item \textit{BackEnd\textsubscript{G}} server che opera effettivamente sui lampioni.
 \end{itemize}
 % BOZZA - DA DEFINIRE
 Per ogni impianto luminoso deve essere prevista una modalità a funzionamento
 automatico ed una modalità a funzionamento manuale, in cui l'operatore potrà
-configurare a proprio piacimento gli elementi dell'impianto. 
+configurare a proprio piacimento gli elementi dell'impianto.
 \subsection{Caratteristiche utenti}
 La Web App prevede due tipologie di utenti:
 \begin{itemize}
     \item operatore non autenticato, che può: \begin{itemize}
-        \item visualizzare la landing page;
-        \item accedere al servizio previo possesso di credenziali autenticate.
-    \end{itemize}
+              \item visualizzare la landing page;
+              \item accedere al servizio previo possesso di credenziali autenticate.
+          \end{itemize}
     \item operatore autenticato, che può: \begin{itemize}
-        \item visualizzare tutti gli impianti luminosi gestiti dall'organizzazione;
-        \item interagire con ogni impianto e modificarne il funzionamento;
-        \item visualizzare eventuali errori e/o guasti.
-    \end{itemize}
+              \item visualizzare tutti gli impianti luminosi gestiti dall'organizzazione;
+              \item interagire con ogni impianto e modificarne il funzionamento;
+              \item visualizzare eventuali errori e/o guasti.
+          \end{itemize}
 \end{itemize}
 % BOZZA - DA DEFINIRE
 Il prodotto si rivolge a tutte le organizzazioni che necessitano di gestire un
@@ -126,21 +126,21 @@ Per il completamento del progetto il proponente richiede che siano ottenuti i
 seguenti risultati:
 \begin{itemize}
     \item applicazione Web Responsive che soddisfi i requisiti obbligatori
-    illustrati dai casi d'uso;
+          illustrati dai casi d'uso;
     \item test che dimostrino il corretto funzionamento dei servizi e delle
-    funzionalità previste, con una copertura minima dell'80\%;
+          funzionalità previste, con una copertura minima dell'80\%;
     \item documentazione sulle scelte implementative e progettuali con le
-    motivazioni e i problemi aperti ed eventuali soluzioni da esplorare.
+          motivazioni e i problemi aperti ed eventuali soluzioni da esplorare.
 \end{itemize}
 Sono di interesse altri due risultati desiderabili ma non vincolanti al fine del
 completamento del progetto:
 \begin{itemize}
     \item cifratura di tutte le comunicazioni fra App e Server per garantire la
-    validità delle informazioni;
+          validità delle informazioni;
     \item analisi riguardante sia il carico massimo supportato in numero di
-    dispositivi che del servizio cloud più adatto per supportarlo
-    analizzando prezzo, stabilità, del servizio ed assistenza.
-\end{itemize} 
+          dispositivi che del servizio cloud più adatto per supportarlo
+          analizzando prezzo, stabilità, del servizio ed assistenza.
+\end{itemize}
 \newpage
 \section{Casi d'uso}
 
@@ -194,7 +194,7 @@ completamento del progetto:
     \item Il sistema elabora l'informazione ricevuta, aumenta l'intensità luminosa dell'area (include[UC17]) per un certo tempo;
     \item A seguire, l'intensità luminosa dell'area viene riportata al valore di default.
 \end{enumerate}
-\textbf{Requisiti collegati:} RF1-O\newline 
+\textbf{Requisiti collegati:} RF1-O\newline
 
 \subsubsection{UC1.1 - Rilevamento presenza di persone automatico}
 \textbf{Attore:} Sensore.\newline
@@ -330,7 +330,7 @@ completamento del progetto:
 \textbf{Requisiti collegati:} RF26-F\newline
 
 \subsubsection{UC5 - Login}
-\textbf{Attore:} 
+\textbf{Attore:}
 \begin{itemize}
     \item Utente non autenticato;
     \item Sistema di autenticazione.
@@ -346,10 +346,10 @@ completamento del progetto:
 \textbf{Estensioni:}
 \begin{itemize}
     \item [a.] Le credenziali inserite non sono corrette;
-    \begin{enumerate}
-        \item Viene visualizzato un errore;
-        \item L'utente deve immettere nuovamente le proprie credenziali.
-    \end{enumerate}
+          \begin{enumerate}
+              \item Viene visualizzato un errore;
+              \item L'utente deve immettere nuovamente le proprie credenziali.
+          \end{enumerate}
 \end{itemize}
 \textbf{Requisiti collegati:} RF5-O, RV1-O\newline
 
@@ -512,10 +512,10 @@ completamento del progetto:
 \textbf{Estensioni:}
 \begin{itemize}
     \item [a.] L'amministratoere non conferma la rimozione alla richiesta di conferma;
-    \begin{enumerate}
-        \item Il sistema non subisce modifiche;
-        \item L'amministratore visualizzerà l'elenco delle aree illuminate;
-    \end{enumerate}
+          \begin{enumerate}
+              \item Il sistema non subisce modifiche;
+              \item L'amministratore visualizzerà l'elenco delle aree illuminate;
+          \end{enumerate}
 \end{itemize}
 \textbf{Requisiti collegati:} RF18-O\newline
 
@@ -582,15 +582,15 @@ completamento del progetto:
 \textbf{Estensioni:}
 \begin{itemize}
     \item [a.] L'amministratoere non conferma la rimozione alla richiesta di conferma;
-    \begin{enumerate}
-        \item Viene visualizzato l'elenco degli impianti luminosi esistenti;
-        \item L'amministratore dovrà selezionare un impianto luminoso da eliminare o annullare la procedura;
-    \end{enumerate}
+          \begin{enumerate}
+              \item Viene visualizzato l'elenco degli impianti luminosi esistenti;
+              \item L'amministratore dovrà selezionare un impianto luminoso da eliminare o annullare la procedura;
+          \end{enumerate}
     \item [b.] Viene annullata la procedura di rimozione;
-    \begin{enumerate}
-        \item La lista degli impianti luminosi non subisce modifiche;
-        \item Viene visualizzata la schermata principale.
-    \end{enumerate}
+          \begin{enumerate}
+              \item La lista degli impianti luminosi non subisce modifiche;
+              \item Viene visualizzata la schermata principale.
+          \end{enumerate}
 \end{itemize}
 \textbf{Requisiti collegati:} RF20-O\newline
 
@@ -613,15 +613,15 @@ completamento del progetto:
 \textbf{Estensioni:}
 \begin{itemize}
     \item [a.] L'amministratore non conferma la rimozione alla richiesta di conferma:
-    \begin{enumerate}
-        \item Viene visualizzato l'elenco delle aree illuminate esistenti;
-        \item L'amministratore dovrà selezionare un'area illuminata da eliminare o annullare la procedura;
-    \end{enumerate}
+          \begin{enumerate}
+              \item Viene visualizzato l'elenco delle aree illuminate esistenti;
+              \item L'amministratore dovrà selezionare un'area illuminata da eliminare o annullare la procedura;
+          \end{enumerate}
     \item [b.] Viene annullata la procedura di rimozione:
-    \begin{enumerate}
-        \item La lista delle aree illuminate non subisce modifiche;
-        \item Viene visualizzata la schermata principale.
-    \end{enumerate}
+          \begin{enumerate}
+              \item La lista delle aree illuminate non subisce modifiche;
+              \item Viene visualizzata la schermata principale.
+          \end{enumerate}
 \end{itemize}
 \textbf{Requisiti collegati:} RF12-O\newline
 
@@ -938,110 +938,110 @@ Ogni requisito è identificato da un codice la cui struttura è definita nelle \
 \setlength\tabcolsep{4pt}
 \begin{longtable}{|c|p{7cm}|c|p{4cm}|}
     \hline
-    \multicolumn{4}{| c |}{\textbf{Requisiti funzionali}} \\
+    \multicolumn{4}{| c |}{\textbf{Requisiti funzionali}}                                                                                                                                                                 \\
     \hline
-    \textbf{Codice} & \textbf{Descrizione} & \textbf{Rilevanza} & \textbf{Fonti} \\
+    \textbf{Codice} & \textbf{Descrizione}                                                                                                                                          & \textbf{Rilevanza} & \textbf{Fonti} \\
     \hline
-    RF1-O & Rilevamento della presenza di individui in una delle aree illuminate. & Obbligatorio & UC1 \\
+    RF1-O           & Rilevamento della presenza di individui in una delle aree illuminate.                                                                                         & Obbligatorio       & UC1            \\
     \hline
-    RF2-O & Acquisizione dell'intensità luminosa e successiva determinazione precisa del livello di luminosità. & Obbligatorio & UC2 \\    
+    RF2-O           & Acquisizione dell'intensità luminosa e successiva determinazione precisa del livello di luminosità.                                                           & Obbligatorio       & UC2            \\
     \hline
-    RF3-O & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato aumenta manualmente il livello di intesità luminosa. & Obbligatorio & UC3 \\    
+    RF3-O           & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato aumenta manualmente il livello di intesità luminosa.                           & Obbligatorio       & UC3            \\
     \hline
-    RF4-O & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato diminuisce manualmente il livello di intensità luminosa. & Obbligatorio & UC4 \\    
+    RF4-O           & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato diminuisce manualmente il livello di intensità luminosa.                       & Obbligatorio       & UC4            \\
     \hline
-    RF5-O & Il gestore può effettuare l'accesso per gestire manualmente i sistemi di illuminazione. & Obbligatorio & UC5 \\    
+    RF5-O           & Il gestore può effettuare l'accesso per gestire manualmente i sistemi di illuminazione.                                                                       & Obbligatorio       & UC5            \\
     \hline
-    RF6-O & Il gestore può effettuare il logout dall'interno dell'area di gestione dei sistemi. & Obbligatorio & UC6 \\
+    RF6-O           & Il gestore può effettuare il logout dall'interno dell'area di gestione dei sistemi.                                                                           & Obbligatorio       & UC6            \\
     \hline
-    RF7-O & Il gestore può consultare l'intero elenco delle aree illuminate. & Obbligatorio & UC7 \\
+    RF7-O           & Il gestore può consultare l'intero elenco delle aree illuminate.                                                                                              & Obbligatorio       & UC7            \\
     \hline
-    RF8-O & Il gestore può consultare l'intero elenco delle aree illuminate con guasti. & Obbligatorio & UC8 \\
+    RF8-O           & Il gestore può consultare l'intero elenco delle aree illuminate con guasti.                                                                                   & Obbligatorio       & UC8            \\
     \hline
-    RF9-O & Il gestore può aggiungere manualmente un guasto selezionando un impianto dalla lista di quelli attivi. & Obbligatorio & UC9 \\
+    RF9-O           & Il gestore può aggiungere manualmente un guasto selezionando un impianto dalla lista di quelli attivi.                                                        & Obbligatorio       & UC9            \\
     \hline
-    RF10-O & Il gestore può creare una nuova area illuminata, inserendone la posizione geografica e i relativi dettagli. & Obbligatorio & UC10 \\
+    RF10-O          & Il gestore può creare una nuova area illuminata, inserendone la posizione geografica e i relativi dettagli.                                                   & Obbligatorio       & UC10           \\
     \hline
-    RF11-O & Il gestore può modificare i dettagli di un'area illuminata già esistente. & Obbligatorio & UC11 \\
+    RF11-O          & Il gestore può modificare i dettagli di un'area illuminata già esistente.                                                                                     & Obbligatorio       & UC11           \\
     \hline
-    RF12-O & Il gestore può rimuovere un'area illuminata già esistente. & Obbligatorio & UC12 \\
+    RF12-O          & Il gestore può rimuovere un'area illuminata già esistente.                                                                                                    & Obbligatorio       & UC12           \\
     \hline
-    RF13-O & Il sistema di gestione dell'illuminazione aumenta l'intensità luminosa al passaggio di una o più persone. & Obbligatorio & UC13 \\
+    RF13-O          & Il sistema di gestione dell'illuminazione aumenta l'intensità luminosa al passaggio di una o più persone.                                                     & Obbligatorio       & UC13           \\
     \hline
-    RF14-O & Il sistema di gestione dell'illuminazione diminuisce l'intensità luminosa al passaggio di una o più persone. & Obbligatorio & UC14 \\
+    RF14-O          & Il sistema di gestione dell'illuminazione diminuisce l'intensità luminosa al passaggio di una o più persone.                                                  & Obbligatorio       & UC14           \\
     \hline
-    RF15-O & Il gestore può impostare la modalità di funzionamento automatico per l'impianto selezionato. & Obbligatorio & UC15 \\
+    RF15-O          & Il gestore può impostare la modalità di funzionamento automatico per l'impianto selezionato.                                                                  & Obbligatorio       & UC15           \\
     \hline
-    RF17-O & Inserimento di un nuovo sensore in un'area per essere gestito dal sistema. & Obbligatorio & UC11.1 \\
+    RF17-O          & Inserimento di un nuovo sensore in un'area per essere gestito dal sistema.                                                                                    & Obbligatorio       & UC11.1         \\
     \hline
-    RF18-O & Il gestore può rimuovere dal sistema uno dei sensori registrati. & Obbligatorio & UC11.2\\
+    RF18-O          & Il gestore può rimuovere dal sistema uno dei sensori registrati.                                                                                              & Obbligatorio       & UC11.2         \\
     \hline
-    RF19-O & Il gestore può inserire nel sistema l'impianto di illuminazione da attivare con i relativi dettagli. & Obbligatorio & UC11.3\\
+    RF19-O          & Il gestore può inserire nel sistema l'impianto di illuminazione da attivare con i relativi dettagli.                                                          & Obbligatorio       & UC11.3         \\
     \hline
-    RF20-O & Il gestore può rimuovere dal sistema uno degli impianti luminosi registrati. & Obbligatorio & UC11.4 \\
+    RF20-O          & Il gestore può rimuovere dal sistema uno degli impianti luminosi registrati.                                                                                  & Obbligatorio       & UC11.4         \\
     \hline
-    RF21-O & Rilevamento della presenza di individui in modalità automatica in una delle aree illuminate & Obbligatorio & UC1.1 \\
+    RF21-O          & Rilevamento della presenza di individui in modalità automatica in una delle aree illuminate                                                                   & Obbligatorio       & UC1.1          \\
     \hline
-    RF22-F & Rilevamento della presenza di individui su richiesta in una delle aree illuminate & Facoltativo & UC1.2 \\
+    RF22-F          & Rilevamento della presenza di individui su richiesta in una delle aree illuminate                                                                             & Facoltativo        & UC1.2          \\
     \hline
-    RF23-O & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato aumenta manualmente il livello di intensità luminosa di un'area illuminata & Obbligatorio & UC3.1 \\
+    RF23-O          & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato aumenta manualmente il livello di intensità luminosa di un'area illuminata     & Obbligatorio       & UC3.1          \\
     \hline
-    RF24-F & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato aumenta manualmente il livello di intensità luminosa di più aree illuminate & Facoltativo & UC3.2 \\
+    RF24-F          & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato aumenta manualmente il livello di intensità luminosa di più aree illuminate    & Facoltativo        & UC3.2          \\
     \hline
-    RF25-O & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato diminuisce manualmente il livello di intensità luminosa di un'area illuminata & Obbligatorio & UC4.1 \\
+    RF25-O          & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato diminuisce manualmente il livello di intensità luminosa di un'area illuminata  & Obbligatorio       & UC4.1          \\
     \hline
-    RF26-F & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato diminuisce manualmente il livello di intensità luminosa di più aree illuminate & Facoltativo & UC4.2 \\
+    RF26-F          & Una volta acquisito il livello di luminosità iniziale, l'operatore autenticato diminuisce manualmente il livello di intensità luminosa di più aree illuminate & Facoltativo        & UC4.2          \\
     \hline
-    RF27-O & Una volta acquisito il livello di luminosità iniziale, il sistema aumenta automaticamente il livello di intensità luminosa di un'area illuminata & Obbligatorio & UC13.1 \\
+    RF27-O          & Una volta acquisito il livello di luminosità iniziale, il sistema aumenta automaticamente il livello di intensità luminosa di un'area illuminata              & Obbligatorio       & UC13.1         \\
     \hline
-    RF28-F & Una volta acquisito il livello di luminosità iniziale, il sistema aumenta automaticamente il livello di intensità luminosa di più aree illuminate & Facoltativo & UC13.2 \\
+    RF28-F          & Una volta acquisito il livello di luminosità iniziale, il sistema aumenta automaticamente il livello di intensità luminosa di più aree illuminate             & Facoltativo        & UC13.2         \\
     \hline
-    RF29-O & Una volta acquisito il livello di luminosità iniziale, il sistema diminuisce automaticamente il livello di intensità luminosa di un'area illuminata & Obbligatorio & UC14.1 \\
+    RF29-O          & Una volta acquisito il livello di luminosità iniziale, il sistema diminuisce automaticamente il livello di intensità luminosa di un'area illuminata           & Obbligatorio       & UC14.1         \\
     \hline
-    RF30-F & Una volta acquisito il livello di luminosità iniziale, il sistema diminuisce automaticamente il livello di intensità luminosa di più aree illuminate & Facoltativo & UC14.2 \\
+    RF30-F          & Una volta acquisito il livello di luminosità iniziale, il sistema diminuisce automaticamente il livello di intensità luminosa di più aree illuminate          & Facoltativo        & UC14.2         \\
     \hline
-    RF31-F & Una volta rilevato un valore di intensità luminosa sotto soglia, il sistema provvede ad aumentare l'intensità luminosa. & Facoltativo & UC17\\
+    RF31-F          & Una volta rilevato un valore di intensità luminosa sotto soglia, il sistema provvede ad aumentare l'intensità luminosa.                                       & Facoltativo        & UC17           \\
     \hline
-    RF32-F & Una volta rilevato un valore di intensità luminosa sopra soglia, il sistema provvede ad diminuire l'intensità luminosa. & Facoltativo & UC18\\
+    RF32-F          & Una volta rilevato un valore di intensità luminosa sopra soglia, il sistema provvede ad diminuire l'intensità luminosa.                                       & Facoltativo        & UC18           \\
     \hline
-    RF33-F & Il sensore rileva un'intensità luminosa che è sopra un certo valore soglia. & Facoltativo & UC19\\
+    RF33-F          & Il sensore rileva un'intensità luminosa che è sopra un certo valore soglia.                                                                                   & Facoltativo        & UC19           \\
     \hline
-    RF34-F & Il sensore rileva un'intensità luminosa che è sotto un certo valore soglia. & Facoltativo & UC20\\
+    RF34-F          & Il sensore rileva un'intensità luminosa che è sotto un certo valore soglia.                                                                                   & Facoltativo        & UC20           \\
     \hline
-    RF35-F & Il sistema rileva la presenza di un guasto o un'anomalia rguardo una misurazione errata. & Facoltativo & UC21\\
+    RF35-F          & Il sistema rileva la presenza di un guasto o un'anomalia rguardo una misurazione errata.                                                                      & Facoltativo        & UC21           \\
     \hline
-    RF36-F & Il sistema provvede ad inserire nella lista di impianti guasti l'area in cui è presente l'anomalia. & Facoltativo & UC22\\    
+    RF36-F          & Il sistema provvede ad inserire nella lista di impianti guasti l'area in cui è presente l'anomalia.                                                           & Facoltativo        & UC22           \\
     \hline
-    RF37-F & Durante l'inserimento di un nuovo lampione si specifica il tipo di interazione automatico (push) con il sistema. & Facoltativo & UC11.3.2\\
+    RF37-F          & Durante l'inserimento di un nuovo lampione si specifica il tipo di interazione automatico (push) con il sistema.                                              & Facoltativo        & UC11.3.2       \\
     \hline
-    RF38-F & Durante l'inserimento di un nuovo lampione si specifica il tipo di interazione su richiesta (pull) con il sistema. & Facoltativo & UC11.3.3\\
+    RF38-F          & Durante l'inserimento di un nuovo lampione si specifica il tipo di interazione su richiesta (pull) con il sistema.                                            & Facoltativo        & UC11.3.3       \\
     \hline
-    RF39-O & Durante l'inserimento di un nuovo sensore si specificano i dettagli relativi a tale sensore. & Obbligatorio & UC11.1.1\\
+    RF39-O          & Durante l'inserimento di un nuovo sensore si specificano i dettagli relativi a tale sensore.                                                                  & Obbligatorio       & UC11.1.1       \\
     \hline
-    RF40-O & Durante l'inserimento di un nuovo sensore si specifica la posizione geografica del sensore di riferimento. & Obbligatorio & UC11.1.4\\
+    RF40-O          & Durante l'inserimento di un nuovo sensore si specifica la posizione geografica del sensore di riferimento.                                                    & Obbligatorio       & UC11.1.4       \\
     \hline
-    RF41-O & Durante l'inserimento di un nuovo sensore si specifica l'ampiezza del raggio d'azione del sensore che si sta aggiungendo. & Obbligatorio & UC11.1.5\\
+    RF41-O          & Durante l'inserimento di un nuovo sensore si specifica l'ampiezza del raggio d'azione del sensore che si sta aggiungendo.                                     & Obbligatorio       & UC11.1.5       \\
     \hline
-    RF42-O & L'impianto guasto viene riparato dal Manutentore e viene segnalato come nuovamente funzionante. & Obbligatorio & UC23\\
+    RF42-O          & L'impianto guasto viene riparato dal Manutentore e viene segnalato come nuovamente funzionante.                                                               & Obbligatorio       & UC23           \\
     \hline
-    RF43-O & Visualizzazione di tutte le informazioni relative ad un impianto luminoso. & Obbligatorio & UC24\\
+    RF43-O          & Visualizzazione di tutte le informazioni relative ad un impianto luminoso.                                                                                    & Obbligatorio       & UC24           \\
     \hline
-    RF44-O & Modifica delle informazioni relative ad un impianto luminoso. & Obbligatorio & UC25\\
+    RF44-O          & Modifica delle informazioni relative ad un impianto luminoso.                                                                                                 & Obbligatorio       & UC25           \\
     \hline
-    RF45-O & Recupero della lista dei sensori di un'area illuminata. & Obbligatorio & UC26\\
+    RF45-O          & Recupero della lista dei sensori di un'area illuminata.                                                                                                       & Obbligatorio       & UC26           \\
     \hline
-    RF46-O & Visualizzazione di tutte le informazioni relative ad un sensore. & Obbligatorio & UC27\\
+    RF46-O          & Visualizzazione di tutte le informazioni relative ad un sensore.                                                                                              & Obbligatorio       & UC27           \\
     \hline
-    RF47-O & Modifica delle informazioni relative ad un sensore. & Obbligatorio & UC28\\
+    RF47-O          & Modifica delle informazioni relative ad un sensore.                                                                                                           & Obbligatorio       & UC28           \\
     \hline
-    RF48-O & Visualizzazione di tutte le informazioni relative ad un'area illuminata. & Obbligatorio & UC31\\
+    RF48-O          & Visualizzazione di tutte le informazioni relative ad un'area illuminata.                                                                                      & Obbligatorio       & UC31           \\
     \hline
-    RF49-O & Recupero della lista dei lampioni di un'area illuminata. & Obbligatorio & UC32\\
+    RF49-O          & Recupero della lista dei lampioni di un'area illuminata.                                                                                                      & Obbligatorio       & UC32           \\
 
-    
-    
-    
-    
+
+
+
+
     \bottomrule
 \end{longtable}
 
@@ -1052,15 +1052,15 @@ Ogni requisito è identificato da un codice la cui struttura è definita nelle \
 \setlength\tabcolsep{4pt}
 \begin{longtable}{|c|p{7cm}|c|p{4cm}|}
     \hline
-    \multicolumn{4}{| c |}{\textbf{Requisiti di Qualità}} \\
+    \multicolumn{4}{| c |}{\textbf{Requisiti di Qualità}}                                                                                                                                                 \\
     \hline
-    \textbf{Codice} & \textbf{Descrizione} & \textbf{Rilevanza} & \textbf{Fonti} \\
+    \textbf{Codice} & \textbf{Descrizione}                                                                                                                          & \textbf{Rilevanza} & \textbf{Fonti} \\
     \hline
-    RQ1-O & Test che dimostrino il corretto funzionamento dei servizi e delle funzionalità previste, con una copertura dell'60-70\% del codice. & Obbligatorio & Capitolato C2 \\
+    RQ1-O           & Test che dimostrino il corretto funzionamento dei servizi e delle funzionalità previste, con una copertura dell'60-70\% del codice.           & Obbligatorio       & Capitolato C2  \\
     \hline
-    RQ2-O & Documenti su scelte implementative e progettuale e relative motivazioni, i problemi aperti e le eventuali soluzioni proposte da approfondire. & Obbligatorio & Capitolato C2 \\
+    RQ2-O           & Documenti su scelte implementative e progettuale e relative motivazioni, i problemi aperti e le eventuali soluzioni proposte da approfondire. & Obbligatorio       & Capitolato C2  \\
     \hline
-    RQ3-O & Web Application responsive per soddisfare i requisiti obbligatori nei casi d'uso. & Obbligatorio & Capitolato C2 \\ 
+    RQ3-O           & Web Application responsive per soddisfare i requisiti obbligatori nei casi d'uso.                                                             & Obbligatorio       & Capitolato C2  \\
     \bottomrule
 \end{longtable}
 
@@ -1068,17 +1068,17 @@ Ogni requisito è identificato da un codice la cui struttura è definita nelle \
 \setlength\tabcolsep{4pt}
 \begin{longtable}{|c|p{7cm}|c|p{4cm}|}
     \hline
-    \multicolumn{4}{| c |}{\textbf{Requisiti di Vincolo}} \\
+    \multicolumn{4}{| c |}{\textbf{Requisiti di Vincolo}}                                                                                   \\
     \hline
-    \textbf{Codice} & \textbf{Descrizione} & \textbf{Rilevanza} & \textbf{Fonti} \\
+    \textbf{Codice} & \textbf{Descrizione}                                                            & \textbf{Rilevanza} & \textbf{Fonti} \\
     \hline
-    RV1-O & Essere in possesso delle credenziali di autenticazione per accedere al sistema. & Obbligatorio & UC5 \\
+    RV1-O           & Essere in possesso delle credenziali di autenticazione per accedere al sistema. & Obbligatorio       & UC5            \\
     \hline
-    RV2-O & Essere in possesso delle credenziali specifiche per il manutentore. & Obbligatorio & UC8 \\
+    RV2-O           & Essere in possesso delle credenziali specifiche per il manutentore.             & Obbligatorio       & UC8            \\
     \hline
-    RV3-F & Registrazione nuovo utente da parte di un amministratore. & Facoltativo & UC29 \\
+    RV3-F           & Registrazione nuovo utente da parte di un amministratore.                       & Facoltativo        & UC29           \\
     \hline
-    RV4-F & Modifica utente da parte di un amministratore. & Facoltativo & UC30 \\
+    RV4-F           & Modifica utente da parte di un amministratore.                                  & Facoltativo        & UC30           \\
     \bottomrule
 \end{longtable}
 

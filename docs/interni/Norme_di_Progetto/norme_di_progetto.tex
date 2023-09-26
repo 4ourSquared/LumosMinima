@@ -29,8 +29,8 @@ Questo documento contiene le procedure, gli strumenti e i criteri di qualità ch
 \addversione{0.1.0}{24/07/2023}{Ceccato Francesco}{Brotto Romina}{Verifica documento per RTB}
 \addversione{1.0.0}{24/07/2023}{Soldà Matteo}{Ceccato Francesco}{Approvazione documento per RTB}
 \addversione{1.0.1}{31/08/2023}{Brotto Romina}{Soldà Matteo}{Aggiunta sezioni mancanti}
-\addversione{1.1.0}{25/09/2023}{Alberti Nicolas}{Soldà Matteo}{Verifica documento per PB}
-\addversione{2.0.0}{25/09/2023}{Soldà Matteo}{Alberti Nicolas}{Approvazione documento per PB}
+\addversione{1.1.0}{26/09/2023}{Alberti Nicolas}{Soldà Matteo}{Verifica per \textit{PB}}
+\addversione{2.0.0}{26/09/2023}{Soldà Matteo}{Alberti Nicolas}{Approvazione per candidatura \textit{PB}}
 
 \begin{document}
 \makeindexdetails
@@ -38,7 +38,7 @@ Questo documento contiene le procedure, gli strumenti e i criteri di qualità ch
 \tableofcontents
 \newpage
 \clearpage
-\makecontentsdetails{Norme di Progetto} 
+\makecontentsdetails{Norme di Progetto}
 
 \section{Introduzione}
 \subsection{Scopo del Documento}
@@ -66,7 +66,7 @@ da una 'G' aggiunta in pedice.
 \subsubsection{Scopo}
 Lo scopo del \textit{processo}\textsubscript{\textit{G}} di fornitura è quello di descrivere e determinare ogni
 compito ed attività svolta dal fornitore, al fine di comprendere e soddisfare le
-richieste del proponente. 
+richieste del proponente.
 La suddivisione e le tempistiche delle attività da svolgere saranno definite dal documento
 \textit{Piano di Progetto}\textsubscript{\textit{G}}.
 
@@ -77,7 +77,7 @@ Le aspettative determinate dal processo di fornitura sono le seguenti:
     \item Definire i requisiti e i vincoli dei processi;
     \item Stimare i costi per la realizzazione del prodotto;
     \item Ottenere dei feedback da proponente e committenti riguardanti il
-    lavoro svolto;
+          lavoro svolto;
     \item Chiarire eventuali dubbi sorti durante il progetto;
 \end{itemize}
 
@@ -88,8 +88,8 @@ Il \textit{Piano di Progetto} è il documento che viene redatto e mantenuto
 durante tutta la durata del progetto. Al suo interno comprende:
 \begin{itemize}
     \item \textbf{Analisi dei rischi:} vengono analizzati i rischi che possono
-    essere individuati durante il corso del progetto e vengono descritte le
-    strategie messe in atto al fine di contenerne la gravità;
+          essere individuati durante il corso del progetto e vengono descritte le
+          strategie messe in atto al fine di contenerne la gravità;
     \item \textbf{Pianificazione del lavoro;}
     \item \textbf{Preventivo e consuntivo delle ore e dei costi.}
 \end{itemize}
@@ -110,21 +110,21 @@ Nel processo di fornitura, il gruppo utilizza i seguenti strumenti per produrre
 i documenti precedentemente elencati:
 \begin{itemize}
     \item \textbf{Google Calendar:} sistema di calendari, usato per inserire le
-    scadenze e gli eventi significativi riguardanti il gruppo;
+          scadenze e gli eventi significativi riguardanti il gruppo;
     \item \textbf{Google Presentazioni:} è un
-    software facente parte del gruppo di applicazioni Google, permette la
-    realizzazione delle presentazioni del gruppo.
+          software facente parte del gruppo di applicazioni Google, permette la
+          realizzazione delle presentazioni del gruppo.
     \item \textbf{Google Fogli:} è un software facente parte del gruppo di
-    applicazioni Google, permette la realizzazione di fogli di calcolo in cui
-    vengono effettuati i conteggi delle ore. 
+          applicazioni Google, permette la realizzazione di fogli di calcolo in cui
+          vengono effettuati i conteggi delle ore.
     \item \textbf{Online Gantt:} è un programma per realizzare i \textit{diagrammi di
-    Gantt}\textsubscript{\textit{G}}.
+              Gantt}\textsubscript{\textit{G}}.
 \end{itemize}
 
 \subsubsection{Repository Pubblica}
 Durante lo sviluppo del progetto, il codice e la documentazione saranno depositati in una repository pubblica. La parte di interesse del proponente e del committente riguarda la cartella \textit{public}. \\
 La cartella sopra citata contiene la documentazione necessaria alle revisioni di periodo con il committente. Tale cartella rispecchia la struttura della cartella \textit{docs}, situata nella parte privata. \\
-I file che prevedono \textit{versionamento\textsubscript{G}}, riporteranno al loro interno la numerazione relativa alla versione attuale e un riassunto delle versioni precedenti. \\ 
+I file che prevedono \textit{versionamento\textsubscript{G}}, riporteranno al loro interno la numerazione relativa alla versione attuale e un riassunto delle versioni precedenti. \\
 Ogni modifica della parte pubblica deve essere approvata, tramite \textit{pull request}, dal responsabile.
 
 \subsubsection{Contatti}
@@ -144,7 +144,7 @@ Le aspettative prevedono:
     \item Determinazione dei vincoli tecnologici e di design;
     \item Determinazione degli obiettivi di sviluppo;
     \item Realizzazione del prodotto finale, superando tutti i test individuati
-    e soddisfando i requisiti e le aspettative del proponente.
+          e soddisfando i requisiti e le aspettative del proponente.
 \end{itemize}
 
 \subsubsection{\textit{Analisi dei Requisiti}}
@@ -153,9 +153,9 @@ Le aspettative prevedono:
 Lo scopo dell'\textit{Analisi dei Requisiti} è quello di:
 \begin{itemize}
     \item Identificare requisiti obbligatori ed auspicabili richiesti dal
-    proponente, tramite lo studio del capitolato;
+          proponente, tramite lo studio del capitolato;
     \item Supportare l'attività di pianificazione, fornendo informazioni utili
-    al computo della mole di lavoro;
+          al computo della mole di lavoro;
     \item Supportare l'attività di verifica, facilitandone il tracciamento dei requisiti.
 \end{itemize}
 
@@ -171,19 +171,19 @@ un utente. Vengono descritte le interazioni con il sistema da parte di uno o pi�
 attori, senza fornire alcun dettaglio implementativo. È formato da:
 \begin{itemize}
     \item \textbf{Diagramma \textit{UML}} (opzionale): indica la relazione con
-    altri Casi d'Uso;
+          altri Casi d'Uso;
     \item \textit{\textbf{Intestazione}}, nel formato:
-    \begin{center}
-        \begin{BVerbatim}
-UC [Codice].[Sottocaso] - [Titolo]
-        \end{BVerbatim}   
-    \end{center}
-    dove:
-    \begin{itemize}
-        \item \Verb^UC ^indica "\textit{Use Case}", ovvero "Caso d'Uso";
-        \item \Verb^[Codice] ^è il codice identificativo del Caso d'Uso, 
-        \item \Verb^[Titolo] ^è il titolo del Caso d'Uso. 
-    \end{itemize}
+          \begin{center}
+              \begin{BVerbatim}
+                  UC [Codice].[Sottocaso] - [Titolo]
+              \end{BVerbatim}
+          \end{center}
+          dove:
+          \begin{itemize}
+              \item \Verb^UC ^indica "\textit{Use Case}", ovvero "Caso d'Uso";
+              \item \Verb^[Codice] ^è il codice identificativo del Caso d'Uso,
+              \item \Verb^[Titolo] ^è il titolo del Caso d'Uso.
+          \end{itemize}
     \item \textbf{\textit{Attore/i} primario/i};
     \item \textbf{\textit{Attore/i} secondario/i} (opzionale);
     \item \textbf{Descrizione};
@@ -201,11 +201,11 @@ con i componenti del gruppo e dal confronto con il proponente, vengono suddivisi
 in tre tipologie:
 \begin{itemize}
     \item \textbf{Funzionali:} descrivono le funzionalità e il comportamento
-    che il prodotto deve presentare;
+          che il prodotto deve presentare;
     \item \textbf{Qualità:} descrivono i vincoli sulla qualità del prodotto e
-    dei suoi componenti;
+          dei suoi componenti;
     \item \textbf{Vincolo:} descrivono i vincoli legati all'implementazione del
-    prodotto, come ad esempio sulla tecnologia da utilizzare.
+          prodotto, come ad esempio sulla tecnologia da utilizzare.
 \end{itemize}
 Ogni requisito ha una determinata importanza, di seguito descritta:
 \begin{itemize}
@@ -213,27 +213,27 @@ Ogni requisito ha una determinata importanza, di seguito descritta:
     \item \textbf{Desiderabile}
     \item \textbf{Opzionale}
 \end{itemize}
-Ogni requisito viene presentato nel formato univoco descritto di seguito: 
+Ogni requisito viene presentato nel formato univoco descritto di seguito:
 \begin{center}
     \begin{BVerbatim}
-R[Tipologia][Caso d'Uso Relativo].[Sottocaso] - [Importanza]
-    \end{BVerbatim}   
+        R[Tipologia][Caso d'Uso Relativo].[Sottocaso] - [Importanza]
+    \end{BVerbatim}
 \end{center}
 Dove:
 \begin{itemize}
     \item \Verb^R^: Acronimo di "Requisito";
     \item \Verb^[Tipologia]^: indica la tipologia del requisito tra le seguenti:
-    \begin{itemize}
-        \item \textbf{F:} Funzionale;
-        \item \textbf{Q:} Qualità;
-        \item \textbf{V:} Vincolo;
-    \end{itemize}
+          \begin{itemize}
+              \item \textbf{F:} Funzionale;
+              \item \textbf{Q:} Qualità;
+              \item \textbf{V:} Vincolo;
+          \end{itemize}
     \item \Verb^[Importanza]^: indica l'importanza del requisito tra le seguenti:
-    \begin{itemize}
-        \item \textbf{O:} Obbligatorio;
-        \item \textbf{D:} Desiderabile;
-        \item \textbf{P:} Opzionale.
-    \end{itemize}
+          \begin{itemize}
+              \item \textbf{O:} Obbligatorio;
+              \item \textbf{D:} Desiderabile;
+              \item \textbf{P:} Opzionale.
+          \end{itemize}
 \end{itemize}
 
 \subsubsection{Organizzazione dei File}
@@ -256,44 +256,44 @@ Per ogni documento esisterà una nuova sottocartella omonima.
 Per quanto riguarda la scrittura del codice, si è scelto di utilizzare le seguenti convenzioni, che sono state selezionate utilizzando lo \textit{standard de-facto} per il linguaggio \textit{Typescript}: \textit{camel case}, \textit{pascal case}, \textit{snake case} e \textit{screaming snake case}.\\ \\
 
 \begin{center}
-\begin{tabular}{|| c || c ||}
-    \hline
-        & TypeScript \\
-    \hline \hline
-    Funzioni e Metodi & camelCase() \\
-    \hline
-    Classi & PascalCase \\
-    \hline
-    Interfacce & PascalCase \\
-    \hline
-    Namespace e Package & camelCase \\
-    \hline
-    Costanti & SCREAMING\_SNAKE\_CASE \\
-    \hline  
-    Variabili Locali e Attributi & snake\_case \\
-    \hline
-    Variabili Globali & snake\_case \\
-    \hline
-\end{tabular}
+    \begin{tabular}{|| c || c ||}
+        \hline
+                                     & TypeScript             \\
+        \hline \hline
+        Funzioni e Metodi            & camelCase()            \\
+        \hline
+        Classi                       & PascalCase             \\
+        \hline
+        Interfacce                   & PascalCase             \\
+        \hline
+        Namespace e Package          & camelCase              \\
+        \hline
+        Costanti                     & SCREAMING\_SNAKE\_CASE \\
+        \hline
+        Variabili Locali e Attributi & snake\_case            \\
+        \hline
+        Variabili Globali            & snake\_case            \\
+        \hline
+    \end{tabular}
 \end{center}
 \vspace*{0.5cm}
 Per quanto riguarda i linguaggi di markup, i tag e gli attributi andranno scritti in lowercase se primitivi o in kebab-case se custom o complessi. \newline
 Inoltre:
 \begin{itemize}
     \item I membri di una classe dovrebbero essere dichiarati e/o definiti nel seguente ordine:
-    \begin{itemize}
-        \item Variabili di classe (statiche)
-        \item Variabili di istanza (attributi) \\
-        Nel seguente ordine (ove possibile):
-        \begin{enumerate}
-            \item public;
-            \item protected;
-            \item private;
-        \end{enumerate}
-        \item Costruttore;
-        \item Distruttore (se richiesto);
-        \item Metodi.
-    \end{itemize}
+          \begin{itemize}
+              \item Variabili di classe (statiche)
+              \item Variabili di istanza (attributi) \\
+                    Nel seguente ordine (ove possibile):
+                    \begin{enumerate}
+                        \item public;
+                        \item protected;
+                        \item private;
+                    \end{enumerate}
+              \item Costruttore;
+              \item Distruttore (se richiesto);
+              \item Metodi.
+          \end{itemize}
 \end{itemize}
 \textbf{CSS}
 \begin{itemize}
@@ -301,10 +301,10 @@ Inoltre:
     \item Mantenere un file chiamato \texttt{global.css} per le regole che si applicano ad ogni aspetto del sito, in particolare ai moduli universali quali, a titolo esemplificativo e non esaustivo, header e footer;
     \item Mantenere un file chiamato \texttt{mini.css} con accorgimenti per la versione mobile;
     \item Specificare le unità di misura in \textit{em}, \textit{rem}, \textit{\%}, \textit{vw}, \textit{vh} (unità relative), a parte per i valori delle seguenti proprietà, i quali possono essere espressi in \textit{px}:
-    \begin{itemize}
-        \item \textit{text-shadow};
-        \item \textit{box-shadow}.
-    \end{itemize}
+          \begin{itemize}
+              \item \textit{text-shadow};
+              \item \textit{box-shadow}.
+          \end{itemize}
 \end{itemize}
 
 \paragraph{Indentazione e Blocchi di Codice}
@@ -317,11 +317,11 @@ Inoltre:
 
 Ogni modifica alla repository dovrà seguire i seguenti passaggi:
 \begin{itemize}
-\item Modifica del codice su \textit{repository\textsubscript{G}} locale;
-\item Push su un \textit{branch\textsubscript{G}} remoto;
-\item Pull request tramite piattaforma web GitHub per merge sul branch \texttt{main};
-\item Review della pull request;
-\item Merge sul branch \texttt{main}.
+    \item Modifica del codice su \textit{repository\textsubscript{G}} locale;
+    \item Push su un \textit{branch\textsubscript{G}} remoto;
+    \item Pull request tramite piattaforma web GitHub per merge sul branch \texttt{main};
+    \item Review della pull request;
+    \item Merge sul branch \texttt{main}.
 \end{itemize}
 
 Un branch remoto è un branch su cui operano uno o più membri del gruppo e ha come scopo l'elaborazione di un prodotto o di un processo di progetto. Il branch si chiamerà come il prodotto o il processo relativo.\newline
@@ -364,20 +364,20 @@ Ogni documento sarà così strutturato:
 
 Le varie sezioni saranno così definite: \\
 
-\textbf{Pagina di Intestazione} 
+\textbf{Pagina di Intestazione}
 \begin{itemize}
     \item Logo e nome del gruppo;
     \item Nome del progetto e azienda cliente;
     \item Mail di contatto;
     \item Titolo del documento;
     \item Info generali:
-    \begin{itemize}
-        \item Redattori;
-        \item Revisori;
-        \item Responsabile;
-        \item Versione, ove necessario;
-        \item Destinazione d'uso (interno o esterno);
-    \end{itemize}
+          \begin{itemize}
+              \item Redattori;
+              \item Revisori;
+              \item Responsabile;
+              \item Versione, ove necessario;
+              \item Destinazione d'uso (interno o esterno);
+          \end{itemize}
     \item Sinossi.
 \end{itemize}
 
@@ -390,7 +390,7 @@ L'elenco delle versioni è una tabella così definita:
     \item Revisore;
     \item Descrizione.
 \end{itemize}
-Le righe della tabella sono organizzate in ordine cronologico inverso. 
+Le righe della tabella sono organizzate in ordine cronologico inverso.
 \newline \newline
 \textbf{Indice} \\
 L'indice è stato creato utilizzando il comando \textit{\textbackslash tableofcontents}
@@ -400,7 +400,7 @@ L'indice è stato creato utilizzando il comando \textit{\textbackslash tableofco
     \item \textbf{Scopo:} Lo scopo del documento è quello di definire le procedure, gli strumenti e criteri di qualità al fine di stabilire un \textit{Way of Working}. Ogni membro del gruppo sarà tenuto a rispettare le indicazioni del documento presentate
     \item \textbf{Titolo:} Norme di Progetto
     \item \textbf{Nome del File:} \texttt{norme\_di\_progetto.tex}
-\end{itemize} 
+\end{itemize}
 \paragraph{}\\
 \textbf{Verbali}
 \begin{itemize}
@@ -409,14 +409,14 @@ L'indice è stato creato utilizzando il comando \textit{\textbackslash tableofco
     \item \textbf{Nome del File:} Tutti i file saranno chiamati \texttt{<yyyy>\_<mm>\_<dd>\_<tipo>.tex} dove $<yyyy>\_<mm>\_<dd>$ indica la data nella quale si è effettuata la riunione nel formato anno-mese-giorno; $<tipo>$ indica se la riunione è avvenuta tra i soli membri del gruppo "I" o con persone esterne "E".
     \item \textbf{Indice:} Non presente in quanto non utile
     \item \textbf{Struttura:}
-    \begin{itemize}
-        \item Data, ora e durata;
-        \item Luogo;
-        \item Partecipanti (interni ed esterni, raggruppati per appartenenza e ordinati alfabeticamente secondo il cognome);
-        \item Ordine del giorno;
-        \item Conclusioni derivanti dalla riunione;
-        \item Impegni assunti.
-    \end{itemize}
+          \begin{itemize}
+              \item Data, ora e durata;
+              \item Luogo;
+              \item Partecipanti (interni ed esterni, raggruppati per appartenenza e ordinati alfabeticamente secondo il cognome);
+              \item Ordine del giorno;
+              \item Conclusioni derivanti dalla riunione;
+              \item Impegni assunti.
+          \end{itemize}
     \item \textbf{Stesura:} All'inizio di ogni riunione verrà nominato un membro del gruppo che redigerà il verbale e un membro che lo validerà. Chi redige il verbale avrà 24 ore per completare il lavoro, lo stesso tempo sarà concesso al validatore per approvarlo e segnalare le modifiche da applicare.
 \end{itemize}
 \paragraph{}\\
@@ -436,21 +436,21 @@ L'indice è stato creato utilizzando il comando \textit{\textbackslash tableofco
 \subsubsection{Convenzioni Documentali}
 \begin{itemize}
     \item \textbf{Riferimento a file o cartelle:}
-    \begin{itemize}
-        \item Per fare riferimento al nome di un file o di una cartella si utilizza il \texttt{testo monospaziato};
-        \item Il nome di una cartella deve sempre terminare con \texttt{/}.
-    \end{itemize}
+          \begin{itemize}
+              \item Per fare riferimento al nome di un file o di una cartella si utilizza il \texttt{testo monospaziato};
+              \item Il nome di una cartella deve sempre terminare con \texttt{/}.
+          \end{itemize}
     \item \textbf{Stringhe e nomi:}
-    \begin{itemize}
-        \item Le stringhe vanno scritte tra doppi apici;
-        \item Per indicare un parametro rappresentate una stringa si usa il testo tra parentesi angolari. Tale parametro non può contenere spazi;
-        \item Per indicare una parte di nome o stringa opzionale si usa il testo racchiuso tra parentesi quadre.
-    \end{itemize}
+          \begin{itemize}
+              \item Le stringhe vanno scritte tra doppi apici;
+              \item Per indicare un parametro rappresentate una stringa si usa il testo tra parentesi angolari. Tale parametro non può contenere spazi;
+              \item Per indicare una parte di nome o stringa opzionale si usa il testo racchiuso tra parentesi quadre.
+          \end{itemize}
     \item \textbf{Riferimento tra documenti:}
-    \begin{itemize}
-        \item Riferimenti interni al documento: comando \texttt{$\backslash$ref};
-        \item Riferimenti esterni al documento: nome della sezione del documento a cui si fa riferimento in corsivo.
-    \end{itemize}
+          \begin{itemize}
+              \item Riferimenti interni al documento: comando \texttt{$\backslash$ref};
+              \item Riferimenti esterni al documento: nome della sezione del documento a cui si fa riferimento in corsivo.
+          \end{itemize}
 \end{itemize}
 \subsection{Versionamento}
 \subsubsection{Repository Github}
@@ -493,14 +493,14 @@ Per le sezioni di codice è consigliato un walkthrough del prodotto, similmente 
 Nel processo di verifica i verificatori si occupano di controllare ed analizzare i prodotti sviluppati dal gruppo. Per fare ciò si avvalgono di due tipi di verifica:
 \begin{itemize}
     \item \textbf{Analisi Statica}: si tratta di un'analisi che prevede un controllo sulla struttura, contenuto, forma dei singoli documenti. Viene effettuata tramite le revisioni che seguono la stesura dei file o dei documenti;
-    \item \textbf{Analisi Dinamica}: è un sistema di valutazione di un sistema software, che osserva il comportamento utilizzando strumenti di compilazione. \'E effettuata su file di codice, non sulla documentazione, per la natura non logica di quest'ultima. 
+    \item \textbf{Analisi Dinamica}: è un sistema di valutazione di un sistema software, che osserva il comportamento utilizzando strumenti di compilazione. \'E effettuata su file di codice, non sulla documentazione, per la natura non logica di quest'ultima.
 \end{itemize}
 
 \subsubsection{Analisi del Codice}
 Nel processo di verifica del codice i due tipi di analisi sopra descritte avvengono, nello specifico, nei file sorgente.
 \begin{itemize}
     \item \textbf{Analisi Statica}: controllo della struttura del file, esaminandolo senza eeguirlo. Tale procedura permette di identificare errori di forma e di progettazione prima di verificarne la compilazione,
-    \item \textbf{Analisi Dinamica}: contrllo del codice eseguendo e compilando i/il file. Tale procedurta ritorna eventuali errori ed anomaile generate dal codice, permettendo un fix mirato e una possibilità di miglioramento della qualità generale del prodotto. 
+    \item \textbf{Analisi Dinamica}: contrllo del codice eseguendo e compilando i/il file. Tale procedurta ritorna eventuali errori ed anomaile generate dal codice, permettendo un fix mirato e una possibilità di miglioramento della qualità generale del prodotto.
 \end{itemize}
 
 \subsubsection{Testing}
@@ -516,13 +516,13 @@ Le metriche di gestione di qualità vengono descritte nel \textit{Piano di Quali
     \item \textbf{Indice di Gulpease}: indice di leggibilità del testo, applicato a tutti i documenti.
 \end{itemize}
 
-\subsubsection{Prodotti Software} 
+\subsubsection{Prodotti Software}
 \begin{itemize}
     \item \textbf{Copertura Statement}: indice di copertura per le linee di codice;
     \item \textbf{Copertura Branch}: indice di copertura per ogni ramo di esecuzione del codice;
 \end{itemize}
 
-\subsubsection{Qualità di processo} 
+\subsubsection{Qualità di processo}
 \begin{itemize}
     \item \textbf{Time Variance}: indice di variazione del tempo stimato all'inizio rispetto al tempo effettivo;
     \item \textbf{Budget Variance}: indice di variazione del buudget stanziato all'inizio rispetto al budget iumpiegato effettivamente;
@@ -533,7 +533,7 @@ Le metriche di gestione di qualità vengono descritte nel \textit{Piano di Quali
     \item \textbf{Schedule Variance}: indica il livello di avanzamento del progetto in base alle previsioni;
     \item \textbf{Estimate at Completition (EAC)}: indica la stima corrente del costo totale alla fine del progetto;
     \item \textbf{Estimate to Complete (ETC)}: indica quant'è il rimanente costo da affrontare per arrivare alla stima prefissata;
-    \item \textbf{Cost Performance Index (CPI)}: è la differenza tra \textit{Earned Value} e \textit{Actual Cost}. 
+    \item \textbf{Cost Performance Index (CPI)}: è la differenza tra \textit{Earned Value} e \textit{Actual Cost}.
 
 \end{itemize}
 
@@ -582,35 +582,35 @@ in GitHub. Viene soddisfatto un requisito quando:
     \item viene creata una issue associata;
     \item viene collegata la issue ad un branch;
     \item i Verificatori devono controllare quanto è stato svolto: \begin{itemize}
-        \item se la verifica ha esito positivo verranno effettuate le seguenti azioni: \begin{itemize}
-            \item viene fatto il merge del branch nell'upstream;
-            \item viene cancellato il branch creato appositamente per l'issue;
-            \item l'issue viene chiusa;
-            \item il requisito viene considerato soddisfatto. 
-        \end{itemize}
-        \item se la verifica ha esito negativo, verrà effettuata la seguente
-        azione: \begin{itemize}
-            \item vengono corretti gli errori segnalati dai Verificatori e si
-            torna al punto (3).
-        \end{itemize}
-    \end{itemize}
+              \item se la verifica ha esito positivo verranno effettuate le seguenti azioni: \begin{itemize}
+                        \item viene fatto il merge del branch nell'upstream;
+                        \item viene cancellato il branch creato appositamente per l'issue;
+                        \item l'issue viene chiusa;
+                        \item il requisito viene considerato soddisfatto.
+                    \end{itemize}
+              \item se la verifica ha esito negativo, verrà effettuata la seguente
+                    azione: \begin{itemize}
+                        \item vengono corretti gli errori segnalati dai Verificatori e si
+                              torna al punto (3).
+                    \end{itemize}
+          \end{itemize}
 \end{enumerate}
 Le issue vengono create dal Responsabile o dai Verificatori e devono avere:
 \begin{itemize}
     \item \textbf{title}: un titolo, dal contenuto breve e significativo;
     \item \textbf{description}: una descrizione, che deve essere breve, chiara e specifica, contenente il
-    motivo dell'apertura della issue;
+          motivo dell'apertura della issue;
     \item \textbf{assignee}: il membro o i membri a cui viene associata l'issue.
-    Possono variare durante il progetto;
+          Possono variare durante il progetto;
     \item \textbf{\textit{milestone}}\textit{\textsubscript{G}}: la milestone ad
-    essa associata;
+          essa associata;
     \item \textbf{labels}: le etichette, specificano lo stato della issue ed il
-    contesto a cui è legata. Le etichette utilizzate sono le seguenti:
-    \begin{itemize}
-        \item \textbf{documentation:} indica che l'issue a cui si sta lavorando
-        riguarda i documenti del gruppo.
-        
-    \end{itemize}
+          contesto a cui è legata. Le etichette utilizzate sono le seguenti:
+          \begin{itemize}
+              \item \textbf{documentation:} indica che l'issue a cui si sta lavorando
+                    riguarda i documenti del gruppo.
+
+          \end{itemize}
 \end{itemize}
 
 

@@ -21,8 +21,9 @@ Questo documento descrive le funzionalità del programma a coloro che dovessero 
 \addversione{0.0.0}{05/09/2023}{Soldà Matteo}{Cavaliere Erica}{Stesura scheletro}
 \addversione{0.0.1}{07/09/2023}{Soldà Matteo}{Cavaliere Erica}{Stesura prima bozza contenuto}
 \addversione{0.0.2}{13/09/2023}{Soldà Matteo}{Cavaliere Erica}{Aggiunta delle immagini}
-\addversione{0.1.0}{25/09/2023}{Alberti Nicolas}{Soldà Matteo}{Verifica per PB}
-\addversione{1.0.0}{25/09/2023}{Soldà Matteo}{Alberti Nicolas}{Approvazione per candidatura RTB}
+\addversione{0.1.0}{26/09/2023}{Alberti Nicolas}{Soldà Matteo}{Verifica per
+\textit{PB}}
+\addversione{1.0.0}{26/09/2023}{Soldà Matteo}{Alberti Nicolas}{Approvazione per candidatura \textit{PB}}
 \begin{document}
 \makeindexdetails
 \makefrontpage \makeversioni
@@ -58,18 +59,18 @@ In questo documento descriveremo l'utilizzo dell'utente con privilegi di manuten
 Il login è la prima cosa che viene richiesta qualora si raggiungesse l'indirizzo dell'applicazione. In questa schermata andrà inserito lo username e la password del proprio utente. Qualora i dati inseriti siano corretti, si verrà renderizzati automaticamente alla dashboard, altrimenti verrà riproposta la pagina di login con un errore. La durata della sessione dopo un login effettuato con successo è di un'ora.
 % Immagine della schermata di login
 \begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{login}
-\caption{Pagina di login}
+    \centering
+    \includegraphics[width=\textwidth]{login}
+    \caption{Pagina di login}
 \end{figure}
 
 \subsection{Logout}
 La funzionalità di logout permette di terminare la sessione generata da un precedente login non ancora scaduto. Il pulsante per il logout è posizionato nella dashboard nell'angolo in alto a destra.
 % Immagine del pulsante di logout
 \begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{EsempioBreadcrumbConEsci}
-\caption{Esempio di barra di breadcrumb con pulsante di logout}
+    \centering
+    \includegraphics[width=\textwidth]{EsempioBreadcrumbConEsci}
+    \caption{Esempio di barra di breadcrumb con pulsante di logout}
 \end{figure}
 
 \newpage
@@ -79,15 +80,15 @@ Le aree illuminate sono la componente di base dell'applicazione. Esse al loro in
 \subsection{Lista Aree Illuminate}
 Entrando nella dashboard dopo il login, verrà presentata la lista delle aree illuminate che sono state inserite a sistema. Ogni area presenta come informazione il proprio ID (generato automaticamente), il nome assegnato, la descrizione, la latitudine e la longitudine. Al fianco di queste informazioni è presentato il pulsante per la visualizzazione delle informazioni relative a quella data area.\\
 \begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{ListaAree}
-\caption{Esempio di lista delle aree}
+    \centering
+    \includegraphics[width=\textwidth]{ListaAree}
+    \caption{Esempio di lista delle aree}
 \end{figure}
 Il pulsante \textit{informazioni} permette di caricare tutte le informazioni dell'area illuminata, permettendo inoltre di visualizzare i lampioni e i sensori ad essa collegati.\\
 \begin{figure}[H]
-\centering
-\includegraphics[width=0.5\textwidth]{InfoArea}
-\caption{Esempio di informazioni di una singola area}
+    \centering
+    \includegraphics[width=0.5\textwidth]{InfoArea}
+    \caption{Esempio di informazioni di una singola area}
 \end{figure}
 
 \newpage
@@ -103,15 +104,15 @@ Inoltre, si può decidere se un lampione è recettivo rispetto ai segnali oppure
 Aprendo le informazioni di una singola area, al di sotto delle informazioni della stessa si troverà la lista dei lampioni collegati all'area selezionata.\\
 Per ogni lampione, sono mostrate nella lista: l'ID (generato automaticamente), lo stato, l'intensità luminosa attuale e il nome del lampione. Al fianco di queste informazioni è presentato il pulsante per la visualizzazione delle informazioni relative a quel dato lampione.\\
 \begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{ListaLampioni}
-\caption{Esempio di lista dei lampioni}
+    \centering
+    \includegraphics[width=\textwidth]{ListaLampioni}
+    \caption{Esempio di lista dei lampioni}
 \end{figure}
 Il pulsante \textit{informazioni} permette di caricare tutte le informazioni del lampione.\\
 \begin{figure}[H]
-\centering
-\includegraphics[width=0.5\textwidth]{InfoLampione}
-\caption{Esempio di informazioni di un singolo lampione}
+    \centering
+    \includegraphics[width=0.5\textwidth]{InfoLampione}
+    \caption{Esempio di informazioni di un singolo lampione}
 \end{figure}
 
 Qualora si effettuasse l'accesso con l'utente manutentore, al termine della lista sarà possibile visualizzare un pulsante grigio che permette di visualizzare i dati dei lampioni guasti, oltre a poter segnalare la loro riparazione con successiva rimozione dalla lista dei guasti.
@@ -119,14 +120,14 @@ Qualora si effettuasse l'accesso con l'utente manutentore, al termine della list
 \subsection{Segnalazione di Riparazione Guasto}
 Dopo aver premuto sul pulsante riportante l'etichetta \textit{Vai alla lista guasti}, si aprirà una tabella molto simile a quella dei lampioni, ma con l'aggiunta di un pulsante per la segnalazione di riparazione, la quale richiederà di confermare due volte di voler rimuovere il lampione dalla lista.
 \begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{ListaGuastiVistaManutentore}
-\caption{Esempio di lista dei lampioni segnalati come guasti}
+    \centering
+    \includegraphics[width=\textwidth]{ListaGuastiVistaManutentore}
+    \caption{Esempio di lista dei lampioni segnalati come guasti}
 \end{figure}
 \begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{ModaleRiparazioneLampione}
-\caption{Richiesta di conferma per la rimozione del lampione dalla lista guasti}
+    \centering
+    \includegraphics[width=\textwidth]{ModaleRiparazioneLampione}
+    \caption{Richiesta di conferma per la rimozione del lampione dalla lista guasti}
 \end{figure}
 
 \newpage
@@ -135,16 +136,16 @@ Dopo aver premuto sul pulsante riportante l'etichetta \textit{Vai alla lista gua
 Il sensore è la componente dell'area che ha lo scopo di rilevare e di conseguenza segnalare i movimenti di cose, persone e animali nel suo raggio d'azione. Tra i suoi elementi, ne spicca uno in particolare: la durata della segnalazione. Questo parametro serve a indicare per quanto tempo i lampioni impostati in modalità manuale possano visualizzare la segnalazione come valida durare la verifica ciclica.
 \subsection{Lista Sensori per Area}
 \begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{ListaSensori}
-\caption{Esempio di lista dei sensori}
+    \centering
+    \includegraphics[width=\textwidth]{ListaSensori}
+    \caption{Esempio di lista dei sensori}
 \end{figure}
 Aprendo le informazioni di una singola area, al di sotto delle informazioni dei lampioni si troverà la lista dei sensori collegati all'area selezionata.\\
 Per ogni sensore, sono mostrate nella lista: l'ID (generato automaticamente), l'indirizzo IP e il nome del sensore. Al fianco di queste informazioni è presentato il pulsante per la visualizzazione delle informazioni relative a quel dato sensore.\\
 Il pulsante \textit{informazioni} permette di caricare tutte le informazioni del sensore.\\
 \begin{figure}[H]
-\centering
-\includegraphics[width=0.5\textwidth]{InfoSensore}
-\caption{Esempio di informazioni di un singolo sensore}
+    \centering
+    \includegraphics[width=0.5\textwidth]{InfoSensore}
+    \caption{Esempio di informazioni di un singolo sensore}
 \end{figure}
 \end{document}
