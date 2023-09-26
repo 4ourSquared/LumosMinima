@@ -25,7 +25,9 @@ Questo documento serve a definire le metriche e i criteri di accettazione dei pr
 \addversione{0.1.0}{25/07/2023}{Brotto Romina}{Salami Lorenzo}{Verifica per RTB}
 \addversione{1.0.0}{25/07/2023}{Salami Lorenzo}{Brotto Romina}{Versione finale	per RTB}
 \addversione{1.0.1}{19/09/2023}{Brotto Romina}{Salami Lorenzo}{Aggiunta sezione di test client}
-\addversione{1.0.2}{19/09/2023}{Brotto Romina}{}{Aggiunti test server}
+\addversione{1.0.2}{25/09/2023}{Brotto Romina}{}{Aggiunti test server}
+\addversione{1.0.3}{26/09/2023}{Brotto Romina}{}{Aggiunta sezione code coverage}
+
 
 \begin{document}
 
@@ -74,7 +76,7 @@ La metrica si basa sullo statement coverage.
 		\hline
 		\textbf{Prodotto} & \textbf{Valore accettabile } & \textbf{Valore ottimale } \\
 		\hline
-		Software          & $>$ 80\%                     & $>$ 95\%                     \\
+		Software          & $>$ 70\%                     & $>$ 95\%                     \\
 		\hline
 	\end{tabularx}\\[8pt]
 	\mbox{}\\
@@ -88,7 +90,7 @@ La metrica si basa sul branch coverage.
 		\hline
 		\textbf{Prodotto} & \textbf{Valore accettabile } & \textbf{Valore ottimale } \\
 		\hline
-		Software          & $>$ 55\%                     & $>$ 80\%                     \\
+		Software          & $>$ 70\%                     & $>$ 80\%                     \\
 		\hline
 	\end{tabularx}\\[8pt]
 	\mbox{}\\
@@ -151,16 +153,6 @@ I seguenti test sono stati elencati seguendo l'ordine alfabetico dei nomi dei fi
 \begin{center}
 	\begin{tabularx}{\textwidth}{|X|X|X|}
 	\hline
-		\textbf{Codice} & \textbf{Descrizione } & \textbf{Requisiti collegati } \\
-		\hline
-		\multicolumn{3}{| c |}{\textbf{LoginPage.test.tsx file}} \\
-		\hline
-		TC1 &   Verifica che il client renderizzi correttamete la pagina di login.  &    RF5-O, RV1-O                   \\
-		\hline
-		TC2 &   Verifica che le credenziali inserite siano corrette e che al click del pulsante "Entra" il login abbia successo   &     RF5-O, RV1-O                   \\
-		\hline
-		TC3 & Verifica che le credenziali inserite non siano corrette e che al click del pulsante "Entra" il login \textit{non} abbia successo & RF5-O, RV1-O \\
-		\hline
 		\multicolumn{3}{| c |}{\textbf{AreaSingleView.test.tsx file}} \\
 		\hline
 		TC4 &  Verifica che il fetch delle informazioni riguardanti tutte le aree illuminate avvenga correttamente & RF7-O \\
@@ -179,7 +171,22 @@ I seguenti test sono stati elencati seguendo l'ordine alfabetico dei nomi dei fi
 		\hline
 		TC10 & Verifica che la rimozione dell'area illuminata venga annullata senza modificarne il contenuto & Rf12-O \\
 		\hline
-		
+		\multicolumn{3}{| c |}{\textbf{Content.test.tsx file}} \\
+		\hline
+		TC11 & Verifica che la pagina di elenco aree illuminate si carichi correttamente (anche se vuota) & RF7-O \\
+		\hline
+		\multicolumn{3}{| c |}{\textbf{EditAreaForm.test.tsx file}} \\
+		\hline
+		TC12 & Verifica che il form di modifica area illuminata venga visualizzato correttamente & RF11-O \\
+		\hline
+		\multicolumn{3}{| c |}{\textbf{EditLampForm.test.tsx file}} \\
+		\hline
+		TC13 & Verifica che il form di modifica lampione venga visualizzato correttamente & RF11-O \\
+		\hline
+		\multicolumn{3}{| c |}{\textbf{EditSensorForm.test.tsx file}} \\
+		\hline
+		TC14 & Verifica che il form di modifica sensore venga visualizzato correttamente & RF39-O \\
+		\hline
 	\end{tabularx}\\[8pt]
 	\mbox{}\\
 \end{center}
@@ -189,58 +196,98 @@ I seguenti test sono stati elencati seguendo l'ordine alfabetico dei nomi dei fi
 \begin{center}
 	\begin{tabularx}{\textwidth}{|X|X|X|}
 	\hline
-		\multicolumn{3}{| c |}{\textbf{Content.test.tsx file}} \\
-		\hline
-		TC11 & Verifica che la pagina di elenco aree illuminate si carichi correttamente (anche se vuota) & RF7-O \\
-		\hline
-		\multicolumn{3}{| c |}{\textbf{EditAreaForm.test.tsx file}} \\
-		\hline
-		TC12 & Verifica che il form di modifica area illuminata venga visualizzato correttamente & RF11-O \\
-		\hline
+	\textbf{Codice} & \textbf{Descrizione } & \textbf{Requisiti collegati } \\
+	\hline
 		\multicolumn{3}{| c |}{\textbf{Footer.test.tsx file}} \\
 		\hline
-		TC13 & Verifica che il footer comune a tutte le pagine venga visualizzato correttamente & - \\
+		TC15 & Verifica che il footer comune a tutte le pagine venga visualizzato correttamente & - \\
 		\hline
 		\multicolumn{3}{| c |}{\textbf{Header.test.tsx file}} \\
 		\hline
-		TC14 & Verifica che il render del modulo header per il logout e il footer avvengano correttamente & - \\
+		TC16 & Verifica che il render del modulo header per il logout e il footer avvengano correttamente & - \\
 		\hline
 		\multicolumn{3}{| c |}{\textbf{LampCard.test.tsx file}} \\
 		\hline
-		TC16 & Verifica che il render della scheda dettagli lampione sia visualizzata correttamente & RF19-O \\
+		TC17 & Verifica che il render della scheda dettagli lampione sia visualizzata correttamente & RF19-O \\
 		\hline
 		\multicolumn{3}{| c |}{\textbf{LampGuastiPage.test.tsx file}} \\
 		\hline
-		T16 & Verifica che il render della pagina dedicata all'elenco aree illuminate segnalate guaste avvenga correttamente & RF8-O, RV2-O \\
+		T18 & Verifica che il render della pagina dedicata all'elenco aree illuminate segnalate guaste avvenga correttamente & RF8-O, RV2-O \\
 		\hline
 		\multicolumn{3}{| c |}{\textbf{LampGuastiTable.test.tsx file}} \\
 		\hline
-		TC17 & Verifica che il load della tabella per l'elenco delle aree illuminate segnalate guaste avvenga correttamente & RF8-O, RV2-O \\
+		TC19 & Verifica che il load della tabella per l'elenco delle aree illuminate segnalate guaste avvenga correttamente & RF8-O, RV2-O \\
 		\hline
-		TC18 & Verifica che la rimozione dell'area illuminata dall'elenco delle aree guaste avvenga con successo & RF16-O \\
+		TC20 & Verifica che la rimozione dell'area illuminata dall'elenco delle aree guaste avvenga con successo & RF16-O \\
 		\hline
-		TC19 & Verifica che la rimozione dell'area illuminata dall'elenco delle aree guaste venga annullata & RF12-O\\
+		TC21 & Verifica che la rimozione dell'area illuminata dall'elenco delle aree guaste venga annullata & RF12-O\\
 		\hline
 		\multicolumn{3}{| c |}{\textbf{LampSingleView.test.tsx file}} \\
 		\hline
-		TC20 & Verifica che il caricamento dei dati relativi al lampione avvenga correttamente & RF11-O \\
+		TC22 & Verifica che il caricamento dei dati relativi al lampione avvenga correttamente & RF11-O \\
+		\hline
+		TC23 & Verifica che il caricamento dei dati relativi alla tabella dettagli lampione avvenga correttamente & RF11-O \\
+		\hline
+		TC24 & Verifica che l'annullamento dell'eliminazione avvenga correttamente & RF20-O \\
+		\hline
+		TC25 & Verifica che l'annullamento della segnalazione di un lampione guasto avvenga correttamente & RF9-O \\
+		\hline
+		\multicolumn{3}{| c |}{\textbf{LampTableManutentore.test.tsx file}} \\
+		\hline
+		TC26 &  Verifica che il caricamento dei dati relativi alle aree guaste avvenga correttamente & RF8-O, RV2-O \\
+		\hline
+		\multicolumn{3}{| c |}{\textbf{LoginPage.test.tsx file}} \\
+		\hline
+		TC27 &   Verifica che il client renderizzi correttamete la pagina di login.  &    RF5-O, RV1-O                   \\
+		\hline
+		TC28 &   Verifica che le credenziali inserite siano corrette e che al click del pulsante "Entra" il login abbia successo   &     RF5-O, RV1-O                   \\
+		\hline
+		TC29 & Verifica che le credenziali inserite non siano corrette e che al click del pulsante "Entra" il login \textit{non} abbia successo & RF5-O, RV1-O \\
+		\hline
+		\multicolumn{3}{| c |}{\textbf{NewAreaForm.test.tsx file}} \\
+		\hline
+		TC30 & Verifica che il caricamento del form di aggiunta nuova area illuminata avvenga correttamente & RF10-O \\ 
+		\hline
+		\multicolumn{3}{| c |}{\textbf{NewAreaPage.test.tsx file}} \\
+		\hline
+		Tc31 & Verifica che il caricamento della pagina per l'aggiunta nuova area illuminata avvenga correttamente & RF10-O \\ 
+		\hline
+		\multicolumn{3}{| c |}{\textbf{NewLampForm.test.tsx file}} \\
+		\hline
+		TC32 & Verifica che il caricamento del form di aggiunta nuovo lampione illuminata avvenga correttamente & RF19-O \\ 
+		\hline
+		\multicolumn{3}{| c |}{\textbf{NewLampPage.test.tsx file}} \\
+		\hline
+		TC33 & Verifica che il caricamento della pagina per l'aggiunta di un lampione avvenga correttamente & RF19-O \\ 
+		\hline
+		\multicolumn{3}{| c |}{\textbf{NewSensPage.test.tsx file}} \\
+		\hline
+		TC34 & Verifica che il caricamento della pagina per l'aggiunta di un sensore avvenga correttamente & RF17-O \\ 
 		\hline
 	\end{tabularx}\\[8pt]
 	\mbox{}\\
 \end{center}
 		
+
+
 \begin{center}
 	\begin{tabularx}{\textwidth}{|X|X|X|}
+	\hline
+	\textbf{Codice} & \textbf{Descrizione } & \textbf{Requisiti collegati } \\
+	\hline
+		\multicolumn{3}{| c |}{\textbf{NewSensorForm.test.tsx file}} \\
+		\hline
+		TC35 & Verifica che il caricamento delform per l'aggiunta di un sensore avvenga correttamente & RF17-O \\ 
 		\hline
 		\multicolumn{3}{| c |}{\textbf{PageFullView.test.tsx file}} \\
 		\hline
-		TC21 & Verifica se sono presenti header, main e footer in tutte le pagine & - \\
+		TC36 & Verifica se sono presenti header, main e footer in tutte le pagine & - \\
 		\hline
 		\multicolumn{3}{| c |}{\textbf{SensorSingleView.test.tsx file}} \\
 		\hline
-		TC22 & Verifica che il caricamento dei dati relativi al sensore avvenga correttamente & RF39-O \\
+		TC37 & Verifica che il caricamento dei dati relativi al sensore avvenga correttamente & RF39-O \\
 		\hline
-		TC23 &  Verifica che il sensore invii correttamente il segnale per scatenare la modifica dell'intensità luminosa del lampione & RF27-O,RF14-O\\ 
+		TC38 &  Verifica che il sensore invii correttamente il segnale per scatenare la modifica dell'intensità luminosa del lampione & RF27-O,RF14-O\\ 
 		\hline
 	\end{tabularx}\\[8pt]
 	\mbox{}\\
@@ -336,12 +383,32 @@ I seguenti test sono stati elencati seguendo l'ordine alfabetico dei nomi dei fi
 	\end{tabularx}\\
 	\mbox{}\\
 \end{center}
+\newpage
+\section{Code Coverage}
+Dopo aver consultato il committente, siamo giunti alla conclusione che la 
+percentuale di code coverage desiderabile poteva essere abbassata dall'80'\% 
+iniziale al 70\%. Il motivo di questa scelta risiede nel fatto che il codice 
+testato è molto modulare e dipende da librerie esterne non controllate 
+direttamente dal gruppo, quindi di conseguenza da non considerare durante l'attività di Testing.
+
+Di seguito riportiamo le \textit{Code Coverage} per il client ed il server.
+
+\subsection*{Client Code Coverage}
+\begin{center}
+	\includegraphics[scale=0.20]{client-coverage.png}
+\end{center}
+\subsection*{Server Code Coverage}
+\begin{center}
+	\includegraphics[scale=0.20]{server-coverage.png}
+\end{center}
 
 \section{Metriche}
 \subsection*{Planning Value, Actual Cost e Earned Value}
 \begin{center}
 	\includegraphics[scale=0.5]{AC_PV_EV.png}
 \end{center}
+
+
 \subsection*{Cost Variance e Schedule Variance}
 \begin{center}
 	\includegraphics[scale=0.5]{Cost_Variance_Schedule_Variance.png}
