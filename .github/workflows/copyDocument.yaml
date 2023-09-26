@@ -1,50 +1,50 @@
-name: Copia dei File Generati
-
-# Avvio dell'azione solamente qualora avvenisse un push
-on: 
-  push:
-    branches:
-      - main
-
-jobs:
-    copy:
-        runs-on: ubuntu-latest
-
-        steps:
-
-        - name: Copia dei File
-          uses: actions/checkout@v2
-
-        - name: Pull dei File
-          run : git pull
-
-          # Copia dei documenti interni (non verbali)
-        - name: Copia dei Documenti Interni
-          run : find docs/interni/ -maxdepth 2 -name '*.pdf' -exec cp {} public/interni \;
-
-          # Copia dei documenti esterni (non verbali)
-        - name: Copia dei Documenti Esterni
-          run : find docs/esterni/ -maxdepth 2 -name '*.pdf' -exec cp {} public/esterni \;
-
-          # copia dei soli verbali interni
-        - name: Copia dei Verbali Interni
-          run : find docs/interni/verbali/ -maxdepth 2 -name '*.pdf' -exec cp {} public/interni/verbali \;
-
-          #copia dei soli verbali esterni
-        - name: Copia dei Verbali Esterni
-          run : find docs/esterni/verbali/ -maxdepth 2 -name '*.pdf' -exec cp {} public/esterni/verbali \;
-
-          # commit dei file creati e/o modificati (se presenti)
-        - name: Commit dei File
-          run : |
-            git config --local user.email "action@github.com"
-            git config --local user.name "GitHub Action"
-
-            git add *.pdf
-            git commit -m "Aggiornamento Automatico Documenti"
-
-          # push dei file creati e/o modificati (se presenti)
-        - name: Push dei File
-          uses: ad-m/github-push-action@master
-          with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
+#name: Copia dei File Generati
+## Avvio dell'azione solamente qualora avvenisse un push
+#
+#on: 
+#  push:
+#    branches:
+#      - main
+#
+#jobs:
+#    copy:
+#        runs-on: ubuntu-latest
+#
+#        steps:
+#
+#        - name: Copia dei File
+#          uses: actions/checkout@v2
+#
+#        - name: Pull dei File
+#          run : git pull
+#
+#          # Copia dei documenti interni (non verbali)
+#        - name: Copia dei Documenti Interni
+#          run : find docs/interni/ -maxdepth 2 -name '*.pdf' -exec cp {} public/interni \;
+#
+#          # Copia dei documenti esterni (non verbali)
+#        - name: Copia dei Documenti Esterni
+#          run : find docs/esterni/ -maxdepth 2 -name '*.pdf' -exec cp {} public/esterni \;
+#
+#          # copia dei soli verbali interni
+#        - name: Copia dei Verbali Interni
+#          run : find docs/interni/verbali/ -maxdepth 2 -name '*.pdf' -exec cp {} public/interni/verbali \;
+#
+#          #copia dei soli verbali esterni
+#        - name: Copia dei Verbali Esterni
+#          run : find docs/esterni/verbali/ -maxdepth 2 -name '*.pdf' -exec cp {} public/esterni/verbali \;
+#
+#          # commit dei file creati e/o modificati (se presenti)
+#        - name: Commit dei File
+#          run : |
+#            git config --local user.email "action@github.com"
+#            git config --local user.name "GitHub Action"
+#
+#            git add *.pdf
+#            git commit -m "Aggiornamento Automatico Documenti"
+#
+#          # push dei file creati e/o modificati (se presenti)
+#        - name: Push dei File
+#          uses: ad-m/github-push-action@master
+#          with:
+#            github_token: ${{ secrets.GITHUB_TOKEN }}
