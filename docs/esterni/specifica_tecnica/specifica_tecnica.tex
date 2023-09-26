@@ -22,6 +22,8 @@ Questo documento descrive la specifica architetturale del progetto, illustrando 
 \addversione{0.0.0}{05/09/2023}{Soldà Matteo}{Alberti Nicolas}{Prima stesura.}
 \addversione{0.0.1}{20/09/2023}{Soldà Matteo}{Alberti Nicolas}{Stesura delle prime sezioni.}
 \addversione{0.0.2}{21/09/2023}{Soldà Matteo}{Alberti Nicolas}{Stesura delle parti mancanti esclusi dati relativi ai test}
+\addversione{0.0.3}{22/09/2023}{Soldà Matteo}{Alberti Nicolas}{Stesura dei dati relativi ai test}
+
 \begin{document}
 \makeindexdetails
 \makefrontpage \makeversioni
@@ -317,5 +319,17 @@ I test sono riproducibili tramite il comando \textit{npm run coverage} dentro la
 directory \textit{/client}, mentre con il comando \textit{npm test} dentro la directory \textit{/server} per i test relativi al frontend
 e al backend. Le percentuali riportate indicano la media, che viene riportata
 nella prima riga del report.\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{test_client}
+    \caption{Code coverage del frontend.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{test-server}
+    \caption{Code coverage del backend.}
+\end{figure}
 
 \end{document}
